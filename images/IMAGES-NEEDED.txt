@@ -1,0 +1,45 @@
+IMAGES NEEDED FOR RYF ONE-PAGER
+================================
+
+Add your images to this folder and rename them as listed below.
+Then remove the placeholder block in index.html and uncomment the <img> tag.
+
+HERO SECTION (Section 1)
+  File name:  leo-with-client.jpg
+  Type:       Portrait (4:5 ratio)
+  Content:    Leo in conversation with a woman in a calm, professional setting
+
+TRANSITION SECTION (Section 2)
+  File name:  ibiza-path.jpg
+  Type:       Wide/landscape (16:7 ratio)
+  Content:    A path along the sea or mountains in Ibiza
+
+WHAT THIS WORK IS (Section 3)
+  File name:  ibiza-nature.jpg
+  Type:       Portrait (3:4 ratio)
+  Content:    Ocean, rocks, or Ibiza horizon
+
+ABOUT LEO (Section 4)
+  File name:  leo-ibiza.jpg
+  Type:       Portrait (3:4 ratio)
+  Content:    Professional portrait of Leo outdoors in Ibiza
+
+THE JOURNEY (Section 5)
+  File name:  women-walking.jpg
+  Type:       Wide/landscape (16:7 ratio)
+  Content:    Women walking together outdoors
+
+START HERE (Section 6)
+  File name:  leo-group.jpg
+  Type:       Portrait (4:5 ratio)
+  Content:    Leo speaking with a small group
+
+WORK WITH LEO (Section 7)
+  File name:  leo-conversation.jpg
+  Type:       Portrait (3:4 ratio)
+  Content:    Professional image of Leo in conversation
+
+LOGO (Nav bar)
+  File name:  ryf-logo-white-back.png
+  Content:    Use "LOGO 1 RYF Main Logo White back.png" from your brand assets
+              (just rename it or copy it here with this filename)
