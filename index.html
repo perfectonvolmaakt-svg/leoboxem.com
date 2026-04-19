@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- League Spartan: main headings | Playfair Display: sub-headings & quotes | Montserrat: body -->
   <!-- Note: Glacial Indifference is not on Google Fonts — League Spartan is used as the closest substitute for buttons/caps labels -->
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
   <style>
     /* =============================================================
@@ -107,14 +107,23 @@
 
     /* Main section heading — League Spartan, all caps, bold, black */
     .h-main {
-      font-family: var(--f-head);
+      font-family: 'Outfit', sans-serif;
       font-size: clamp(28px, 4vw, 52px);
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 700;
+      text-transform: none;
       color: var(--black);
-      line-height: 1.1;
+      line-height: 1.15;
       letter-spacing: -0.01em;
       margin-bottom: 8px;
+    }
+
+    .h-main em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15em;
+      color: var(--black);
+      letter-spacing: 0;
     }
 
     /* Sub-heading — Playfair Display italic, warm */
@@ -360,14 +369,23 @@
     }
 
     h1.hero-h {
-      font-family: var(--f-head);
-      font-size: clamp(28px, 4.2vw, 54px);
-      font-weight: 900;
-      text-transform: uppercase;
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 4.6vw, 64px);
+      font-weight: 700;
+      text-transform: none;
       color: var(--black);
-      line-height: 1.0;
-      letter-spacing: -0.02em;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
       margin-bottom: 20px;
+    }
+
+    h1.hero-h em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15em;
+      color: var(--black);
+      letter-spacing: 0;
     }
 
     .hero-serif-sub {
@@ -780,7 +798,7 @@
         <div class="hero-text">
           <p class="hero-eyebrow reveal">High-Touch Mentoring for Women on a Threshold in Life &amp; Leadership</p>
 
-          <h1 class="hero-h reveal d1">Something in Your Life Has Shifted</h1>
+          <h1 class="hero-h reveal d1">Something in Your Life Has <em>Shifted</em></h1>
 
           <p class="hero-serif-sub reveal d2">And you can feel that the way forward will require something new from you.</p>
 
@@ -818,6 +836,15 @@
 
 
   <!-- =============================================================
+       BANNER — FULL WIDTH
+  ============================================================= -->
+  <div style="width: 100%; line-height: 0;">
+    <img src="images/ryf-banner.jpg" alt="Remember Your Future — because you are here for a reason"
+         style="width: 100%; height: auto; display: block;">
+  </div>
+
+
+  <!-- =============================================================
        SECTION 2 — TRANSITION
   ============================================================= -->
   <section id="transition">
@@ -826,7 +853,7 @@
 
         <p class="trans-label reveal">You Are in the In-Between</p>
 
-        <h2 class="h-main reveal d1">You being in-between<br>is not a crisis.</h2>
+        <h2 class="h-main reveal d1">You being <em>in-between</em><br>is not a crisis.</h2>
         <p class="h-sub reveal d2">It is a turning point — and it might be the best thing happening to you.</p>
 
         <div class="trans-body reveal d2">
@@ -858,7 +885,7 @@
 
         <div class="what-text">
           <span class="label reveal">The Work</span>
-          <h2 class="h-main reveal d1">Remember<br>Your Future</h2>
+          <h2 class="h-main reveal d1">Remember<br><em>Your</em> Future</h2>
           <p class="h-sub reveal d1">Not a method. A way of living.</p>
           <span class="rule reveal d1"></span>
 
@@ -913,7 +940,7 @@
 
         <div class="about-text">
           <span class="label reveal">Your Guide</span>
-          <h2 class="h-main reveal d1">About Leo</h2>
+          <h2 class="h-main reveal d1"><em>About</em> Leo</h2>
           <p class="h-sub reveal d1">Leo Boxem is a guide for women in transition.</p>
           <span class="rule reveal d1"></span>
 
@@ -948,9 +975,9 @@
   <section id="journey">
     <div class="wrap">
 
-      <span class="label reveal">The Path Forward</span>
-      <h2 class="h-main reveal d1">Your Path Inside<br>Remember Your Future</h2>
-      <p class="h-sub reveal d1" style="max-width: 540px;">You simply need to take the next step.</p>
+      <span class="label reveal">How to Remember Your Future</span>
+      <h2 class="h-main reveal d1">Your Path <em>Forward</em></h2>
+      <p class="h-sub reveal d1" style="max-width: 540px;">You only have to decide on the next natural step forward.</p>
 
       <div class="j-track" style="margin-top: 48px;">
 
@@ -1018,7 +1045,7 @@
 
         <div class="start-text">
           <span class="label reveal">The Foundation</span>
-          <h2 class="h-main reveal d1">Start Here —<br>Living Your Truth</h2>
+          <h2 class="h-main reveal d1">Start Here to Live Your <em>Own</em> Truth</h2>
           <p class="h-sub reveal d1">This is where change begins.</p>
           <span class="rule reveal d1"></span>
 
@@ -1066,7 +1093,7 @@
 
         <div class="work-text">
           <span class="label reveal">Work With Leo</span>
-          <h2 class="h-main reveal d1">Not Sure What Step<br>Comes Next?</h2>
+          <h2 class="h-main reveal d1">Not Sure What Step<br>Comes <em style="color: var(--white);">Next</em>?</h2>
           <p class="h-sub reveal d1" style="color: rgba(255,255,255,.7);">Sometimes clarity comes through conversation.</p>
           <span class="rule reveal d1"></span>
 
@@ -1120,7 +1147,7 @@
 
         <span class="label reveal" style="display:block; text-align:center;">Your Invitation</span>
 
-        <h2 class="h-main reveal d1">You Do Not Have to<br>Figure It Out Alone</h2>
+        <h2 class="h-main reveal d1">You Do <em>Not</em> Have to<br>Figure It Out Alone</h2>
         <p class="h-sub reveal d1">You are not late. You are not behind.</p>
 
         <div class="closing-body reveal d2">
