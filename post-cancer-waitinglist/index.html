@@ -245,7 +245,7 @@
     }
     .nav-back:hover { opacity: 1; }
 
-    /* HERO — above fold, dark green */
+    /* HERO TOP — dark green, copy only */
     #hero {
       background: var(--green-dark);
       padding-top: calc(var(--pv) + 66px);
@@ -254,12 +254,16 @@
       padding-right: var(--ph);
     }
 
+    /* HERO FORM — cream, form only */
+    #hero-form {
+      background: var(--cream);
+      padding: 64px var(--ph);
+    }
+
     .hero-inner {
       max-width: 760px;
       margin: 0 auto;
     }
-
-    #hero .label { color: rgba(253,247,245,.65); }
 
     #hero h1.hero-h {
       font-family: 'Outfit', sans-serif;
@@ -309,32 +313,21 @@
       font-size: 15px;
       line-height: 2;
       color: rgba(253,247,245,.88);
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
 
     .hero-note {
-      font-family: var(--f-head);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(253,247,245,.45);
+      font-family: var(--f-body);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--taupe);
       margin-top: 16px;
     }
 
-    /* CIRCLE FORM WRAPPER */
+    /* FORM WRAPPER */
     .form-wrap {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(225,198,183,.2);
-      border-radius: 12px;
-      padding: 36px 32px;
-      margin-top: 8px;
-    }
-
-    .form-wrap-light {
-      background: var(--white);
-      border: 1px solid rgba(195,153,80,.2);
-      border-radius: 12px;
-      padding: 36px 32px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     /* INFORM SECTION */
@@ -567,12 +560,12 @@
     [data-circle-form-uid] > div > *:not(form) {
       display: none !important;
     }
-    /* Style inputs to blend with dark backgrounds */
+    /* Style Circle form inputs for cream/light background */
     [data-circle-form-uid] input[type="text"],
     [data-circle-form-uid] input[type="email"] {
-      background: rgba(255,255,255,.12) !important;
-      border: 1px solid rgba(255,255,255,.28) !important;
-      color: #ffffff !important;
+      background: var(--white) !important;
+      border: 1px solid rgba(140,117,106,.3) !important;
+      color: var(--black) !important;
       padding: 14px 18px !important;
       border-radius: 6px !important;
       font-size: 15px !important;
@@ -581,7 +574,7 @@
       margin-bottom: 12px !important;
     }
     [data-circle-form-uid] label {
-      color: rgba(255,255,255,.7) !important;
+      color: var(--dark-brown) !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 0.16em !important;
@@ -632,7 +625,7 @@
   </nav>
 
 
-  <!-- HERO — above fold -->
+  <!-- HERO TOP — colored, copy only -->
   <section id="hero">
     <div class="hero-inner">
 
@@ -648,13 +641,22 @@
       </div>
 
       <div class="hero-body reveal d2">
-        <p>Leave your name and email below to be the first to hear about Leo's future <span style="color: var(--green-light); font-weight: 600;">Post-Cancer Purpose</span> events, workshops, and offers from Leo — and future <span style="color: var(--green-light); font-weight: 600;">Thriving After Cancer Retreats</span> with David &amp; Leo.</p>
-        <p style="margin-top: 16px; font-weight: 700; color: var(--white); font-size: 14px; letter-spacing: 0.01em;">You will not be added to the main email list automatically. This list is separate.</p>
+        <p>Leave your name and email below to be the first to hear about Leo's future <span style="color: var(--green-light); font-weight: 600;">Post-Cancer Purpose</span> events, workshops, and offers — and future <span style="color: var(--green-light); font-weight: 600;">Thriving After Cancer Retreats</span> with David &amp; Leo.</p>
       </div>
 
-      <div class="form-wrap reveal d3">
+    </div>
+  </section>
+
+
+  <!-- HERO FORM — cream background -->
+  <section id="hero-form">
+    <div class="hero-inner">
+
+      <div class="form-wrap reveal">
         <div data-is-popup="false" data-circle-form-uid="1aebb7b6"></div>
       </div>
+
+      <p class="hero-note reveal d1" style="text-align: center; margin-top: 20px;">You will not be added to the main email list automatically. This list is separate.</p>
 
     </div>
   </section>
@@ -784,10 +786,8 @@
         If something in you recognised itself reading this — your name belongs on this list.
       </p>
 
-      <div class="form-wrap" style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,.07); border-color: rgba(225,198,183,.2);">
-        <div class="reveal d3">
-          <div data-is-popup="false" data-circle-form-uid="1aebb7b6"></div>
-        </div>
+      <div class="form-wrap reveal d3">
+        <div data-is-popup="false" data-circle-form-uid="1aebb7b6"></div>
       </div>
 
     </div>
