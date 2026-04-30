@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Heart-Journal™ Waitinglist — Leo Boxem</title>
+  <meta name="description" content="Join the waitinglist for Leo Boxem's Heart-Journal™ Challenge — a powerful concept that opens you to your inner world and expands your creativity in daily life.">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --gold:       #c39950;
+      --taupe:      #8c756a;
+      --orange:     #e97553;
+      --green-dark: #517f80;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:  'League Spartan', sans-serif;
+      --f-serif: 'Playfair Display', Georgia, serif;
+      --f-body:  'Montserrat', sans-serif;
+
+      --max: 1100px;
+      --pv:  88px;
+      --ph:  48px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    img { display: block; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .22s; }
+    .d3 { transition-delay: .36s; }
+    .d4 { transition-delay: .5s; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--ph); }
+    section { padding: var(--pv) var(--ph); }
+    section > .wrap { padding-left: 0; padding-right: 0; }
+
+    .label {
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .rule { display: block; width: 40px; height: 1.5px; margin-bottom: 28px; }
+
+    .h-main {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .h-main em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15em;
+      letter-spacing: 0;
+    }
+    .h-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 23px);
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 400;
+      background: rgba(253,247,245,.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(195,153,80,.18);
+      padding: 0 var(--ph);
+    }
+    .nav-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 66px;
+    }
+    .nav-brand { font-family: var(--f-serif); font-size: 15px; font-weight: 500; color: var(--black); letter-spacing: 0.02em; text-decoration: none; }
+    .nav-back { font-family: var(--f-head); font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dark-brown); opacity: .65; text-decoration: none; transition: opacity .2s; }
+    .nav-back:hover { opacity: 1; }
+
+    /* HERO — orange background */
+    #hero {
+      background: var(--orange);
+      padding-top: calc(var(--pv) + 66px);
+      padding-bottom: var(--pv);
+      padding-left: var(--ph);
+      padding-right: var(--ph);
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    #hero .label { color: rgba(253,247,245,.65); }
+
+    h1.hero-h {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(34px, 5vw, 64px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    h1.hero-h em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.12em;
+      color: var(--cream);
+      letter-spacing: 0;
+    }
+
+    .hero-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.9vw, 21px);
+      color: rgba(253,247,245,.9);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .hero-body { font-size: 15px; line-height: 2; color: rgba(253,247,245,.88); margin-bottom: 12px; }
+
+    .benefit-list {
+      list-style: none;
+      margin: 20px 0 32px;
+    }
+    .benefit-list li {
+      padding: 9px 0 9px 26px;
+      position: relative;
+      font-size: 15px;
+      color: rgba(253,247,245,.9);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      line-height: 1.6;
+    }
+    .benefit-list li:first-child { border-top: 1px solid rgba(255,255,255,.12); }
+    .benefit-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 17px;
+      width: 10px; height: 1px;
+      background: rgba(253,247,245,.6);
+    }
+
+    .form-wrap {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px;
+      padding: 36px 32px;
+      margin-top: 8px;
+    }
+    .hero-note {
+      font-family: var(--f-head);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(253,247,245,.45);
+      margin-top: 16px;
+    }
+    .hero-note a { color: rgba(253,247,245,.65); }
+
+    /* INFORM */
+    #inform { background: var(--cream); }
+    #inform .label { color: var(--gold); }
+    #inform .rule { background: linear-gradient(to right, var(--gold), transparent); }
+    .inform-inner { max-width: 720px; margin: 0 auto; }
+
+    /* GALLERY */
+    #gallery { background: var(--white); }
+    #gallery .label { color: var(--gold); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .gallery-ph {
+      aspect-ratio: 3/4;
+      border-radius: 10px;
+      background: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--f-body);
+      font-size: 11px;
+      font-style: italic;
+      color: var(--taupe);
+      text-align: center;
+      padding: 14px;
+    }
+    .gallery-img {
+      aspect-ratio: 3/4;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .gallery-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* GUIDE */
+    #guide { background: var(--blush); }
+    #guide .label { color: var(--red-brown); }
+    #guide .rule { background: linear-gradient(to right, var(--red-brown), transparent); }
+    #guide .h-main { color: var(--dark-brown); }
+    #guide .h-main em { color: var(--dark-brown); }
+    .guide-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center; }
+    .img-portrait { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; }
+    .img-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* REPEAT FORM */
+    #signup-bottom {
+      background: var(--dark-brown);
+      text-align: center;
+      padding: var(--pv) var(--ph);
+    }
+    #signup-bottom .label { color: var(--blush); opacity: .8; }
+    #signup-bottom .h-main { color: var(--white); }
+    #signup-bottom .h-main em { color: var(--blush); }
+    .invite-line {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 22px);
+      color: rgba(225,198,183,.8);
+      line-height: 1.65;
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
+    .form-wrap-dark {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(225,198,183,.2);
+      border-radius: 12px;
+      padding: 36px 32px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 48px var(--ph); text-align: center; }
+    .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
+    .footer-tag { font-family: var(--f-head); font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .6; margin-bottom: 24px; }
+    .footer-links { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.3); }
+    .footer-links a { color: var(--blush); text-decoration: none; opacity: .7; }
+    .footer-links a:hover { opacity: 1; }
+
+    @media (max-width: 880px) {
+      :root { --pv: 60px; --ph: 24px; }
+      .guide-grid { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-in">
+      <a href="https://www.leoboxem.com" class="nav-brand">Remember Your Future™</a>
+      <a href="https://www.leoboxem.com" class="nav-back">← Back to main page</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <span class="label reveal">Waitinglist</span>
+
+      <h1 class="hero-h reveal d1">
+        The <em>Heart-Journal™</em><br>Waitinglist
+      </h1>
+
+      <p class="hero-sub reveal d2">
+        Over 4,500 women have joined Leo's Heart-Journal™ Challenge in previous editions.<br>
+        It is coming back. And you can be first in line.
+      </p>
+
+      <div class="hero-body reveal d2">
+        <p>Soon Leo will bring her successful Heart-Journal™ Challenge back into her legacy work and community. Leave your name and email below so Leo can send you an invitation the moment she opens it.</p>
+        <p>You will <strong style="color: var(--white);">not</strong> be added to the main email list automatically. <a href="https://www.leoboxem.com/join-the-movement" target="_blank" rel="noopener" style="color: rgba(253,247,245,.85); text-underline-offset: 3px;">Subscribe here if you want that too.</a></p>
+      </div>
+
+      <p style="font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(253,247,245,.6); margin-bottom: 12px;" class="reveal d2">A Heart-Journal helps you to:</p>
+
+      <ul class="benefit-list reveal d2">
+        <li>Quickly open up to your inner world</li>
+        <li>Realize you are more creative than you think</li>
+        <li>Expand your level of creativity in daily life, in your work, in raising your kids, in relating to whatever life brings to your plate — it goes way beyond paint, pencils and paper</li>
+      </ul>
+
+      <div class="form-wrap reveal d3">
+        <div data-is-popup="false" data-circle-form-uid="2a31c36c"></div>
+        <script>if(!window.circleFormsScriptLoaded){window.circleFormsScriptLoaded=true;const script=document.createElement('script');script.src='https://leoboxem.circle.so/external/form-embeds.js';script.defer=true;document.head.appendChild(script)}</script>
+      </div>
+
+      <p class="hero-note reveal d4">This waitinglist is separate from the main email list.</p>
+
+    </div>
+  </section>
+
+
+  <!-- INFORM -->
+  <section id="inform">
+    <div class="wrap">
+      <div class="inform-inner">
+
+        <span class="label reveal">What Is a Heart-Journal™?</span>
+        <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
+
+        <div class="reveal d1">
+          <p>A Heart-Journal is not a diary. It is not a sketchbook. It is not art therapy.</p>
+          <p>It is a practice — a way of meeting yourself on paper, without judgment, without rules, without needing to be "good at it."</p>
+          <p>Women who do this work are often surprised by what comes out. Not just drawings or words — but clarity. Relief. A sense of recognition.</p>
+          <p><strong>It is one of the most powerful, accessible tools Leo has encountered in over a decade of guiding women through transition.</strong></p>
+          <p>The challenge runs for a defined period, with guidance from Leo. Thousands of women have done it before. Many say it changed the way they see themselves.</p>
+        </div>
+
+        <!-- PLACEHOLDER: Add any extra informative text Leo wants here -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALLERY — Heart-Journal examples -->
+  <section id="gallery">
+    <div class="wrap">
+
+      <span class="label reveal" style="color: var(--gold);">Examples of Heart-Journals™</span>
+      <p class="reveal d1" style="font-family: var(--f-serif); font-style: italic; font-size: 17px; color: var(--taupe); margin-bottom: 8px;">A glimpse into what women create.</p>
+
+      <!-- PLACEHOLDER: Replace with real Heart-Journal example images.
+           Drop images in /images/ folder and replace the gallery-ph divs with:
+           <div class="gallery-img"><img src="../images/your-image.jpg" alt="Heart-Journal example"></div> -->
+      <div class="gallery-grid">
+        <div class="gallery-ph reveal">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d1">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d2">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d3">Heart-Journal example image</div>
+        <div class="gallery-ph reveal">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d1">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d2">Heart-Journal example image</div>
+        <div class="gallery-ph reveal d3">Heart-Journal example image</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GUIDE — Leo -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="guide-grid">
+
+        <div class="reveal d1">
+          <div class="img-portrait">
+            <!-- PLACEHOLDER: Replace with a warm, creative photo of Leo
+                 e.g. <img src="../images/leo-heartjournal.jpg" alt="Leo Boxem"> -->
+            <img src="../images/leo-ibiza-sea.jpg" alt="Leo Boxem">
+          </div>
+        </div>
+
+        <div>
+          <span class="label reveal">Your Guide</span>
+          <h2 class="h-main reveal d1"><em>About</em> Leo</h2>
+          <p class="h-sub reveal d1" style="color: var(--dark-brown); opacity: .75;">Leo Boxem — guide, mentor, and creator of the Heart-Journal™ Challenge.</p>
+          <span class="rule reveal d1" style="background: linear-gradient(to right, var(--red-brown), transparent);"></span>
+
+          <div class="reveal d2">
+            <!-- PLACEHOLDER: Leo to provide a short bio specifically about her relationship
+                 with the Heart-Journal — how it started, what it means to her, why she brought
+                 it into her work. Replace this paragraph with her actual text. -->
+            <p>Leo has been guiding women through transition for over a decade. The Heart-Journal™ Challenge emerged from her own creative practice — a tool she discovered could unlock something in women that years of talking sometimes could not reach.</p>
+            <p>More than 4,500 women have joined previous editions. Many describe it as one of the most unexpectedly powerful things they have done.</p>
+            <p>Leo brings the same warmth, honesty, and depth to this creative challenge that she brings to all of her work.</p>
+            <p><em>This is not about being artistic. It is about being honest.</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REPEAT FORM -->
+  <section id="signup-bottom">
+    <div class="wrap">
+
+      <span class="label reveal" style="display: block; text-align: center;">Reserve Your Spot</span>
+      <h2 class="h-main reveal d1" style="text-align: center; color: var(--white);">
+        Your Name <em>Belongs</em><br>on This List
+      </h2>
+      <p class="invite-line reveal d2">
+        4,500 women before you said yes. The next challenge is coming. Don't miss the invitation.
+      </p>
+
+      <div class="form-wrap-dark reveal d3">
+        <div data-is-popup="false" data-circle-form-uid="2a31c36c"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
