@@ -411,9 +411,9 @@
   </footer>
 
   <script>
-    // Clone Circle form to any empty [data-circle-form-uid] slots after render
-    setTimeout(function() {
+    function cleanAndCloneCircle() {
       var slots = document.querySelectorAll('[data-circle-form-uid]');
+      // Clone rendered form to empty slots
       var rendered = null;
       slots.forEach(function(s) { if (s.children.length > 0) rendered = s; });
       if (rendered) {
@@ -421,7 +421,27 @@
           if (s.children.length === 0) s.innerHTML = rendered.innerHTML;
         });
       }
-    }, 1800);
+      // Strip Circle's white card and title/description from every slot
+      slots.forEach(function(wrap) {
+        // Remove background/border from all descendant divs (except inputs)
+        wrap.querySelectorAll('div').forEach(function(d) {
+          d.style.background = 'transparent';
+          d.style.boxShadow = 'none';
+          d.style.border = 'none';
+        });
+        // Hide title and description (everything before the <form> tag)
+        var form = wrap.querySelector('form');
+        if (form && form.parentElement) {
+          Array.from(form.parentElement.children).forEach(function(child) {
+            if (child !== form) child.style.cssText = 'display:none!important';
+          });
+        }
+      });
+    }
+    // Run multiple times to catch Circle's async render
+    [600, 1200, 2000, 3500].forEach(function(ms) { setTimeout(cleanAndCloneCircle, ms); });
+    // Also watch for DOM mutations (Circle renders async)
+    new MutationObserver(cleanAndCloneCircle).observe(document.body, { childList: true, subtree: true });
   </script>
 
   <script>
