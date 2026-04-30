@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <script async src="https://leoboxem.circle.so/external/form-embeds.js"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -310,6 +311,57 @@
     .footer-links a { color: var(--blush); text-decoration: none; opacity: .7; }
     .footer-links a:hover { opacity: 1; }
 
+    /* === CIRCLE FORM FIXES === */
+    /* Remove Circle's white card wrapper */
+    [data-circle-form-uid] > div {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+    }
+    /* Hide Circle's own title and description (shown before the <form> tag) */
+    [data-circle-form-uid] > div > *:not(form) {
+      display: none !important;
+    }
+    /* Style inputs to blend with dark backgrounds */
+    [data-circle-form-uid] input[type="text"],
+    [data-circle-form-uid] input[type="email"] {
+      background: rgba(255,255,255,.12) !important;
+      border: 1px solid rgba(255,255,255,.28) !important;
+      color: #ffffff !important;
+      padding: 14px 18px !important;
+      border-radius: 6px !important;
+      font-size: 15px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      margin-bottom: 12px !important;
+    }
+    [data-circle-form-uid] label {
+      color: rgba(255,255,255,.7) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.16em !important;
+      text-transform: uppercase !important;
+      display: block !important;
+      margin-bottom: 6px !important;
+    }
+    [data-circle-form-uid] button[type="submit"],
+    [data-circle-form-uid] input[type="submit"] {
+      background: #8d4215 !important;
+      color: #ffffff !important;
+      border: none !important;
+      border-radius: 6px !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.16em !important;
+      text-transform: uppercase !important;
+      padding: 16px 28px !important;
+      cursor: pointer !important;
+      width: 100% !important;
+      margin-top: 8px !important;
+    }
+
     @media (max-width: 880px) {
       :root { --pv: 60px; --ph: 24px; }
       .guide-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -360,7 +412,6 @@
 
       <div class="form-wrap reveal d3">
         <div data-is-popup="false" data-circle-form-uid="2a31c36c"></div>
-        <script>if(!window.circleFormsScriptLoaded){window.circleFormsScriptLoaded=true;const script=document.createElement('script');script.src='https://leoboxem.circle.so/external/form-embeds.js';script.defer=true;document.head.appendChild(script)}</script>
       </div>
 
       <p class="hero-note reveal d4">This waitinglist is separate from the main email list.</p>
@@ -482,6 +533,20 @@
       <a href="https://www.leoboxem.com">www.leoboxem.com</a>
     </p>
   </footer>
+
+  <script>
+    // Clone Circle form to any empty [data-circle-form-uid] slots after render
+    setTimeout(function() {
+      var slots = document.querySelectorAll('[data-circle-form-uid]');
+      var rendered = null;
+      slots.forEach(function(s) { if (s.children.length > 0) rendered = s; });
+      if (rendered) {
+        slots.forEach(function(s) {
+          if (s.children.length === 0) s.innerHTML = rendered.innerHTML;
+        });
+      }
+    }, 1800);
+  </script>
 
   <script>
     const obs = new IntersectionObserver(entries => {
