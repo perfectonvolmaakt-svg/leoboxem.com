@@ -109,7 +109,8 @@
     .hero-sub { font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 1.9vw, 21px); color: rgba(253,247,245,.88); line-height: 1.65; margin-bottom: 28px; }
     .hero-body { font-size: 15px; line-height: 2; color: rgba(253,247,245,.85); margin-bottom: 32px; }
 
-    .form-wrap { background: rgba(255,255,255,.09); border: 1px solid rgba(225,198,183,.2); border-radius: 12px; padding: 36px 32px; }
+    .form-wrap { max-width: 600px; margin: 0 auto; }
+    #hero-form { background: var(--cream); padding: 64px var(--ph); }
 
     /* ABOUT — the movement */
     #about-movement { background: var(--cream); }
@@ -151,12 +152,12 @@
     [data-circle-form-uid] > div > *:not(form) {
       display: none !important;
     }
-    /* Style inputs to blend with dark backgrounds */
+    /* Style inputs for cream/light background */
     [data-circle-form-uid] input[type="text"],
     [data-circle-form-uid] input[type="email"] {
-      background: rgba(255,255,255,.12) !important;
-      border: 1px solid rgba(255,255,255,.28) !important;
-      color: #ffffff !important;
+      background: var(--white) !important;
+      border: 1px solid rgba(140,117,106,.3) !important;
+      color: var(--black) !important;
       padding: 14px 18px !important;
       border-radius: 6px !important;
       font-size: 15px !important;
@@ -165,7 +166,7 @@
       margin-bottom: 12px !important;
     }
     [data-circle-form-uid] label {
-      color: rgba(255,255,255,.7) !important;
+      color: var(--dark-brown) !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 0.16em !important;
@@ -225,7 +226,15 @@
         <p>Not alone. But together, for yourself.</p>
       </div>
 
-      <div class="form-wrap reveal d3">
+    </div>
+  </section>
+
+
+  <!-- HERO FORM — cream background -->
+  <section id="hero-form">
+    <div class="hero-inner">
+
+      <div class="form-wrap reveal">
         <div data-is-popup="false" data-circle-form-uid="dd1b04f3"></div>
       </div>
 

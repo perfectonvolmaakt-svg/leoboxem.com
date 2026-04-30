@@ -113,7 +113,8 @@
     .retreat-list li::before { content: ''; position: absolute; left: 0; top: 18px; width: 10px; height: 1px; background: var(--green-light); }
 
     .hero-body { font-size: 15px; line-height: 2; color: rgba(253,247,245,.85); margin-bottom: 32px; }
-    .form-wrap { background: rgba(255,255,255,.09); border: 1px solid rgba(212,216,209,.2); border-radius: 12px; padding: 36px 32px; }
+    .form-wrap { max-width: 600px; margin: 0 auto; }
+    #hero-form { background: var(--cream); padding: 64px var(--ph); }
     .hero-note { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(253,247,245,.4); margin-top: 16px; }
     .hero-note a { color: rgba(212,216,209,.7); }
 
@@ -188,12 +189,12 @@
     [data-circle-form-uid] > div > *:not(form) {
       display: none !important;
     }
-    /* Style inputs to blend with dark backgrounds */
+    /* Style inputs for cream/light background */
     [data-circle-form-uid] input[type="text"],
     [data-circle-form-uid] input[type="email"] {
-      background: rgba(255,255,255,.12) !important;
-      border: 1px solid rgba(255,255,255,.28) !important;
-      color: #ffffff !important;
+      background: var(--white) !important;
+      border: 1px solid rgba(140,117,106,.3) !important;
+      color: var(--black) !important;
       padding: 14px 18px !important;
       border-radius: 6px !important;
       font-size: 15px !important;
@@ -202,7 +203,7 @@
       margin-bottom: 12px !important;
     }
     [data-circle-form-uid] label {
-      color: rgba(255,255,255,.7) !important;
+      color: var(--dark-brown) !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 0.16em !important;
@@ -271,11 +272,19 @@
         <p><strong style="color: var(--white);">Note:</strong> You will not be added to the main email list automatically. <a href="https://www.leoboxem.com/join-the-movement" target="_blank" rel="noopener" style="color: var(--green-light); text-underline-offset: 3px;">Subscribe here if you want that too.</a></p>
       </div>
 
-      <div class="form-wrap reveal d3">
+    </div>
+  </section>
+
+
+  <!-- HERO FORM — cream background -->
+  <section id="hero-form">
+    <div class="hero-inner">
+
+      <div class="form-wrap reveal">
         <div data-is-popup="false" data-circle-form-uid="bbc315f7"></div>
       </div>
 
-      <p class="hero-note reveal d4">This waitinglist is separate from the main email list.</p>
+      <p class="hero-note reveal d1" style="text-align: center; margin-top: 16px; color: var(--taupe);">This waitinglist is separate from the main email list.</p>
 
     </div>
   </section>

@@ -214,21 +214,17 @@
     }
 
     .form-wrap {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 12px;
-      padding: 36px 32px;
-      margin-top: 8px;
+      max-width: 600px;
+      margin: 0 auto;
     }
     .hero-note {
-      font-family: var(--f-head);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(253,247,245,.45);
+      font-family: var(--f-body);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--taupe);
       margin-top: 16px;
     }
-    .hero-note a { color: rgba(253,247,245,.65); }
+    .hero-note a { color: var(--rose); }
 
     /* INFORM */
     #inform { background: var(--cream); }
@@ -311,6 +307,9 @@
     .footer-links a { color: var(--blush); text-decoration: none; opacity: .7; }
     .footer-links a:hover { opacity: 1; }
 
+    /* HERO FORM — cream section */
+    #hero-form { background: var(--cream); padding: 64px var(--ph); }
+
     /* === CIRCLE FORM FIXES === */
     /* Remove Circle's white card wrapper */
     [data-circle-form-uid] > div {
@@ -324,12 +323,12 @@
     [data-circle-form-uid] > div > *:not(form) {
       display: none !important;
     }
-    /* Style inputs to blend with dark backgrounds */
+    /* Style inputs for cream/light background */
     [data-circle-form-uid] input[type="text"],
     [data-circle-form-uid] input[type="email"] {
-      background: rgba(255,255,255,.12) !important;
-      border: 1px solid rgba(255,255,255,.28) !important;
-      color: #ffffff !important;
+      background: var(--white) !important;
+      border: 1px solid rgba(140,117,106,.3) !important;
+      color: var(--black) !important;
       padding: 14px 18px !important;
       border-radius: 6px !important;
       font-size: 15px !important;
@@ -338,7 +337,7 @@
       margin-bottom: 12px !important;
     }
     [data-circle-form-uid] label {
-      color: rgba(255,255,255,.7) !important;
+      color: var(--dark-brown) !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 0.16em !important;
@@ -410,11 +409,19 @@
         <li>Expand your level of creativity in daily life, in your work, in raising your kids, in relating to whatever life brings to your plate — it goes way beyond paint, pencils and paper</li>
       </ul>
 
-      <div class="form-wrap reveal d3">
+    </div>
+  </section>
+
+
+  <!-- HERO FORM — cream background -->
+  <section id="hero-form">
+    <div class="hero-inner">
+
+      <div class="form-wrap reveal">
         <div data-is-popup="false" data-circle-form-uid="2a31c36c"></div>
       </div>
 
-      <p class="hero-note reveal d4">This waitinglist is separate from the main email list.</p>
+      <p class="hero-note reveal d1" style="text-align: center; margin-top: 16px;">This waitinglist is separate from the main email list.</p>
 
     </div>
   </section>

@@ -126,7 +126,8 @@
     .benefit-list li:first-child { border-top: 1px solid rgba(255,255,255,.1); }
     .benefit-list li::before { content: ''; position: absolute; left: 0; top: 17px; width: 10px; height: 1px; background: var(--blush); }
 
-    .form-wrap { background: rgba(255,255,255,.09); border: 1px solid rgba(225,198,183,.2); border-radius: 12px; padding: 36px 32px; margin-top: 8px; }
+    .form-wrap { max-width: 600px; margin: 0 auto; }
+    #hero-form { background: var(--cream); padding: 64px var(--ph); }
     .hero-note { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(253,247,245,.4); margin-top: 16px; }
     .hero-note a { color: rgba(225,198,183,.7); }
 
@@ -186,12 +187,12 @@
     [data-circle-form-uid] > div > *:not(form) {
       display: none !important;
     }
-    /* Style inputs to blend with dark backgrounds */
+    /* Style inputs for cream/light background */
     [data-circle-form-uid] input[type="text"],
     [data-circle-form-uid] input[type="email"] {
-      background: rgba(255,255,255,.12) !important;
-      border: 1px solid rgba(255,255,255,.28) !important;
-      color: #ffffff !important;
+      background: var(--white) !important;
+      border: 1px solid rgba(140,117,106,.3) !important;
+      color: var(--black) !important;
       padding: 14px 18px !important;
       border-radius: 6px !important;
       font-size: 15px !important;
@@ -200,7 +201,7 @@
       margin-bottom: 12px !important;
     }
     [data-circle-form-uid] label {
-      color: rgba(255,255,255,.7) !important;
+      color: var(--dark-brown) !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 0.16em !important;
@@ -266,11 +267,19 @@
         <li>Je komt hiermee <strong style="color: var(--white);">niet</strong> op de algemene email lijst — <a href="https://www.leoboxem.com/join-the-movement" target="_blank" rel="noopener" style="color: var(--blush); text-underline-offset: 3px;">schrijf je hier apart in als je dat ook wilt</a></li>
       </ul>
 
-      <div class="form-wrap reveal d3">
+    </div>
+  </section>
+
+
+  <!-- HERO FORM — cream background -->
+  <section id="hero-form">
+    <div class="hero-inner">
+
+      <div class="form-wrap reveal">
         <div data-is-popup="false" data-circle-form-uid="6b213d9c"></div>
       </div>
 
-      <p class="hero-note reveal d4">Deze wachtlijst staat los van de algemene email lijst.</p>
+      <p class="hero-note reveal d1" style="text-align: center; margin-top: 16px; color: var(--taupe);">Deze wachtlijst staat los van de algemene email lijst.</p>
 
     </div>
   </section>
