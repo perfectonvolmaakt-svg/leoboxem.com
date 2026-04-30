@@ -236,6 +236,7 @@
       .testi-grid-2 { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      #ibiza-images > div { grid-template-columns: 1fr; }
     }
     @media (max-width: 560px) {
       .video-grid { grid-template-columns: 1fr; }
@@ -315,72 +316,16 @@
   </section>
 
 
-  <!-- VIDEO TESTIMONIALS -->
-  <section id="video-testi">
-    <div class="wrap">
-
-      <span class="section-head reveal" style="color: var(--blush);">Hear It From the Women Who Were There</span>
-      <p style="font-family: var(--f-serif); font-style: italic; font-size: 17px; color: rgba(225,198,183,.7); margin-bottom: 8px;" class="reveal d1">Retreat testimonials — in their own words.</p>
-
-      <!-- PLACEHOLDER: Replace with real video embeds (YouTube or Vimeo iframes).
-           Example:
-           <div style="aspect-ratio:16/9; border-radius:12px; overflow:hidden;">
-             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID"
-               frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-           </div>
-      -->
-      <div class="video-grid">
-        <div class="video-ph reveal"><div class="play"></div><p>Video testimonial 1<br>(placeholder)</p></div>
-        <div class="video-ph reveal d1"><div class="play"></div><p>Video testimonial 2<br>(placeholder)</p></div>
-        <div class="video-ph reveal d2"><div class="play"></div><p>Video testimonial 3<br>(placeholder)</p></div>
-        <div class="video-ph reveal"><div class="play"></div><p>Video testimonial 4<br>(placeholder)</p></div>
-        <div class="video-ph reveal d1"><div class="play"></div><p>Video testimonial 5<br>(placeholder)</p></div>
-        <div class="video-ph reveal d2"><div class="play"></div><p>Video testimonial 6<br>(placeholder)</p></div>
+  <!-- IBIZA IMAGES — temporary until videos + gallery are ready -->
+  <!-- RESTORE TOMORROW: video-testi (6 videos) + written-testi (2 SK images) + gallery (8 photos) -->
+  <section id="ibiza-images" style="padding: 0;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div class="reveal" style="overflow: hidden; aspect-ratio: 4/3;">
+        <img src="../images/ibiza-path.jpg" alt="Ibiza" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- WRITTEN TESTIMONIALS -->
-  <section id="written-testi">
-    <div class="wrap">
-
-      <span class="section-head reveal" style="color: var(--red-brown);">What Women Say</span>
-      <span class="rule reveal" style="background: linear-gradient(to right, var(--red-brown), transparent);"></span>
-
-      <div class="testi-grid-2">
-        <div class="reveal" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(195,153,80,.1);">
-          <img src="../images/tesimonial-1-retreat-sk.jpg" alt="Testimonial" style="width: 100%; display: block;">
-        </div>
-        <div class="reveal d1" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(195,153,80,.1);">
-          <img src="../images/tesimonial-2-retreat-sk.jpg" alt="Testimonial" style="width: 100%; display: block;">
-        </div>
+      <div class="reveal d1" style="overflow: hidden; aspect-ratio: 4/3;">
+        <img src="../images/ibiza-sea.jpg" alt="Ibiza" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- GALLERY — retreat images -->
-  <section id="gallery">
-    <div class="wrap">
-
-      <span class="section-head reveal" style="color: var(--gold);">From Past Retreats</span>
-
-      <!-- PLACEHOLDER: Drop retreat photos into /images/ and replace gallery-ph divs.
-           Format: <div class="gallery-img"><img src="../images/retreat-xyz.jpg" alt="Retreat Ibiza"></div> -->
-      <div class="gallery-grid">
-        <div class="gallery-ph reveal">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d1">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d2">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d3">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d1">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d2">Retreat photo<br><em>(placeholder)</em></div>
-        <div class="gallery-ph reveal d3">Retreat photo<br><em>(placeholder)</em></div>
-      </div>
-
     </div>
   </section>
 
