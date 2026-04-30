@@ -52,6 +52,38 @@
     section > .wrap { padding-left: 0; padding-right: 0; }
 
     .label { font-family: var(--f-head); font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; display: block; margin-bottom: 16px; }
+
+    /* Large section heading — used for "What Is a Heart-Journal?", "What Others Say" etc. */
+    .section-head {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Hero waitinglist category label — large and prominent */
+    .waitinglist-label {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Circle form overrides */
+    .form-wrap input,
+    .form-wrap textarea,
+    .form-wrap select {
+      font-family: var(--f-body) !important;
+      font-size: 15px !important;
+      border-radius: 6px !important;
+    }
+
     .rule { display: block; width: 40px; height: 1.5px; margin-bottom: 28px; }
 
     .h-main { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 52px); font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 8px; }
@@ -162,7 +194,7 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="label reveal">Wachtlijst</span>
+      <span class="waitinglist-label reveal" style="color: rgba(225,198,183,.65);">Wachtlijst</span>
 
       <div class="reveal d1">
         <span class="hero-badge">Speciaal voor Nederlanders · Dutchies Only!</span>
@@ -197,7 +229,7 @@
   <section id="inform">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--gold);">Wat is een VIP Dag?</span>
+      <span class="section-head reveal" style="color: var(--gold);">Wat is een VIP Dag?</span>
       <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
 
       <div style="max-width: 720px;" class="reveal d1">
@@ -217,7 +249,7 @@
   <section id="testimonials">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--gold);">Zij gingen je voor</span>
+      <span class="section-head reveal" style="color: var(--gold);">Zij gingen je voor</span>
       <p class="testi-intro reveal d1">"Zij gingen je voor met een VIP dag in Nederland"</p>
 
       <!-- PLACEHOLDER: Vervang door echte ervaringen van Annelieke, Doran, Judith en Maria -->
@@ -249,7 +281,7 @@
   <section id="gallery">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--red-brown);">Leontine in gesprek</span>
+      <span class="section-head reveal" style="color: var(--red-brown);">Leontine in gesprek</span>
 
       <!-- PLACEHOLDER: Voeg foto's toe van Leontine in coachingsgesprekken.
            Drop afbeeldingen in /images/ en vervang de gallery-ph divs. -->

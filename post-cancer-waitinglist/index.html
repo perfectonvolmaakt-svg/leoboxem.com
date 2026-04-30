@@ -87,11 +87,42 @@
       margin-bottom: 16px;
     }
 
+    /* Large section heading — used for "What This Is About", "What Others Say" etc. */
+    .section-head {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Hero waitinglist category label — large and prominent */
+    .waitinglist-label {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
     .rule {
       display: block;
       width: 40px;
       height: 1.5px;
       margin-bottom: 28px;
+    }
+
+    /* Circle form overrides */
+    .form-wrap input,
+    .form-wrap textarea,
+    .form-wrap select {
+      font-family: var(--f-body) !important;
+      font-size: 15px !important;
+      border-radius: 6px !important;
     }
 
     .h-main {
@@ -553,7 +584,7 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="label reveal">Waitinglist</span>
+      <span class="waitinglist-label reveal" style="color: rgba(212,216,209,.7);">Waitinglist</span>
 
       <h1 class="hero-h reveal d1">
         Post-Cancer <em>Purpose</em><br>in Life &amp; Leadership
@@ -565,15 +596,14 @@
       </div>
 
       <div class="hero-body reveal d2">
-        <p>Leave your name and email below to be the first to hear about new 'Post-Cancer Purpose' events, workshops, and offers from Leo — and future <strong style="color: var(--blush);">Thriving After Cancer Retreats</strong> with Leo &amp; David.</p>
+        <p>Leave your name and email below to be the first to hear about Leo's future <span style="color: var(--green-light); font-weight: 600;">Post-Cancer Purpose</span> events, workshops, and offers from Leo — and future <span style="color: var(--green-light); font-weight: 600;">Thriving After Cancer Retreats</span> with David &amp; Leo.</p>
+        <p style="margin-top: 16px; font-weight: 700; color: var(--white); font-size: 14px; letter-spacing: 0.01em;">You will not be added to the main email list automatically. This list is separate.</p>
       </div>
 
       <div class="form-wrap reveal d3">
         <div data-is-popup="false" data-circle-form-uid="1aebb7b6"></div>
         <script>if(!window.circleFormsScriptLoaded){window.circleFormsScriptLoaded=true;const script=document.createElement('script');script.src='https://leoboxem.circle.so/external/form-embeds.js';script.defer=true;document.head.appendChild(script)}</script>
       </div>
-
-      <p class="hero-note reveal d4">You will not be added to the main email list automatically. This list is separate.</p>
 
     </div>
   </section>
@@ -584,8 +614,8 @@
     <div class="wrap">
       <div class="inform-inner">
 
-        <span class="label reveal">What This Is About</span>
-        <span class="rule reveal"></span>
+        <span class="section-head reveal" style="color: var(--black);">What This Is About</span>
+        <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
 
         <div class="reveal d1">
           <p>A cancer diagnosis changes everything.</p>
@@ -597,7 +627,7 @@
 
         <ul class="inform-list reveal d2">
           <li>Post-Cancer Purpose events &amp; workshops with Leo</li>
-          <li>Thriving After Cancer Retreats — intimate, in-person, with Leo &amp; David</li>
+          <li>Thriving After Cancer Retreats — intimate, in-person, with David &amp; Leo</li>
           <li>Early access to new offers before they open to the public</li>
           <li>Messages, insights, and invitations relevant to this specific journey</li>
         </ul>
@@ -650,7 +680,7 @@
   <section id="testimonials">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--gold);">What Others Say</span>
+      <span class="section-head reveal" style="color: var(--black);">What Others Say</span>
       <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
 
       <div class="testi-grid">

@@ -70,6 +70,38 @@
       display: block;
       margin-bottom: 16px;
     }
+
+    /* Large section heading — used for "What Is a Heart-Journal?", "What Others Say" etc. */
+    .section-head {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Hero waitinglist category label — large and prominent */
+    .waitinglist-label {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Circle form overrides */
+    .form-wrap input,
+    .form-wrap textarea,
+    .form-wrap select {
+      font-family: var(--f-body) !important;
+      font-size: 15px !important;
+      border-radius: 6px !important;
+    }
+
     .rule { display: block; width: 40px; height: 1.5px; margin-bottom: 28px; }
 
     .h-main {
@@ -302,7 +334,7 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="label reveal">Waitinglist</span>
+      <span class="waitinglist-label reveal" style="color: rgba(253,247,245,.65);">Waitinglist</span>
 
       <h1 class="hero-h reveal d1">
         The <em>Heart-Journal™</em><br>Waitinglist
@@ -342,7 +374,7 @@
     <div class="wrap">
       <div class="inform-inner">
 
-        <span class="label reveal">What Is a Heart-Journal™?</span>
+        <span class="section-head reveal">What Is a Heart-Journal™?</span>
         <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
 
         <div class="reveal d1">
@@ -364,7 +396,7 @@
   <section id="gallery">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--gold);">Examples of Heart-Journals™</span>
+      <span class="section-head reveal" style="color: var(--gold);">Examples of Heart-Journals™</span>
       <p class="reveal d1" style="font-family: var(--f-serif); font-style: italic; font-size: 17px; color: var(--taupe); margin-bottom: 8px;">A glimpse into what women create.</p>
 
       <!-- PLACEHOLDER: Replace with real Heart-Journal example images.

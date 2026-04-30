@@ -54,6 +54,38 @@
     section > .wrap { padding-left: 0; padding-right: 0; }
 
     .label { font-family: var(--f-head); font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; display: block; margin-bottom: 16px; }
+
+    /* Large section heading — used for "What Is a Heart-Journal?", "What Others Say" etc. */
+    .section-head {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Hero waitinglist category label — large and prominent */
+    .waitinglist-label {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Circle form overrides */
+    .form-wrap input,
+    .form-wrap textarea,
+    .form-wrap select {
+      font-family: var(--f-body) !important;
+      font-size: 15px !important;
+      border-radius: 6px !important;
+    }
+
     .rule { display: block; width: 40px; height: 1.5px; margin-bottom: 28px; }
     .h-main { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 52px); font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 8px; }
     .h-main em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 1.15em; letter-spacing: 0; }
@@ -168,7 +200,7 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="label reveal">Retreat Waitinglist · Ibiza</span>
+      <span class="waitinglist-label reveal" style="color: rgba(253,247,245,.65);">Retreat Waitinglist · Ibiza</span>
 
       <h1 class="hero-h reveal d1">
         Leo's<br><em>Retreat</em><br>Waitinglist
@@ -203,7 +235,7 @@
     <div class="wrap">
       <div class="inform-inner">
 
-        <span class="label reveal" style="color: var(--gold);">What to Expect</span>
+        <span class="section-head reveal" style="color: var(--black);">What to Expect</span>
         <span class="rule reveal" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
 
         <div class="reveal d1">
@@ -224,7 +256,7 @@
   <section id="video-testi">
     <div class="wrap">
 
-      <span class="label reveal">Hear It From the Women Who Were There</span>
+      <span class="section-head reveal" style="color: var(--blush);">Hear It From the Women Who Were There</span>
       <p style="font-family: var(--f-serif); font-style: italic; font-size: 17px; color: rgba(225,198,183,.7); margin-bottom: 8px;" class="reveal d1">Retreat testimonials — in their own words.</p>
 
       <!-- PLACEHOLDER: Replace with real video embeds (YouTube or Vimeo iframes).
@@ -251,7 +283,7 @@
   <section id="written-testi">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--red-brown);">What Women Say</span>
+      <span class="section-head reveal" style="color: var(--red-brown);">What Women Say</span>
       <span class="rule reveal" style="background: linear-gradient(to right, var(--red-brown), transparent);"></span>
 
       <!-- PLACEHOLDER: Replace with 2 real written testimonials from retreat participants -->
@@ -272,7 +304,7 @@
   <section id="gallery">
     <div class="wrap">
 
-      <span class="label reveal" style="color: var(--gold);">From Past Retreats</span>
+      <span class="section-head reveal" style="color: var(--gold);">From Past Retreats</span>
 
       <!-- PLACEHOLDER: Drop retreat photos into /images/ and replace gallery-ph divs.
            Format: <div class="gallery-img"><img src="../images/retreat-xyz.jpg" alt="Retreat Ibiza"></div> -->
