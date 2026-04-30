@@ -127,12 +127,15 @@
     .testi-ph { min-height: 200px; display: flex; align-items: center; justify-content: center; font-family: var(--f-body); font-size: 12px; font-style: italic; color: var(--taupe); text-align: center; border: 1px dashed rgba(141,66,21,.25); border-radius: 12px; padding: 24px; background: rgba(255,255,255,.5); }
 
     /* REPEAT FORM */
-    #signup-bottom { background: var(--dark-brown); text-align: center; padding: var(--pv) var(--ph); }
-    .invite-line { font-family: var(--f-serif); font-style: italic; font-size: clamp(17px, 2vw, 22px); color: rgba(225,198,183,.8); line-height: 1.65; max-width: 580px; margin: 0 auto 40px; }
-    .form-wrap-dark { background: rgba(255,255,255,.07); border: 1px solid rgba(225,198,183,.2); border-radius: 12px; padding: 36px 32px; max-width: 600px; margin: 0 auto; }
+    #signup-bottom { background: var(--white); text-align: center; padding: var(--pv) var(--ph); }
+    #signup-bottom .label { color: var(--dark-brown); opacity: .7; }
+    #signup-bottom .h-main { color: var(--dark-brown); }
+    #signup-bottom .h-main em { color: var(--rose); }
+    .invite-line { font-family: var(--f-serif); font-style: italic; font-size: clamp(17px, 2vw, 22px); color: var(--taupe); line-height: 1.65; max-width: 580px; margin: 0 auto 40px; }
+    .form-wrap-dark { max-width: 600px; margin: 0 auto; }
 
     /* FOOTER */
-    footer { background: var(--black); padding: 48px var(--ph); text-align: center; }
+    footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
     .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
     .footer-tag { font-family: var(--f-head); font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .6; margin-bottom: 24px; }
     .footer-links { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.3); }
@@ -211,8 +214,6 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="waitinglist-label reveal" style="color: rgba(253,247,245,.65);">Join Leo's List & Community</span>
-
       <h1 class="hero-h reveal d1">
         Join <em>Leo's List</em><br>= Community!
       </h1>
@@ -223,7 +224,7 @@
 
       <div class="hero-body reveal d2">
         <p>More so, join to become part of the global <strong style="color: var(--white);">Remember Your Future™</strong> movement — where women (and a few good men) in transition come together to find their true purpose, authentic path, and figure out how to get there with ease and an enjoyable process.</p>
-        <p>Not alone. But together, for yourself.</p>
+        <p><strong>Not alone. But together, for yourself.</strong></p>
       </div>
 
     </div>
@@ -259,7 +260,7 @@
                  and what someone can expect when they join. Keep it short, warm, direct. -->
             <p>Remember Your Future™ is not a program. It is a way of living — and a community of women who have decided to stop playing small and start living truthfully.</p>
             <p>Leo Boxem founded this movement after her own turning point — a leukemia diagnosis that made clear she had not yet lived the life she was here to live.</p>
-            <p>Today, thousands of women around the world have been part of this community. They are in transition. They are in the process of becoming. And they are doing it — together, for themselves.</p>
+            <p>Today, thousands of women (and a few good men) around the world have been part of this community. They are in transition. They are in the process of becoming. And they are doing it — together, for themselves.</p>
             <p><strong>This list is where it begins.</strong></p>
           </div>
         </div>
@@ -280,7 +281,7 @@
   <section id="testimonials">
     <div class="wrap">
 
-      <span class="section-head reveal" style="color: var(--red-brown);">What Women Say</span>
+      <span class="section-head reveal" style="color: var(--red-brown);">What Others Say</span>
       <span class="rule reveal" style="background: linear-gradient(to right, var(--red-brown), transparent);"></span>
 
       <!-- PLACEHOLDER: Replace with 2-3 real testimonials from community members.
@@ -309,8 +310,8 @@
   <section id="signup-bottom">
     <div class="wrap">
 
-      <span class="label reveal" style="display: block; text-align: center; color: rgba(225,198,183,.7);">You Belong Here</span>
-      <h2 class="h-main reveal d1" style="text-align: center; color: var(--white);">
+      <span class="label reveal" style="display: block; text-align: center;">You Belong Here</span>
+      <h2 class="h-main reveal d1" style="text-align: center;">
         Ready to Join<br>the <em>Movement?</em>
       </h2>
       <p class="invite-line reveal d2">

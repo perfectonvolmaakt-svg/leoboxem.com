@@ -164,12 +164,15 @@
     .img-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* REPEAT FORM */
-    #signup-bottom { background: var(--dark-brown); text-align: center; padding: var(--pv) var(--ph); }
-    .invite-line { font-family: var(--f-serif); font-style: italic; font-size: clamp(17px, 2vw, 22px); color: rgba(225,198,183,.8); line-height: 1.65; max-width: 580px; margin: 0 auto 40px; }
-    .form-wrap-dark { background: rgba(255,255,255,.07); border: 1px solid rgba(225,198,183,.2); border-radius: 12px; padding: 36px 32px; max-width: 600px; margin: 0 auto; }
+    #signup-bottom { background: var(--white); text-align: center; padding: var(--pv) var(--ph); }
+    #signup-bottom .label { color: var(--dark-brown); opacity: .7; }
+    #signup-bottom .h-main { color: var(--dark-brown); }
+    #signup-bottom .h-main em { color: var(--rose); }
+    .invite-line { font-family: var(--f-serif); font-style: italic; font-size: clamp(17px, 2vw, 22px); color: var(--taupe); line-height: 1.65; max-width: 580px; margin: 0 auto 40px; }
+    .form-wrap-dark { max-width: 600px; margin: 0 auto; }
 
     /* FOOTER */
-    footer { background: var(--black); padding: 48px var(--ph); text-align: center; }
+    footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
     .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
     .footer-tag { font-family: var(--f-head); font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .6; margin-bottom: 24px; }
     .footer-links { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.3); }
@@ -253,23 +256,21 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <span class="waitinglist-label reveal" style="color: rgba(253,247,245,.65);">Retreat Waitinglist · Ibiza</span>
-
       <h1 class="hero-h reveal d1">
-        Leo's<br><em>Retreat</em><br>Waitinglist
+        Leo's<br><em>Ibiza Retreats</em><br>Waitinglist
       </h1>
 
-      <p style="font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(212,216,209,.6); margin-bottom: 12px;" class="reveal d2">Join Leo in-person on Ibiza for one of her retreats:</p>
+      <p style="font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(212,216,209,.6); margin-bottom: 12px;" class="reveal d2">In-person on Ibiza — planned for 2026-2027:</p>
 
       <ul class="retreat-list reveal d2">
         <li>The Joy of Being &amp; Becoming Retreat — 2nd edition</li>
         <li>The Unlimited Retreat — 5th edition</li>
-        <li>The Authentic Legacy™ Retreat</li>
+        <li>Thriving After Cancer Retreat — 2nd edition</li>
+        <li>The Authentic Legacy™ Retreat — new</li>
       </ul>
 
       <div class="hero-body reveal d2">
         <p>Leave your name and email below so Leo can send you an invitation and information as soon as she opens registration for (limited) spaces on one of her retreats.</p>
-        <p><strong style="color: var(--white);">Note:</strong> You will not be added to the main email list automatically. <a href="https://www.leoboxem.com/join-the-movement" target="_blank" rel="noopener" style="color: var(--green-light); text-underline-offset: 3px;">Subscribe here if you want that too.</a></p>
       </div>
 
     </div>
@@ -284,7 +285,7 @@
         <div data-is-popup="false" data-circle-form-uid="bbc315f7"></div>
       </div>
 
-      <p class="hero-note reveal d1" style="text-align: center; margin-top: 16px; color: var(--taupe);">This waitinglist is separate from the main email list.</p>
+      <p class="hero-note reveal d1" style="text-align: center; margin-top: 16px; color: var(--taupe);">You will not be added to the main email list automatically. <a href="https://www.leoboxem.com/join-the-movement" target="_blank" rel="noopener" style="color: var(--rose);">Subscribe here if you want that too.</a></p>
 
     </div>
   </section>
@@ -301,10 +302,12 @@
         <div class="reveal d1">
           <!-- PLACEHOLDER: Leo to provide a short informative text about the retreats.
                What is the overall vibe? What do women experience? What makes them different? -->
-          <p>Leo's retreats take place on Ibiza — an island that holds a particular energy for women who are ready to shift something.</p>
+          <p>Leo's retreats take place on Ibiza — an island that holds a powerful energy for women who are ready to shift something that has meaning.</p>
           <p>Each retreat is intimate, intentional, and created around one clear purpose: to help you remember who you are, and what you are here for.</p>
+          <p>Three different retreats. Each with its own focus.<br>
+          <strong>All sharing one thread — the truth that there is more for you.</strong><br>
+          And that you know it.</p>
           <p>The group is always small. The work is always deep. And the island does the rest.</p>
-          <p>Three different retreats. Each with its own focus. All sharing one thread — the truth that there is more for you. And that you know it.</p>
         </div>
 
       </div>
@@ -420,8 +423,8 @@
   <section id="signup-bottom">
     <div class="wrap">
 
-      <span class="label reveal" style="display: block; text-align: center; color: rgba(225,198,183,.7);">Reserve Your Place</span>
-      <h2 class="h-main reveal d1" style="text-align: center; color: var(--white);">
+      <span class="label reveal" style="display: block; text-align: center;">Reserve Your Place</span>
+      <h2 class="h-main reveal d1" style="text-align: center;">
         Ibiza Is<br><em>Waiting for You</em>
       </h2>
       <p class="invite-line reveal d2">
