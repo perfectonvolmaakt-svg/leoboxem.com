@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mirror of Meaning™ — A Live Workshop · Remember Your Future™</title>
+  <meta name="description" content="Awaken the Reason You're Here & Identify Your Next Authentic Shift. A 2.5-hour live workshop with Leo Boxem. Friday 24 April 2026 · 10:30–13:00 CET · Live on Zoom.">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================================
+       RESET
+    ============================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #b27931;
+      --gold-light: #c39950;
+      --taupe:      #8c756a;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:   'League Spartan', sans-serif;
+      --f-serif:  'Playfair Display', Georgia, serif;
+      --f-body:   'Montserrat', sans-serif;
+      --f-script: 'Great Vibes', cursive;
+      --f-display: 'Outfit', sans-serif;
+
+      --max: 1100px;
+      --pv:  96px;
+      --ph:  48px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    img { display: block; }
+
+    /* =============================================================
+       SCROLL REVEAL
+    ============================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .22s; }
+    .d3 { transition-delay: .36s; }
+    .d4 { transition-delay: .5s; }
+
+    /* =============================================================
+       LAYOUT
+    ============================================================= */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--ph);
+    }
+    section { padding: var(--pv) var(--ph); }
+    section > .wrap { padding-left: 0; padding-right: 0; }
+
+    /* =============================================================
+       TYPOGRAPHY ATOMS
+    ============================================================= */
+    .label {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .rule {
+      display: block;
+      width: 40px;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 28px;
+    }
+
+    .rule-center {
+      display: block;
+      width: 40px;
+      height: 1.5px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0 auto 32px;
+    }
+
+    /* Script accent — Great Vibes */
+    .script {
+      font-family: var(--f-script);
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    /* =============================================================
+       BUTTON
+    ============================================================= */
+    .btn {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 4px;
+      padding: 16px 36px;
+      line-height: 1.5;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
+
+    .btn-fill {
+      background: var(--gold);
+      color: var(--white);
+      border: 2px solid var(--gold);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--dark-brown);
+      border: 1.5px solid var(--gold);
+    }
+
+    /* =============================================================
+       NAV
+    ============================================================= */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 400;
+      background: rgba(253,247,245,.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(178,121,49,.18);
+      padding: 0 var(--ph);
+    }
+
+    .nav-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 66px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-brand-name {
+      font-family: var(--f-serif);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      letter-spacing: 0.02em;
+    }
+    .nav-back {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dark-brown);
+      opacity: .6;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .nav-back:hover { opacity: 1; }
+    .nav-cta {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gold);
+      border-radius: 4px;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: opacity .2s;
+      flex-shrink: 0;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* =============================================================
+       HERO
+    ============================================================= */
+    #hero {
+      background: var(--cream);
+      padding-top: calc(var(--pv) + 66px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 52fr 48fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      opacity: .8;
+      margin-bottom: 24px;
+    }
+
+    h1.hero-title {
+      font-family: var(--f-display);
+      font-size: clamp(32px, 4.5vw, 58px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 0;
+    }
+
+    .hero-script-word {
+      font-family: var(--f-script);
+      font-size: clamp(60px, 8.5vw, 108px);
+      color: var(--gold);
+      line-height: 1.05;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--taupe);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .hero-lead {
+      font-family: var(--f-serif);
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 500;
+      color: var(--dark-brown);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .hero-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--black);
+      margin-bottom: 32px;
+    }
+
+    .hero-meta {
+      font-family: var(--f-head);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      opacity: .75;
+      margin-top: 16px;
+    }
+
+    /* Hero right — RYF branded panel */
+    .hero-panel {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ede4da;
+      aspect-ratio: 4/3.2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-content {
+      padding: 36px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      width: 58%;
+    }
+
+    .panel-eyebrow {
+      font-family: var(--f-head);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .panel-remember {
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: clamp(18px, 2.5vw, 30px);
+      color: var(--dark-brown);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin-bottom: 0;
+    }
+
+    .panel-future {
+      font-family: var(--f-script);
+      font-size: clamp(38px, 5vw, 64px);
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .panel-with {
+      font-family: var(--f-head);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+    .panel-photo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 48%;
+    }
+    .panel-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .panel-bar {
+      height: 5px;
+      background: linear-gradient(to right, var(--gold), var(--dark-brown));
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+    }
+
+    /* =============================================================
+       DO YOU RECOGNIZE YOURSELF?
+    ============================================================= */
+    #recognize {
+      background: #f0e9e5;
+      text-align: center;
+    }
+
+    .recognize-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .recognize-list {
+      list-style: none;
+      text-align: left;
+      display: inline-block;
+      margin: 36px auto;
+    }
+
+    .recognize-list li {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.7;
+      padding: 12px 0 12px 28px;
+      position: relative;
+    }
+
+    .recognize-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 20px;
+      line-height: 1.55;
+      font-style: normal;
+    }
+
+    .you-need {
+      font-family: var(--f-serif);
+      font-size: clamp(17px, 1.9vw, 22px);
+      color: var(--dark-brown);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    /* =============================================================
+       THE TURNING POINT
+    ============================================================= */
+    #turning {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .turning-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .turning-h {
+      font-family: var(--f-display);
+      font-size: clamp(26px, 3.8vw, 50px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .turning-h .script { font-size: 1.3em; }
+
+    .turning-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--taupe);
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    .mirror-cols {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      align-items: start;
+      text-align: left;
+      margin: 0 auto 52px;
+      max-width: 680px;
+      gap: 0;
+    }
+
+    .mirror-divider {
+      background: rgba(178,121,49,.35);
+      align-self: stretch;
+      margin: 0 44px;
+    }
+
+    .mirror-col-title {
+      font-family: var(--f-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-brown);
+      margin-bottom: 20px;
+    }
+
+    .mirror-left-list {
+      list-style: none;
+    }
+    .mirror-left-list li {
+      font-size: 15px;
+      color: var(--black);
+      line-height: 1.8;
+      padding: 8px 0 8px 26px;
+      position: relative;
+    }
+    .mirror-left-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-family: var(--f-serif);
+    }
+
+    .mirror-realize {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.75;
+    }
+
+    .turning-closing {
+      font-size: 15px;
+      color: var(--taupe);
+      line-height: 1.9;
+    }
+    .turning-closing em {
+      font-family: var(--f-serif);
+      font-style: italic;
+      color: var(--dark-brown);
+    }
+
+    /* =============================================================
+       WHAT HAPPENS INSIDE — dark
+    ============================================================= */
+    #inside {
+      background: var(--mocha);
+      text-align: center;
+    }
+
+    #inside .label { color: rgba(195,153,80,.65); }
+
+    .inside-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3.2vw, 44px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .inside-sub {
+      font-family: var(--f-head);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 52px;
+    }
+
+    .steps-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto 52px;
+      text-align: left;
+    }
+
+    .steps-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      font-size: 16px;
+      color: rgba(255,255,255,.85);
+      line-height: 1.6;
+    }
+    .steps-list li:first-child { border-top: 1px solid rgba(255,255,255,.07); }
+
+    .step-num {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--gold-light);
+      opacity: .65;
+      flex-shrink: 0;
+      min-width: 22px;
+    }
+
+    .inside-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: rgba(255,255,255,.55);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .inside-bold {
+      font-family: var(--f-display);
+      font-size: clamp(16px, 1.9vw, 23px);
+      font-weight: 600;
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
+    }
+    .inside-bold .script {
+      color: var(--rose);
+      font-size: 1.4em;
+    }
+
+    /* =============================================================
+       THE LIONHEART MOMENT
+    ============================================================= */
+    #lionheart {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .lionheart-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .lionheart-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3.2vw, 44px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .lionheart-h .script {
+      color: var(--rose);
+      font-size: 1.35em;
+    }
+
+    .lionheart-intro {
+      font-size: 15px;
+      color: var(--taupe);
+      margin-bottom: 36px;
+    }
+
+    .courage-list {
+      list-style: none;
+      margin: 0 auto 48px;
+    }
+    .courage-list li {
+      font-family: var(--f-serif);
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.6;
+      padding: 10px 0;
+    }
+
+    .shift-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--taupe);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    /* From / To table */
+    .from-to-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .ft-col {
+      padding: 0 36px;
+    }
+    .ft-left { text-align: right; }
+    .ft-right { text-align: left; }
+
+    .ft-divider {
+      width: 1px;
+      background: rgba(178,121,49,.35);
+    }
+
+    .ft-header {
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding-bottom: 14px;
+    }
+    .ft-left .ft-header { color: var(--taupe); }
+    .ft-right .ft-header { color: var(--rose); }
+
+    .ft-item {
+      font-size: 15px;
+      padding: 8px 0;
+      line-height: 1.5;
+    }
+    .ft-left .ft-item { color: var(--taupe); }
+    .ft-right .ft-item { color: var(--rose); font-weight: 600; }
+
+    /* =============================================================
+       WHAT YOU'LL WALK AWAY WITH
+    ============================================================= */
+    #walkaway {
+      background: #f5efeb;
+      text-align: center;
+    }
+
+    .walkaway-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3.2vw, 44px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.2;
+      margin-bottom: 48px;
+    }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .outcome-card {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.15);
+      border-radius: 10px;
+      padding: 30px 28px 26px;
+    }
+
+    .outcome-num {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gold);
+      opacity: .65;
+      margin-bottom: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    .outcome-text {
+      font-size: 15px;
+      color: var(--dark-brown);
+      line-height: 1.7;
+    }
+
+    /* =============================================================
+       YOUR INVITATION / REGISTER
+    ============================================================= */
+    #register {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .register-inner {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .register-h {
+      font-family: var(--f-display);
+      font-size: clamp(26px, 3.8vw, 50px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .register-h .script { font-size: 1.35em; }
+
+    .register-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--taupe);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .details-card {
+      background: #f0e9e5;
+      border-radius: 14px;
+      padding: 40px 48px;
+      margin-bottom: 0;
+    }
+
+    .details-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 24px;
+      margin-bottom: 36px;
+    }
+
+    .detail-block { text-align: center; }
+
+    .detail-label {
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 8px;
+    }
+
+    .detail-value {
+      font-family: var(--f-serif);
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: var(--dark-brown);
+      line-height: 1.45;
+    }
+
+    .strike {
+      text-decoration: line-through;
+      color: var(--taupe);
+      opacity: .7;
+      margin-right: 6px;
+    }
+
+    .price {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .btn-block {
+      display: block;
+      width: 100%;
+    }
+
+    /* Reassurance */
+    .reassurance {
+      margin-top: 52px;
+    }
+
+    .reassurance-text {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--rose);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .reassurance-closing {
+      font-size: 15px;
+      color: var(--taupe);
+      line-height: 1.9;
+    }
+
+    .sign-off {
+      font-family: var(--f-script);
+      font-size: 40px;
+      color: var(--dark-brown);
+      margin-top: 18px;
+      display: block;
+    }
+
+    /* =============================================================
+       FOOTER
+    ============================================================= */
+    footer {
+      background: var(--mocha);
+      padding: 52px var(--ph);
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: var(--f-serif);
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .footer-tag {
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      font-family: var(--f-head);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .footer-links a:hover { opacity: 1; }
+
+    /* =============================================================
+       MOBILE
+    ============================================================= */
+    @media (max-width: 880px) {
+      :root { --pv: 64px; --ph: 24px; }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-panel { aspect-ratio: 3/2; }
+      .mirror-cols { grid-template-columns: 1fr; }
+      .mirror-divider { display: none; }
+      .outcome-grid { grid-template-columns: 1fr; }
+      .details-card-grid { grid-template-columns: 1fr; }
+      .details-card { padding: 32px 24px; }
+    }
+
+    @media (max-width: 560px) {
+      h1.hero-title { font-size: 32px; }
+      .hero-script-word { font-size: 60px; }
+      .panel-content { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================= -->
+  <nav>
+    <div class="nav-in">
+      <a href="../index.html" class="nav-brand">
+        <span class="nav-brand-name">Remember Your Future™</span>
+      </a>
+      <a href="../index.html" class="nav-back">← Back to main page</a>
+      <a href="#register" class="nav-cta">Enter the Mirror</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================= -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <div>
+          <p class="hero-eyebrow reveal">A Live Workshop with Leo Boxem</p>
+
+          <h1 class="hero-title reveal d1">The Mirror of</h1>
+          <span class="hero-script-word reveal d1">Meaning</span>
+
+          <p class="hero-sub reveal d2">
+            Awaken the Reason You're Here<br>
+            &amp; Identify Your Next Authentic Shift
+          </p>
+
+          <span class="rule reveal d2"></span>
+
+          <p class="hero-lead reveal d2">You can feel that something in your life is ready to change.</p>
+
+          <p class="hero-body reveal d3">Not because your life is wrong — but because parts of you are ready to be lived more honestly. This workshop helps you see clearly what your life is asking from you now.</p>
+
+          <div class="reveal d3">
+            <a href="#register" class="btn btn-fill">Enter the Mirror</a>
+          </div>
+
+          <p class="hero-meta reveal d4">
+            Friday 24 April 2026 &nbsp;·&nbsp; 10:30 – 13:00 CET &nbsp;·&nbsp; Live on Zoom
+          </p>
+        </div>
+
+        <div class="hero-panel reveal d2">
+          <div class="panel-content">
+            <p class="panel-eyebrow">You are here for a reason</p>
+            <p class="panel-remember">REMEMBER<br>YOUR</p>
+            <p class="panel-future">Future!</p>
+            <p class="panel-with">With Leo Boxem</p>
+          </div>
+          <div class="panel-photo">
+            <img src="../images/leo-professional-wild.jpg" alt="Leo Boxem">
+          </div>
+          <div class="panel-bar"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DO YOU RECOGNIZE YOURSELF?
+  ============================================================= -->
+  <section id="recognize">
+    <div class="wrap">
+      <div class="recognize-inner">
+
+        <span class="label reveal" style="text-align:center;">Do you recognize yourself?</span>
+
+        <ul class="recognize-list">
+          <li class="reveal">You feel a quiet tension between the life you have and the life you sense is possible</li>
+          <li class="reveal d1">You know you are capable of more — but something is holding you back</li>
+          <li class="reveal d2">You feel tired of postponing decisions that matter</li>
+          <li class="reveal d3">You sense that time matters now</li>
+        </ul>
+
+        <span class="rule-center reveal"></span>
+
+        <div class="reveal d1">
+          <p class="you-need">You don't need another strategy.</p>
+          <p class="you-need" style="margin-top: 8px;">You need <span class="script" style="font-size: 1.5em; vertical-align: middle;">clarity.</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE TURNING POINT
+  ============================================================= -->
+  <section id="turning">
+    <div class="wrap">
+      <div class="turning-inner">
+
+        <span class="label reveal" style="text-align:center;">The Turning Point</span>
+
+        <h2 class="turning-h reveal d1">
+          The Mirror of <span class="script">Meaning</span>
+        </h2>
+
+        <p class="turning-sub reveal d2">At certain moments in life, something becomes undeniable.</p>
+
+        <div class="mirror-cols reveal d2">
+          <div>
+            <p class="mirror-col-title">You see:</p>
+            <ul class="mirror-left-list">
+              <li>Where you adapted</li>
+              <li>Where you stayed silent</li>
+              <li>Where you stopped trusting yourself</li>
+            </ul>
+          </div>
+          <div class="mirror-divider"></div>
+          <div>
+            <p class="mirror-col-title">And you realize:</p>
+            <p class="mirror-realize">"I cannot keep living half-aligned."</p>
+          </div>
+        </div>
+
+        <p class="turning-closing reveal d3">
+          That moment is what I call: <em>The Mirror of Meaning.</em>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT HAPPENS INSIDE — dark section
+  ============================================================= -->
+  <section id="inside">
+    <div class="wrap">
+
+      <span class="label reveal" style="text-align:center; display:block;">What Happens Inside</span>
+
+      <h2 class="inside-h reveal d1">During this 2.5-hour live experience</h2>
+      <p class="inside-sub reveal d1">You will:</p>
+
+      <ul class="steps-list">
+        <li class="reveal">
+          <span class="step-num">01</span>
+          <span>Identify where your life no longer fully reflects who you are</span>
+        </li>
+        <li class="reveal d1">
+          <span class="step-num">02</span>
+          <span>Recognize the patterns that keep you stuck</span>
+        </li>
+        <li class="reveal d2">
+          <span class="step-num">03</span>
+          <span>Reconnect with your deeper truth</span>
+        </li>
+        <li class="reveal d3">
+          <span class="step-num">04</span>
+          <span>Clarify your next authentic step</span>
+        </li>
+      </ul>
+
+      <span class="rule-center reveal" style="background: linear-gradient(to right, transparent, rgba(195,153,80,.4), transparent);"></span>
+
+      <p class="inside-note reveal d1">This is not about blowing up your life.</p>
+      <p class="inside-bold reveal d2">
+        It is about moving forward with <span class="script">honesty.</span>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE LIONHEART MOMENT
+  ============================================================= -->
+  <section id="lionheart">
+    <div class="wrap">
+      <div class="lionheart-inner">
+
+        <span class="label reveal" style="text-align:center;">The Lionheart Moment</span>
+
+        <h2 class="lionheart-h reveal d1">
+          Because insight alone is <span class="script">not enough.</span>
+        </h2>
+
+        <p class="lionheart-intro reveal d2">Change requires courage.</p>
+
+        <ul class="courage-list reveal d2">
+          <li>The courage to stop hiding</li>
+          <li>The courage to stop postponing</li>
+          <li>The courage to choose yourself</li>
+        </ul>
+
+        <span class="rule-center reveal"></span>
+
+        <p class="shift-note reveal d1">
+          This is the moment where many women feel something shift:
+        </p>
+
+        <div class="from-to-wrap reveal d2">
+          <div class="ft-col ft-left">
+            <div class="ft-header">From</div>
+            <div class="ft-item">hesitation</div>
+            <div class="ft-item">waiting</div>
+          </div>
+          <div class="ft-divider"></div>
+          <div class="ft-col ft-right">
+            <div class="ft-header">To</div>
+            <div class="ft-item">commitment</div>
+            <div class="ft-item">movement</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT YOU'LL WALK AWAY WITH
+  ============================================================= -->
+  <section id="walkaway">
+    <div class="wrap">
+
+      <span class="label reveal" style="text-align:center; display:block;">What You'll Walk Away With</span>
+      <h2 class="walkaway-h reveal d1">After this workshop, you will leave with</h2>
+
+      <div class="outcome-grid">
+
+        <div class="outcome-card reveal">
+          <div class="outcome-num">01</div>
+          <div class="outcome-text">Clarity about what is no longer aligned</div>
+        </div>
+
+        <div class="outcome-card reveal d1">
+          <div class="outcome-num">02</div>
+          <div class="outcome-text">Confidence about your next step</div>
+        </div>
+
+        <div class="outcome-card reveal d2">
+          <div class="outcome-num">03</div>
+          <div class="outcome-text">Language for the transition you are in</div>
+        </div>
+
+        <div class="outcome-card reveal d3">
+          <div class="outcome-num">04</div>
+          <div class="outcome-text">Renewed trust in yourself</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       YOUR INVITATION
+  ============================================================= -->
+  <section id="register">
+    <div class="wrap">
+      <div class="register-inner">
+
+        <span class="label reveal" style="text-align:center; display:block;">Your Invitation</span>
+
+        <h2 class="register-h reveal d1">
+          The Mirror of <span class="script">Meaning</span>
+        </h2>
+
+        <p class="register-sub reveal d2">
+          Awaken the Reason You're Here &amp; Identify Your Next Authentic Shift
+        </p>
+
+        <div class="details-card reveal d2">
+          <div class="details-card-grid">
+            <div class="detail-block">
+              <div class="detail-label">Date</div>
+              <div class="detail-value">Friday 24 April 2026</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Time</div>
+              <div class="detail-value">10:30 – 13:00 CET</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Location</div>
+              <div class="detail-value">Live on Zoom</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Investment</div>
+              <div class="detail-value">
+                <span class="strike">€450</span>
+                <span class="price">€247</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Replace # with your actual registration/payment link -->
+          <a href="#" class="btn btn-fill btn-block">Enter the Mirror</a>
+        </div>
+
+        <div class="reassurance reveal d3">
+          <span class="label" style="text-align:center; display:block; color: var(--rose);">Reassurance</span>
+          <p class="reassurance-text">
+            You do not have to be fully ready.<br>
+            You need to be willing to look honestly.
+          </p>
+          <p class="reassurance-closing">
+            So you can recognize the life that is waiting for you.
+          </p>
+          <p class="reassurance-closing" style="margin-top: 12px;">
+            I am looking forward to seeing you there!
+          </p>
+          <span class="sign-off">Leo</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="../index.html">Back to main page</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+
+  <!-- ============================================================
+       SCROLL REVEAL
+  ============================================================= -->
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
