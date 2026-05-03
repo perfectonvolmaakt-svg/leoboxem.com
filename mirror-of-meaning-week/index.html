@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mirror of Meaning Week — 5-Day Live Experience · Remember Your Future™</title>
+  <meta name="description" content="A 5-day guided threshold experience with Leo Boxem. 18–22 May 2026. Free. Four days to prepare. One moment to see clearly.">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================================
+       RESET & ROOT
+    ============================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #b27931;
+      --gold-light: #c39950;
+      --taupe:      #8c756a;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:    'League Spartan', sans-serif;
+      --f-serif:   'Playfair Display', Georgia, serif;
+      --f-body:    'Montserrat', sans-serif;
+      --f-script:  'Great Vibes', cursive;
+      --f-display: 'Outfit', sans-serif;
+
+      --max: 1100px;
+      --pv:  96px;
+      --ph:  48px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    img { display: block; }
+
+    /* =============================================================
+       SCROLL REVEAL
+    ============================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .22s; }
+    .d3 { transition-delay: .36s; }
+    .d4 { transition-delay: .5s; }
+    .d5 { transition-delay: .64s; }
+
+    /* =============================================================
+       LAYOUT
+    ============================================================= */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--ph);
+    }
+    section { padding: var(--pv) var(--ph); }
+    section > .wrap { padding-left: 0; padding-right: 0; }
+
+    /* =============================================================
+       TYPOGRAPHY ATOMS
+    ============================================================= */
+    .label {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .rule {
+      display: block;
+      width: 40px;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 28px;
+    }
+
+    .rule-center {
+      display: block;
+      width: 44px;
+      height: 1.5px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0 auto 32px;
+    }
+
+    .section-h {
+      font-family: var(--f-display);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+
+    .script { font-family: var(--f-script); color: var(--gold); }
+
+    /* =============================================================
+       BUTTONS
+    ============================================================= */
+    .btn {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 4px;
+      padding: 16px 36px;
+      line-height: 1.5;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
+
+    .btn-fill   { background: var(--red-brown); color: var(--white); border: 2px solid var(--red-brown); }
+    .btn-gold   { background: var(--gold); color: var(--white); border: 2px solid var(--gold); }
+    .btn-blush  { background: var(--blush); color: var(--dark-brown); border: 2px solid var(--blush); }
+    .btn-outline { background: transparent; color: var(--dark-brown); border: 1.5px solid var(--gold); }
+    .btn-white  { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.5); }
+    .btn-block  { display: block; width: 100%; }
+
+    /* =============================================================
+       IMAGE WRAPPERS
+    ============================================================= */
+    .img-portrait {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .img-portrait img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .img-square {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .img-square img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* =============================================================
+       NAV
+    ============================================================= */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 400;
+      background: rgba(253,247,245,.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(178,121,49,.18);
+      padding: 0 var(--ph);
+    }
+    .nav-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 66px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .nav-brand-name {
+      font-family: var(--f-serif);
+      font-size: 15px; font-weight: 500;
+      color: var(--black); letter-spacing: 0.02em;
+    }
+    .nav-back {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--dark-brown); opacity: .6;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .nav-back:hover { opacity: 1; }
+    .nav-cta {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--white); background: var(--red-brown);
+      border-radius: 4px; padding: 10px 20px;
+      text-decoration: none; transition: opacity .2s; flex-shrink: 0;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* =============================================================
+       HERO
+    ============================================================= */
+    #hero {
+      background: var(--cream);
+      padding-top: calc(var(--pv) + 66px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--taupe); opacity: .8;
+      margin-bottom: 20px;
+    }
+
+    h1.hero-title {
+      font-family: var(--f-display);
+      font-size: clamp(30px, 4.2vw, 58px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin-bottom: 2px;
+    }
+
+    .hero-script {
+      font-family: var(--f-script);
+      font-size: clamp(54px, 7.5vw, 100px);
+      color: var(--gold);
+      line-height: 1.05;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .hero-week-label {
+      font-family: var(--f-head);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--taupe);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .hero-poem {
+      font-family: var(--f-serif);
+      font-size: clamp(15px, 1.7vw, 19px);
+      color: var(--dark-brown);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .hero-poem strong {
+      font-weight: 600;
+      display: block;
+    }
+
+    .hero-stanza {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: var(--taupe);
+      line-height: 2;
+      padding-left: 20px;
+      border-left: 2px solid rgba(178,121,49,.3);
+      margin: 20px 0 32px;
+    }
+
+    .hero-tagline {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--taupe);
+      margin-top: 14px;
+      opacity: .85;
+    }
+
+    .hero-dates {
+      font-family: var(--f-head);
+      font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--taupe); opacity: .7;
+      margin-top: 10px;
+    }
+
+    /* Hero image frame with decorative offset */
+    .hero-img-wrap {
+      position: relative;
+    }
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -16px; left: -16px;
+      width: 80px; height: 80px;
+      border: 1.5px solid rgba(178,121,49,.25);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -16px; right: -16px;
+      width: 120px; height: 120px;
+      border: 1.5px solid rgba(178,121,49,.2);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    /* =============================================================
+       RECOGNITION
+    ============================================================= */
+    #recognition { background: #f0e9e5; }
+
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .rec-label-block {
+      text-align: right;
+    }
+    .rec-heading {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--dark-brown);
+      line-height: 1.4;
+    }
+
+    .rec-list {
+      list-style: none;
+    }
+    .rec-list li {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 17px);
+      color: var(--dark-brown);
+      line-height: 1.7;
+      padding: 11px 0 11px 28px;
+      border-bottom: 1px solid rgba(141,66,21,.1);
+      position: relative;
+    }
+    .rec-list li:first-child { border-top: 1px solid rgba(141,66,21,.1); }
+    .rec-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0; top: 14px;
+      font-size: 8px;
+      color: var(--rose);
+      font-style: normal;
+    }
+
+    .rec-closing {
+      margin-top: 28px;
+      padding: 20px 24px;
+      background: rgba(141,66,21,.06);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+    .rec-closing p {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: var(--dark-brown);
+      line-height: 1.8;
+    }
+    .rec-closing strong { font-style: normal; }
+
+    /* =============================================================
+       REFRAME
+    ============================================================= */
+    #reframe {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .reframe-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .reframe-not {
+      font-family: var(--f-display);
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 600;
+      color: var(--taupe);
+      line-height: 1.6;
+      text-decoration: line-through;
+      text-decoration-color: rgba(140,117,106,.3);
+      margin-bottom: 6px;
+    }
+
+    .reframe-is {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--dark-brown);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .reframe-affirmation {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .reframe-affirmation p {
+      font-family: var(--f-serif);
+      font-size: clamp(17px, 2vw, 23px);
+      color: var(--dark-brown);
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+    .reframe-affirmation p strong {
+      font-weight: 600;
+    }
+
+    /* =============================================================
+       WHAT THIS WEEK IS
+    ============================================================= */
+    #what { background: var(--white); text-align: center; }
+
+    .what-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .what-h {
+      font-size: clamp(24px, 3.2vw, 42px);
+      margin-bottom: 28px;
+    }
+
+    .what-body p {
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 2;
+      color: var(--black);
+    }
+
+    .what-body strong {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--dark-brown);
+    }
+
+    .what-coda {
+      margin-top: 36px;
+      padding: 24px 32px;
+      background: var(--cream);
+      border-radius: 10px;
+      border: 1px solid rgba(178,121,49,.15);
+    }
+    .what-coda p {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* =============================================================
+       WEEK STRUCTURE
+    ============================================================= */
+    #structure { background: var(--cream); }
+
+    .structure-header {
+      max-width: 560px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .structure-h {
+      font-size: clamp(24px, 3.2vw, 42px);
+      margin-bottom: 12px;
+    }
+
+    .structure-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--taupe);
+      line-height: 1.7;
+    }
+
+    /* Mon–Thu cards: 2x2 grid */
+    .days-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .day-card {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.15);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .day-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(80,42,26,.07);
+    }
+
+    .day-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .day-num {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .day-date {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--taupe); opacity: .7;
+    }
+
+    .day-theme {
+      font-family: var(--f-serif);
+      font-size: clamp(15px, 1.6vw, 18px);
+      font-weight: 600;
+      color: var(--dark-brown);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .day-desc {
+      font-size: 13px;
+      color: var(--taupe);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .day-affirmation {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gold);
+      line-height: 1.6;
+      padding-left: 14px;
+      border-left: 2px solid rgba(178,121,49,.3);
+    }
+
+    /* Friday — featured card */
+    .day-friday {
+      background: var(--mocha);
+      border: 1px solid rgba(195,153,80,.2);
+      border-radius: 12px;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .friday-badge {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold-light);
+      border: 1px solid rgba(195,153,80,.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+
+    .friday-theme {
+      font-family: var(--f-display);
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .friday-theme .script {
+      color: var(--gold-light);
+      font-size: 1.25em;
+    }
+
+    .friday-date {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 12px;
+    }
+
+    .friday-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,.75);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .friday-affirmation {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--gold-light);
+      opacity: .85;
+    }
+
+    .friday-meta {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .friday-icon {
+      font-family: var(--f-script);
+      font-size: 64px;
+      color: var(--gold);
+      opacity: .45;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .friday-tag {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold-light);
+      opacity: .6;
+    }
+
+    /* =============================================================
+       FULL-WIDTH IMAGE BREAK
+    ============================================================= */
+    .img-break {
+      line-height: 0;
+      overflow: hidden;
+    }
+    .img-break img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 420px;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    /* =============================================================
+       THE TURNING POINT
+    ============================================================= */
+    #turning { background: var(--blush); }
+
+    .turning-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .turning-h {
+      font-size: clamp(24px, 3.2vw, 42px);
+      margin-bottom: 16px;
+    }
+
+    .turning-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: var(--rose);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .turning-you-see {
+      font-family: var(--f-body);
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--dark-brown);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .turning-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .turning-list li {
+      font-size: 15px;
+      color: var(--dark-brown);
+      line-height: 1.75;
+      padding: 8px 0 8px 24px;
+      border-bottom: 1px solid rgba(141,66,21,.1);
+      position: relative;
+    }
+    .turning-list li:first-child { border-top: 1px solid rgba(141,66,21,.1); }
+    .turning-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-family: var(--f-serif);
+    }
+
+    .turning-realize {
+      padding: 22px 26px;
+      background: rgba(255,255,255,.45);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.75;
+    }
+
+    .turning-closing {
+      margin-top: 28px;
+      font-size: 14px;
+      color: var(--taupe);
+      line-height: 1.9;
+    }
+    .turning-closing em {
+      font-family: var(--f-serif);
+      font-style: italic;
+      color: var(--dark-brown);
+    }
+
+    /* =============================================================
+       WHAT HAPPENS INSIDE — dark
+    ============================================================= */
+    #inside { background: var(--mocha); text-align: center; }
+
+    #inside .label { color: rgba(195,153,80,.65); }
+
+    .inside-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .inside-sub {
+      font-family: var(--f-head);
+      font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 52px;
+    }
+
+    .inside-list {
+      list-style: none;
+      max-width: 580px;
+      margin: 0 auto 52px;
+      text-align: left;
+    }
+    .inside-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 22px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 16px;
+      color: rgba(255,255,255,.85);
+      line-height: 1.6;
+    }
+    .inside-list li:first-child { border-top: 1px solid rgba(255,255,255,.06); }
+
+    .step-num {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--gold-light);
+      opacity: .6;
+      flex-shrink: 0;
+      min-width: 20px;
+    }
+
+    .inside-coda {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 40px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .inside-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: rgba(255,255,255,.5);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .inside-bold {
+      font-family: var(--f-display);
+      font-size: clamp(17px, 2vw, 23px);
+      font-weight: 600;
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
+    }
+    .inside-bold .script { color: var(--rose); font-size: 1.4em; }
+
+    /* =============================================================
+       LIONHEART MOMENT
+    ============================================================= */
+    #lionheart { background: var(--cream); text-align: center; }
+
+    .lionheart-inner { max-width: 680px; margin: 0 auto; }
+
+    .lionheart-h {
+      font-size: clamp(22px, 3vw, 40px);
+      margin-bottom: 14px;
+    }
+    .lionheart-h .script { color: var(--rose); font-size: 1.3em; }
+
+    .lionheart-sub {
+      font-size: 15px;
+      color: var(--taupe);
+      margin-bottom: 36px;
+    }
+
+    .courage-list {
+      list-style: none;
+      margin: 0 auto 48px;
+    }
+    .courage-list li {
+      font-family: var(--f-serif);
+      font-size: clamp(15px, 1.7vw, 19px);
+      color: var(--dark-brown);
+      line-height: 1.6;
+      padding: 11px 0;
+    }
+
+    .shift-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: var(--taupe);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .from-to-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .ft-col { padding: 0 36px; }
+    .ft-left { text-align: right; }
+    .ft-right { text-align: left; }
+    .ft-divider { width: 1px; background: rgba(178,121,49,.3); }
+    .ft-header {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      padding-bottom: 14px;
+    }
+    .ft-left .ft-header { color: var(--taupe); }
+    .ft-right .ft-header { color: var(--rose); }
+    .ft-item {
+      font-size: 15px;
+      padding: 8px 0;
+      line-height: 1.5;
+    }
+    .ft-left .ft-item { color: var(--taupe); }
+    .ft-right .ft-item { color: var(--rose); font-weight: 600; }
+
+    /* =============================================================
+       WALK AWAY
+    ============================================================= */
+    #walkaway { background: #f5efeb; text-align: center; }
+
+    .walkaway-h {
+      font-size: clamp(22px, 3vw, 40px);
+      margin-bottom: 48px;
+    }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .outcome-card {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.15);
+      border-radius: 12px;
+      padding: 28px 26px 24px;
+    }
+
+    .outcome-num {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gold); opacity: .65;
+      margin-bottom: 14px;
+      letter-spacing: .05em;
+    }
+
+    .outcome-text {
+      font-size: 15px;
+      color: var(--dark-brown);
+      line-height: 1.7;
+    }
+
+    /* =============================================================
+       FREE INVITATION
+    ============================================================= */
+    #invitation {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .invitation-inner {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .invitation-h {
+      font-size: clamp(24px, 3.5vw, 46px);
+      margin-bottom: 16px;
+    }
+    .invitation-h .script { font-size: 1.3em; }
+
+    .invitation-event {
+      font-family: var(--f-head);
+      font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe); opacity: .7;
+      margin-bottom: 32px;
+    }
+
+    .invitation-card {
+      background: #f0e9e5;
+      border-radius: 14px;
+      padding: 40px 44px;
+      margin-bottom: 0;
+    }
+
+    .invitation-body {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+
+    .invitation-note {
+      font-size: 13px;
+      color: var(--taupe);
+      margin-top: 14px;
+      font-style: italic;
+    }
+
+    /* =============================================================
+       VIP SECTION
+    ============================================================= */
+    #vip { background: var(--taupe); }
+
+    #vip .label { color: rgba(225,198,183,.75); }
+    #vip .rule { background: linear-gradient(to right, var(--blush), transparent); }
+
+    .vip-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .vip-h {
+      font-size: clamp(24px, 3.2vw, 42px);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .vip-intro {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: rgba(255,255,255,.7);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .vip-hook {
+      font-size: 15px;
+      color: rgba(255,255,255,.85);
+      line-height: 1.95;
+      margin-bottom: 28px;
+    }
+
+    /* Two VIP tier cards */
+    .vip-tiers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .vip-tier {
+      background: rgba(0,0,0,.15);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 12px;
+      padding: 24px 22px;
+    }
+
+    .vip-tier.featured {
+      border-color: rgba(195,153,80,.35);
+      background: rgba(0,0,0,.2);
+    }
+
+    .tier-name {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .tier-price {
+      font-family: var(--f-display);
+      font-size: 28px; font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .tier-list {
+      list-style: none;
+      font-size: 13px;
+      color: rgba(255,255,255,.75);
+      line-height: 1.8;
+    }
+    .tier-list li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .tier-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 7px; height: 1px;
+      background: var(--blush);
+    }
+
+    .vip-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 13px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.8;
+    }
+
+    /* =============================================================
+       DAY 5 MASTERCLASS — premium featured
+    ============================================================= */
+    #masterclass {
+      background: var(--dark-brown);
+      text-align: center;
+    }
+
+    .masterclass-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .masterclass-badge {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold-light);
+      border: 1px solid rgba(195,153,80,.35);
+      border-radius: 20px;
+      padding: 6px 18px;
+      margin-bottom: 24px;
+    }
+
+    .masterclass-day {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: rgba(195,153,80,.6);
+      margin-bottom: 10px;
+    }
+
+    .masterclass-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .masterclass-h .script { color: var(--gold-light); font-size: 1.3em; }
+
+    .masterclass-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: rgba(255,255,255,.55);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .masterclass-body {
+      font-size: 15px;
+      color: rgba(255,255,255,.75);
+      line-height: 2;
+      margin-bottom: 32px;
+    }
+    .masterclass-body strong { color: var(--white); }
+
+    .masterclass-date {
+      font-family: var(--f-head);
+      font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      margin-top: 10px;
+    }
+
+    /* =============================================================
+       FINAL CLOSING
+    ============================================================= */
+    #closing {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .closing-inner { max-width: 600px; margin: 0 auto; }
+
+    .closing-leo {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 28px;
+      border: 2px solid rgba(178,121,49,.25);
+    }
+    .closing-leo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .closing-h {
+      font-size: clamp(22px, 3vw, 38px);
+      margin-bottom: 20px;
+    }
+
+    .closing-body {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+
+    .closing-note {
+      font-size: 13px;
+      color: var(--taupe);
+      font-style: italic;
+      margin-top: 12px;
+    }
+
+    /* =============================================================
+       FOOTER
+    ============================================================= */
+    footer {
+      background: var(--mocha);
+      padding: 52px var(--ph);
+      text-align: center;
+    }
+    .footer-name {
+      font-family: var(--f-serif);
+      font-size: 20px; font-weight: 500; font-style: italic;
+      color: var(--gold-light); margin-bottom: 8px;
+    }
+    .footer-tag {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,.4); margin-bottom: 24px;
+    }
+    .footer-links {
+      font-family: var(--f-head);
+      font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none; transition: opacity .2s;
+    }
+    .footer-links a:hover { opacity: 1; }
+
+    /* =============================================================
+       MOBILE
+    ============================================================= */
+    @media (max-width: 880px) {
+      :root { --pv: 64px; --ph: 24px; }
+
+      .hero-grid,
+      .recognition-grid,
+      .turning-grid,
+      .vip-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .days-grid { grid-template-columns: 1fr; }
+
+      .day-friday {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+      }
+      .friday-meta { display: none; }
+
+      .outcome-grid { grid-template-columns: 1fr; }
+      .vip-tiers { grid-template-columns: 1fr; }
+      .invitation-card { padding: 28px 20px; }
+
+      .hero-img-wrap::before,
+      .hero-img-wrap::after { display: none; }
+
+      .rec-label-block { text-align: left; }
+      .recognition-grid { direction: initial; }
+    }
+
+    @media (max-width: 560px) {
+      h1.hero-title { font-size: 30px; }
+      .hero-script { font-size: 58px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================= -->
+  <nav>
+    <div class="nav-in">
+      <a href="../index.html" class="nav-brand">
+        <span class="nav-brand-name">Remember Your Future™</span>
+      </a>
+      <a href="../index.html" class="nav-back">← Back to main page</a>
+      <a href="#invitation" class="nav-cta">Join Free — 18 May</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================= -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <div>
+          <p class="hero-eyebrow reveal">A 5-Day Live Experience with Leo Boxem</p>
+
+          <h1 class="hero-title reveal d1">The Mirror of</h1>
+          <span class="hero-script reveal d1">Meaning Week</span>
+
+          <p class="hero-week-label reveal d2">18 – 22 May 2026 &nbsp;·&nbsp; Free &nbsp;·&nbsp; Online</p>
+
+          <div class="hero-stanza reveal d2">
+            <p>Four days to prepare.<br>One moment to see clearly.</p>
+          </div>
+
+          <p class="hero-poem reveal d2">
+            <strong>You are standing at a crossroad.</strong>
+            And part of you already knows:<br>
+            Something needs to change.
+          </p>
+
+          <div class="reveal d3" style="margin-top: 28px;">
+            <p style="font-size: 14px; line-height: 1.85; color: var(--black); margin-bottom: 28px;">This is a guided threshold experience that leads to a decision of who you are, why you're here — and what your next natural step forward is.</p>
+            <a href="#invitation" class="btn btn-fill">Join the Mirror of Meaning Week — Free</a>
+          </div>
+
+          <p class="hero-tagline reveal d4">No pressure. No expectations. Just a space to look honestly at your life.</p>
+        </div>
+
+        <div class="hero-img-wrap reveal d2">
+          <div class="img-portrait">
+            <img src="../images/leo-professional-wild.jpg" alt="Leo Boxem">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RECOGNITION
+  ============================================================= -->
+  <section id="recognition">
+    <div class="wrap">
+      <div class="recognition-grid">
+
+        <div class="rec-label-block reveal">
+          <span class="label">You may recognize yourself</span>
+          <h2 class="section-h rec-heading" style="font-size: clamp(20px,2.5vw,30px);">Something in your life is asking to be<br><em style="font-family:var(--f-script); color:var(--gold); font-size:1.2em;">seen clearly.</em></h2>
+        </div>
+
+        <div>
+          <ul class="rec-list">
+            <li class="reveal">Something in your life no longer fits</li>
+            <li class="reveal d1">You feel a quiet tension between who you are and how you live</li>
+            <li class="reveal d2">You know you are capable of more</li>
+            <li class="reveal d3">You feel that time matters now</li>
+            <li class="reveal d4">You are standing at a crossroad</li>
+          </ul>
+
+          <div class="rec-closing reveal d4">
+            <p>And you know:<br><strong>you cannot keep going like this.</strong></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       REFRAME
+  ============================================================= -->
+  <section id="reframe">
+    <div class="wrap">
+      <div class="reframe-inner">
+
+        <span class="label reveal" style="text-align:center;">An important shift</span>
+        <span class="rule-center reveal"></span>
+
+        <div class="reframe-affirmation">
+          <p class="reframe-not reveal">This is not a breakdown.</p>
+          <p class="reframe-not reveal d1">This is not failure.</p>
+        </div>
+
+        <p class="reframe-is reveal d2" style="margin-top: 24px;">
+          This is what happens<br>
+          when a part of you is ready<br>
+          to be lived more honestly.
+        </p>
+
+        <span class="rule-center reveal d2"></span>
+
+        <div class="reframe-affirmation reveal d3">
+          <p style="font-family:var(--f-display); font-size:clamp(18px,2.2vw,26px); font-weight:700; color:var(--dark-brown);">You are not lost.</p>
+          <p style="font-family:var(--f-serif); font-style:italic; font-size:clamp(18px,2.2vw,26px); color:var(--rose);">You are in transition.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT THIS WEEK IS
+  ============================================================= -->
+  <section id="what">
+    <div class="wrap">
+      <div class="what-inner">
+
+        <span class="label reveal" style="text-align:center;">What This Week Is</span>
+        <h2 class="section-h what-h reveal d1">This is not another workshop.</h2>
+
+        <div class="what-body reveal d2">
+          <p>This is <strong>a guided preparation toward a moment of truth.</strong></p>
+          <p>Across five days, you will not just reflect.<br>
+          You will move toward a point where something becomes undeniable.</p>
+          <p>A moment where you stop postponing.<br>
+          And decide what matters now.</p>
+        </div>
+
+        <div class="what-coda reveal d3">
+          <p>This week builds toward one moment.<br>
+          <em>And that moment changes everything.</em></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WEEK STRUCTURE
+  ============================================================= -->
+  <section id="structure">
+    <div class="wrap">
+
+      <div class="structure-header">
+        <span class="label reveal" style="text-align:center;">The Journey</span>
+        <h2 class="section-h structure-h reveal d1">The Mirror of <span class="script">Meaning</span> Week</h2>
+        <p class="structure-sub reveal d2">This week builds toward one moment.</p>
+      </div>
+
+      <!-- Mon – Thu -->
+      <div class="days-grid">
+
+        <div class="day-card reveal">
+          <div class="day-meta">
+            <span class="day-num">Monday</span>
+            <span class="day-date">18 May</span>
+          </div>
+          <div class="day-theme">The Crossroad</div>
+          <p class="day-desc">Understand the in-between phase you are in. Why this moment is not the end — but a threshold.</p>
+          <p class="day-affirmation">"I am not lost. I am in transition."</p>
+        </div>
+
+        <div class="day-card reveal d1">
+          <div class="day-meta">
+            <span class="day-num">Tuesday</span>
+            <span class="day-date">19 May</span>
+          </div>
+          <div class="day-theme">The Misalignment</div>
+          <p class="day-desc">See clearly what no longer fits. Name it honestly, without drama or judgment.</p>
+          <p class="day-affirmation">"I see what is no longer aligned."</p>
+        </div>
+
+        <div class="day-card reveal d2">
+          <div class="day-meta">
+            <span class="day-num">Wednesday</span>
+            <span class="day-date">20 May</span>
+          </div>
+          <div class="day-theme">The Calling</div>
+          <p class="day-desc">Reconnect with what wants to emerge. The deeper truth that has been quietly asking for your attention.</p>
+          <p class="day-affirmation">"I feel the pull."</p>
+        </div>
+
+        <div class="day-card reveal d3">
+          <div class="day-meta">
+            <span class="day-num">Thursday</span>
+            <span class="day-date">21 May</span>
+          </div>
+          <div class="day-theme">The Courage</div>
+          <p class="day-desc">Prepare to choose yourself. This is the day you stop holding back and step toward what is true.</p>
+          <p class="day-affirmation">"I am ready to stop holding back."</p>
+        </div>
+
+      </div>
+
+      <!-- Friday — featured -->
+      <div class="day-friday reveal d4" style="margin-top: 16px;">
+        <div>
+          <span class="friday-badge">Masterclass Intensive</span>
+          <div class="friday-date">Friday 22 May 2026</div>
+          <div class="friday-theme">The Mirror of <span class="script">Meaning</span></div>
+          <p class="friday-desc">Stand before the mirror and decide what your life is asking of you now. This is where everything comes together — not more input, but a real moment of truth.</p>
+          <p class="friday-affirmation">"I see the life that is waiting for me."</p>
+        </div>
+        <div class="friday-meta">
+          <div class="friday-icon">V</div>
+          <div class="friday-tag">Day 5</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FULL-WIDTH IMAGE BREAK
+  ============================================================= -->
+  <div class="img-break">
+    <img src="../images/ibiza-path.jpg" alt="A path forward — Ibiza">
+  </div>
+
+
+  <!-- ============================================================
+       THE TURNING POINT
+  ============================================================= -->
+  <section id="turning">
+    <div class="wrap">
+      <div class="turning-grid">
+
+        <div>
+          <span class="label reveal">The Turning Point</span>
+          <h2 class="section-h turning-h reveal d1">
+            At certain moments in life,<br>
+            <em style="font-family:var(--f-script); color:var(--gold); font-size:1.2em;">something becomes undeniable.</em>
+          </h2>
+
+          <p class="turning-sub reveal d2">You see clearly what has been there all along.</p>
+
+          <p class="turning-you-see reveal d2">You see:</p>
+
+          <ul class="turning-list reveal d2">
+            <li>Where you adapted</li>
+            <li>Where you stayed silent</li>
+            <li>Where you stopped trusting yourself</li>
+          </ul>
+
+          <div class="turning-realize reveal d3">
+            "I cannot keep living half-aligned."
+          </div>
+
+          <p class="turning-closing reveal d3">
+            That moment is what I call: <em>The Mirror of Meaning.</em><br>
+            And once you see it — you cannot unsee it.
+          </p>
+        </div>
+
+        <div class="reveal d1">
+          <div class="img-portrait">
+            <img src="../images/ibiza-perfectly-imperfect.jpg" alt="Perfectly imperfect — a moment of honesty">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT HAPPENS INSIDE — dark
+  ============================================================= -->
+  <section id="inside">
+    <div class="wrap">
+
+      <span class="label reveal" style="text-align:center; display:block;">What Happens Inside</span>
+      <h2 class="inside-h reveal d1">During this 5-day experience</h2>
+      <p class="inside-sub reveal d1">You will:</p>
+
+      <ul class="inside-list">
+        <li class="reveal">
+          <span class="step-num">01</span>
+          <span>See clearly where your life no longer reflects who you are</span>
+        </li>
+        <li class="reveal d1">
+          <span class="step-num">02</span>
+          <span>Recognize the patterns that have kept you playing smaller</span>
+        </li>
+        <li class="reveal d2">
+          <span class="step-num">03</span>
+          <span>Reconnect with the part of you that already knows</span>
+        </li>
+        <li class="reveal d3">
+          <span class="step-num">04</span>
+          <span>Prepare to take a step that feels honest and aligned</span>
+        </li>
+      </ul>
+
+      <div class="inside-coda reveal d3">
+        <p class="inside-note">This is not about blowing up your life.</p>
+        <p class="inside-bold">It is about moving forward with <span class="script">honesty.</span></p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE LIONHEART MOMENT
+  ============================================================= -->
+  <section id="lionheart">
+    <div class="wrap">
+      <div class="lionheart-inner">
+
+        <span class="label reveal" style="text-align:center;">The Lionheart Moment</span>
+
+        <h2 class="section-h lionheart-h reveal d1">
+          Because insight alone is <span class="script">not enough.</span>
+        </h2>
+
+        <p class="lionheart-sub reveal d2">Change requires courage.</p>
+
+        <ul class="courage-list reveal d2">
+          <li>The courage to stop hiding</li>
+          <li>The courage to stop postponing</li>
+          <li>The courage to choose yourself</li>
+        </ul>
+
+        <span class="rule-center reveal"></span>
+
+        <p class="shift-note reveal d1">
+          This is the moment where many women feel something shift:
+        </p>
+
+        <div class="from-to-wrap reveal d2">
+          <div class="ft-col ft-left">
+            <div class="ft-header">From</div>
+            <div class="ft-item">hesitation</div>
+            <div class="ft-item">waiting</div>
+          </div>
+          <div class="ft-divider"></div>
+          <div class="ft-col ft-right">
+            <div class="ft-header">To</div>
+            <div class="ft-item">commitment</div>
+            <div class="ft-item">movement</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT YOU'LL WALK AWAY WITH
+  ============================================================= -->
+  <section id="walkaway">
+    <div class="wrap">
+
+      <span class="label reveal" style="text-align:center; display:block;">What You'll Walk Away With</span>
+      <h2 class="section-h walkaway-h reveal d1">After this experience, you will leave with</h2>
+
+      <div class="outcome-grid">
+
+        <div class="outcome-card reveal">
+          <div class="outcome-num">01</div>
+          <div class="outcome-text">Clarity about what is no longer aligned</div>
+        </div>
+
+        <div class="outcome-card reveal d1">
+          <div class="outcome-num">02</div>
+          <div class="outcome-text">A deeper trust in yourself</div>
+        </div>
+
+        <div class="outcome-card reveal d2">
+          <div class="outcome-num">03</div>
+          <div class="outcome-text">Language for the transition you are in</div>
+        </div>
+
+        <div class="outcome-card reveal d3">
+          <div class="outcome-num">04</div>
+          <div class="outcome-text">A clear sense of what your next step could be</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FREE INVITATION — first CTA
+  ============================================================= -->
+  <section id="invitation">
+    <div class="wrap">
+      <div class="invitation-inner">
+
+        <span class="label reveal" style="text-align:center; display:block;">Your Invitation</span>
+
+        <h2 class="section-h invitation-h reveal d1">
+          The Mirror of <span class="script">Meaning</span> Week
+        </h2>
+
+        <p class="invitation-event reveal d2">
+          18–22 May 2026 &nbsp;·&nbsp; Free &nbsp;·&nbsp; Live online
+        </p>
+
+        <div class="invitation-card reveal d2">
+          <p class="invitation-body">
+            You do not have to be ready.<br>
+            You only need to be willing<br>
+            to look honestly.
+          </p>
+
+          <!-- Replace # with your Circle registration link -->
+          <a href="#" class="btn btn-fill btn-block" style="font-size: 12px; padding: 18px 36px;">
+            Reserve My Spot — It's Free
+          </a>
+
+          <p class="invitation-note">No pressure. No obligations. Just a space to see clearly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       VIP SECTION
+  ============================================================= -->
+  <section id="vip">
+    <div class="wrap">
+      <div class="vip-grid">
+
+        <div>
+          <span class="label reveal">Go Deeper</span>
+          <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:var(--f-script); font-size:1.2em; color:var(--blush);">supports you.</em></h2>
+          <span class="rule reveal d1"></span>
+
+          <p class="vip-intro reveal d2">
+            Some women will attend.<br>
+            Some women will decide to truly meet themselves here.
+          </p>
+
+          <p class="vip-hook reveal d2">
+            If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
+          </p>
+
+          <div class="vip-tiers reveal d3">
+
+            <div class="vip-tier">
+              <div class="tier-name">VIP</div>
+              <div class="tier-price">€47</div>
+              <ul class="tier-list">
+                <li>All session recordings</li>
+                <li>Guided "Mirror of Meaning Moment" document</li>
+                <li>Deeper reflection &amp; integration tools</li>
+                <li>Access to the Living Your Truth space</li>
+                <li>The Daily Return (private audio guidance)</li>
+                <li>Your seat for the Friday Masterclass Intensive</li>
+              </ul>
+            </div>
+
+            <div class="vip-tier featured">
+              <div class="tier-name">Extended VIP</div>
+              <div class="tier-price">€147</div>
+              <ul class="tier-list">
+                <li>Everything in VIP</li>
+                <li style="margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,.08);">1 week of private access to Leo</li>
+                <li>Reflect, ask questions, and move forward with clarity</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Replace # with your Circle VIP payment link -->
+          <a href="#" class="btn btn-blush reveal d3">Upgrade to VIP</a>
+          <p class="vip-note reveal d3" style="margin-top: 14px;">Only if it feels right for you. You can decide now — or after joining the free week.</p>
+        </div>
+
+        <div class="reveal d2">
+          <div class="img-portrait">
+            <img src="../images/talk-to-leo-3-4.jpg" alt="Leo Boxem — personal guidance">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DAY 5 — MASTERCLASS INTENSIVE
+  ============================================================= -->
+  <section id="masterclass">
+    <div class="wrap">
+      <div class="masterclass-inner">
+
+        <div class="masterclass-badge reveal">Included with VIP</div>
+
+        <p class="masterclass-day reveal">Friday 22 May 2026 &nbsp;·&nbsp; Day 5</p>
+
+        <h2 class="masterclass-h reveal d1">
+          The Mirror of <span class="script">Meaning</span>
+        </h2>
+
+        <p class="masterclass-sub reveal d2">
+          Stand before the Mirror of Meaning —<br>
+          and recognize the life that is waiting for you.
+        </p>
+
+        <div class="masterclass-body reveal d2">
+          <p>Awaken the reason you're here.<br>
+          Identify your next authentic shift.</p>
+          <p>This is where everything comes together.<br>
+          <strong>Not more input. But a real moment of truth.</strong></p>
+        </div>
+
+        <a href="#" class="btn btn-gold reveal d3">Join as VIP — €47</a>
+
+        <p class="masterclass-date reveal d3">
+          Friday 22 May 2026 &nbsp;·&nbsp; Live on Zoom
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FINAL CLOSING
+  ============================================================= -->
+  <section id="closing">
+    <div class="wrap">
+      <div class="closing-inner">
+
+        <div class="closing-leo reveal">
+          <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
+        </div>
+
+        <h2 class="section-h closing-h reveal d1">
+          You are here<br>for a <span class="script">reason.</span>
+        </h2>
+
+        <p class="closing-body reveal d2">
+          And at certain moments in life,<br>
+          that reason becomes impossible to ignore.<br>
+          This may be one of those moments.
+        </p>
+
+        <!-- Replace # with your Circle registration link -->
+        <a href="#" class="btn btn-fill reveal d3" style="font-size: 12px; padding: 18px 40px;">
+          Join the Mirror of Meaning Week — Free
+        </a>
+
+        <p class="closing-note reveal d3">
+          18–22 May 2026 &nbsp;·&nbsp; Live online &nbsp;·&nbsp; No pressure. No expectations.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="../index.html">Back to main page</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+
+  <!-- ============================================================
+       SCROLL REVEAL
+  ============================================================= -->
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
