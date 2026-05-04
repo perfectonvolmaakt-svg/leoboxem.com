@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're in — Mirror of Meaning Masterclass Week · Remember Your Future™</title>
-  <meta name="description" content="You've joined the Mirror of Meaning Masterclass Week. See you 18–22 May 2026. Optional: go deeper with VIP access.">
+  <title>VIP Upgrade — Mirror of Meaning Masterclass Week · Remember Your Future™</title>
+  <meta name="description" content="Upgrade to VIP for the Mirror of Meaning Masterclass Week for the best experience and outcome.">
   <meta name="robots" content="noindex, nofollow">
 
   <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
@@ -52,9 +52,6 @@
       background: var(--cream);
     }
 
-    /* =============================================================
-       SHARED UTILITIES
-    ============================================================= */
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
@@ -119,7 +116,6 @@
     .btn-fill   { background: var(--red-brown); color: var(--white); border: 2px solid var(--red-brown); }
     .btn-gold   { background: var(--gold); color: var(--white); border: 2px solid var(--gold); }
     .btn-blush  { background: var(--blush); color: var(--dark-brown); border: 2px solid var(--blush); }
-    .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.4); }
     .btn-block  { display: block; width: 100%; }
 
     /* =============================================================
@@ -154,70 +150,27 @@
     .d4 { transition-delay: .52s; }
 
     /* =============================================================
-       CONFIRMATION / WELCOME
+       UPGRADE HEADER
     ============================================================= */
-    #confirm {
+    #upgrade-header {
       background: var(--cream);
       text-align: center;
-      padding-top: 72px;
-      padding-bottom: 0;
+      padding: 80px var(--ph) 0;
     }
 
-    .confirm-inner {
+    .upgrade-inner {
       max-width: 600px;
       margin: 0 auto;
-      padding: 0 var(--ph) 56px;
+      padding: 0 0 56px;
     }
 
-    .confirm-mark {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      background: rgba(178,121,49,.12);
-      border: 1.5px solid rgba(178,121,49,.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 22px;
-      font-size: 20px;
-    }
-
-    .confirm-h {
+    .upgrade-h {
       font-family: var(--f-display);
-      font-size: clamp(26px, 4vw, 48px);
+      font-size: clamp(24px, 3.8vw, 46px);
       font-weight: 700;
       color: var(--dark-brown);
-      line-height: 1.15;
+      line-height: 1.2;
       margin-bottom: 10px;
-    }
-
-    .confirm-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(14px, 1.7vw, 18px);
-      color: var(--rose);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .confirm-body {
-      font-size: 14px;
-      color: var(--taupe);
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
-
-    .confirm-details {
-      display: inline-block;
-      background: rgba(178,121,49,.08);
-      border: 1px solid rgba(178,121,49,.2);
-      border-radius: 10px;
-      padding: 14px 28px;
-      font-family: var(--f-head);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
     }
 
     /* "If you feel called to go deeper" transition */
@@ -264,7 +217,7 @@
     }
 
     /* =============================================================
-       VIP SECTION — primary offer
+       VIP SECTION
     ============================================================= */
     #vip { background: var(--taupe); }
 
@@ -284,7 +237,6 @@
       margin-bottom: 16px;
     }
 
-    /* Emphasized "Some women will decide" */
     .vip-decide {
       font-family: var(--f-serif);
       font-style: italic;
@@ -301,7 +253,6 @@
       margin-bottom: 32px;
     }
 
-    /* Masterclass callout inside VIP section */
     .vip-masterclass-callout {
       border-left: 2px solid rgba(195,153,80,.4);
       padding-left: 20px;
@@ -324,7 +275,6 @@
     }
     .callout-body strong { color: var(--white); }
 
-    /* VIP Offer Card */
     .vip-offer-card {
       background: rgba(0,0,0,.2);
       border: 1px solid rgba(195,153,80,.3);
@@ -394,7 +344,6 @@
       background: var(--gold-light);
     }
 
-    /* "Only if it feels right" note — bigger */
     .vip-note {
       font-family: var(--f-serif);
       font-style: italic;
@@ -403,30 +352,6 @@
       line-height: 1.8;
       margin-top: 12px;
       margin-bottom: 40px;
-    }
-
-    /* Extended VIP — secondary card */
-    .vip-extended-card {
-      background: rgba(0,0,0,.12);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 14px;
-      padding: 24px 28px;
-    }
-
-    .extended-label {
-      font-family: var(--f-head);
-      font-size: 9px; font-weight: 700;
-      letter-spacing: 0.28em; text-transform: uppercase;
-      color: rgba(225,198,183,.6);
-      margin-bottom: 8px;
-    }
-
-    .extended-hook {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(14px, 1.5vw, 17px);
-      color: rgba(255,255,255,.6);
-      margin-bottom: 14px;
     }
 
     /* =============================================================
@@ -504,21 +429,6 @@
       :root { --ph: 20px; --pv: 52px; }
     }
 
-    /* Tip bar */
-    .tip-bar {
-      background: rgba(178,121,49,.08);
-      border-bottom: 1px solid rgba(178,121,49,.15);
-      text-align: center;
-      padding: 10px var(--ph);
-      font-family: var(--f-head);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--taupe);
-    }
-    .tip-bar span { color: var(--gold); margin: 0 6px; }
-
     /* Full-width sea image break */
     .img-break-sea {
       width: 100%;
@@ -537,39 +447,16 @@
 <body>
 
 
-  <!-- Tip bar -->
-  <div class="tip-bar">
-    <span>1.</span> Check your email for details &nbsp;&nbsp;
-    <span>2.</span> Add the event to your calendar
-  </div>
-
   <!-- ============================================================
-       CONFIRMATION — WELCOME
+       UPGRADE HEADER
   ============================================================= -->
-  <section id="confirm">
-    <div class="confirm-inner">
+  <section id="upgrade-header">
+    <div class="upgrade-inner">
 
-      <div class="confirm-mark reveal">✓</div>
-
-      <h1 class="confirm-h reveal d1">
-        You are in.<br><span class="script" style="color: var(--rose);">See you there.</span>
+      <h1 class="upgrade-h reveal">
+        Are you ready for a VIP upgrade<br>
+        <span class="script" style="color: var(--rose);">for the best experience and outcome?</span>
       </h1>
-
-      <p class="confirm-sub reveal d2">
-        The Mirror of Meaning Masterclass Week<br>
-        18–22 May 2026 · Live online
-      </p>
-
-      <p class="confirm-body reveal d2">
-        Check your inbox — your confirmation is on its way.<br>
-        <a href="https://www.addevent.com/calendar/Wm648938" style="color:var(--gold); text-decoration:none; font-weight:600;">Click here to add all sessions to your calendar</a> (includes the link to join).
-      </p>
-
-      <div class="confirm-details reveal d3">
-        18–22 May 2026 &nbsp;·&nbsp; Monday through Friday &nbsp;·&nbsp; Live on Zoom
-      </div>
-
-      <a href="https://www.leoboxem.com/mirror-of-meaning-final-thank-you" class="reveal d4" style="display:inline-block; margin-top:24px; font-family:var(--f-head); font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--taupe); text-decoration:none; border-bottom:1px solid rgba(140,117,106,.3); padding-bottom:2px;">No thanks. I am fine with the basic Masterclass Week.</a>
 
     </div>
   </section>
@@ -611,7 +498,6 @@
             If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
           </p>
 
-          <!-- What Friday is: the WHY for the VIP upgrade -->
           <div class="vip-masterclass-callout reveal d2">
             <p class="callout-sub">
               Stand before the Mirror of Meaning —<br>
@@ -625,7 +511,6 @@
             </div>
           </div>
 
-          <!-- VIP PRIMARY OFFER -->
           <div class="vip-offer-card reveal d3">
             <div class="vip-offer-label">VIP Upgrade — Friday 22 May 2026</div>
             <div class="vip-price-row">
@@ -733,9 +618,6 @@
   </footer>
 
 
-  <!-- ============================================================
-       SCROLL REVEAL
-  ============================================================= -->
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); observer.unobserve(e.target); } });
