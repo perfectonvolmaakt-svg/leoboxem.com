@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
   <style>
     /* =============================================================
@@ -33,7 +33,7 @@
       --f-head:    'League Spartan', sans-serif;
       --f-serif:   'Playfair Display', Georgia, serif;
       --f-body:    'Montserrat', sans-serif;
-      --f-script:  'Great Vibes', cursive;
+      --f-script:  'Playfair Display', Georgia, serif;
       --f-display: 'Outfit', sans-serif;
 
       --max: 1100px;
@@ -121,7 +121,7 @@
       letter-spacing: -0.01em;
     }
 
-    .script { font-family: var(--f-script); color: var(--gold); }
+    .script { font-family: var(--f-script); font-style: italic; font-weight: 500; color: var(--gold); }
 
     /* =============================================================
        BUTTONS
@@ -258,6 +258,8 @@
 
     .hero-script {
       font-family: var(--f-script);
+      font-style: italic;
+      font-weight: 500;
       font-size: clamp(54px, 7.5vw, 100px);
       color: var(--gold);
       line-height: 1.05;
@@ -677,6 +679,8 @@
 
     .friday-icon {
       font-family: var(--f-script);
+      font-style: italic;
+      font-weight: 500;
       font-size: 64px;
       color: var(--gold);
       opacity: .45;
@@ -1370,7 +1374,7 @@
 
         <div class="rec-label-block reveal">
           <span class="label">You may recognize yourself</span>
-          <h2 class="section-h rec-heading" style="font-size: clamp(20px,2.5vw,30px);">Something in your life is asking to be<br><em style="font-family:var(--f-script); color:var(--gold); font-size:1.2em;">seen clearly.</em></h2>
+          <h2 class="section-h rec-heading" style="font-size: clamp(20px,2.5vw,30px);">Something in your life is asking to be<br><em style="font-family:var(--f-script); font-style:italic; font-weight:500; color:var(--gold); font-size:1.2em;">seen clearly.</em></h2>
         </div>
 
         <div>
@@ -1552,7 +1556,7 @@
           <span class="label reveal">The Turning Point</span>
           <h2 class="section-h turning-h reveal d1">
             At certain moments in life,<br>
-            <em style="font-family:var(--f-script); color:var(--gold); font-size:1.2em;">something becomes undeniable.</em>
+            <em style="font-family:var(--f-script); font-style:italic; font-weight:500; color:var(--gold); font-size:1.2em;">something becomes undeniable.</em>
           </h2>
 
           <p class="turning-sub reveal d2">You see clearly what has been there all along.</p>
