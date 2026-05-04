@@ -351,7 +351,7 @@
     /* =============================================================
        RECOGNITION
     ============================================================= */
-    #recognition { background: #f0e9e5; }
+    #recognition { background: var(--blush); }
 
     .recognition-grid {
       display: grid;
@@ -1482,23 +1482,6 @@
 
 
   <!-- ============================================================
-       ABOUT LEO
-  ============================================================= -->
-  <section id="about-leo">
-    <div class="about-leo-inner">
-      <div>
-        <p class="about-label reveal">Your guide this week</p>
-        <p class="about-name reveal d1">Leo Boxem</p>
-        <p class="about-bio reveal d2">Twelve years ago I was diagnosed with leukemia. In that moment it became clear: I had not yet lived the life I was here to live. That realization became the foundation of everything I do. I guide women through the moments where something in life is asking to be lived more honestly — not through pressure, but through clarity.</p>
-      </div>
-      <div class="about-leo-photo reveal d2">
-        <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
        RECOGNITION
   ============================================================= -->
   <section id="recognition">
@@ -1525,6 +1508,12 @@
         </div>
 
       </div>
+
+      <blockquote class="rec-testimonial reveal d4" style="margin-top:40px; padding-top:32px; border-top:1px solid rgba(141,66,21,.15); font-family:var(--f-serif); font-style:italic; font-size:clamp(14px,1.5vw,17px); color:var(--dark-brown); line-height:1.85; max-width:700px;">
+        <p style="margin-bottom:10px;">"Surrender to her drive, knowledge, and skills. Success guaranteed! Fearless and very passionate, Leontine manages to provide each participant with insight, transformation and joy."</p>
+        <footer style="font-family:var(--f-head); font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--rose); font-style:normal;">— S. Kock</footer>
+      </blockquote>
+
     </div>
   </section>
 
@@ -1591,6 +1580,40 @@
 
 
   <!-- ============================================================
+       YOU ARE HERE FOR A REASON
+  ============================================================= -->
+  <section id="closing">
+    <div class="wrap">
+      <div class="closing-inner">
+
+        <div class="closing-leo reveal">
+          <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
+        </div>
+
+        <h2 class="section-h closing-h reveal d1">
+          You are here<br>for a <span class="script">reason.</span>
+        </h2>
+
+        <p class="closing-body reveal d2">
+          And at certain moments in life,<br>
+          that reason becomes impossible to ignore.<br>
+          This may be one of those moments.
+        </p>
+
+        <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-masterclass-week" class="btn btn-fill reveal d3" style="font-size: 12px; padding: 18px 40px;">
+          Join the Mirror of Meaning Masterclass Week — Only €1
+        </a>
+
+        <p class="closing-note reveal d3">
+          18–22 May 2026 &nbsp;·&nbsp; Live online &nbsp;·&nbsp; No pressure. No expectations.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        WEEK STRUCTURE
   ============================================================= -->
   <section id="structure">
@@ -1612,7 +1635,7 @@
           </div>
           <div class="day-time">10:30 CET &nbsp;·&nbsp; 9:30 AM UK</div>
           <div class="day-tag">The Crossroad</div>
-          <div class="day-topic">How to get clarity on your purpose — and the power of the in-between phase</div>
+          <div class="day-topic">Get Clarity on Your Purpose &amp; The Power of the In-Between Phase</div>
           <p class="day-desc">Understand the in-between. Breakthrough vs breakdown. Your 4-part Remember Your Future™ path — from stuck to worth living.</p>
           <p class="day-affirmation">"I am not lost. I am in transition."</p>
         </div>
@@ -1814,6 +1837,23 @@
 
 
   <!-- ============================================================
+       ABOUT LEO
+  ============================================================= -->
+  <section id="about-leo">
+    <div class="about-leo-inner">
+      <div>
+        <p class="about-label reveal">Your guide this week</p>
+        <p class="about-name reveal d1">Leo Boxem</p>
+        <p class="about-bio reveal d2">Twelve years ago I was diagnosed with leukemia. In that moment it became clear: I had not yet lived the life I was here to live. That realization became the foundation of everything I do. I guide women through the moments where something in life is asking to be lived more honestly — not through pressure, but through clarity.</p>
+      </div>
+      <div class="about-leo-photo reveal d2">
+        <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        WHAT YOU'LL WALK AWAY WITH
   ============================================================= -->
   <section id="walkaway">
@@ -1841,7 +1881,17 @@
 
         <div class="outcome-card reveal d3">
           <div class="outcome-num">04</div>
+          <div class="outcome-text">A roadmap from being stuck on the crossroad, towards creating your own Purpose &amp; Legacy™</div>
+        </div>
+
+        <div class="outcome-card reveal d4">
+          <div class="outcome-num">05</div>
           <div class="outcome-text">A clear sense of what your next step could be</div>
+        </div>
+
+        <div class="outcome-card reveal d4">
+          <div class="outcome-num">06</div>
+          <div class="outcome-text">An understanding of what it means to 'Remember' your future (and purpose)</div>
         </div>
 
       </div>
@@ -1857,6 +1907,7 @@
 
       <div class="testimonials-label reveal">
         <span class="label" style="display:inline-block;">What women say</span>
+        <p style="font-family:var(--f-serif); font-style:italic; font-size:clamp(16px,1.8vw,22px); color:var(--rose); margin-top:8px;">Don't take my word for it.</p>
       </div>
 
       <div class="testimonials-grid">
@@ -1922,40 +1973,6 @@
   </section>
 
 
-
-
-  <!-- ============================================================
-       FINAL CLOSING
-  ============================================================= -->
-  <section id="closing">
-    <div class="wrap">
-      <div class="closing-inner">
-
-        <div class="closing-leo reveal">
-          <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
-        </div>
-
-        <h2 class="section-h closing-h reveal d1">
-          You are here<br>for a <span class="script">reason.</span>
-        </h2>
-
-        <p class="closing-body reveal d2">
-          And at certain moments in life,<br>
-          that reason becomes impossible to ignore.<br>
-          This may be one of those moments.
-        </p>
-
-        <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-masterclass-week" class="btn btn-fill reveal d3" style="font-size: 12px; padding: 18px 40px;">
-          Join the Mirror of Meaning Masterclass Week — Only €1
-        </a>
-
-        <p class="closing-note reveal d3">
-          18–22 May 2026 &nbsp;·&nbsp; Live online &nbsp;·&nbsp; No pressure. No expectations.
-        </p>
-
-      </div>
-    </div>
-  </section>
 
 
   <!-- ============================================================
