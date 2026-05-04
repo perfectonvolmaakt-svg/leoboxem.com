@@ -1266,6 +1266,50 @@
     }
 
     /* =============================================================
+       TESTIMONIALS
+    ============================================================= */
+    #testimonials {
+      background: var(--white);
+    }
+
+    .testimonials-label { text-align: center; margin-bottom: 48px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: var(--cream);
+      border: 1px solid rgba(178,121,49,.12);
+      border-radius: 14px;
+      padding: 28px 28px 22px;
+    }
+
+    .testimonial-quote {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: var(--dark-brown);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after  { content: '\201D'; }
+
+    .testimonial-name {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    @media (max-width: 660px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================================
        FINAL CLOSING
     ============================================================= */
     #closing {
@@ -1798,6 +1842,43 @@
         <div class="outcome-card reveal d3">
           <div class="outcome-num">04</div>
           <div class="outcome-text">A clear sense of what your next step could be</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================= -->
+  <section id="testimonials">
+    <div class="wrap">
+
+      <div class="testimonials-label reveal">
+        <span class="label" style="display:inline-block;">What women say</span>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">I cannot express how valuable Leo's presence has been in my life over the past year. You keep reminding me to follow my own path.</p>
+          <p class="testimonial-name">Marloes</p>
+        </div>
+
+        <div class="testimonial-card reveal d1">
+          <p class="testimonial-quote">Leontine helps you see the bigger picture of who you are. She makes you realize the true extent of your greatness, and shows you where you're stopping yourself from manifesting it right now.</p>
+          <p class="testimonial-name">Flor</p>
+        </div>
+
+        <div class="testimonial-card reveal d2">
+          <p class="testimonial-quote">Working with Leontine brings me into fast track personal, leadership and business development…</p>
+          <p class="testimonial-name">Nadine</p>
+        </div>
+
+        <div class="testimonial-card reveal d3">
+          <p class="testimonial-quote">Leontine's guidance is pure, precise and focused on my success.</p>
+          <p class="testimonial-name">Annelieke</p>
         </div>
 
       </div>
