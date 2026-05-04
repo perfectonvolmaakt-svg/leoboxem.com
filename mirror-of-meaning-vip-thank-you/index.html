@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're in as VIP — Mirror of Meaning · Remember Your Future™</title>
+  <meta name="description" content="You've upgraded to VIP for the Mirror of Meaning Masterclass Week. Check your email for everything you need.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #b27931;
+      --gold-light: #c39950;
+      --taupe:      #8c756a;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:    'League Spartan', sans-serif;
+      --f-serif:   'Playfair Display', Georgia, serif;
+      --f-body:    'Montserrat', sans-serif;
+      --f-script:  'Playfair Display', Georgia, serif;
+      --f-display: 'Outfit', sans-serif;
+
+      --ph: 48px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+    }
+
+    /* =============================================================
+       SCROLL REVEAL
+    ============================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: .12s; }
+    .d2 { transition-delay: .26s; }
+    .d3 { transition-delay: .42s; }
+
+    /* =============================================================
+       MAIN
+    ============================================================= */
+    .page-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 72px var(--ph) 48px;
+      text-align: center;
+    }
+
+    .vip-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(178,121,49,.12);
+      border: 1.5px solid rgba(178,121,49,.35);
+      font-size: 22px;
+      margin-bottom: 28px;
+    }
+
+    .vip-label {
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .vip-h {
+      font-family: var(--f-display);
+      font-size: clamp(28px, 4.5vw, 56px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .vip-script {
+      font-family: var(--f-script);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.2em;
+      color: var(--rose);
+    }
+
+    .vip-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.8vw, 20px);
+      color: var(--rose);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .vip-body {
+      font-size: 15px;
+      color: var(--taupe);
+      line-height: 1.9;
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+
+    /* Three steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 480px;
+      width: 100%;
+      margin-bottom: 48px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      text-align: left;
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.14);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .step-num {
+      font-family: var(--f-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: rgba(178,121,49,.25);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 32px;
+      padding-top: 2px;
+    }
+
+    .step-text {
+      font-size: 15px;
+      color: var(--dark-brown);
+      line-height: 1.7;
+    }
+
+    .step-text strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .step-text a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .step-text a:hover { opacity: .75; }
+
+    /* Full-width sea image */
+    .img-break-sea {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+    }
+    .img-break-sea img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--mocha);
+      color: rgba(253,247,245,.55);
+      text-align: center;
+      padding: 40px var(--ph);
+      font-size: 12px;
+      line-height: 2;
+    }
+    footer a { color: rgba(253,247,245,.55); text-decoration: none; }
+    footer a:hover { color: var(--blush); }
+    .footer-name {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+    .footer-tag { font-style: italic; margin-bottom: 10px; }
+
+    @media (max-width: 600px) {
+      :root { --ph: 24px; }
+      .vip-mark { width: 52px; height: 52px; font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <div class="vip-mark reveal">✓</div>
+
+    <p class="vip-label reveal d1">VIP — Mirror of Meaning Masterclass Week</p>
+
+    <h1 class="vip-h reveal d1">
+      You are in.<br>
+      <span class="vip-script">See you Friday.</span>
+    </h1>
+
+    <p class="vip-sub reveal d2">Friday 22 May 2026 &nbsp;·&nbsp; Masterclass Intensive &nbsp;·&nbsp; Live on Zoom</p>
+
+    <p class="vip-body reveal d2">
+      Everything you need is in your inbox. Here's what to do next:
+    </p>
+
+    <div class="steps">
+
+      <div class="step reveal d2">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Check your email</strong>
+          Your VIP confirmation with all details and access links is on its way.
+        </div>
+      </div>
+
+      <div class="step reveal d2">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Add the event to your calendar</strong>
+          Monday 18 – Friday 22 May 2026. Block Friday morning especially — that's your Masterclass Intensive.
+        </div>
+      </div>
+
+      <div class="step reveal d3">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Come say hello in the community</strong>
+          Join the Mirror of Meaning space for early access and to connect before we start.<br>
+          <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-extended-vip-upgrade">Join the community →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Full-width sea image -->
+  <div class="img-break-sea">
+    <img src="../images/ibiza-sea.jpg" alt="Ibiza sea">
+  </div>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p>
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="../mirror-of-meaning-week/index.html">Back to week page</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
