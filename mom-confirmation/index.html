@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're in — Mirror of Meaning Masterclass Week</title>
+  <meta name="description" content="You're registered for the Mirror of Meaning Masterclass Week. Here's everything you need to get set up.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #b27931;
+      --gold-light: #c39950;
+      --taupe:      #8c756a;
+      --white:      #ffffff;
+      --ph:         40px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--dark-brown);
+      background: var(--cream);
+    }
+
+    /* ── HERO ─────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 52px var(--ph) 36px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-sub {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(15px, 2vw, 19px);
+      font-weight: 500;
+      color: var(--taupe);
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .hero-cta {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(26px, 5vw, 50px);
+      font-weight: 900;
+      color: var(--dark-brown);
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 28px auto 0;
+      border-radius: 2px;
+      opacity: .5;
+    }
+
+    /* ── GRID ─────────────────────────────────── */
+    .grid-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 44px var(--ph) 0;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* ── STEP CARD ────────────────────────────── */
+    .step {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.14);
+      border-radius: 14px;
+      padding: 28px 26px 26px;
+    }
+
+    .step-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(178,121,49,.15);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dark-brown);
+      margin-bottom: 10px;
+    }
+
+    .step-body {
+      font-size: 13px;
+      color: var(--taupe);
+      line-height: 1.85;
+    }
+
+    .step-body a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .step-body a:hover { opacity: .75; }
+
+    .step-body ul {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+    .step-body li { margin-bottom: 3px; }
+
+    /* ── STEP 7 — full width ──────────────────── */
+    .step-full {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.14);
+      border-radius: 14px;
+      padding: 28px 32px 26px;
+      margin-top: 20px;
+    }
+
+    .step-full .step-num {
+      flex-shrink: 0;
+    }
+
+    /* ── CLOSING ──────────────────────────────── */
+    .closing {
+      text-align: center;
+      padding: 56px var(--ph) 64px;
+      font-size: 16px;
+      line-height: 2;
+      color: var(--dark-brown);
+    }
+
+    /* ── FOOTER ───────────────────────────────── */
+    footer {
+      background: var(--mocha);
+      color: rgba(253,247,245,.55);
+      text-align: center;
+      padding: 40px var(--ph);
+      font-size: 12px;
+      line-height: 2;
+    }
+    footer a { color: rgba(253,247,245,.55); text-decoration: none; }
+    footer a:hover { color: var(--blush); }
+    .footer-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+    .footer-tag { font-style: italic; margin-bottom: 10px; }
+
+    @media (max-width: 640px) {
+      :root { --ph: 20px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .step-full { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-sub">
+      You are in!<br>
+      Looking forward to spending time together soon!
+    </p>
+    <h1 class="hero-cta">To get access to<br>the Masterclass Week!</h1>
+    <div class="hero-divider"></div>
+  </div>
+
+
+  <!-- STEPS 1–6 in 2×3 grid -->
+  <div class="grid-wrap">
+    <div class="steps-grid">
+
+      <!-- 1 -->
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Click the link to 'Access Community' in the email</div>
+        <div class="step-body">
+          Go to your email and click the link <strong>'Access Community'</strong>.<br>
+          (If needed check your spam box — the sender is <em>'Leo's Community'</em>)<br><br>
+          Without this step you have <strong>NO access</strong> — it only takes a few seconds, and then you will benefit from it! Use the same email address you used while purchasing your ticket.<br><br>
+          Choose your password. And complete your profile (keep it simple, but do it).<br><br>
+          → You can have a look inside the 🔴 <strong>'MoM' Community</strong> already, or come back later.
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Add to your calendar</div>
+        <div class="step-body">
+          <a href="https://www.addevent.com/calendar/Wm648938">Click here to add all dates to your own calendar</a> — to not miss anything we do 18–22 May.
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Get your bonuses!</div>
+        <div class="step-body">
+          Access your <strong>POWERFUL BONUSES</strong> in case you upgraded as a VIP.<br>
+          Once you are inside the Mirror of Meaning Community, click on the left menu to access:
+          <ul>
+            <li>The private client-only podcast <em>The Daily Return</em></li>
+            <li>The Living Your Truth Community and program, your personal Mirror of Meaning Clarity document, and more...</li>
+          </ul>
+          <br>
+          <em>(...and if you have not already, consider <a href="https://www.leoboxem.com/mom-vip-upgrade">upgrading to VIP</a> to have the most intimate and empowering experience — including the Masterclass Intensive deep dive on Friday, 22 May! OHHHH and get POWERFUL BONUSES as well! Like the private client-only podcast The Daily Return, access to the Living Your Truth Community and program, your personal Mirror of Meaning Clarity document, and much more masterclass magic...)</em>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Look around in the Mirror of Meaning Community space</div>
+        <div class="step-body">
+          In the left menu you see 🔴 <strong>'MoM' Community</strong>:
+          <ul>
+            <li>This is a safe space for connection, support and sharing the joy.</li>
+            <li>The Masterclass sessions will be announced here.</li>
+            <li>Resources will be shared and replays will be hosted here as well.</li>
+          </ul>
+          <br>
+          Start by introducing yourself (simple: where do you live, what do you hope for?)
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-title">Share the love</div>
+        <div class="step-body">
+          Share the Masterclass Week with your friends and colleagues — by sharing this link:<br><br>
+          <a href="https://www.leoboxem.com/mirror-of-meaning-week">www.leoboxem.com/mirror-of-meaning-week</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-title">Most important: Relax!</div>
+        <div class="step-body">
+          After you've set yourself up (above steps): No other preparation is needed! You <strong>ONLY</strong> have to show up live (or catch the replay).<br><br>
+          Get ready to enjoy your experience.<br><br>
+          In our space there is no 'behind' — you do this for yourself, and however you can show up, that is fine!
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 7 — full width -->
+    <div class="step-full">
+      <div class="step-num">7</div>
+      <div>
+        <div class="step-title">Ask for support if needed</div>
+        <div class="step-body">
+          Ask it inside the community (tag me with <strong>@leoboxem</strong>)<br>
+          or send us an email to <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <p>Exciting to move forward together!</p>
+    <p style="margin-top: 20px;">Love,<br>Leo 🦁</p>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p>
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
