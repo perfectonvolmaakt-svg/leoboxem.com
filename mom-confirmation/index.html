@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're in — Mirror of Meaning Masterclass Week</title>
-  <meta name="description" content="You're registered for the Mirror of Meaning Masterclass Week. Here's everything you need to get set up.">
+  <title>You're in — Mirror of Meaning Masterclass Week · Remember Your Future™</title>
+  <meta name="description" content="You've joined the Mirror of Meaning Masterclass Week. Here's everything you need to get access.">
   <meta name="robots" content="noindex, nofollow">
 
   <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,28 +25,94 @@
       --gold:       #b27931;
       --gold-light: #c39950;
       --taupe:      #8c756a;
+      --black:      #1a1a1a;
       --white:      #ffffff;
-      --ph:         40px;
+
+      --f-head:    'League Spartan', sans-serif;
+      --f-serif:   'Playfair Display', Georgia, serif;
+      --f-body:    'Montserrat', sans-serif;
+      --f-display: 'Outfit', sans-serif;
+
+      --max: 1100px;
+      --pv:  96px;
+      --ph:  48px;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      line-height: 1.85;
-      color: var(--dark-brown);
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
       background: var(--cream);
     }
 
-    /* ── HERO ─────────────────────────────────── */
+    /* ── SCROLL REVEAL ─────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .22s; }
+    .d3 { transition-delay: .38s; }
+    .d4 { transition-delay: .52s; }
+
+    /* ── SHARED UTILITIES ──────────────────────── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: var(--pv) var(--ph); }
+
+    .label {
+      display: block;
+      font-family: var(--f-head);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .rule {
+      display: block;
+      width: 48px; height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin: 16px 0 28px;
+    }
+    .section-h {
+      font-family: var(--f-display);
+      font-size: clamp(24px, 3.2vw, 46px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.15;
+    }
+
+    /* ── BUTTONS ───────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      text-decoration: none; text-align: center;
+      border-radius: 4px;
+      padding: 16px 36px;
+      line-height: 1.5;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
+    .btn-fill  { background: var(--red-brown); color: var(--white); border: 2px solid var(--red-brown); }
+    .btn-gold  { background: var(--gold); color: var(--white); border: 2px solid var(--gold); }
+    .btn-block { display: block; width: 100%; }
+
+    /* ── HERO ──────────────────────────────────── */
     .hero {
       text-align: center;
       padding: 52px var(--ph) 36px;
-      max-width: 760px;
+      max-width: 680px;
       margin: 0 auto;
     }
 
     .hero-sub {
-      font-family: 'Outfit', sans-serif;
+      font-family: var(--f-display);
       font-size: clamp(15px, 2vw, 19px);
       font-weight: 500;
       color: var(--taupe);
@@ -55,7 +121,7 @@
     }
 
     .hero-cta {
-      font-family: 'Outfit', sans-serif;
+      font-family: var(--f-display);
       font-size: clamp(26px, 5vw, 50px);
       font-weight: 900;
       color: var(--dark-brown);
@@ -65,240 +131,473 @@
     }
 
     .hero-divider {
-      width: 48px;
-      height: 2px;
+      width: 48px; height: 2px;
       background: var(--gold);
       margin: 28px auto 0;
       border-radius: 2px;
       opacity: .5;
     }
 
-    /* ── GRID ─────────────────────────────────── */
-    .grid-wrap {
-      max-width: 960px;
+    /* ── ACTION BOXES ──────────────────────────── */
+    .action-wrap {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 44px var(--ph) 0;
+      padding: 36px var(--ph) 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .steps-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    /* ── STEP CARD ────────────────────────────── */
-    .step {
+    .action-box {
       background: var(--white);
-      border: 1px solid rgba(178,121,49,.14);
+      border: 1px solid rgba(178,121,49,.16);
       border-radius: 14px;
-      padding: 28px 26px 26px;
+      padding: 28px 32px;
     }
 
-    .step-num {
-      font-family: 'Outfit', sans-serif;
-      font-size: 72px;
-      font-weight: 900;
-      color: rgba(178,121,49,.15);
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .step-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+    .action-box-title {
+      font-family: var(--f-display);
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--dark-brown);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .step-body {
-      font-size: 13px;
+    .action-box-body {
+      font-size: 14px;
       color: var(--taupe);
       line-height: 1.85;
     }
 
-    .step-body a {
+    .action-box-body a {
       color: var(--gold);
       font-weight: 600;
       text-decoration: none;
     }
-    .step-body a:hover { opacity: .75; }
+    .action-box-body a:hover { opacity: .75; }
 
-    .step-body ul {
-      padding-left: 18px;
-      margin: 6px 0;
-    }
-    .step-body li { margin-bottom: 3px; }
-
-    /* ── STEP 7 — full width ──────────────────── */
-    .step-full {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      background: var(--white);
-      border: 1px solid rgba(178,121,49,.14);
-      border-radius: 14px;
-      padding: 28px 32px 26px;
-      margin-top: 20px;
-    }
-
-    .step-full .step-num {
-      flex-shrink: 0;
-    }
-
-    /* ── CLOSING ──────────────────────────────── */
-    .closing {
+    /* ── "GO DEEPER" TRANSITION ────────────────── */
+    .confirm-deeper-wrap {
+      background: var(--blush);
       text-align: center;
-      padding: 56px var(--ph) 64px;
-      font-size: 16px;
-      line-height: 2;
+      padding: 56px var(--ph);
+      margin-top: 56px;
+    }
+    .confirm-deeper-inner { max-width: 600px; margin: 0 auto; }
+
+    .confirm-deeper {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(20px, 2.8vw, 32px);
       color: var(--dark-brown);
+      line-height: 1.5;
+      margin-bottom: 20px;
     }
 
-    /* ── FOOTER ───────────────────────────────── */
+    .confirm-divider-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .confirm-divider-line::before,
+    .confirm-divider-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(141,66,21,.2);
+    }
+    .confirm-divider-label {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--red-brown);
+      opacity: .7;
+      white-space: nowrap;
+    }
+
+    /* ── VIP SECTION ───────────────────────────── */
+    #vip { background: var(--taupe); }
+    #vip .label { color: var(--white); font-size: 18px; letter-spacing: 0.18em; }
+    #vip .rule  { background: linear-gradient(to right, var(--blush), transparent); }
+
+    .vip-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .vip-h {
+      font-size: clamp(24px, 3.2vw, 42px);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .vip-decide {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--blush);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .vip-hook {
+      font-size: 15px;
+      color: rgba(255,255,255,.8);
+      line-height: 1.95;
+      margin-bottom: 32px;
+    }
+
+    .vip-masterclass-callout {
+      border-left: 2px solid rgba(195,153,80,.4);
+      padding-left: 20px;
+      margin-bottom: 32px;
+    }
+
+    .callout-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.8vw, 20px);
+      color: var(--blush);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .callout-body {
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: rgba(255,255,255,.7);
+      line-height: 2;
+    }
+    .callout-body strong { color: var(--white); }
+
+    .vip-offer-card {
+      background: rgba(0,0,0,.2);
+      border: 1px solid rgba(195,153,80,.3);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    .vip-offer-label {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .vip-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .price-was {
+      font-family: var(--f-display);
+      font-size: 20px; font-weight: 600;
+      color: rgba(255,255,255,.35);
+      text-decoration: line-through;
+    }
+    .price-now {
+      font-family: var(--f-display);
+      font-size: 38px; font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .price-badge {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      background: var(--gold);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 4px 10px;
+    }
+
+    .tier-list {
+      list-style: none;
+      font-size: 13px;
+      color: rgba(255,255,255,.8);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .tier-list li {
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+    .tier-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 8px; height: 1.5px;
+      background: var(--gold-light);
+    }
+
+    .vip-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+      margin-top: 12px;
+      margin-bottom: 40px;
+    }
+
+    /* ── IMAGE ─────────────────────────────────── */
+    .img-portrait {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .img-portrait img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    /* ── TESTIMONIALS ──────────────────────────── */
+    #testimonials { background: var(--cream); }
+
+    .testimonials-label { text-align: center; margin-bottom: 48px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.12);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+    }
+
+    .testimonial-quote {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: var(--dark-brown);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after  { content: '\201D'; }
+
+    .testimonial-name {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── SEA IMAGE ─────────────────────────────── */
+    .img-break-sea {
+      width: 100%; height: 340px;
+      overflow: hidden;
+    }
+    .img-break-sea img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      display: block;
+    }
+
+    /* ── FOOTER ────────────────────────────────── */
     footer {
       background: var(--mocha);
       color: rgba(253,247,245,.55);
       text-align: center;
-      padding: 40px var(--ph);
+      padding: 44px var(--ph);
       font-size: 12px;
       line-height: 2;
     }
     footer a { color: rgba(253,247,245,.55); text-decoration: none; }
     footer a:hover { color: var(--blush); }
     .footer-name {
-      font-family: 'Outfit', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--gold-light);
       margin-bottom: 4px;
     }
-    .footer-tag { font-style: italic; margin-bottom: 10px; }
+    .footer-tag { font-style: italic; margin-bottom: 12px; }
 
-    @media (max-width: 640px) {
-      :root { --ph: 20px; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .step-full { flex-direction: column; gap: 0; }
+    /* ── RESPONSIVE ────────────────────────────── */
+    @media (max-width: 860px) {
+      :root { --ph: 28px; --pv: 64px; }
+      .vip-grid { grid-template-columns: 1fr; gap: 40px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      :root { --ph: 20px; --pv: 52px; }
     }
   </style>
 </head>
 <body>
 
+
   <!-- HERO -->
   <div class="hero">
-    <p class="hero-sub">
+    <p class="hero-sub reveal">
       You are in!<br>
       Looking forward to spending time together soon!
     </p>
-    <h1 class="hero-cta">To get access to<br>the Masterclass Week!</h1>
-    <div class="hero-divider"></div>
+    <h1 class="hero-cta reveal d1">To get access to<br>the Masterclass Week!</h1>
+    <div class="hero-divider reveal d2"></div>
   </div>
 
 
-  <!-- STEPS 1–6 in 2×3 grid -->
-  <div class="grid-wrap">
-    <div class="steps-grid">
+  <!-- ACTION BOXES -->
+  <div class="action-wrap">
 
-      <!-- 1 -->
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Click the link to 'Access Community' in the email</div>
-        <div class="step-body">
-          Go to your email and click the link <strong>'Access Community'</strong>.<br>
-          (If needed check your spam box — the sender is <em>'Leo's Community'</em>)<br><br>
-          Without this step you have <strong>NO access</strong> — it only takes a few seconds, and then you will benefit from it! Use the same email address you used while purchasing your ticket.<br><br>
-          Choose your password. And complete your profile (keep it simple, but do it).<br><br>
-          → You can have a look inside the 🔴 <strong>'MoM' Community</strong> already, or come back later.
-        </div>
+    <div class="action-box reveal">
+      <div class="action-box-title">Click on the link in the email to get access</div>
+      <div class="action-box-body">
+        (If needed check your spam box — the sender is <em>'Leo's Community'</em>)
       </div>
-
-      <!-- 2 -->
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Add to your calendar</div>
-        <div class="step-body">
-          <a href="https://www.addevent.com/calendar/Wm648938">Click here to add all dates to your own calendar</a> — to not miss anything we do 18–22 May.
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">Get your bonuses!</div>
-        <div class="step-body">
-          Access your <strong>POWERFUL BONUSES</strong> in case you upgraded as a VIP.<br>
-          Once you are inside the Mirror of Meaning Community, click on the left menu to access:
-          <ul>
-            <li>The private client-only podcast <em>The Daily Return</em></li>
-            <li>The Living Your Truth Community and program, your personal Mirror of Meaning Clarity document, and more...</li>
-          </ul>
-          <br>
-          <em>(...and if you have not already, consider <a href="https://www.leoboxem.com/mom-vip-upgrade">upgrading to VIP</a> to have the most intimate and empowering experience — including the Masterclass Intensive deep dive on Friday, 22 May! OHHHH and get POWERFUL BONUSES as well! Like the private client-only podcast The Daily Return, access to the Living Your Truth Community and program, your personal Mirror of Meaning Clarity document, and much more masterclass magic...)</em>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Look around in the Mirror of Meaning Community space</div>
-        <div class="step-body">
-          In the left menu you see 🔴 <strong>'MoM' Community</strong>:
-          <ul>
-            <li>This is a safe space for connection, support and sharing the joy.</li>
-            <li>The Masterclass sessions will be announced here.</li>
-            <li>Resources will be shared and replays will be hosted here as well.</li>
-          </ul>
-          <br>
-          Start by introducing yourself (simple: where do you live, what do you hope for?)
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-title">Share the love</div>
-        <div class="step-body">
-          Share the Masterclass Week with your friends and colleagues — by sharing this link:<br><br>
-          <a href="https://www.leoboxem.com/mirror-of-meaning-week">www.leoboxem.com/mirror-of-meaning-week</a>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-title">Most important: Relax!</div>
-        <div class="step-body">
-          After you've set yourself up (above steps): No other preparation is needed! You <strong>ONLY</strong> have to show up live (or catch the replay).<br><br>
-          Get ready to enjoy your experience.<br><br>
-          In our space there is no 'behind' — you do this for yourself, and however you can show up, that is fine!
-        </div>
-      </div>
-
     </div>
 
-    <!-- 7 — full width -->
-    <div class="step-full">
-      <div class="step-num">7</div>
-      <div>
-        <div class="step-title">Ask for support if needed</div>
-        <div class="step-body">
-          Ask it inside the community (tag me with <strong>@leoboxem</strong>)<br>
-          or send us an email to <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a>
-        </div>
+    <div class="action-box reveal d1">
+      <div class="action-box-body">
+        Ask for support if needed — send us an email to <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a>
       </div>
     </div>
 
   </div>
 
 
-  <!-- CLOSING -->
-  <div class="closing">
-    <p>Exciting to move forward together!</p>
-    <p style="margin-top: 20px;">Love,<br>Leo 🦁</p>
+  <!-- "GO DEEPER" TRANSITION -->
+  <div class="confirm-deeper-wrap">
+    <div class="confirm-deeper-inner">
+      <p class="confirm-deeper reveal">
+        <span style="font-family:var(--f-head); font-style:normal; font-weight:700;">If you feel called to go deeper —</span><br><em>this is for you.</em>
+      </p>
+      <div class="confirm-divider-line reveal d2">
+        <span class="confirm-divider-label">Optional upgrade</span>
+      </div>
+      <a href="https://www.leoboxem.com/mirror-of-meaning-final-thank-you" style="display:inline-block; margin-top:20px; font-family:var(--f-head); font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--taupe); text-decoration:none; border-bottom:1px solid rgba(140,117,106,.3); padding-bottom:2px;">No thanks. I am fine with the basic Masterclass Week.</a>
+    </div>
+  </div>
+
+
+  <!-- VIP SECTION -->
+  <section id="vip">
+    <div class="wrap">
+      <div class="vip-grid">
+
+        <div>
+          <span class="label reveal">Go Deeper</span>
+          <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:1.2em; color:var(--blush);">supports you.</em></h2>
+          <span class="rule reveal d1"></span>
+
+          <p class="vip-decide reveal d2">
+            Some women will attend.<br>
+            Some women will decide to truly meet themselves here.
+          </p>
+
+          <p class="vip-hook reveal d2">
+            If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
+          </p>
+
+          <div class="vip-masterclass-callout reveal d2">
+            <p class="callout-sub">
+              Stand before the Mirror of Meaning —<br>
+              and recognize the life that is waiting for you.
+            </p>
+            <div class="callout-body">
+              <p><strong>Awaken the reason you're here.<br>
+              Identify your next authentic shift.</strong></p>
+              <p style="margin-top:8px;">This is where everything comes together.<br>
+              <strong>Not more input. But a real moment of truth.</strong></p>
+            </div>
+          </div>
+
+          <div class="vip-offer-card reveal d3">
+            <div class="vip-offer-label">VIP Upgrade — Friday 22 May 2026</div>
+            <div class="vip-price-row">
+              <span class="price-was">€247</span>
+              <span class="price-now">€47</span>
+              <span class="price-badge">90% off</span>
+            </div>
+            <ul class="tier-list">
+              <li>Your ticket for the Friday Masterclass Intensive</li>
+              <li>Your own guided "Mirror of Meaning Moment" document</li>
+              <li>All of May: access to The Daily Return (private client podcast)</li>
+              <li>Access to the Living Your Truth Community &amp; program</li>
+              <li>1 year access to all session recordings</li>
+              <li>Deeper reflection &amp; integration tools after the Masterclass</li>
+            </ul>
+            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-vip-upgrade-intensive" class="btn btn-gold btn-block">Upgrade to VIP — <s>€247</s> Now €47</a>
+          </div>
+
+          <p class="vip-note reveal d3">Only if it feels right for you. You can always decide later.</p>
+
+        </div>
+
+        <div class="reveal d2">
+          <div class="img-portrait">
+            <img src="../images/talk-to-leo-3-4.jpg" alt="Leo Boxem — personal guidance">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+
+      <div class="testimonials-label reveal">
+        <span class="label" style="display:inline-block;">What women say</span>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">I cannot express how valuable Leo's presence has been in my life over the past year. You keep reminding me to follow my own path.</p>
+          <p class="testimonial-name">Marloes</p>
+        </div>
+
+        <div class="testimonial-card reveal d1">
+          <p class="testimonial-quote">Leontine helps you see the bigger picture of who you are. She makes you realize the true extent of your greatness, and shows you where you're stopping yourself from manifesting it right now.</p>
+          <p class="testimonial-name">Flor</p>
+        </div>
+
+        <div class="testimonial-card reveal d2">
+          <p class="testimonial-quote">Working with Leontine brings me into fast track personal, leadership and business development…</p>
+          <p class="testimonial-name">Nadine</p>
+        </div>
+
+        <div class="testimonial-card reveal d3">
+          <p class="testimonial-quote">Leontine's guidance is pure, precise and focused on my success.</p>
+          <p class="testimonial-name">Annelieke</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Full-width sea image -->
+  <div class="img-break-sea" style="margin-top:48px;">
+    <img src="../images/ibiza-sea.jpg" alt="Ibiza sea">
+  </div>
+
+
+  <!-- Support note + no thanks -->
+  <div style="background:var(--cream); text-align:center; padding:28px var(--ph) 20px; font-family:var(--f-body); font-size:13px; color:var(--taupe); line-height:1.8;">
+    In case you have questions or need some extra support, email <a href="mailto:leo@leoboxem.com" style="color:var(--gold); text-decoration:none; font-weight:600;">leo@leoboxem.com</a> and we are happy to help you out asap!
+  </div>
+  <div style="background:var(--cream); text-align:center; padding:0 var(--ph) 36px;">
+    <a href="https://www.leoboxem.com/mirror-of-meaning-final-thank-you" style="font-family:var(--f-head); font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--taupe); text-decoration:none; border-bottom:1px solid rgba(140,117,106,.3); padding-bottom:2px;">No thanks. I am fine with the basic Masterclass Week.</a>
   </div>
 
 
@@ -313,6 +612,14 @@
       <a href="https://www.leoboxem.com">www.leoboxem.com</a>
     </p>
   </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
