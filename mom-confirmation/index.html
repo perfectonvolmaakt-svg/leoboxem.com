@@ -222,11 +222,28 @@
     #vip .label { color: var(--white); font-size: 18px; letter-spacing: 0.18em; }
     #vip .rule  { background: linear-gradient(to right, var(--blush), transparent); }
 
-    .vip-grid {
+    .vip-intro {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+
+    .vip-cards-grid {
       display: grid;
-      grid-template-columns: 7fr 5fr;
-      gap: 72px;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
       align-items: start;
+    }
+
+    .vip-card-tier {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .vip-cards-grid { grid-template-columns: 1fr; }
     }
 
     .vip-h {
@@ -489,36 +506,42 @@
   <!-- VIP SECTION -->
   <section id="vip">
     <div class="wrap">
-      <div class="vip-grid">
 
-        <div>
-          <span class="label reveal">Go Deeper</span>
-          <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:1.2em; color:var(--blush);">supports you.</em></h2>
-          <span class="rule reveal d1"></span>
+      <div class="vip-intro">
+        <span class="label reveal">Go Deeper</span>
+        <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:1.2em; color:var(--blush);">supports you.</em></h2>
+        <span class="rule reveal d1"></span>
 
-          <p class="vip-decide reveal d2">
-            Some women will attend.<br>
-            Some women will decide to truly meet themselves here.
+        <p class="vip-decide reveal d2">
+          Some women will attend.<br>
+          Some women will decide to truly meet themselves here.
+        </p>
+
+        <p class="vip-hook reveal d2">
+          If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
+        </p>
+
+        <div class="vip-masterclass-callout reveal d2">
+          <p class="callout-sub">
+            Stand before the Mirror of Meaning —<br>
+            and recognize the life that is waiting for you.
           </p>
-
-          <p class="vip-hook reveal d2">
-            If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
-          </p>
-
-          <div class="vip-masterclass-callout reveal d2">
-            <p class="callout-sub">
-              Stand before the Mirror of Meaning —<br>
-              and recognize the life that is waiting for you.
-            </p>
-            <div class="callout-body">
-              <p><strong>Awaken the reason you're here.<br>
-              Identify your next authentic shift.</strong></p>
-              <p style="margin-top:8px;">This is where everything comes together.<br>
-              <strong>Not more input. But a real moment of truth.</strong></p>
-            </div>
+          <div class="callout-body">
+            <p><strong>Awaken the reason you're here.<br>
+            Identify your next authentic shift.</strong></p>
+            <p style="margin-top:8px;">This is where everything comes together.<br>
+            <strong>Not more input. But a real moment of truth.</strong></p>
           </div>
+        </div>
+      </div>
 
-          <div class="vip-offer-card reveal d3">
+      <!-- Two offer cards side by side -->
+      <div class="vip-cards-grid">
+
+        <!-- LEFT: VIP -->
+        <div class="reveal d2">
+          <div class="vip-card-tier">VIP</div>
+          <div class="vip-offer-card" style="margin-bottom:0;">
             <div class="vip-offer-label">VIP Upgrade — Friday 22 May 2026</div>
             <div class="vip-price-row">
               <span class="price-was">€247</span>
@@ -533,20 +556,40 @@
               <li>1 year access to all session recordings</li>
               <li>Deeper reflection &amp; integration tools after the Masterclass</li>
             </ul>
-            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-extended-vip-upgrade" class="btn btn-gold btn-block">Upgrade to VIP — <s>€247</s> Now €47</a>
+            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-vip-upgrade-intensive" class="btn btn-gold btn-block">Upgrade to VIP — <s>€247</s> Now €47</a>
           </div>
-
-          <p class="vip-note reveal d3">Only if it feels right for you. You can always decide later.</p>
-
         </div>
 
-        <div class="reveal d2">
-          <div class="img-portrait">
-            <img src="../images/talk-to-leo-3-4.jpg" alt="Leo Boxem — personal guidance">
+        <!-- RIGHT: DIAMOND VIP -->
+        <div class="reveal d3">
+          <div class="vip-card-tier">Diamond VIP</div>
+          <div class="vip-offer-card" style="margin-bottom:0;">
+            <div class="vip-offer-label">VIP Upgrade — Intensive &amp; Private Guidance</div>
+            <div class="vip-price-row">
+              <span class="price-was">€997</span>
+              <span class="price-now">€147</span>
+              <span class="price-badge">€850 off</span>
+            </div>
+            <ul class="tier-list">
+              <li><strong style="color:var(--white);">1-Week Private Mentoring by Leo (worth €997)</strong></li>
+            </ul>
+            <p style="font-family:var(--f-head); font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(195,153,80,.7); margin-bottom:12px;">And also get:</p>
+            <ul class="tier-list">
+              <li>Your ticket for the Friday Masterclass Intensive</li>
+              <li>Your own guided "Mirror of Meaning Moment" document</li>
+              <li>All of May: access to The Daily Return (private client podcast)</li>
+              <li>Access to the Living Your Truth Community &amp; program</li>
+              <li>1 year access to all session recordings</li>
+              <li>Deeper reflection &amp; integration tools after the Masterclass</li>
+            </ul>
+            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-diamond-vip-upgrade" class="btn btn-gold btn-block">Upgrade to Diamond VIP — <s>€997</s> Now €147</a>
           </div>
         </div>
 
       </div>
+
+      <p class="vip-note reveal d3" style="margin-top:28px;">Only if it feels right for you. You can always decide later.</p>
+
     </div>
   </section>
 
