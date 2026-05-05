@@ -235,11 +235,13 @@
     }
 
     .vip-card-tier {
-      font-family: var(--f-head);
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--gold-light);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(195,153,80,.75);
       margin-bottom: 14px;
+      letter-spacing: 0.02em;
     }
 
     @media (max-width: 860px) {
@@ -538,33 +540,11 @@
       <!-- Two offer cards side by side -->
       <div class="vip-cards-grid">
 
-        <!-- LEFT: VIP -->
+        <!-- LEFT: DIAMOND VIP -->
         <div class="reveal d2">
-          <div class="vip-card-tier">VIP</div>
-          <div class="vip-offer-card" style="margin-bottom:0;">
-            <div class="vip-offer-label">VIP Upgrade — Friday 22 May 2026</div>
-            <div class="vip-price-row">
-              <span class="price-was">€247</span>
-              <span class="price-now">€47</span>
-              <span class="price-badge">90% off</span>
-            </div>
-            <ul class="tier-list">
-              <li>Your ticket for the Friday Masterclass Intensive</li>
-              <li>Your own guided "Mirror of Meaning Moment" document</li>
-              <li>All of May: access to The Daily Return (private client podcast)</li>
-              <li>Access to the Living Your Truth Community &amp; program</li>
-              <li>1 year access to all session recordings</li>
-              <li>Deeper reflection &amp; integration tools after the Masterclass</li>
-            </ul>
-            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-vip-upgrade-intensive" class="btn btn-gold btn-block">Upgrade to VIP — <s>€247</s> Now €47</a>
-          </div>
-        </div>
-
-        <!-- RIGHT: DIAMOND VIP -->
-        <div class="reveal d3">
           <div class="vip-card-tier">Diamond VIP</div>
           <div class="vip-offer-card" style="margin-bottom:0;">
-            <div class="vip-offer-label">VIP Upgrade — Intensive &amp; Private Guidance</div>
+            <div class="vip-offer-label">Masterclass Intensive + 1-Week Private Guidance</div>
             <div class="vip-price-row">
               <span class="price-was">€997</span>
               <span class="price-now">€147</span>
@@ -583,6 +563,28 @@
               <li>Deeper reflection &amp; integration tools after the Masterclass</li>
             </ul>
             <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-diamond-vip-upgrade" class="btn btn-gold btn-block">Upgrade to Diamond VIP — <s>€997</s> Now €147</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: VIP -->
+        <div class="reveal d3">
+          <div class="vip-card-tier">VIP</div>
+          <div class="vip-offer-card" style="margin-bottom:0;">
+            <div class="vip-offer-label">Masterclass Intensive Ticket</div>
+            <div class="vip-price-row">
+              <span class="price-was">€247</span>
+              <span class="price-now">€47</span>
+              <span class="price-badge">90% off</span>
+            </div>
+            <ul class="tier-list">
+              <li>Your ticket for the Friday Masterclass Intensive</li>
+              <li>Your own guided "Mirror of Meaning Moment" document</li>
+              <li>All of May: access to The Daily Return (private client podcast)</li>
+              <li>Access to the Living Your Truth Community &amp; program</li>
+              <li>1 year access to all session recordings</li>
+              <li>Deeper reflection &amp; integration tools after the Masterclass</li>
+            </ul>
+            <a href="https://leoboxem.circle.so/checkout/mirror-of-meaning-vip-upgrade-intensive" class="btn btn-gold btn-block">Upgrade to VIP — <s>€247</s> Now €47</a>
           </div>
         </div>
 
