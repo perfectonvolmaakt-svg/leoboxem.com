@@ -232,9 +232,32 @@
     #vip .label { color: var(--white); font-size: 18px; letter-spacing: 0.18em; }
     #vip .rule  { background: linear-gradient(to right, var(--blush), transparent); }
 
-    .vip-intro {
-      max-width: 680px;
+    .vip-top-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 64px;
+      align-items: start;
       margin-bottom: 48px;
+    }
+
+    .vip-intro {
+      min-width: 0;
+    }
+
+    .vip-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .vip-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    @media (max-width: 860px) {
+      .vip-top-grid { grid-template-columns: 1fr; }
+      .vip-photo { display: none; }
     }
 
     .vip-cards-grid {
@@ -516,32 +539,40 @@
   <section id="vip">
     <div class="wrap">
 
-      <div class="vip-intro">
-        <span class="label reveal">Go Deeper</span>
-        <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:1.2em; color:var(--blush);">supports you.</em></h2>
-        <span class="rule reveal d1"></span>
+      <div class="vip-top-grid">
 
-        <p class="vip-decide reveal d2">
-          Some women will attend.<br>
-          Some women will decide to truly meet themselves here.
-        </p>
+        <div class="vip-intro">
+          <span class="label reveal">Go Deeper</span>
+          <h2 class="section-h vip-h reveal d1">In a way that actually<br><em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:1.2em; color:var(--blush);">supports you.</em></h2>
+          <span class="rule reveal d1"></span>
 
-        <p class="vip-hook reveal d2">
-          If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
-        </p>
-
-        <div class="vip-masterclass-callout reveal d2">
-          <p class="callout-sub">
-            Stand before the Mirror of Meaning —<br>
-            and recognize the life that is waiting for you.
+          <p class="vip-decide reveal d2">
+            Some women will attend.<br>
+            Some women will decide to truly meet themselves here.
           </p>
-          <div class="callout-body">
-            <p><strong>Awaken the reason you're here.<br>
-            Identify your next authentic shift.</strong></p>
-            <p style="margin-top:8px;">This is where everything comes together.<br>
-            <strong>Not more input. But a real moment of truth.</strong></p>
+
+          <p class="vip-hook reveal d2">
+            If you feel that this moment in your life matters, you may not want to just listen. You may want to fully step into it.
+          </p>
+
+          <div class="vip-masterclass-callout reveal d2">
+            <p class="callout-sub">
+              Stand before the Mirror of Meaning —<br>
+              and recognize the life that is waiting for you.
+            </p>
+            <div class="callout-body">
+              <p><strong>Awaken the reason you're here.<br>
+              Identify your next authentic shift.</strong></p>
+              <p style="margin-top:8px;">This is where everything comes together.<br>
+              <strong>Not more input. But a real moment of truth.</strong></p>
+            </div>
           </div>
         </div>
+
+        <div class="vip-photo reveal d1">
+          <img src="../images/talk-to-leo-3-4.jpg" alt="Leo Boxem — personal guidance">
+        </div>
+
       </div>
 
       <!-- Two offer cards side by side -->
