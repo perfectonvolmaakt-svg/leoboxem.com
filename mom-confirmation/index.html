@@ -130,6 +130,16 @@
       letter-spacing: -0.01em;
     }
 
+    .hero-action {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(20px, 3vw, 32px);
+      color: var(--blush);
+      line-height: 1.3;
+      margin-top: 20px;
+    }
+
     .hero-divider {
       width: 48px; height: 2px;
       background: var(--gold);
@@ -239,7 +249,7 @@
       font-size: clamp(22px, 2.8vw, 32px);
       font-weight: 400;
       font-style: italic;
-      color: rgba(195,153,80,.75);
+      color: rgba(253,247,245,.75);
       margin-bottom: 14px;
       letter-spacing: 0.02em;
     }
@@ -302,10 +312,11 @@
 
     .vip-offer-label {
       font-family: var(--f-head);
-      font-size: 9px; font-weight: 700;
-      letter-spacing: 0.28em; text-transform: uppercase;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--gold-light);
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      line-height: 1.5;
     }
 
     .vip-price-row {
@@ -467,8 +478,9 @@
       <em style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:400; font-size:1.15em; color:var(--rose);">You are in!</em><br>
       Looking forward to spending time together soon!
     </p>
-    <h1 class="hero-cta reveal d1">To get access to the Masterclass Week, do this now:</h1>
-    <div class="hero-divider reveal d2"></div>
+    <h1 class="hero-cta reveal d1">To get access to the Masterclass Week</h1>
+    <p class="hero-action reveal d2">Click on the link in the email to get access</p>
+    <div class="hero-divider reveal d3"></div>
   </div>
 
 
@@ -577,7 +589,7 @@
               <span class="price-badge">90% off</span>
             </div>
             <ul class="tier-list">
-              <li>Your ticket for the Friday Masterclass Intensive</li>
+              <li><strong style="color:var(--white);">Your ticket for the Friday Masterclass Intensive</strong></li>
               <li>Your own guided "Mirror of Meaning Moment" document</li>
               <li>All of May: access to The Daily Return (private client podcast)</li>
               <li>Access to the Living Your Truth Community &amp; program</li>

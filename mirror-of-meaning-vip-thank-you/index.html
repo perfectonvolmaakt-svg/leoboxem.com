@@ -147,60 +147,44 @@
       margin: 0 auto 48px;
     }
 
-    /* Action grid */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      max-width: 760px;
-      width: 100%;
+    /* Action boxes */
+    .action-wrap {
+      max-width: 640px;
       margin: 0 auto;
-    }
-
-    @media (max-width: 640px) {
-      .steps-grid { grid-template-columns: 1fr; }
-    }
-
-    .step {
+      padding: 36px var(--ph) 0;
       display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      text-align: left;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .action-box {
       background: var(--white);
-      border: 1px solid rgba(178,121,49,.14);
-      border-radius: 12px;
-      padding: 20px 22px;
+      border: 1px solid rgba(178,121,49,.16);
+      border-radius: 14px;
+      padding: 28px 32px;
+      text-align: left;
     }
 
-    .step-num {
+    .action-box-title {
       font-family: var(--f-display);
-      font-size: 28px;
-      font-weight: 700;
-      color: rgba(178,121,49,.25);
-      line-height: 1;
-      flex-shrink: 0;
-      width: 32px;
-      padding-top: 2px;
-    }
-
-    .step-text {
-      font-size: 15px;
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--dark-brown);
-      line-height: 1.7;
+      margin-bottom: 8px;
     }
 
-    .step-text strong {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 2px;
+    .action-box-body {
+      font-size: 14px;
+      color: var(--taupe);
+      line-height: 1.85;
     }
 
-    .step-text a {
+    .action-box-body a {
       color: var(--gold);
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
-    .step-text a:hover { opacity: .75; }
+    .action-box-body a:hover { opacity: .75; }
 
     /* Full-width sea image */
     .img-break-sea {
@@ -263,49 +247,27 @@
   </div>
 
 
-  <!-- 4-block action grid -->
-  <div style="padding: 32px var(--ph) 48px; background: var(--cream);">
-    <div class="steps-grid">
+  <!-- Action boxes -->
+  <div class="action-wrap">
 
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <strong>Add the event to your calendar</strong>
-          <a href="https://www.addevent.com/calendar/Wm648938">Click here to add all sessions Monday 18 – Friday 22 May 2026 to your calendar.</a><br>
-          Especially block Friday morning from 10.30 CET / 9.30 AM UK — that's your VIP Masterclass Intensive.
-        </div>
+    <div class="action-box reveal">
+      <div class="action-box-title">Click on the link in the email to get access</div>
+      <div class="action-box-body">
+        (If needed check your spam box — the sender is <em>'Leo's Community'</em>)
       </div>
-
-      <div class="step reveal d1">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <strong>Get into the community to get access</strong>
-          <a href="https://leoboxem.circle.so/c/mom-masterclass-week/">Join the community →</a><br>
-          Make sure to prioritize joining the community and <strong>setting up your profile</strong> — so you can get access to all that is promised to come your way.
-        </div>
-      </div>
-
-      <div class="step reveal d2">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <strong>Check your email</strong>
-          Your confirmation with all details and access links is on its way. In case you upgraded to VIP, you will find all your bonus details in your email too.
-        </div>
-      </div>
-
-      <div class="step reveal d3">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <strong>Questions?</strong>
-          In case you have questions or need some extra support, email <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a> and we are happy to help you out asap!
-        </div>
-      </div>
-
     </div>
+
+    <div class="action-box reveal d1">
+      <div class="action-box-body">
+        This email shows you how you can add the sessions to your calendar, how to enter the community, receive your bonuses etc.<br><br>
+        Ask for support if needed — send us an email to <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- Program image -->
-  <div style="text-align:center; padding:0 var(--ph) 48px; background:var(--cream);">
+  <div style="text-align:center; padding:40px var(--ph) 48px; background:var(--cream);">
     <img src="../images/5-day-MoM-program.jpg" alt="Mirror of Meaning 5-Day Program" style="max-width:600px; width:100%; border-radius:12px; display:block; margin:0 auto;">
   </div>
 
