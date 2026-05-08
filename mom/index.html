@@ -234,6 +234,32 @@
       line-height: 1.7;
     }
 
+    /* 2-column layout: image + placeholder */
+    .replays-two-col {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .replays-img-col img {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .replays-two-col .replays-placeholder {
+      max-width: none;
+      height: 100%;
+      min-height: 260px;
+    }
+
+    @media (max-width: 680px) {
+      .replays-two-col { grid-template-columns: 1fr; }
+    }
+
     /* Replay card (for when replays are added) */
     .replay-grid {
       display: grid;
@@ -470,11 +496,19 @@
         <h2 class="section-h">MoM Replays</h2>
       </div>
 
-      <!-- Placeholder — remove and replace with replay-grid when sessions go live -->
-      <div class="replays-placeholder reveal d1">
-        <div class="replays-icon">▶</div>
-        <p class="replays-coming">Replays will appear here</p>
-        <p class="replays-note">After each live session the replay will be added to this page.<br>Check back after each session day.</p>
+      <!-- 2-column: image left, replay placeholder right -->
+      <div class="replays-two-col reveal d1">
+
+        <div class="replays-img-col">
+          <img src="/images/5-day-MoM-program.jpg" alt="Mirror of Meaning 5-Day Program">
+        </div>
+
+        <div class="replays-placeholder">
+          <div class="replays-icon">▶</div>
+          <p class="replays-coming">Replays will appear here</p>
+          <p class="replays-note">After each live session the replay will be added to this page.<br>Check back after each session day.</p>
+        </div>
+
       </div>
 
     </div>
