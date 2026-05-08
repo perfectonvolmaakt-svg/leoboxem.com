@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror of Meaning Masterclass Hub · Remember Your Future™</title>
+  <meta name="description" content="All details, links, guides and replays of your Mirror of Meaning Experience.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #b27931;
+      --gold-light: #c39950;
+      --taupe:      #8c756a;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:    'League Spartan', sans-serif;
+      --f-serif:   'Playfair Display', Georgia, serif;
+      --f-body:    'Montserrat', sans-serif;
+      --f-display: 'Outfit', sans-serif;
+
+      --max: 900px;
+      --pv:  80px;
+      --ph:  48px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── SCROLL REVEAL ───────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .12s; }
+    .d2 { transition-delay: .26s; }
+    .d3 { transition-delay: .42s; }
+    .d4 { transition-delay: .58s; }
+
+    /* ── LAYOUT ──────────────────────────────── */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--ph);
+    }
+    section { padding: var(--pv) var(--ph); }
+    section > .wrap { padding-left: 0; padding-right: 0; }
+
+    /* ── TYPOGRAPHY ATOMS ────────────────────── */
+    .label {
+      font-family: var(--f-head);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .rule {
+      display: block;
+      width: 40px; height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 28px;
+    }
+    .rule-center {
+      display: block;
+      width: 44px; height: 1.5px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0 auto 32px;
+    }
+
+    /* ── HERO ────────────────────────────────── */
+    #hero {
+      background: var(--dark-brown);
+      padding: 80px var(--ph) 72px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--f-head);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(195,153,80,.65);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: var(--f-display);
+      font-size: clamp(28px, 5vw, 58px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .hero-script {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(26px, 4.5vw, 54px);
+      color: var(--gold-light);
+      font-weight: 400;
+      line-height: 1.2;
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    .hero-rule {
+      width: 48px; height: 1.5px;
+      background: rgba(195,153,80,.3);
+      margin: 0 auto 28px;
+    }
+
+    .hero-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.8vw, 20px);
+      color: rgba(253,247,245,.65);
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── NAV TABS ────────────────────────────── */
+    .hub-nav {
+      background: var(--mocha);
+      border-bottom: 1px solid rgba(195,153,80,.15);
+      padding: 0 var(--ph);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .hub-nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .hub-nav-link {
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      text-decoration: none;
+      padding: 18px 24px 16px;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color .2s, border-color .2s;
+      flex-shrink: 0;
+    }
+    .hub-nav-link:hover { color: rgba(255,255,255,.75); }
+    .hub-nav-link.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+    /* ── SECTION HEADING SHARED ──────────────── */
+    .section-label-center {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-h {
+      font-family: var(--f-display);
+      font-size: clamp(22px, 3.2vw, 40px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.15;
+    }
+
+    /* ── REPLAYS SECTION ─────────────────────── */
+    #replays {
+      background: var(--white);
+    }
+
+    .replays-placeholder {
+      max-width: var(--max);
+      margin: 0 auto;
+      border: 1.5px dashed rgba(178,121,49,.25);
+      border-radius: 14px;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .replays-icon {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 48px;
+      color: rgba(178,121,49,.2);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .replays-coming {
+      font-family: var(--f-display);
+      font-size: 16px; font-weight: 700;
+      color: var(--taupe);
+      margin-bottom: 8px;
+    }
+
+    .replays-note {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 14px;
+      color: rgba(140,117,106,.6);
+      line-height: 1.7;
+    }
+
+    /* Replay card (for when replays are added) */
+    .replay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .replay-card {
+      background: var(--cream);
+      border: 1px solid rgba(178,121,49,.15);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .replay-thumb {
+      background: var(--dark-brown);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .replay-thumb-play {
+      width: 48px; height: 48px;
+      border: 1.5px solid rgba(195,153,80,.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .replay-thumb-play::after {
+      content: '';
+      width: 0; height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid rgba(195,153,80,.5);
+      margin-left: 3px;
+    }
+
+    .replay-info {
+      padding: 20px 22px;
+    }
+
+    .replay-day {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+
+    .replay-title {
+      font-family: var(--f-display);
+      font-size: 15px; font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.3;
+    }
+
+    /* ── NEED TO KNOW / STEPS ────────────────── */
+    #need-to-know {
+      background: var(--cream);
+    }
+
+    .steps-list {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 1px solid rgba(178,121,49,.15);
+      border-radius: 14px;
+      padding: 32px 36px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .step-num-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4px;
+    }
+
+    .step-num-text {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+
+    .step-num-big {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 48px; font-weight: 400;
+      color: rgba(178,121,49,.18);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-family: var(--f-display);
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--dark-brown);
+      margin-bottom: 10px;
+    }
+
+    .step-body {
+      font-size: 15px;
+      color: var(--taupe);
+      line-height: 1.85;
+    }
+    .step-body strong { color: var(--dark-brown); font-weight: 700; }
+    .step-body a { color: var(--gold); font-weight: 600; text-decoration: none; }
+    .step-body a:hover { opacity: .75; }
+
+    .step-link-block {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 24px;
+      background: var(--cream);
+      border: 1px solid rgba(178,121,49,.25);
+      border-radius: 8px;
+      font-family: var(--f-head);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      transition: background .2s, opacity .2s;
+    }
+    .step-link-block:hover { background: rgba(178,121,49,.08); opacity: .85; }
+
+    .step-card.step-vip {
+      background: var(--mocha);
+      border-color: rgba(195,153,80,.25);
+    }
+    .step-card.step-vip .step-title { color: var(--gold-light); }
+    .step-card.step-vip .step-body  { color: rgba(253,247,245,.75); }
+    .step-card.step-vip .step-body strong { color: var(--white); }
+    .step-card.step-vip .step-body a { color: var(--gold-light); }
+    .step-card.step-vip .step-num-big { color: rgba(195,153,80,.15); }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--mocha);
+      padding: 52px var(--ph);
+      text-align: center;
+    }
+    .footer-name {
+      font-family: var(--f-serif);
+      font-size: 20px; font-weight: 500; font-style: italic;
+      color: var(--gold-light); margin-bottom: 8px;
+    }
+    .footer-tag {
+      font-family: var(--f-head);
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,.4); margin-bottom: 20px;
+    }
+    .footer-links {
+      font-family: var(--f-head);
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-links a { color: rgba(255,255,255,.6); text-decoration: none; transition: opacity .2s; }
+    .footer-links a:hover { opacity: 1; }
+
+    /* ── MOBILE ──────────────────────────────── */
+    @media (max-width: 720px) {
+      :root { --ph: 24px; --pv: 56px; }
+      .step-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px 24px;
+      }
+      .step-num-block { flex-direction: row; align-items: baseline; gap: 8px; }
+      .step-num-big { font-size: 32px; }
+      .replay-grid { grid-template-columns: 1fr; }
+      .hub-nav-link { padding: 16px 16px 14px; font-size: 9px; }
+    }
+    @media (max-width: 480px) {
+      :root { --ph: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================= -->
+  <section id="hero">
+
+    <p class="hero-eyebrow">Mirror of Meaning · Masterclass Week</p>
+
+    <h1 class="hero-title">Mirror Of Meaning</h1>
+    <span class="hero-script">Masterclass Hub</span>
+
+    <div class="hero-rule"></div>
+
+    <p class="hero-sub">
+      Below all details, links, guides and all the replays of your Mirror of Meaning Experience.
+    </p>
+
+  </section>
+
+
+  <!-- ============================================================
+       STICKY HUB NAV
+  ============================================================= -->
+  <nav class="hub-nav">
+    <div class="hub-nav-inner">
+      <a href="#replays" class="hub-nav-link">Replays</a>
+      <a href="#need-to-know" class="hub-nav-link">All You Need To Know</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       MoM REPLAYS
+  ============================================================= -->
+  <section id="replays">
+    <div class="wrap">
+
+      <div class="section-label-center reveal">
+        <span class="label" style="display:inline-block; text-align:center;">Watch back</span>
+        <h2 class="section-h">MoM Replays</h2>
+      </div>
+
+      <!-- Placeholder — remove and replace with replay-grid when sessions go live -->
+      <div class="replays-placeholder reveal d1">
+        <div class="replays-icon">▶</div>
+        <p class="replays-coming">Replays will appear here</p>
+        <p class="replays-note">After each live session the replay will be added to this page.<br>Check back after each session day.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ALL YOU NEED TO KNOW
+  ============================================================= -->
+  <section id="need-to-know">
+    <div class="wrap">
+
+      <div class="section-label-center reveal">
+        <span class="label" style="display:inline-block;">Your guide</span>
+        <h2 class="section-h">All You Need To Know</h2>
+        <span class="rule-center reveal d1"></span>
+      </div>
+
+      <div class="steps-list">
+
+        <!-- STEP 1 -->
+        <div class="step-card reveal">
+          <div class="step-num-block">
+            <span class="step-num-text">Step</span>
+            <span class="step-num-big">1</span>
+          </div>
+          <div>
+            <div class="step-title">Bookmark this page</div>
+            <p class="step-body">
+              Be sure to bookmark this page on your desktop.<br>
+              It is the main hub for the Masterclass.<br><br>
+              Here you will find all dates, links, support to get started, and the replays:
+            </p>
+            <a href="https://www.leoboxem.com/mom" class="step-link-block">www.leoboxem.com/mom</a>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step-card reveal">
+          <div class="step-num-block">
+            <span class="step-num-text">Step</span>
+            <span class="step-num-big">2</span>
+          </div>
+          <div>
+            <div class="step-title">Activate your account</div>
+            <p class="step-body">
+              Go to your email, find the email sent by <strong>'Leo's Community'</strong><br>
+              (check your spam folder as well!)<br><br>
+              And click on: <strong>Activate my account.</strong><br><br>
+              If you do, you get access to the community. If you don't — you won't.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step-card reveal">
+          <div class="step-num-block">
+            <span class="step-num-text">Step</span>
+            <span class="step-num-big">3</span>
+          </div>
+          <div>
+            <div class="step-title">Start Here inside the community</div>
+            <p class="step-body">
+              Once you are inside Leo's Community, go to the left menu — <strong>'Start Here'</strong>.<br><br>
+              Follow step by step your preparations to set yourself up for success and ease.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step-card reveal">
+          <div class="step-num-block">
+            <span class="step-num-text">Step</span>
+            <span class="step-num-big">4</span>
+          </div>
+          <div>
+            <div class="step-title">Add the dates to your calendar</div>
+            <p class="step-body">
+              Block the week now so nothing stands in your way.
+            </p>
+            <a href="https://www.addevent.com/calendar/Wm648938" target="_blank" rel="noopener" class="step-link-block">Add to calendar →</a>
+          </div>
+        </div>
+
+        <!-- STEP 5 — VIP -->
+        <div class="step-card step-vip reveal">
+          <div class="step-num-block">
+            <span class="step-num-text" style="color:var(--gold-light);">Step</span>
+            <span class="step-num-big">5</span>
+          </div>
+          <div>
+            <div class="step-title">Consider upgrading to VIP</div>
+            <p class="step-body">
+              If not already, think about <a href="https://www.leoboxem.com/mom-vip-upgrade">upgrading to VIP</a> to have the most intimate and empowering experience — including the Masterclass Intensive deep dive on <strong>Friday, 22 May!</strong><br><br>
+              OHHHH and get <strong>POWERFUL BONUSES</strong> as well!<br>
+              Like the private client-only podcast <strong>The Daily Return</strong>, access to the <strong>Living Your Truth Community</strong> and program, your personal <strong>Mirror of Meaning Clarity document</strong>, and more...
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="step-card reveal">
+          <div class="step-num-block">
+            <span class="step-num-text">Step</span>
+            <span class="step-num-big">6</span>
+          </div>
+          <div>
+            <div class="step-title">Share with a friend</div>
+            <p class="step-body">
+              Share the Masterclass week with your friends and colleagues — by sharing this link:
+            </p>
+            <a href="https://www.leoboxem.com/mirror-of-meaning-week" target="_blank" rel="noopener" class="step-link-block">www.leoboxem.com/mirror-of-meaning-week</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:leo@leoboxem.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Highlight active nav tab on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.hub-nav-link');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.hub-nav-link[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => io.observe(s));
+  </script>
+
+</body>
+</html>
