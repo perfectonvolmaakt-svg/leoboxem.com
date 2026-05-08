@@ -34,7 +34,7 @@
       --f-display: 'Outfit', sans-serif;
 
       --max: 900px;
-      --pv:  96px;
+      --pv:  80px;
       --ph:  48px;
     }
 
@@ -81,12 +81,6 @@
       display: block;
       margin-bottom: 16px;
     }
-    .rule {
-      display: block;
-      width: 40px; height: 1.5px;
-      background: linear-gradient(to right, var(--gold), transparent);
-      margin-bottom: 28px;
-    }
     .rule-center {
       display: block;
       width: 44px; height: 1.5px;
@@ -97,32 +91,27 @@
     /* ── SECTION 1: HERO ─────────────────────── */
     #hero {
       background: var(--dark-brown);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      padding: 64px var(--ph) 56px;
       text-align: center;
-      padding: 80px var(--ph) 60px;
-      position: relative;
     }
 
-    .hero-label {
+    .hero-eyebrow {
       font-family: var(--f-head);
       font-size: 11px; font-weight: 700;
       letter-spacing: 0.28em; text-transform: uppercase;
-      color: rgba(195,153,80,.7);
+      color: rgba(195,153,80,.65);
       margin-bottom: 28px;
     }
 
+    /* Both "Yay!" and "Your seat is saved!" share Playfair italic */
     .hero-yay {
-      font-family: var(--f-display);
-      font-size: clamp(36px, 7vw, 80px);
-      font-weight: 900;
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(48px, 9vw, 100px);
+      font-weight: 400;
       color: var(--white);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
     .hero-seat {
@@ -131,40 +120,34 @@
       font-size: clamp(20px, 3.5vw, 42px);
       color: var(--gold-light);
       line-height: 1.3;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
     .hero-divider {
       width: 48px; height: 1.5px;
       background: rgba(195,153,80,.35);
-      margin: 0 auto 36px;
+      margin: 0 auto 28px;
     }
 
     .hero-before {
       font-family: var(--f-display);
-      font-size: clamp(18px, 2.5vw, 28px);
+      font-size: clamp(17px, 2.2vw, 24px);
       font-weight: 600;
-      color: rgba(253,247,245,.75);
+      color: rgba(253,247,245,.7);
       line-height: 1.4;
-      margin-bottom: 52px;
+      margin-bottom: 36px;
     }
 
     .hero-arrow {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       animation: bounce 1.8s infinite ease-in-out;
-    }
-    .hero-arrow-label {
-      font-family: var(--f-head);
-      font-size: 9px; font-weight: 700;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      color: rgba(195,153,80,.5);
+      margin-bottom: 44px;
     }
     .hero-arrow-icon {
       color: var(--gold);
-      opacity: .6;
+      opacity: .55;
       font-size: 28px;
       line-height: 1;
     }
@@ -173,75 +156,40 @@
       50%       { transform: translateY(10px); }
     }
 
-    /* ── SECTION 2: VIDEO ────────────────────── */
-    #video-section {
-      background: var(--blush);
-      padding: var(--pv) var(--ph);
-      text-align: center;
-    }
-
-    .video-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .video-placeholder {
-      background: var(--dark-brown);
-      border-radius: 16px;
-      aspect-ratio: 16/9;
+    /* Video inside hero */
+    .hero-video-wrap {
       max-width: 720px;
-      margin: 32px auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
       border: 1px solid rgba(195,153,80,.2);
+      background: var(--mocha);
     }
 
-    .video-play-icon {
-      width: 72px; height: 72px;
-      border: 2px solid rgba(195,153,80,.4);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .video-play-icon::after {
-      content: '';
-      width: 0; height: 0;
-      border-top: 14px solid transparent;
-      border-bottom: 14px solid transparent;
-      border-left: 22px solid rgba(195,153,80,.5);
-      margin-left: 4px;
+    .hero-video-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
-    .video-placeholder-text {
-      font-family: var(--f-head);
-      font-size: 10px; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(195,153,80,.45);
-    }
-
-    /* ── SECTION 3: STEPS ────────────────────── */
+    /* ── SECTION 2: STEPS ────────────────────── */
     #steps {
-      background: var(--cream);
+      background: var(--blush);
       padding: var(--pv) var(--ph);
     }
 
     .steps-header {
       text-align: center;
       max-width: 680px;
-      margin: 0 auto 64px;
+      margin: 0 auto 56px;
     }
 
     .steps-h {
       font-family: var(--f-display);
-      font-size: clamp(24px, 3.5vw, 44px);
+      font-size: clamp(22px, 3.5vw, 40px);
       font-weight: 700;
       color: var(--dark-brown);
       line-height: 1.15;
-      margin-bottom: 0;
     }
 
     .steps-list {
@@ -249,17 +197,17 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
 
     .step-card {
       background: var(--white);
       border: 1px solid rgba(178,121,49,.15);
       border-radius: 14px;
-      padding: 32px 36px;
+      padding: 28px 32px;
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 28px;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
       align-items: start;
     }
 
@@ -267,23 +215,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 4px;
+      padding-top: 2px;
     }
 
-    .step-num-text {
+    .step-num-label {
       font-family: var(--f-head);
-      font-size: 9px; font-weight: 700;
+      font-size: 8px; font-weight: 700;
       letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 3px;
+      color: var(--taupe);
+      margin-bottom: 2px;
     }
 
     .step-num-big {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: 48px;
-      font-weight: 400;
-      color: rgba(178,121,49,.18);
+      font-size: 44px; font-weight: 600;
+      color: var(--dark-brown);
       line-height: 1;
     }
 
@@ -292,7 +239,7 @@
       font-size: 13px; font-weight: 800;
       letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--dark-brown);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .step-body {
@@ -300,81 +247,75 @@
       color: var(--taupe);
       line-height: 1.85;
     }
-    .step-body strong {
-      color: var(--dark-brown);
-      font-weight: 700;
-    }
-    .step-body a {
-      color: var(--gold);
-      font-weight: 600;
-      text-decoration: none;
-    }
+    .step-body strong { color: var(--dark-brown); font-weight: 700; }
+    .step-body a { color: var(--red-brown); font-weight: 600; text-decoration: none; }
     .step-body a:hover { opacity: .75; }
 
     .step-link-block {
       display: inline-block;
-      margin-top: 14px;
-      padding: 12px 24px;
-      background: var(--cream);
-      border: 1px solid rgba(178,121,49,.25);
+      margin-top: 12px;
+      padding: 11px 22px;
+      background: rgba(80,42,26,.07);
+      border: 1px solid rgba(141,66,21,.2);
       border-radius: 8px;
       font-family: var(--f-head);
       font-size: 10px; font-weight: 700;
       letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold);
+      color: var(--dark-brown);
       text-decoration: none;
       transition: background .2s, opacity .2s;
     }
-    .step-link-block:hover { background: rgba(178,121,49,.08); opacity: .85; }
+    .step-link-block:hover { background: rgba(80,42,26,.12); }
 
-    /* VIP highlight card */
+    /* VIP step — slightly darker card */
     .step-card.step-vip {
-      background: var(--mocha);
-      border-color: rgba(195,153,80,.25);
+      background: var(--dark-brown);
+      border-color: rgba(195,153,80,.2);
     }
-    .step-card.step-vip .step-title { color: var(--gold-light); }
-    .step-card.step-vip .step-body  { color: rgba(253,247,245,.75); }
+    .step-card.step-vip .step-num-label { color: rgba(195,153,80,.6); }
+    .step-card.step-vip .step-num-big   { color: var(--gold-light); }
+    .step-card.step-vip .step-title     { color: var(--gold-light); }
+    .step-card.step-vip .step-body      { color: rgba(253,247,245,.72); }
     .step-card.step-vip .step-body strong { color: var(--white); }
-    .step-card.step-vip .step-body a { color: var(--gold-light); }
-    .step-card.step-vip .step-num-big { color: rgba(195,153,80,.15); }
+    .step-card.step-vip .step-body a    { color: var(--gold-light); }
 
     /* ── CLOSING ─────────────────────────────── */
     #closing {
-      background: var(--blush);
+      background: var(--cream);
       padding: var(--pv) var(--ph);
       text-align: center;
     }
 
     .closing-inner {
-      max-width: 620px;
+      max-width: 580px;
       margin: 0 auto;
     }
 
     .closing-h {
       font-family: var(--f-display);
-      font-size: clamp(22px, 3vw, 36px);
+      font-size: clamp(20px, 2.8vw, 32px);
       font-weight: 700;
       color: var(--dark-brown);
       line-height: 1.2;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .closing-body {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(15px, 1.8vw, 20px);
+      font-size: clamp(15px, 1.8vw, 19px);
       color: var(--dark-brown);
       line-height: 1.85;
-      margin-bottom: 32px;
-      opacity: .85;
+      margin-bottom: 28px;
+      opacity: .8;
     }
 
     .closing-sig {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(18px, 2.2vw, 26px);
+      font-size: clamp(22px, 3vw, 32px);
       color: var(--gold);
-      margin-top: 20px;
+      margin-top: 16px;
     }
 
     /* ── FOOTER ──────────────────────────────── */
@@ -404,17 +345,17 @@
 
     /* ── MOBILE ──────────────────────────────── */
     @media (max-width: 720px) {
-      :root { --ph: 24px; --pv: 64px; }
+      :root { --ph: 24px; --pv: 56px; }
       .step-card {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 24px 24px;
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+        padding: 22px 20px;
       }
-      .step-num-block { flex-direction: row; align-items: baseline; gap: 8px; }
-      .step-num-big { font-size: 32px; }
+      .step-num-big { font-size: 34px; }
     }
     @media (max-width: 480px) {
       :root { --ph: 20px; }
+      .hero-yay { font-size: 52px; }
     }
   </style>
 </head>
@@ -426,7 +367,7 @@
   ============================================================= -->
   <section id="hero">
 
-    <p class="hero-label reveal">Mirror of Meaning Masterclass Week</p>
+    <p class="hero-eyebrow reveal">Mirror of Meaning Masterclass Week</p>
 
     <h1 class="hero-yay reveal d1">Yay!</h1>
     <p class="hero-seat reveal d2">Your seat is saved!</p>
@@ -436,33 +377,21 @@
     <p class="hero-before reveal d3">Before you go!</p>
 
     <div class="hero-arrow reveal d4">
-      <span class="hero-arrow-label">Scroll down</span>
       <span class="hero-arrow-icon">↓</span>
     </div>
 
-  </section>
-
-
-  <!-- ============================================================
-       SECTION 2 — VIDEO
-  ============================================================= -->
-  <section id="video-section">
-    <div class="video-inner">
-
-      <span class="label reveal">A message from Leo</span>
-      <h2 style="font-family:var(--f-display); font-size:clamp(20px,2.8vw,34px); font-weight:700; color:var(--dark-brown); line-height:1.2;" class="reveal d1">Watch this first</h2>
-
-      <div class="video-placeholder reveal d2">
-        <div class="video-play-icon"></div>
-        <p class="video-placeholder-text">Video coming soon</p>
-      </div>
-
+    <!-- Leo's welcome video -->
+    <div class="hero-video-wrap reveal d4">
+      <video controls playsinline preload="metadata" poster="../images/mom-og-banner.jpg">
+        <source src="../images/welcome-mom.mp4" type="video/mp4">
+      </video>
     </div>
+
   </section>
 
 
   <!-- ============================================================
-       SECTION 3 — STEPS
+       SECTION 2 — STEPS
   ============================================================= -->
   <section id="steps">
 
@@ -477,7 +406,7 @@
       <!-- STEP 1 -->
       <div class="step-card reveal">
         <div class="step-num-block">
-          <span class="step-num-text">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">1</span>
         </div>
         <div>
@@ -494,7 +423,7 @@
       <!-- STEP 2 -->
       <div class="step-card reveal">
         <div class="step-num-block">
-          <span class="step-num-text">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">2</span>
         </div>
         <div>
@@ -502,7 +431,7 @@
           <p class="step-body">
             Go to your email, find the email sent by <strong>'Leo's Community'</strong><br>
             (check your spam folder as well!)<br><br>
-            And click on: <strong>Activate my account.</strong><br><br>
+            Click on: <strong>Activate my account.</strong><br><br>
             If you do, you get access to the community. If you don't — you won't.
           </p>
         </div>
@@ -511,7 +440,7 @@
       <!-- STEP 3 -->
       <div class="step-card reveal">
         <div class="step-num-block">
-          <span class="step-num-text">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">3</span>
         </div>
         <div>
@@ -526,7 +455,7 @@
       <!-- STEP 4 -->
       <div class="step-card reveal">
         <div class="step-num-block">
-          <span class="step-num-text">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">4</span>
         </div>
         <div>
@@ -541,7 +470,7 @@
       <!-- STEP 5 — VIP -->
       <div class="step-card step-vip reveal">
         <div class="step-num-block">
-          <span class="step-num-text" style="color:var(--gold-light);">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">5</span>
         </div>
         <div>
@@ -557,7 +486,7 @@
       <!-- STEP 6 -->
       <div class="step-card reveal">
         <div class="step-num-block">
-          <span class="step-num-text">Step</span>
+          <span class="step-num-label">Step</span>
           <span class="step-num-big">6</span>
         </div>
         <div>
@@ -588,13 +517,13 @@
         Get ready to receive and feel alive.
       </p>
 
-      <div style="font-family:var(--f-head); font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--dark-brown); opacity:.65; margin-bottom:10px;" class="reveal d2">With questions</div>
+      <div style="font-family:var(--f-head); font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--dark-brown); opacity:.55; margin-bottom:10px;" class="reveal d2">With questions</div>
       <p style="font-size:14px; color:var(--taupe); line-height:1.9;" class="reveal d2">
         Ask inside the community (tag me with <strong style="color:var(--dark-brown);">@leoboxem</strong>)<br>
         or send us an email to <a href="mailto:leo@leoboxem.com" style="color:var(--gold); font-weight:600; text-decoration:none;">leo@leoboxem.com</a>
       </p>
 
-      <p style="font-size:14px; color:var(--dark-brown); margin-top:28px; font-family:var(--f-body); opacity:.8;" class="reveal d3">
+      <p style="font-size:14px; color:var(--dark-brown); margin-top:28px; opacity:.7;" class="reveal d3">
         Exciting to move forward together!
       </p>
       <p class="closing-sig reveal d3">Leo</p>
