@@ -91,9 +91,9 @@
 
     .vip-label {
       font-family: var(--f-head);
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.26em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 16px;
@@ -148,7 +148,7 @@
       gap: 16px;
       max-width: 480px;
       width: 100%;
-      margin-bottom: 48px;
+      margin-bottom: 16px;
     }
 
     .step {
@@ -156,10 +156,28 @@
       align-items: flex-start;
       gap: 18px;
       text-align: left;
-      background: var(--white);
-      border: 1px solid rgba(178,121,49,.14);
+      background: rgba(178,121,49,.08);
+      border: 1px solid rgba(178,121,49,.2);
       border-radius: 12px;
       padding: 20px 22px;
+    }
+
+    .img-row {
+      display: flex;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+    .img-row img {
+      flex: 1;
+      width: 50%;
+      border-radius: 12px;
+      display: block;
+    }
+    @media (max-width: 680px) {
+      .img-row { flex-direction: column; }
+      .img-row img { width: 100%; }
     }
 
     .step-num {
@@ -239,7 +257,7 @@
     <p class="vip-label reveal d1">Confirmation — Mirror of Meaning Masterclass Experience</p>
 
     <h1 class="vip-h reveal d1">
-      Add the event to your calendar
+      Now add the events to your calendar
     </h1>
 
     <p class="vip-event reveal d2">The Mirror of Meaning Masterclass Experience</p>
@@ -248,8 +266,8 @@
     <div class="steps">
 
       <div class="step reveal d2" style="background: var(--gold); border-color: rgba(80,42,26,.25);">
-        <div class="step-text" style="color: var(--dark-brown);">
-          <strong style="color: var(--dark-brown);">The Threshold Experience</strong>
+        <div class="step-text" style="color: var(--white);">
+          <strong style="color: var(--white);">The Threshold Experience</strong>
           Friday 12 June &nbsp;·&nbsp; 10:30–13:00 CET / 9:30–12:00 AM UK<br>
           <em>Live Masterclass Intensive · 2.5 hours</em>
         </div>
@@ -263,10 +281,10 @@
         </div>
       </div>
 
-      <div class="step reveal d2" style="background: rgba(178,121,49,.08); border-color: rgba(178,121,49,.2);">
+      <div class="step reveal d2">
         <div class="step-text">
           <strong>You Are Here For A Reason — Audio Series</strong>
-          Released 4 June<br>
+          Released 4 June by email<br>
           <em>Your bonus gift — unlocked when you sign up</em>
         </div>
       </div>
@@ -289,7 +307,7 @@
 
     </div>
 
-    <p class="reveal d3" style="margin-top:24px; font-family:var(--f-body); font-size:14px; color:var(--taupe); line-height:1.8; max-width:480px; font-style:italic;">
+    <p class="reveal d3" style="margin-top:8px; font-family:var(--f-body); font-size:17px; font-weight:700; color:var(--dark-brown); line-height:1.7; max-width:480px;">
       More information, links, bonuses and instructions follow on June 4th by email.
     </p>
 
@@ -301,9 +319,11 @@
 
 
   <!-- Images -->
-  <div style="text-align:center; padding:48px var(--ph) 0; background:var(--cream);">
-    <img src="../images/MoM2%20Cover.jpg" alt="Mirror of Meaning Masterclass" style="max-width:600px; width:100%; border-radius:12px; display:block; margin:0 auto;">
-    <img src="../images/MoM-You-Are-Here-For-A-Reason-Audio-series-1.jpg" alt="You Are Here For A Reason Audio Series" style="max-width:600px; width:100%; border-radius:12px; display:block; margin:24px auto 0;">
+  <div style="padding:48px var(--ph) 0; background:var(--cream);">
+    <div class="img-row">
+      <img src="../images/MoM-You-Are-Here-For-A-Reason-Audio-series-1.jpg" alt="You Are Here For A Reason Audio Series">
+      <img src="../images/MoM2%20Cover.jpg" alt="Mirror of Meaning Masterclass">
+    </div>
   </div>
 
 
