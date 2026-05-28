@@ -1205,6 +1205,117 @@
     }
 
     /* =============================================================
+       FAQ
+    ============================================================= */
+    #faq { background: var(--white); }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .faq-h { font-size: clamp(22px, 3vw, 38px); }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(178,121,49,.15);
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(178,121,49,.15); }
+
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 22px 0;
+      text-align: left;
+      font-family: var(--f-display);
+      font-size: clamp(15px, 1.6vw, 17px);
+      font-weight: 600;
+      color: var(--dark-brown);
+      line-height: 1.4;
+      gap: 20px;
+    }
+    .faq-q:hover { color: var(--red-brown); }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform .3s ease;
+      line-height: 1;
+    }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .45s ease;
+    }
+    .faq-item.open .faq-a { max-height: 1000px; }
+
+    .faq-a-inner {
+      padding: 0 40px 28px 0;
+      font-size: 15px;
+      color: var(--black);
+      line-height: 1.9;
+    }
+
+    .faq-a-inner p { margin-bottom: 10px; }
+    .faq-a-inner p:last-child { margin-bottom: 0; }
+
+    .faq-a-inner ol, .faq-a-inner ul {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+    .faq-a-inner li { margin-bottom: 6px; line-height: 1.75; }
+
+    .faq-a-inner strong { color: var(--dark-brown); font-weight: 600; }
+
+    .faq-a-inner em {
+      font-family: var(--f-serif);
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .faq-a-inner a {
+      color: var(--red-brown);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(141,66,21,.3);
+      transition: border-color .2s;
+    }
+    .faq-a-inner a:hover { border-bottom-color: var(--red-brown); }
+
+    .faq-closing {
+      text-align: center;
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(178,121,49,.15);
+    }
+    .faq-closing p {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 17px);
+      color: var(--dark-brown);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .faq-closing a {
+      color: var(--red-brown);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(141,66,21,.3);
+    }
+
+    /* =============================================================
        FOOTER
     ============================================================= */
     footer {
@@ -1508,33 +1619,14 @@
   <!-- ============================================================
        BONUS — AUDIO SERIES
   ============================================================= -->
-  <section id="bonus-audio">
-    <div class="wrap">
-      <div class="bonus-audio-grid">
-
-        <div class="bonus-img-area reveal">
-          <!-- TODO: Replace this placeholder with the actual audio series image when available -->
-          <div class="placeholder-icon">♪</div>
-          <div class="placeholder-note">Image coming soon</div>
-        </div>
-
-        <div>
-          <p class="bonus-label reveal">Bonus — for every participant</p>
-          <span class="bonus-gift-tag reveal d1">Included when you sign up</span>
-
-          <h3 class="bonus-title reveal d1">
-            The Secret Cost of not Living<br>
-            <span class="script">Your Purpose</span>
-          </h3>
-
-          <p class="bonus-subtitle reveal d2">
-            An Audio Series — For Women Who Know They Are Meant for More in Life, Work and Leadership — But Do Not Know How Their Next Step Forward Looks
-          </p>
-
-          <p class="bonus-release reveal d2">Released 5 June 2026</p>
-        </div>
-
-      </div>
+  <section id="bonus-audio" style="background: var(--dark-brown); padding: var(--pv) var(--ph);">
+    <div class="wrap" style="text-align: center;">
+      <img
+        src="../images/MoM-You-Are-Here-For-A-Reason-Audio-series-1.jpg"
+        alt="You Are Here For A Reason — Audio Series"
+        class="reveal"
+        style="max-width: 860px; width: 100%; border-radius: 14px; display: block; margin: 0 auto;"
+      >
     </div>
   </section>
 
@@ -1850,6 +1942,135 @@
 
 
   <!-- ============================================================
+       FAQ
+  ============================================================= -->
+  <section id="faq">
+    <div class="wrap">
+
+      <div class="faq-header">
+        <span class="label reveal" style="display:inline-block;">FAQ</span>
+        <h2 class="section-h faq-h reveal d1">Good questions deserve honest answers.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-q">What is this Masterclass Experience about?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>A guided threshold experience that leads to a recognition of:</p>
+              <ol>
+                <li>Who you are</li>
+                <li>Why you're here</li>
+                <li>What your next natural step forward is</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">What is the vibe?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>No pressure or pushing. No expectations.<br>
+              Just a space to look honestly at your life.</p>
+              <p>Lively, human, perfectly imperfect.<br>
+              Empowering, awakening, and activating.</p>
+              <p>Leo is known for creating a safe space — even on Zoom — where you can show up as yourself, bring your fears and hopes, and connect on a meaningful level with other like-minded women.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">What is required of me to join?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>No pressure. No expectations.<br>
+              Just a space to look honestly at your life.</p>
+              <p>I advise you to use the 2 ways to prepare yourself so you get the most out of it!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">How do I prepare?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>This experience is consciously crafted with two ways to prepare yourself — to be fully present and aligned once we stand before your Mirror of Meaning during the main Masterclass on Friday 12th.</p>
+              <ol>
+                <li><strong>An exclusive Audio Series</strong> to prepare you fully for the moment you stand before your own Mirror of Meaning. This lays the foundation for:
+                  <ul style="margin-top: 8px;">
+                    <li><em>The WHY</em> → The Secret Costs of NOT Living Your Purpose</li>
+                    <li><em>The WHAT</em> → How to Remember Who you are &amp; Why you are here</li>
+                    <li><em>The HOW</em> → How to Find Your Purpose &amp; Path</li>
+                  </ul>
+                </li>
+                <li style="margin-top: 10px;"><strong>A Preparation Session</strong> to prepare you practically and energetically</li>
+              </ol>
+              <p style="margin-top: 12px;">Both leading up to one moment to see clearly: <em>The Mirror of Meaning Masterclass.</em></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">When &amp; How do I prepare?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>By signing up for the Mirror of Meaning Masterclass, you automatically unlock access to the exclusive <em>'You Are Here for a Reason'</em> audio series.</p>
+              <p>This audio series will be released 1 week before the Masterclass: <strong>Thursday 4 June</strong> — it will be sent straight to your inbox.</p>
+              <p>The day before the Masterclass, <strong>Wednesday 11 June, 12:00 CET / 11 AM UK</strong>, I will host a live Preparation Session — practical and energetic preparation so you are all set and ready to get the most out of the main Masterclass on 12 June.</p>
+              <p>A replay will be available straight after. Joining live is not mandatory but warmly advised!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">What if I don't have time to do all the preparation?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Prioritize in this order:</p>
+              <ol>
+                <li><strong>Friday 12 June</strong> — the main Masterclass. This is the one.</li>
+                <li><strong>The Audio Series (4 June)</strong> — even if you listen while walking, driving, or cooking.</li>
+                <li><strong>The live Preparation Session (11 June)</strong> — practical and energetic warm-up.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">What does it cost?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Nothing. I decided to offer this for free.</p>
+              <p>What I ask from you is your decisiveness to be present — and to show up with curiosity and the willingness to get the most out of your experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q">I thought this was a full Masterclass Week in May…?</button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Yes, that was the initial planning.</p>
+              <p>Due to personal circumstances I had to postpone it to June — and I chose to make the process as clean and simple as possible for you to join.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-closing reveal">
+        <p>I have another question</p>
+        <p>Send me a message at <a href="mailto:leo@leoboxem.com">leo@leoboxem.com</a><br>
+        I am here for you and your growth.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        FOOTER
   ============================================================= -->
   <footer>
@@ -1874,6 +2095,16 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
   </script>
 
 </body>
