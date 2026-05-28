@@ -558,10 +558,10 @@
     .threshold-badge {
       display: inline-block;
       font-family: var(--f-head);
-      font-size: 9px; font-weight: 700;
-      letter-spacing: 0.26em; text-transform: uppercase;
-      color: var(--gold-light);
-      border: 1px solid rgba(195,153,80,.4);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--dark-brown);
+      border: 1px solid rgba(80,42,26,.3);
       border-radius: 20px;
       padding: 5px 16px;
       margin-bottom: 20px;
@@ -569,9 +569,9 @@
 
     .threshold-date {
       font-family: var(--f-head);
-      font-size: 10px; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(255,255,255,.45);
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--dark-brown);
       margin-bottom: 10px;
     }
 
@@ -579,23 +579,23 @@
       font-family: var(--f-display);
       font-size: clamp(22px, 3vw, 38px);
       font-weight: 700;
-      color: var(--white);
+      color: var(--dark-brown);
       line-height: 1.15;
       margin-bottom: 6px;
     }
-    .threshold-title .script { color: var(--gold-light); font-size: 1.1em; }
+    .threshold-title .script { color: var(--dark-brown); opacity: .7; font-size: 1.1em; }
 
     .threshold-time {
       font-family: var(--f-head);
-      font-size: 10px; font-weight: 600;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: rgba(195,153,80,.65);
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(80,42,26,.75);
       margin-bottom: 20px;
     }
 
     .threshold-desc {
       font-size: 15px;
-      color: rgba(255,255,255,.78);
+      color: rgba(80,42,26,.85);
       line-height: 1.85;
       max-width: 620px;
       margin-bottom: 28px;
@@ -605,7 +605,7 @@
       font-family: var(--f-serif);
       font-style: italic;
       font-size: clamp(15px, 1.6vw, 17px);
-      color: var(--gold-light);
+      color: var(--dark-brown);
       opacity: .85;
       margin-bottom: 32px;
     }
@@ -1407,16 +1407,16 @@
 
         <div>
           <p class="hero-eyebrow reveal">12 June 2026</p>
+          <p class="hero-eyebrow reveal" style="margin-bottom: 20px; opacity: .75;">A Guided Threshold Experience with Leo Boxem</p>
 
           <h1 class="hero-title reveal d1">The Mirror of Meaning</h1>
           <span class="hero-script reveal d1">Masterclass</span>
 
-          <p class="hero-for reveal d2" style="margin-bottom: 4px; margin-top: 20px;">A Guided Threshold Experience with Leo Boxem</p>
-          <p class="hero-for reveal d2" style="margin-bottom: 4px;">
+          <p class="hero-for reveal d2" style="margin-top: 20px; line-height: 1.7;">
             For Women Who Know They Are Meant for More<br>
-            in Life, Work and Leadership
+            in Life, Work and Leadership,<br>
+            <em style="font-style:italic; color:var(--rose);">Not Clearly Knowing What To Do Next</em>
           </p>
-          <p class="hero-for reveal d2" style="font-style: italic; color: var(--rose); margin-bottom: 24px;">Not Knowing What To Do Next</p>
 
           <div class="reveal d3" style="margin-top: 28px;">
             <p style="font-size: 14px; line-height: 1.85; color: var(--black); margin-bottom: 28px;">This is a guided threshold experience that leads to a recognition of who you are, why you're here — and what your next natural step forward is.</p>
@@ -1465,9 +1465,9 @@
 
       </div>
 
-      <div class="reveal d4" style="margin-top:40px; background:var(--dark-brown); border-radius:12px; padding:32px 36px; text-align:center; max-width:720px; margin-left:auto; margin-right:auto;">
-        <p style="font-family:var(--f-serif); font-style:italic; font-size:clamp(14px,1.5vw,17px); color:rgba(253,247,245,.85); line-height:1.85; margin-bottom:16px;">"Surrender to her drive, knowledge, and skills. Success guaranteed! Fearless and very passionate, Leontine manages to provide each participant with insight, transformation and joy."</p>
-        <cite style="font-family:var(--f-head); font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); font-style:normal;">— S. Kock</cite>
+      <div class="reveal d4" style="margin-top:40px; background:#fdf7f5; border-radius:12px; padding:32px 36px; text-align:center; max-width:720px; margin-left:auto; margin-right:auto; border:1px solid rgba(178,121,49,.15);">
+        <p style="font-family:var(--f-serif); font-style:italic; font-size:clamp(14px,1.5vw,17px); color:var(--dark-brown); line-height:1.85; margin-bottom:16px;">"Surrender to her drive, knowledge, and skills. Success guaranteed! Fearless and very passionate, Leontine manages to provide each participant with insight, transformation and joy."</p>
+        <cite style="font-family:var(--f-head); font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); font-style:normal;">— S. Kock</cite>
       </div>
 
     </div>
@@ -1531,9 +1531,9 @@
           And realize what matters now.</p>
         </div>
 
-        <div class="what-coda reveal d3">
-          <p>This masterclass builds toward one moment.<br>
-          <em>And that moment changes everything.</em></p>
+        <div class="what-coda reveal d3" style="background:#b98774; border-color:rgba(80,42,26,.15);">
+          <p style="color:var(--white);">This masterclass builds toward one moment.<br>
+          <em style="color:var(--white);">And that moment changes everything.</em></p>
         </div>
 
       </div>
@@ -1554,44 +1554,43 @@
       </div>
 
       <!-- MAIN: Threshold Experience -->
-      <div class="threshold-card reveal d1">
+      <div class="threshold-card reveal d1" style="background: var(--gold); border-color: rgba(80,42,26,.25);">
         <span class="threshold-badge">Live Masterclass Intensive</span>
         <div class="threshold-date">Friday 12 June 2026</div>
         <div class="threshold-title">The <span class="script">Threshold</span> Experience</div>
-        <div class="threshold-time">10:30–13:00 CET &nbsp;·&nbsp; 9:30–12:00 AM UK &nbsp;·&nbsp; 2.5 hours live</div>
+        <div class="threshold-time">10:30–13:00 CET / 9:30–12:00 AM UK &nbsp;·&nbsp; 2.5 hours live</div>
         <p class="threshold-desc">Stand before the mirror and realize what your life is asking of you now. This is where everything comes together — not more input, but a real moment of truth. You will walk away with clear vision, a beaming heart and a concrete plan for your next 3 steps.</p>
         <p class="threshold-affirmation">"I see the life that is waiting for me."</p>
-        <!-- TODO: Replace the href below with your Circle signup form URL -->
-        <a href="https://leoboxem.circle.so/mom-signup" class="btn btn-gold">Claim Your Spot — Free</a>
+        <a href="https://leoboxem.circle.so/mom-signup" class="btn btn-fill">Claim Your Spot — Free</a>
       </div>
 
       <!-- 3 supporting sessions -->
       <div class="sessions-row">
 
         <div class="session-card reveal">
-          <div class="session-badge">Preparation Session</div>
-          <div class="session-date">Thursday 11 June 2026</div>
-          <div class="session-time">12:00 CET &nbsp;·&nbsp; 11 AM UK</div>
+          <div class="session-badge">Bonus Session 1</div>
+          <div class="session-date">Wednesday 10 June 2026</div>
+          <div class="session-time">10:30 CET / 9:30 AM UK</div>
           <div class="session-title">Threshold Preparation</div>
-          <p class="session-desc">A 1-hour live session to prepare you for the Masterclass. So you arrive ready — open, grounded and clear on what you want to see.</p>
+          <p class="session-desc">A 1-hour live session to prepare you practically and energetically for the Masterclass. So you arrive ready — open, grounded and clear on what you want to see.</p>
         </div>
 
-        <div class="session-card is-bonus reveal d1">
-          <div class="session-badge bonus">Bonus Session 1</div>
-          <div class="session-date">Monday 15 June 2026</div>
-          <div class="session-time">20:00 CET &nbsp;·&nbsp; 7 PM UK</div>
-          <div class="session-title">Topic to be revealed</div>
-          <p class="session-desc">Included when you sign up for the Mirror of Meaning Masterclass.</p>
-          <p class="session-surprise">Topic: a surprise gift, revealed closer to the date.</p>
+        <div class="session-card reveal d1" style="background:#b98774; border-color:rgba(80,42,26,.15);">
+          <div class="session-badge" style="color:var(--dark-brown);">Bonus Session 2</div>
+          <div class="session-date" style="color:var(--dark-brown);">Monday 15 June 2026</div>
+          <div class="session-time" style="color:rgba(80,42,26,.7); opacity:1;">20:00 CET / 7 PM UK</div>
+          <div class="session-title" style="color:var(--dark-brown);">Topic: Surprise!</div>
+          <p class="session-desc" style="color:rgba(80,42,26,.8);">Included when you sign up for the Mirror of Meaning Masterclass — for deeper integration and to ask your questions.</p>
+          <p class="session-surprise" style="color:var(--dark-brown); opacity:.75;">Topic will be revealed closer to the date.</p>
         </div>
 
-        <div class="session-card is-bonus reveal d2">
-          <div class="session-badge bonus">Bonus Session 2</div>
-          <div class="session-date">Tuesday 16 June 2026</div>
-          <div class="session-time">10:30 CET &nbsp;·&nbsp; 9:30 AM UK</div>
-          <div class="session-title">Topic to be revealed</div>
-          <p class="session-desc">Included when you sign up for the Mirror of Meaning Masterclass.</p>
-          <p class="session-surprise">Topic: a surprise gift, revealed closer to the date.</p>
+        <div class="session-card reveal d2" style="background:#8c756a; border-color:rgba(253,247,245,.15);">
+          <div class="session-badge" style="color:var(--cream);">Bonus Session 3</div>
+          <div class="session-date" style="color:var(--cream);">Tuesday 16 June 2026</div>
+          <div class="session-time" style="color:rgba(253,247,245,.7); opacity:1;">10:30 CET / 9:30 AM UK</div>
+          <div class="session-title" style="color:var(--white);">Surprise Gift!</div>
+          <p class="session-desc" style="color:rgba(253,247,245,.85);">Included when you sign up for the Mirror of Meaning Masterclass — for deeper integration and to ask your questions.</p>
+          <p class="session-surprise" style="color:rgba(253,247,245,.7);">Topic will be revealed closer to the date.</p>
         </div>
 
       </div>
@@ -1681,14 +1680,12 @@
             <li>Where you stopped trusting yourself</li>
           </ul>
 
-          <div class="turning-realize reveal d3">
-            "I cannot keep living half-aligned."
-          </div>
+          <p class="reveal d3" style="font-family:var(--f-display); font-size:clamp(18px,2.2vw,26px); font-weight:700; color:var(--dark-brown); line-height:1.35; margin-bottom:24px;">"I cannot keep living half-aligned."</p>
 
-          <p class="turning-closing reveal d3" style="color:var(--black);">
-            That moment is what I call: <em style="font-family:var(--f-serif); font-style:italic; color:var(--black);">The Mirror of Meaning.</em><br>
+          <div class="turning-realize reveal d3">
+            That moment is what I call: <em style="font-family:var(--f-serif); font-style:italic; color:var(--gold);">The Mirror of Meaning.</em><br>
             And once you see it — you cannot unsee it.
-          </p>
+          </div>
         </div>
 
         <div class="reveal d1">
@@ -1732,7 +1729,7 @@
       </ul>
 
       <div class="inside-coda reveal d3">
-        <p class="inside-note">This is not about blowing up your life.</p>
+        <p class="inside-bold">This is not about blowing up your life.</p>
         <p class="inside-bold">It is about moving forward with <span class="script">honesty and ease.</span></p>
       </div>
 
@@ -1747,13 +1744,17 @@
     <div class="wrap">
       <div class="lionheart-inner">
 
-        <p class="reveal" style="text-align:center; font-family:var(--f-script); font-style:italic; font-size:clamp(30px,4vw,52px); font-weight:500; color:var(--gold); margin-bottom:16px; line-height:1.1;">The Lionheart Moment</p>
+        <p class="reveal" style="text-align:center; font-family:var(--f-script); font-style:italic; font-size:clamp(30px,4vw,52px); font-weight:500; color:var(--gold); margin-bottom:12px; line-height:1.1;">The Lionheart Moment</p>
 
-        <h2 class="section-h lionheart-h reveal d1">
+        <div class="reveal d1" style="text-align:center; margin-bottom:24px;">
+          <img src="../images/lionheart-logo.jpg" alt="Lionheart" style="width:72px; height:72px; object-fit:contain; display:inline-block; opacity:.85;">
+        </div>
+
+        <p class="reveal d1" style="text-align:center; font-family:var(--f-display); font-size:clamp(20px,2.5vw,30px); font-weight:800; color:var(--dark-brown); margin-bottom:20px; line-height:1.2;">Change requires courage.</p>
+
+        <h2 class="section-h lionheart-h reveal d2">
           Because insight alone is <span class="script">not enough.</span>
         </h2>
-
-        <p class="lionheart-sub reveal d2">Change requires courage.</p>
 
         <ul class="courage-list reveal d2">
           <li>The courage to stop hiding</li>
@@ -1792,7 +1793,7 @@
   <section id="about-leo">
     <div class="about-leo-inner">
       <div>
-        <p class="about-label reveal" style="font-size:16px; letter-spacing:0.12em; opacity:1; margin-bottom:12px;">Your guide</p>
+        <p class="reveal" style="font-family:var(--f-script); font-style:italic; font-size:clamp(30px,4vw,52px); font-weight:500; color:var(--gold); margin-bottom:12px; line-height:1.1;">Your guide</p>
         <p class="about-name reveal d1">Leo Boxem</p>
         <p class="about-bio reveal d2">Twelve years ago I was diagnosed with leukemia. In that moment it became clear: I had not yet lived the life I was here to live. That realization became the foundation of everything I do. I guide women through the moments where something in life is asking to be lived more honestly — not through pressure, but through clarity.</p>
       </div>
@@ -2001,7 +2002,7 @@
             <div class="faq-a-inner">
               <p>By signing up for the Mirror of Meaning Masterclass, you automatically unlock access to the exclusive <em>'You Are Here for a Reason'</em> audio series.</p>
               <p>This audio series will be released 1 week before the Masterclass: <strong>Thursday 4 June</strong> — it will be sent straight to your inbox.</p>
-              <p>The day before the Masterclass, <strong>Thursday 11 June, 12:00 CET / 11 AM UK</strong>, I will host a live Preparation Session — practical and energetic preparation so you are all set and ready to get the most out of the main Masterclass on 12 June.</p>
+              <p>The day before the Masterclass, <strong>Wednesday 10 June, 10:30 CET / 9:30 AM UK</strong>, I will host a live Preparation Session — practical and energetic preparation so you are all set and ready to get the most out of the main Masterclass on 12 June.</p>
               <p>A replay will be available straight after. Joining live is not mandatory but warmly advised!</p>
             </div>
           </div>
@@ -2015,7 +2016,7 @@
               <ol>
                 <li><strong>Friday 12 June</strong> — the main Masterclass. This is the one.</li>
                 <li><strong>The Audio Series (4 June)</strong> — even if you listen while walking, driving, or cooking.</li>
-                <li><strong>The live Preparation Session (11 June)</strong> — practical and energetic warm-up.</li>
+                <li><strong>The live Preparation Session (10 June)</strong> — practical and energetic warm-up.</li>
               </ol>
             </div>
           </div>
