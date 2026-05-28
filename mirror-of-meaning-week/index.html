@@ -986,14 +986,17 @@
     .about-leo-inner {
       max-width: var(--max);
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 56px;
+    }
+
+    .about-leo-header {
+      display: flex;
       align-items: center;
+      gap: 28px;
+      margin-bottom: 28px;
     }
 
     .about-leo-photo {
-      width: 100px; height: 100px;
+      width: 180px; height: 180px;
       border-radius: 50%;
       overflow: hidden;
       flex-shrink: 0;
@@ -1002,7 +1005,7 @@
     .about-leo-photo img {
       width: 100%; height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: center 15%;
     }
 
     .about-label {
@@ -1369,8 +1372,8 @@
       .rec-label-block { text-align: left; }
       .invitation-card { padding: 28px 20px; }
 
-      .about-leo-inner { grid-template-columns: 1fr; gap: 24px; }
-      .about-leo-photo { display: none; }
+      .about-leo-header { gap: 20px; }
+      .about-leo-photo { width: 120px; height: 120px; }
     }
 
     @media (max-width: 560px) {
@@ -1792,9 +1795,16 @@
   ============================================================= -->
   <section id="about-leo">
     <div class="about-leo-inner">
-      <div>
-        <p class="reveal" style="font-family:var(--f-script); font-style:italic; font-size:clamp(30px,4vw,52px); font-weight:500; color:var(--gold); margin-bottom:12px; line-height:1.1;">Your guide</p>
-        <p class="about-name reveal d1">Leo Boxem</p>
+
+      <div class="about-leo-header">
+        <div>
+          <p class="reveal" style="font-family:var(--f-script); font-style:italic; font-size:clamp(30px,4vw,52px); font-weight:500; color:var(--gold); margin-bottom:8px; line-height:1.1;">Your guide</p>
+          <p class="about-name reveal d1">Leo Boxem</p>
+        </div>
+        <div class="about-leo-photo reveal d1">
+          <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
+        </div>
+      </div>
 
         <p class="about-bio reveal d2">Leo Boxem is a Legacy Mentor, transformational guide, and the founder of the Remember Your Future™ Movement — devoted to helping women reconnect with who they truly are, why they are here, and the meaningful work still waiting to be lived through them.</p>
 
@@ -1835,10 +1845,7 @@
         and create a life, leadership, and legacy that genuinely feels like their own.</p>
 
         <p class="reveal d3" style="font-family:var(--f-serif); font-style:italic; font-size:clamp(15px,1.6vw,19px); color:var(--rose); margin-top:20px; font-weight:500;">One Authentic Shift™ at a time.</p>
-      </div>
-      <div class="about-leo-photo reveal d2">
-        <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
-      </div>
+
     </div>
   </section>
 
