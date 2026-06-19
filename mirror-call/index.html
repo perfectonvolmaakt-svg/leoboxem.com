@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror of Meaning Call — Leo Boxem | Remember Your Future™</title>
+  <meta name="description" content="A private 30–45 min conversation with Leo Boxem. You sense there is more to your life. Let's look at it together — honestly, gently, and without holding back.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Leo Boxem · Remember Your Future™">
+  <meta property="og:title" content="Mirror of Meaning Call — Leo Boxem">
+  <meta property="og:description" content="A private 30–45 min conversation with Leo Boxem. You sense there is more to your life. Let's look at it together — honestly, gently, and without holding back.">
+  <meta property="og:image" content="https://www.leoboxem.com/images/mom-og-banner.jpg">
+  <meta property="og:url" content="https://www.leoboxem.com/mirror-call">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.leoboxem.com/images/mom-og-banner.jpg">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================================
+       RESET
+    ============================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --rose:       #b98774;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --mocha:      #3a2d24;
+      --gold:       #c39950;
+      --gold-dark:  #b27931;
+      --taupe:      #8c756a;
+      --black:      #1a1a1a;
+      --white:      #ffffff;
+
+      --f-head:    'League Spartan', sans-serif;
+      --f-serif:   'Playfair Display', Georgia, serif;
+      --f-body:    'Montserrat', sans-serif;
+      --f-display: 'Outfit', sans-serif;
+
+      --max: 1100px;
+      --pv:  88px;
+      --ph:  48px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--black);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    img { display: block; }
+
+    /* =============================================================
+       SCROLL REVEAL
+    ============================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .22s; }
+    .d3 { transition-delay: .36s; }
+    .d4 { transition-delay: .5s; }
+
+    /* =============================================================
+       LAYOUT
+    ============================================================= */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--ph);
+    }
+    section { padding: var(--pv) var(--ph); }
+    section > .wrap { padding-left: 0; padding-right: 0; }
+
+    /* =============================================================
+       TYPOGRAPHY
+    ============================================================= */
+    .label {
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .rule {
+      display: block;
+      width: 40px;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 28px;
+    }
+
+    .h-main {
+      font-family: var(--f-display);
+      font-size: clamp(26px, 3.6vw, 46px);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .h-main em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15em;
+      color: var(--red-brown);
+      letter-spacing: 0;
+    }
+
+    .h-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.8vw, 22px);
+      font-weight: 400;
+      color: var(--rose);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* =============================================================
+       BUTTONS
+    ============================================================= */
+    .btn {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 6px;
+      padding: 16px 30px;
+      line-height: 1.5;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: .82; transform: translateY(-2px); }
+
+    .btn-fill {
+      background: var(--red-brown);
+      color: var(--white);
+      border: 2px solid var(--red-brown);
+    }
+    .btn-gold {
+      background: transparent;
+      color: var(--dark-brown);
+      border: 1.5px solid var(--gold);
+    }
+    .btn-blush {
+      background: var(--blush);
+      color: var(--dark-brown);
+      border: 2px solid var(--blush);
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--dark-brown);
+      border: 2px solid var(--white);
+    }
+
+    /* =============================================================
+       IMAGE WRAPPERS
+    ============================================================= */
+    .img-portrait {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .img-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =============================================================
+       NAV
+    ============================================================= */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 400;
+      background: rgba(253,247,245,.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(195,153,80,.18);
+      padding: 0 var(--ph);
+    }
+
+    .nav-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 66px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-brand-name {
+      font-family: var(--f-serif);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .nav-back {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dark-brown);
+      opacity: .55;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .nav-back:hover { opacity: 1; }
+
+    .nav-cta {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--red-brown);
+      border-radius: 6px;
+      padding: 10px 18px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity .2s;
+      flex-shrink: 0;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* =============================================================
+       HERO — deep, moody background
+    ============================================================= */
+    #hero {
+      background: var(--mocha);
+      padding-top: calc(var(--pv) + 66px);
+      padding-bottom: var(--pv);
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--blush);
+      opacity: .7;
+      margin-bottom: 22px;
+    }
+
+    h1.hero-h {
+      font-family: var(--f-display);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    h1.hero-h em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.1em;
+      color: var(--blush);
+      letter-spacing: 0;
+    }
+
+    .hero-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.8vw, 21px);
+      color: rgba(225,198,183,.75);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    /* =============================================================
+       OPENING INVITATION
+    ============================================================= */
+    #invitation {
+      background: var(--white);
+    }
+
+    .invitation-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .poem-block {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: var(--dark-brown);
+      line-height: 2.1;
+      margin: 20px 0 32px;
+    }
+
+    .poem-questions {
+      margin: 0 auto 32px;
+      text-align: left;
+      display: inline-block;
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 2.2;
+      color: var(--black);
+    }
+
+    .poem-questions p {
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .poem-questions p::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-family: var(--f-serif);
+    }
+
+    .invitation-closing {
+      font-family: var(--f-body);
+      font-size: 15px;
+      line-height: 2.1;
+      color: var(--black);
+      margin-top: 28px;
+    }
+
+    /* =============================================================
+       TWO-COL
+    ============================================================= */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    /* =============================================================
+       WHAT THIS CALL IS (cream)
+    ============================================================= */
+    #what { background: var(--cream); }
+
+    .explore-list {
+      list-style: none;
+      margin: 20px 0 32px;
+    }
+
+    .explore-list li {
+      padding: 10px 0 10px 24px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(195,153,80,.15);
+    }
+    .explore-list li:first-child { border-top: 1px solid rgba(195,153,80,.15); }
+    .explore-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 19px;
+      width: 10px; height: 1px;
+      background: var(--gold);
+    }
+
+    .mirror-quote {
+      border-left: 2px solid var(--rose);
+      padding: 20px 24px;
+      margin: 28px 0 0;
+      background: rgba(185,135,116,.06);
+      border-radius: 0 8px 8px 0;
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--dark-brown);
+    }
+
+    /* =============================================================
+       THE JOURNEY — what happens in this call
+    ============================================================= */
+    #journey { background: var(--dark-brown); }
+
+    #journey .label { color: var(--blush); opacity: .75; }
+    #journey .h-main { color: var(--white); }
+    #journey .h-main em { color: var(--blush); }
+
+    .journey-inner {
+      max-width: 800px;
+    }
+
+    .journey-steps {
+      margin-top: 44px;
+      position: relative;
+    }
+
+    .journey-steps::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(195,153,80,.4), rgba(195,153,80,.1));
+    }
+
+    .journey-step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+    .journey-step:last-child { margin-bottom: 0; }
+
+    .journey-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(195,153,80,.4);
+      background: var(--dark-brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .journey-dot-inner {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: .6;
+    }
+
+    .journey-step-text {
+      padding-top: 3px;
+    }
+
+    .journey-step-title {
+      font-family: var(--f-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 4px;
+    }
+
+    .journey-step-body {
+      font-size: 14px;
+      color: rgba(253,247,245,.68);
+      line-height: 1.85;
+    }
+
+    .journey-mirror-moment {
+      margin: 44px 0;
+      padding: 28px 32px;
+      border: 1px solid rgba(225,198,183,.15);
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: rgba(253,247,245,.82);
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    /* =============================================================
+       WHO IT'S FOR (blush)
+    ============================================================= */
+    #who { background: var(--blush); }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .for-list {
+      list-style: none;
+      margin: 20px 0 32px;
+    }
+
+    .for-list li {
+      padding: 10px 0 10px 24px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(141,66,21,.1);
+    }
+    .for-list li:first-child { border-top: 1px solid rgba(141,66,21,.1); }
+    .for-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0; top: 13px;
+      font-size: 8px;
+      color: var(--red-brown);
+    }
+
+    /* =============================================================
+       WALK AWAY (cream, outcome cards)
+    ============================================================= */
+    #walkaway { background: var(--cream); text-align: center; }
+
+    .walkaway-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 40px 0;
+      text-align: left;
+    }
+
+    .outcome-card {
+      background: var(--white);
+      border: 1px solid rgba(195,153,80,.18);
+      border-radius: 12px;
+      padding: 24px 20px;
+    }
+
+    .outcome-num {
+      font-family: var(--f-serif);
+      font-size: 28px;
+      font-style: italic;
+      color: var(--gold);
+      opacity: .45;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .outcome-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--dark-brown);
+    }
+
+    /* =============================================================
+       PRACTICAL DETAILS (white)
+    ============================================================= */
+    #details { background: var(--white); }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 40px 0 0;
+    }
+
+    .detail-card {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 28px 24px;
+      border: 1px solid rgba(195,153,80,.18);
+    }
+
+    .detail-icon {
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .detail-value {
+      font-family: var(--f-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .detail-desc {
+      font-size: 13px;
+      color: var(--taupe);
+      line-height: 1.7;
+    }
+
+    /* =============================================================
+       BONUS SECTION (hidden — activate when audio series is ready)
+    ============================================================= */
+    #bonus {
+      background: var(--dark-brown);
+    }
+
+    .bonus-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bonus-badge {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--dark-brown);
+      background: var(--gold);
+      border-radius: 4px;
+      padding: 5px 12px;
+      margin-bottom: 20px;
+    }
+
+    #bonus .label { color: rgba(225,198,183,.65); }
+    #bonus .h-main { color: var(--white); }
+    #bonus .h-main em { color: var(--blush); }
+
+    .bonus-body {
+      font-size: 15px;
+      color: rgba(253,247,245,.68);
+      line-height: 1.9;
+      margin: 20px 0 28px;
+    }
+    .bonus-body strong { color: var(--white); }
+
+    .bonus-episodes {
+      list-style: none;
+      margin: 0 0 32px;
+    }
+
+    .bonus-episodes li {
+      padding: 9px 0 9px 22px;
+      position: relative;
+      font-size: 13px;
+      color: rgba(253,247,245,.6);
+      line-height: 1.7;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .bonus-episodes li:first-child { border-top: 1px solid rgba(255,255,255,.06); }
+    .bonus-episodes li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 17px;
+      width: 8px; height: 1px;
+      background: var(--gold);
+      opacity: .5;
+    }
+
+    .bonus-img {
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .bonus-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 880px) {
+      .bonus-inner { grid-template-columns: 1fr; gap: 40px; }
+      .bonus-img { aspect-ratio: 4/3; max-width: 460px; }
+    }
+
+    /* =============================================================
+       FIT NOTE (blush strip)
+    ============================================================= */
+    .fit-strip {
+      background: var(--rose);
+      padding: 52px var(--ph);
+      text-align: center;
+    }
+
+    .fit-strip-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .fit-strip p {
+      font-size: 15px;
+      color: rgba(80,42,26,.85);
+      line-height: 2;
+    }
+
+    .fit-strip p em {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--dark-brown);
+    }
+
+    /* =============================================================
+       BOOKING (dark background)
+    ============================================================= */
+    #booking {
+      background: var(--mocha);
+      text-align: center;
+    }
+
+    #booking .label { color: rgba(225,198,183,.7); }
+    #booking .h-main { color: var(--white); }
+    #booking .h-main em { color: var(--blush); }
+
+    .booking-sub {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.8vw, 19px);
+      color: rgba(253,247,245,.6);
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
+
+    .tidycal-wrap {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      min-height: 600px;
+    }
+
+    /* =============================================================
+       FOOTER
+    ============================================================= */
+    footer {
+      background: var(--black);
+      padding: 48px var(--ph);
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: var(--f-serif);
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-tag {
+      font-family: var(--f-head);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      opacity: .5;
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      font-family: var(--f-head);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+
+    .footer-links a {
+      color: var(--blush);
+      text-decoration: none;
+      opacity: .65;
+    }
+    .footer-links a:hover { opacity: 1; }
+
+    /* =============================================================
+       MOBILE
+    ============================================================= */
+    @media (max-width: 880px) {
+      :root { --pv: 60px; --ph: 24px; }
+
+      .two-col,
+      .who-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .outcome-grid { grid-template-columns: 1fr 1fr; }
+      .details-grid { grid-template-columns: 1fr 1fr; }
+
+      .who-grid .img-portrait { order: -1; }
+    }
+
+    @media (max-width: 560px) {
+      h1.hero-h { font-size: 40px; }
+      .outcome-grid { grid-template-columns: 1fr; }
+      .details-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================= -->
+  <nav>
+    <div class="nav-in">
+
+      <a href="../index.html" class="nav-brand">
+        <span class="nav-brand-name">Remember Your Future™</span>
+      </a>
+
+      <a href="../index.html" class="nav-back">← Back to main page</a>
+
+      <a href="#booking" class="nav-cta">Book Your Call</a>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================= -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+
+        <p class="hero-eyebrow reveal">A private conversation with Leo Boxem</p>
+
+        <h1 class="hero-h reveal d1">Mirror of<br><em>Meaning</em><br>Call</h1>
+
+        <p class="hero-sub reveal d2">
+          You sense there is more to your life.<br>
+          Let's look at it together — honestly, gently, and without holding back.
+        </p>
+
+        <div class="reveal d3">
+          <a href="#booking" class="btn btn-white">Book Your Call — Complimentary</a>
+        </div>
+
+        <div class="reveal d4" style="display: flex; justify-content: center; gap: 36px; margin-top: 44px; flex-wrap: wrap;">
+          <span style="font-family: var(--f-head); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(225,198,183,.55);">30–45 min · On Zoom · Free</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       OPENING INVITATION
+  ============================================================= -->
+  <section id="invitation">
+    <div class="wrap">
+      <div class="invitation-inner">
+
+        <p class="poem-block reveal">
+          There is a feeling that doesn't go away.
+        </p>
+
+        <div class="reveal d1" style="font-size: 15px; line-height: 2.1; color: var(--black);">
+          <p>A quiet knowing that something more is possible.<br>
+          Something more honest. More alive. More <em style="font-family: var(--f-serif);">you.</em></p>
+          <p>Maybe you can't fully name it yet.<br>
+          Maybe you can — but haven't dared to claim it.</p>
+          <p>Maybe life looks fine from the outside.<br>
+          But inside, you feel it:</p>
+        </div>
+
+        <div class="poem-questions reveal d2">
+          <p>Is this really all there is?</p>
+          <p>Am I living the life I am actually here to live?</p>
+          <p>Why does something feel missing — even when nothing is wrong?</p>
+          <p>What is it that I truly want?</p>
+        </div>
+
+        <div class="invitation-closing reveal d3">
+          <p>These are not small questions.<br>
+          They are the ones that matter most.</p>
+          <p>And this call is exactly the space to sit with them.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT THIS CALL IS
+  ============================================================= -->
+  <section id="what">
+    <div class="wrap">
+      <div class="two-col">
+
+        <div>
+          <span class="label reveal">What This Call Is</span>
+          <h2 class="h-main reveal d1">A Space to Look<br><em>Honestly</em></h2>
+          <p class="h-sub reveal d1">Private. With love. Without judgment.</p>
+          <span class="rule reveal d1"></span>
+
+          <div class="reveal d2">
+            <p>Your Mirror of Meaning Call is a private 30 to 45 minute conversation with Leo — on Zoom, just the two of you.</p>
+            <p>Together, we will take an honest look at your life. Your relationships, your health, your finances, your time, your sense of purpose.</p>
+            <p>Not to judge. Not to fix. But to <strong>see clearly.</strong></p>
+            <p>We will explore where you feel truly alive — and where you don't. And then, with love and gentleness, I will ask you the question most people never allow themselves to face:</p>
+          </div>
+
+          <div class="mirror-quote reveal d3">
+            "If this were the end of your life — would you have lived enough?<br>
+            Have you been who you truly are?<br>
+            Have you done what you are here to do?"
+          </div>
+
+        </div>
+
+        <div class="reveal d1">
+          <div class="img-portrait">
+            <img src="../images/talk-to-leo-3-4.jpg" alt="A conversation with Leo Boxem">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE JOURNEY — what happens during the call
+  ============================================================= -->
+  <section id="journey">
+    <div class="wrap">
+      <div class="journey-inner">
+
+        <span class="label reveal">What We Will Do Together</span>
+        <h2 class="h-main reveal d1">The Call,<br><em>Step by Step</em></h2>
+        <span class="rule reveal d1" style="background: linear-gradient(to right, var(--blush), transparent);"></span>
+
+        <div class="journey-steps">
+
+          <div class="journey-step reveal">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">We look at the full picture</div>
+              <div class="journey-step-body">I will ask about every area of your life — relationships, health, time, finances, purpose and work. Not as a checklist, but as a living map of where you actually are.</div>
+            </div>
+          </div>
+
+          <div class="journey-step reveal d1">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">We find where you are truly alive</div>
+              <div class="journey-step-body">We look honestly at where you feel fulfilled — and where you don't. Where your energy flows freely, and where something quietly drains.</div>
+            </div>
+          </div>
+
+          <div class="journey-step reveal d1">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">I ask permission to hold up the mirror</div>
+              <div class="journey-step-body">I will ask if you want me to be honest with you. If you say yes, I will show you what I see — with love, and without softening what needs to be said.</div>
+            </div>
+          </div>
+
+          <div class="journey-mirror-moment reveal d2">
+            "If this were the end of your life — would you have lived enough?<br>
+            Have you been who you truly are? Have you done what you are here to do?<br>
+            Have you truly lived?"
+          </div>
+
+          <div class="journey-step reveal d2">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">We explore what is missing — and what is in the way</div>
+              <div class="journey-step-body">If the answer is not yet — we get honest about why. What has been stopping you? What are you waiting for? What have you been telling yourself?</div>
+            </div>
+          </div>
+
+          <div class="journey-step reveal d2">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">We get to your true desire</div>
+              <div class="journey-step-body">What is it that you actually want? Not what seems responsible, or realistic, or safe. What does your gut know? What has it always known?</div>
+            </div>
+          </div>
+
+          <div class="journey-step reveal d3">
+            <div class="journey-dot"><div class="journey-dot-inner"></div></div>
+            <div class="journey-step-text">
+              <div class="journey-step-title">If it feels right — I share how I can help</div>
+              <div class="journey-step-body">If you want to move forward and feel I can support you, I will share what working together could look like. You decide. No pressure, no rush. The call always stands on its own.</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHO IT'S FOR
+  ============================================================= -->
+  <section id="who">
+    <div class="wrap">
+      <div class="who-grid">
+
+        <div class="reveal d1">
+          <div class="img-portrait">
+            <img src="../images/leo-ibiza-sea.jpg" alt="Leo Boxem, Ibiza">
+          </div>
+        </div>
+
+        <div>
+          <span class="label reveal">This Call Is For You If</span>
+          <h2 class="h-main reveal d1">You Know You Are<br><em>Here for More</em></h2>
+          <span class="rule reveal d1"></span>
+
+          <ul class="for-list reveal d2">
+            <li>You feel something is missing — even when you can't name it</li>
+            <li>You know, somewhere deep down, that you are here for something more</li>
+            <li>You sense your purpose but haven't yet stepped into it</li>
+            <li>You know what you want in your gut — but lack the courage to go after it</li>
+            <li>Something feels off, even when life looks fine from the outside</li>
+            <li>You are tired of living someone else's version of your life</li>
+            <li>You are ready to stop waiting and start asking the honest questions</li>
+            <li>You want someone to hold the mirror — with love, not judgment</li>
+            <li>You are looking for clarity, not just comfort</li>
+          </ul>
+
+          <a href="#booking" class="btn btn-fill reveal d3">Book Your Call</a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHAT YOU WALK AWAY WITH
+  ============================================================= -->
+  <section id="walkaway">
+    <div class="wrap">
+      <div class="walkaway-inner">
+
+        <span class="label reveal" style="display: block; text-align: center;">What You Will Walk Away With</span>
+        <h2 class="h-main reveal d1">One Conversation.<br><em>Real</em> Clarity.</h2>
+        <p class="h-sub reveal d1">By the end of this call, you will:</p>
+
+        <div class="outcome-grid">
+
+          <div class="outcome-card reveal">
+            <div class="outcome-num">01</div>
+            <div class="outcome-text">Have an honest picture of where you truly are across every area of your life</div>
+          </div>
+
+          <div class="outcome-card reveal d1">
+            <div class="outcome-num">02</div>
+            <div class="outcome-text">Feel seen — perhaps more clearly than you have felt in a long time</div>
+          </div>
+
+          <div class="outcome-card reveal d2">
+            <div class="outcome-num">03</div>
+            <div class="outcome-text">Know what is actually missing — and what has been in the way</div>
+          </div>
+
+          <div class="outcome-card reveal d1">
+            <div class="outcome-num">04</div>
+            <div class="outcome-text">Have named your desire — out loud, without softening it</div>
+          </div>
+
+          <div class="outcome-card reveal d2">
+            <div class="outcome-num">05</div>
+            <div class="outcome-text">Know what your next honest step is — even if it's a small one</div>
+          </div>
+
+          <div class="outcome-card reveal d3" style="background: var(--cream); border: 1px solid rgba(195,153,80,.25); display: flex; flex-direction: column; justify-content: center;">
+            <div class="outcome-text" style="font-family: var(--f-serif); font-style: italic; font-size: 15px; color: var(--dark-brown); line-height: 2;">
+              And quite possibly —<br>the courage<br>you didn't know<br>you already had.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRACTICAL DETAILS
+  ============================================================= -->
+  <section id="details">
+    <div class="wrap">
+
+      <span class="label reveal">Practical Details</span>
+      <h2 class="h-main reveal d1">Simple.<br><em>Straightforward.</em></h2>
+
+      <div class="details-grid">
+
+        <div class="detail-card reveal">
+          <div class="detail-icon">Length</div>
+          <div class="detail-value">30–45 min</div>
+          <div class="detail-desc">We take the time the conversation needs</div>
+        </div>
+
+        <div class="detail-card reveal d1">
+          <div class="detail-icon">Location</div>
+          <div class="detail-value">Online</div>
+          <div class="detail-desc">Via Zoom — from wherever you are</div>
+        </div>
+
+        <div class="detail-card reveal d2">
+          <div class="detail-icon">Investment</div>
+          <div class="detail-value">Free</div>
+          <div class="detail-desc">Complimentary — no strings attached</div>
+        </div>
+
+        <div class="detail-card reveal d3">
+          <div class="detail-icon">After Booking</div>
+          <div class="detail-value">Confirmed</div>
+          <div class="detail-desc">You will receive a confirmation with your Zoom link and everything you need</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BONUS — "You Are Here for a Reason" Audio Series
+       ACTIVATE: remove the style="display:none" from the section tag below
+       when the audio series is ready to share with new bookings.
+  ============================================================= -->
+  <section id="bonus" style="display:none">
+    <div class="wrap">
+      <div class="bonus-inner">
+
+        <div>
+          <span class="bonus-badge reveal">Your bonus when you book</span>
+          <span class="label reveal">You Are Here for a Reason</span>
+          <h2 class="h-main reveal d1">A Private<br><em>Audio Series</em><br>from Leo</h2>
+          <span class="rule reveal d1" style="background: linear-gradient(to right, var(--blush), transparent);"></span>
+
+          <p class="bonus-body reveal d2">
+            When you book your Mirror of Meaning Call, you will receive access to <strong>You Are Here for a Reason</strong> — a private audio series to help you arrive at the call ready.
+          </p>
+
+          <p class="bonus-body reveal d2" style="margin-top: -12px;">
+            Each episode is an invitation to go deeper. To begin hearing what you already know. To arrive in the conversation not as a stranger to yourself — but as someone who has already started to listen.
+          </p>
+
+          <ul class="bonus-episodes reveal d3">
+            <li>Listen before your call, at your own pace</li>
+            <li>Private — not available anywhere else</li>
+            <li>Sent to you by email after booking</li>
+          </ul>
+
+          <a href="#booking" class="btn btn-blush reveal d3">Book Your Call — Receive the Series</a>
+        </div>
+
+        <div class="reveal d2">
+          <div class="bonus-img">
+            <img src="../images/MoM-You-Are-Here-For-A-Reason-Audio-series-1.jpg" alt="You Are Here for a Reason — Audio Series by Leo Boxem">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FIT NOTE
+  ============================================================= -->
+  <div class="fit-strip">
+    <div class="fit-strip-inner">
+      <p class="reveal"><em>If, during our conversation, it feels right to take a next step together —</em></p>
+      <p class="reveal d1">I will share what that could look like. Whether that is a private mentoring journey, a group experience, or something else entirely — you will always know your options, and you always choose.</p>
+      <p class="reveal d2"><strong>But this call is always, first and foremost, a moment of honest clarity for you.</strong></p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       BOOKING
+  ============================================================= -->
+  <section id="booking">
+    <div class="wrap">
+
+      <span class="label reveal" style="text-align: center; display: block;">Reserve Your Spot</span>
+      <h2 class="h-main reveal d1" style="text-align: center;">Book Your<br><em>Mirror of Meaning Call</em></h2>
+
+      <p class="booking-sub reveal d2">
+        If you feel that pull — that quiet knowing that something more is waiting —
+        I warmly invite you to book your call.
+        Let's look in the mirror together.
+      </p>
+
+      <!-- TidyCal embed -->
+      <!-- UPDATE: Replace data-path below with your actual TidyCal booking link path -->
+      <!-- Example: leoboxem/mirror-of-meaning-call -->
+      <div class="tidycal-wrap reveal d3">
+        <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+        <div class="tidycal-embed" data-path="leoboxem/mirror-of-meaning-call"></div>
+      </div>
+
+      <!-- Fallback direct link -->
+      <div class="reveal d3" style="text-align: center; margin-top: 8px;">
+        <a href="https://tidycal.com/leoboxem/mirror-of-meaning-call"
+           target="_blank" rel="noopener"
+           class="btn btn-blush">
+          Can't see the calendar? Open booking page →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="../index.html">Back to main page</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+
+  <!-- ============================================================
+       SCROLL REVEAL
+  ============================================================= -->
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
