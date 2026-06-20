@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mirror of Meaning Call — Leo Boxem | Remember Your Future™</title>
-  <meta name="description" content="A private 30–45 min conversation with Leo Boxem. You sense there is more to your life. Let's look at it together — honestly, gently, and without holding back.">
+  <meta name="description" content="You sense there is more to your life. In this conversation we find out what that is, what has been in the way — and how you move forward with ease, clarity and deeper fulfillment.">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Leo Boxem · Remember Your Future™">
   <meta property="og:title" content="Mirror of Meaning Call — Leo Boxem">
-  <meta property="og:description" content="A private 30–45 min conversation with Leo Boxem. You sense there is more to your life. Let's look at it together — honestly, gently, and without holding back.">
+  <meta property="og:description" content="You sense there is more to your life. In this conversation we find out what that is, what has been in the way — and how you move forward with ease, clarity and deeper fulfillment.">
   <meta property="og:image" content="https://www.leoboxem.com/images/mom-og-banner.jpg">
   <meta property="og:url" content="https://www.leoboxem.com/mirror-call">
   <meta name="twitter:card" content="summary_large_image">
@@ -267,17 +267,20 @@
     .nav-cta:hover { opacity: .85; }
 
     /* =============================================================
-       HERO — deep, moody background
+       HERO — cream, two-column with image
     ============================================================= */
     #hero {
-      background: var(--mocha);
+      background: var(--cream);
       padding-top: calc(var(--pv) + 66px);
       padding-bottom: var(--pv);
-      text-align: center;
     }
 
-    .hero-inner {
-      max-width: 760px;
+    .hero-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      max-width: var(--max);
       margin: 0 auto;
     }
 
@@ -287,8 +290,8 @@
       font-weight: 700;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--blush);
-      opacity: .7;
+      color: var(--gold);
+      opacity: .85;
       margin-bottom: 22px;
     }
 
@@ -296,7 +299,7 @@
       font-family: var(--f-display);
       font-size: clamp(36px, 6vw, 72px);
       font-weight: 700;
-      color: var(--white);
+      color: var(--black);
       line-height: 1.08;
       letter-spacing: -0.02em;
       margin-bottom: 20px;
@@ -307,46 +310,45 @@
       font-style: italic;
       font-weight: 400;
       font-size: 1.1em;
-      color: var(--blush);
+      color: var(--red-brown);
       letter-spacing: 0;
     }
 
     .hero-sub {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(16px, 1.8vw, 21px);
-      color: rgba(225,198,183,.75);
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto 40px;
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: var(--taupe);
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 0 36px;
     }
 
     /* =============================================================
-       OPENING INVITATION
+       COMBINED INTRO (invitation left + what this call is right)
     ============================================================= */
-    #invitation {
+    #intro-combined {
       background: var(--white);
     }
 
-    .invitation-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      text-align: center;
+    .intro-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
     }
 
     .poem-block {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(16px, 1.8vw, 20px);
+      font-size: clamp(17px, 1.8vw, 21px);
       color: var(--dark-brown);
-      line-height: 2.1;
-      margin: 20px 0 32px;
+      line-height: 2;
+      margin-bottom: 28px;
     }
 
     .poem-questions {
-      margin: 0 auto 32px;
-      text-align: left;
-      display: inline-block;
+      margin: 0 0 28px;
       font-family: var(--f-body);
       font-size: 15px;
       line-height: 2.2;
@@ -372,11 +374,10 @@
       font-size: 15px;
       line-height: 2.1;
       color: var(--black);
-      margin-top: 28px;
     }
 
     /* =============================================================
-       TWO-COL
+       TWO-COL (reused)
     ============================================================= */
     .two-col {
       display: grid;
@@ -386,45 +387,7 @@
     }
 
     /* =============================================================
-       WHAT THIS CALL IS (cream)
-    ============================================================= */
-    #what { background: var(--cream); }
-
-    .explore-list {
-      list-style: none;
-      margin: 20px 0 32px;
-    }
-
-    .explore-list li {
-      padding: 10px 0 10px 24px;
-      position: relative;
-      font-size: 15px;
-      border-bottom: 1px solid rgba(195,153,80,.15);
-    }
-    .explore-list li:first-child { border-top: 1px solid rgba(195,153,80,.15); }
-    .explore-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 19px;
-      width: 10px; height: 1px;
-      background: var(--gold);
-    }
-
-    .mirror-quote {
-      border-left: 2px solid var(--rose);
-      padding: 20px 24px;
-      margin: 28px 0 0;
-      background: rgba(185,135,116,.06);
-      border-radius: 0 8px 8px 0;
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: 15px;
-      line-height: 1.9;
-      color: var(--dark-brown);
-    }
-
-    /* =============================================================
-       THE JOURNEY — what happens in this call
+       THE JOURNEY — what happens during the call
     ============================================================= */
     #journey { background: var(--dark-brown); }
 
@@ -500,20 +463,6 @@
       font-size: 14px;
       color: rgba(253,247,245,.68);
       line-height: 1.85;
-    }
-
-    .journey-mirror-moment {
-      margin: 44px 0;
-      padding: 28px 32px;
-      border: 1px solid rgba(225,198,183,.15);
-      border-radius: 12px;
-      background: rgba(255,255,255,.04);
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(15px, 1.6vw, 18px);
-      color: rgba(253,247,245,.82);
-      line-height: 1.9;
-      text-align: center;
     }
 
     /* =============================================================
@@ -709,13 +658,8 @@
       object-fit: cover;
     }
 
-    @media (max-width: 880px) {
-      .bonus-inner { grid-template-columns: 1fr; gap: 40px; }
-      .bonus-img { aspect-ratio: 4/3; max-width: 460px; }
-    }
-
     /* =============================================================
-       FIT NOTE (blush strip)
+       FIT NOTE (rose strip)
     ============================================================= */
     .fit-strip {
       background: var(--rose);
@@ -822,13 +766,17 @@
     @media (max-width: 880px) {
       :root { --pv: 60px; --ph: 24px; }
 
+      .hero-two-col,
+      .intro-two-col,
       .two-col,
-      .who-grid { grid-template-columns: 1fr; gap: 40px; }
+      .who-grid,
+      .bonus-inner { grid-template-columns: 1fr; gap: 40px; }
 
       .outcome-grid { grid-template-columns: 1fr 1fr; }
       .details-grid { grid-template-columns: 1fr 1fr; }
 
       .who-grid .img-portrait { order: -1; }
+      .bonus-img { aspect-ratio: 4/3; max-width: 460px; }
     }
 
     @media (max-width: 560px) {
@@ -859,79 +807,77 @@
 
 
   <!-- ============================================================
-       HERO
+       HERO — cream, two-column with image
   ============================================================= -->
   <section id="hero">
-    <div class="wrap">
-      <div class="hero-inner">
+    <div class="hero-two-col wrap">
 
+      <div>
         <p class="hero-eyebrow reveal">A private conversation with Leo Boxem</p>
 
         <h1 class="hero-h reveal d1">Mirror of<br><em>Meaning</em><br>Call</h1>
 
         <p class="hero-sub reveal d2">
-          You sense there is more to your life.<br>
-          Let's look at it together — honestly, gently, and without holding back.
+          You sense there is more to your life. In this conversation we find out what that is,
+          what has been in the way — and how you move forward with ease, clarity and deeper fulfillment.
         </p>
 
         <div class="reveal d3">
-          <a href="#booking" class="btn btn-white">Book Your Call — Complimentary</a>
+          <a href="#booking" class="btn btn-fill">Book Your Call — Complimentary</a>
         </div>
 
-        <div class="reveal d4" style="display: flex; justify-content: center; gap: 36px; margin-top: 44px; flex-wrap: wrap;">
-          <span style="font-family: var(--f-head); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(225,198,183,.55);">30–45 min · On Zoom · Free</span>
+        <div class="reveal d4" style="margin-top: 28px;">
+          <span style="font-family: var(--f-head); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); opacity: .7;">30–45 min · On Zoom · Free</span>
         </div>
-
       </div>
+
+      <div class="reveal d1">
+        <div class="img-portrait">
+          <img src="../images/talk-to-leo-3-4.jpg" alt="A conversation with Leo Boxem">
+        </div>
+      </div>
+
     </div>
   </section>
 
 
   <!-- ============================================================
-       OPENING INVITATION
+       COMBINED — invitation (left) + what this call is (right)
   ============================================================= -->
-  <section id="invitation">
+  <section id="intro-combined">
     <div class="wrap">
-      <div class="invitation-inner">
+      <div class="intro-two-col">
 
-        <p class="poem-block reveal">
-          There is a feeling that doesn't go away.
-        </p>
+        <!-- LEFT: invitation poem -->
+        <div>
+          <p class="poem-block reveal">
+            There is a feeling that doesn't go away.
+          </p>
 
-        <div class="reveal d1" style="font-size: 15px; line-height: 2.1; color: var(--black);">
-          <p>A quiet knowing that something more is possible.<br>
-          Something more honest. More alive. More <em style="font-family: var(--f-serif);">you.</em></p>
-          <p>Maybe you can't fully name it yet.<br>
-          Maybe you can — but haven't dared to claim it.</p>
-          <p>Maybe life looks fine from the outside.<br>
-          But inside, you feel it:</p>
+          <div class="reveal d1" style="font-size: 15px; line-height: 2.1; color: var(--black);">
+            <p>A quiet knowing that something more is possible.<br>
+            Something more honest. More alive. More <em style="font-family: var(--f-serif);">you.</em></p>
+            <p>Maybe you can't fully name it yet.<br>
+            Maybe you can — but haven't dared to claim it.</p>
+            <p>Maybe life looks fine from the outside.<br>
+            But inside, you feel it:</p>
+          </div>
+
+          <div class="poem-questions reveal d2">
+            <p>Is this really all there is?</p>
+            <p>Am I living the life I am actually here to live?</p>
+            <p>Why does something feel missing — even when nothing is wrong?</p>
+            <p>What is it that I truly want?</p>
+          </div>
+
+          <div class="invitation-closing reveal d3">
+            <p>These are not small questions.<br>
+            They are the ones that matter most.</p>
+            <p>And this call is exactly the space to sit with them.</p>
+          </div>
         </div>
 
-        <div class="poem-questions reveal d2">
-          <p>Is this really all there is?</p>
-          <p>Am I living the life I am actually here to live?</p>
-          <p>Why does something feel missing — even when nothing is wrong?</p>
-          <p>What is it that I truly want?</p>
-        </div>
-
-        <div class="invitation-closing reveal d3">
-          <p>These are not small questions.<br>
-          They are the ones that matter most.</p>
-          <p>And this call is exactly the space to sit with them.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       WHAT THIS CALL IS
-  ============================================================= -->
-  <section id="what">
-    <div class="wrap">
-      <div class="two-col">
-
+        <!-- RIGHT: what this call is -->
         <div>
           <span class="label reveal">What This Call Is</span>
           <h2 class="h-main reveal d1">A Space to Look<br><em>Honestly</em></h2>
@@ -942,20 +888,11 @@
             <p>Your Mirror of Meaning Call is a private 30 to 45 minute conversation with Leo — on Zoom, just the two of you.</p>
             <p>Together, we will take an honest look at your life. Your relationships, your health, your finances, your time, your sense of purpose.</p>
             <p>Not to judge. Not to fix. But to <strong>see clearly.</strong></p>
-            <p>We will explore where you feel truly alive — and where you don't. And then, with love and gentleness, I will ask you the question most people never allow themselves to face:</p>
+            <p>We will explore where you feel truly alive — and where you don't. And then, with love and gentleness, I will hold up the mirror of meaning — with love, not judgment — and ask you a question most people never allow themselves to face, but that will change your perspective immediately.</p>
           </div>
 
-          <div class="mirror-quote reveal d3">
-            "If this were the end of your life — would you have lived enough?<br>
-            Have you been who you truly are?<br>
-            Have you done what you are here to do?"
-          </div>
-
-        </div>
-
-        <div class="reveal d1">
-          <div class="img-portrait">
-            <img src="../images/talk-to-leo-3-4.jpg" alt="A conversation with Leo Boxem">
+          <div class="reveal d3" style="margin-top: 28px;">
+            <a href="#booking" class="btn btn-fill">Book Your Call</a>
           </div>
         </div>
 
@@ -981,7 +918,7 @@
             <div class="journey-dot"><div class="journey-dot-inner"></div></div>
             <div class="journey-step-text">
               <div class="journey-step-title">We look at the full picture</div>
-              <div class="journey-step-body">I will ask about every area of your life — relationships, health, time, finances, purpose and work. Not as a checklist, but as a living map of where you actually are.</div>
+              <div class="journey-step-body">I will ask a few questions to get a clear overview of your current situation, so I can help you best from where you actually are at.</div>
             </div>
           </div>
 
@@ -1001,17 +938,11 @@
             </div>
           </div>
 
-          <div class="journey-mirror-moment reveal d2">
-            "If this were the end of your life — would you have lived enough?<br>
-            Have you been who you truly are? Have you done what you are here to do?<br>
-            Have you truly lived?"
-          </div>
-
           <div class="journey-step reveal d2">
             <div class="journey-dot"><div class="journey-dot-inner"></div></div>
             <div class="journey-step-text">
               <div class="journey-step-title">We explore what is missing — and what is in the way</div>
-              <div class="journey-step-body">If the answer is not yet — we get honest about why. What has been stopping you? What are you waiting for? What have you been telling yourself?</div>
+              <div class="journey-step-body">If you realize that and where you are not yet 100% aligned with your purpose — we get honest about why. What has been stopping you? What are you waiting for? What have you been telling yourself?</div>
             </div>
           </div>
 
@@ -1154,7 +1085,7 @@
         <div class="detail-card reveal d2">
           <div class="detail-icon">Investment</div>
           <div class="detail-value">Free</div>
-          <div class="detail-desc">Complimentary — no strings attached</div>
+          <div class="detail-desc">Complimentary — no strings attached. I only ask you to answer a few questions as preparation.</div>
         </div>
 
         <div class="detail-card reveal d3">
@@ -1218,8 +1149,8 @@
   <div class="fit-strip">
     <div class="fit-strip-inner">
       <p class="reveal"><em>If, during our conversation, it feels right to take a next step together —</em></p>
-      <p class="reveal d1">I will share what that could look like. Whether that is a private mentoring journey, a group experience, or something else entirely — you will always know your options, and you always choose.</p>
-      <p class="reveal d2"><strong>But this call is always, first and foremost, a moment of honest clarity for you.</strong></p>
+      <p class="reveal d1">I will share what that could look like. Whether that is a private mentoring journey, a group experience, or something else entirely — you will always know your options, and you always have a choice.</p>
+      <p class="reveal d2"><strong>But this call is, first and foremost, a gift — a moment of honest clarity for you.</strong></p>
     </div>
   </div>
 
@@ -1239,15 +1170,11 @@
         Let's look in the mirror together.
       </p>
 
-      <!-- TidyCal embed -->
-      <!-- UPDATE: Replace data-path below with your actual TidyCal booking link path -->
-      <!-- Example: leoboxem/mirror-of-meaning-call -->
       <div class="tidycal-wrap reveal d3">
-        <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
         <div class="tidycal-embed" data-path="leoboxem/mirror-of-meaning-call"></div>
+        <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
       </div>
 
-      <!-- Fallback direct link -->
       <div class="reveal d3" style="text-align: center; margin-top: 8px;">
         <a href="https://tidycal.com/leoboxem/mirror-of-meaning-call"
            target="_blank" rel="noopener"
