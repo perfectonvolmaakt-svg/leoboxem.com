@@ -97,9 +97,9 @@
     ============================================================= */
     .label {
       font-family: var(--f-head);
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       display: block;
@@ -286,12 +286,11 @@
 
     .hero-eyebrow {
       font-family: var(--f-head);
-      font-size: 10px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      opacity: .85;
       margin-bottom: 22px;
     }
 
@@ -315,9 +314,9 @@
     }
 
     .hero-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
+      font-family: var(--f-display);
       font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 400;
       color: var(--taupe);
       line-height: 1.75;
       max-width: 480px;
@@ -374,6 +373,25 @@
       font-size: 15px;
       line-height: 2.1;
       color: var(--black);
+    }
+
+    /* =============================================================
+       MIRROR QUOTE STRIP
+    ============================================================= */
+    #mirror-quote {
+      background: var(--blush);
+      padding: 72px var(--ph);
+      text-align: center;
+    }
+
+    .mirror-quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3.2vw, 40px);
+      color: var(--dark-brown);
+      line-height: 1.55;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     /* =============================================================
@@ -698,10 +716,10 @@
     #booking .h-main em { color: var(--blush); }
 
     .booking-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(15px, 1.8vw, 19px);
-      color: rgba(253,247,245,.6);
+      font-family: var(--f-display);
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 400;
+      color: rgba(253,247,245,.7);
       line-height: 1.8;
       max-width: 560px;
       margin: 0 auto 48px;
@@ -827,7 +845,7 @@
         </div>
 
         <div class="reveal d4" style="margin-top: 28px;">
-          <span style="font-family: var(--f-head); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); opacity: .7;">30–45 min · On Zoom · Free</span>
+          <span style="font-family: var(--f-head); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dark-brown);">30–45 min · On Zoom · Free</span>
         </div>
       </div>
 
@@ -857,8 +875,8 @@
           <div class="reveal d1" style="font-size: 15px; line-height: 2.1; color: var(--black);">
             <p>A quiet knowing that something more is possible.<br>
             Something more honest. More alive. More <em style="font-family: var(--f-serif);">you.</em></p>
-            <p>Maybe you can't fully name it yet.<br>
-            Maybe you can — but haven't dared to claim it.</p>
+            <p><strong>Maybe you can't fully name it yet.<br>
+            Maybe you can — but haven't dared to claim it.</strong></p>
             <p>Maybe life looks fine from the outside.<br>
             But inside, you feel it:</p>
           </div>
@@ -886,9 +904,9 @@
 
           <div class="reveal d2">
             <p>Your Mirror of Meaning Call is a private 30 to 45 minute conversation with Leo — on Zoom, just the two of you.</p>
-            <p>Together, we will take an honest look at your life. Your relationships, your health, your finances, your time, your sense of purpose.</p>
+            <p>Together, we will take an honest look at your life and in which area you seek more fulfillment.</p>
             <p>Not to judge. Not to fix. But to <strong>see clearly.</strong></p>
-            <p>We will explore where you feel truly alive — and where you don't. And then, with love and gentleness, I will hold up the mirror of meaning — with love, not judgment — and ask you a question most people never allow themselves to face, but that will change your perspective immediately.</p>
+            <p>We will explore where you feel truly alive — and where you don't. And then, <strong>with love and gentleness, I will hold up the mirror of meaning — with love, not judgment — and ask you a question most people never allow themselves to face, but that will change your perspective immediately.</strong></p>
           </div>
 
           <div class="reveal d3" style="margin-top: 28px;">
@@ -898,6 +916,16 @@
 
       </div>
     </div>
+  </section>
+
+
+  <!-- ============================================================
+       MIRROR QUOTE STRIP
+  ============================================================= -->
+  <section id="mirror-quote">
+    <p class="mirror-quote-text reveal">
+      "I will hold up the mirror of meaning — with love, not judgment."
+    </p>
   </section>
 
 
