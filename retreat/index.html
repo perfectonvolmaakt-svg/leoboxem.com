@@ -51,8 +51,7 @@
 
     html { scroll-behavior: smooth; }
     body {
-      font-family: var(--f-body);
-      font-size: 15px; line-height: 1.9;
+      font-family: var(--f-body); font-size: 15px; line-height: 1.9;
       color: var(--black); background: var(--cream);
       -webkit-font-smoothing: antialiased; overflow-x: hidden;
     }
@@ -81,12 +80,15 @@
       background: linear-gradient(to right, transparent, var(--gold), transparent);
       margin: 0 auto 32px;
     }
+    .rule-left {
+      display: block; width: 36px; height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 24px;
+    }
 
     .section-h {
-      font-family: var(--f-display);
-      font-size: clamp(24px, 3.5vw, 44px); font-weight: 700;
-      color: var(--dark-brown); line-height: 1.12;
-      letter-spacing: -0.01em; margin-bottom: 20px;
+      font-family: var(--f-display); font-size: clamp(24px, 3.5vw, 44px); font-weight: 700;
+      color: var(--dark-brown); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 20px;
     }
     .section-h em {
       font-family: var(--f-cg); font-style: italic; font-weight: 400;
@@ -186,8 +188,46 @@
     }
     .intro-body p { margin-bottom: 0.55em; }
     .intro-closing {
-      font-family: var(--f-body); font-size: 15px; font-weight: 500;
+      font-family: var(--f-body); font-size: 16px; font-weight: 500;
       color: var(--dark-brown); line-height: 1.9; margin-top: 36px;
+    }
+
+    /* ── ART OF BEING & BECOMING ── */
+    #art { background: var(--mocha); }
+    .art-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    #art .label { color: rgba(195,153,80,.6); }
+    .art-lead {
+      font-family: var(--f-body); font-size: 15px;
+      color: rgba(253,247,245,.75); line-height: 2; margin-bottom: 36px;
+    }
+    .art-duality {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+      max-width: 480px; margin: 0 auto 36px;
+    }
+    .art-duality-item {
+      padding: 28px 20px;
+      border: 1px solid rgba(195,153,80,.2);
+    }
+    .art-duality-item:first-child { border-radius: 12px 0 0 12px; }
+    .art-duality-item:last-child { border-radius: 0 12px 12px 0; border-left: none; }
+    .art-duality-word {
+      font-family: var(--f-display); font-size: 32px; font-weight: 800;
+      color: var(--gold-pale); letter-spacing: -0.01em; display: block; margin-bottom: 4px;
+    }
+    .art-duality-desc {
+      font-family: var(--f-head); font-size: 9px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.55);
+    }
+    .art-rhythm {
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(17px, 2vw, 22px); color: rgba(240,221,176,.65);
+      line-height: 1.7; margin: 0 auto 36px; max-width: 560px;
+    }
+    .art-body { font-family: var(--f-body); font-size: 15px; color: rgba(253,247,245,.72); line-height: 2; margin-bottom: 0.75em; }
+    .art-closing {
+      font-family: var(--f-serif); font-style: italic;
+      font-size: clamp(16px, 2vw, 21px); color: var(--gold-pale);
+      line-height: 1.75; margin-top: 32px;
     }
 
     /* ── WHO ── */
@@ -205,8 +245,7 @@
     #about { background: var(--cream); }
     .about-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center;
-      max-width: var(--max); margin: 0 auto;
+      gap: 64px; align-items: center; max-width: var(--max); margin: 0 auto;
     }
     .about-img { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; }
     .about-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -261,6 +300,7 @@
     }
     .sacred-name { font-family: var(--f-display); font-size: 17px; font-weight: 700; color: var(--dark-brown); margin-bottom: 12px; }
     .sacred-body { font-family: var(--f-body); font-size: 14px; color: var(--taupe); line-height: 1.85; }
+    .sacred-body p { margin-bottom: 0.4em; }
     .sacred-note {
       max-width: 640px; margin: 40px auto 0;
       font-family: var(--f-serif); font-style: italic;
@@ -277,6 +317,22 @@
     }
     .included-star { font-size: 16px; flex-shrink: 0; padding-top: 2px; }
     .included-text { font-family: var(--f-body); font-size: 14px; color: var(--dark-brown); line-height: 1.6; }
+
+    /* ── WHAT WOMEN LEAVE WITH ── */
+    #outcomes { background: var(--blush); }
+    #outcomes .label { color: rgba(80,42,26,.5); }
+    .outcomes-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 12px; max-width: var(--max); margin: 36px auto 0;
+    }
+    .outcome-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(141,66,21,.1); border-radius: 10px;
+    }
+    .outcome-star { font-size: 16px; flex-shrink: 0; padding-top: 2px; }
+    .outcome-text { font-family: var(--f-body); font-size: 14px; color: var(--dark-brown); line-height: 1.6; }
 
     /* ── VIDEO TESTIMONIALS ── */
     #video-testi { background: var(--dark-brown); }
@@ -304,8 +360,8 @@
     .video-ph-note { font-family: var(--f-body); font-size: 11px; font-style: italic; color: rgba(225,198,183,.4); line-height: 1.6; max-width: 240px; }
 
     /* ── WRITTEN TESTIMONIALS ── */
-    #written-testi { background: var(--blush); }
-    #written-testi .label { color: rgba(80,42,26,.5); }
+    #written-testi { background: var(--cream); }
+    #written-testi .label { color: var(--gold); }
     .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: var(--max); margin: 40px auto 0; }
     .testi-card {
       background: var(--white); border: 1px solid rgba(141,66,21,.08);
@@ -322,10 +378,10 @@
     .testi-role { display: block; font-style: italic; text-transform: none; letter-spacing: 0.04em; font-size: 9px; opacity: .7; margin-top: 2px; }
 
     /* ── PRICING ── */
-    #pricing { background: var(--cream); }
+    #pricing { background: var(--white); }
     .pricing-inner { max-width: 760px; margin: 0 auto; }
     .pricing-box {
-      background: var(--white); border: 1px solid rgba(178,121,49,.15);
+      background: var(--cream); border: 1px solid rgba(178,121,49,.15);
       border-radius: 16px; padding: 48px; margin-bottom: 28px;
     }
     .pricing-row {
@@ -345,8 +401,17 @@
     .bonus-eyebrow { font-family: var(--f-head); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.65); display: block; margin-bottom: 12px; }
     .bonus-title { font-family: var(--f-display); font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
     .bonus-title em { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--gold-pale); }
-    .bonus-body { font-family: var(--f-body); font-size: 14px; color: rgba(253,247,245,.75); line-height: 1.9; }
-    .bonus-value { margin-top: 16px; font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .bonus-intro { font-family: var(--f-body); font-size: 14px; color: rgba(253,247,245,.75); line-height: 1.9; margin-bottom: 20px; }
+    .bonus-list { list-style: none; margin-bottom: 20px; }
+    .bonus-list li {
+      font-family: var(--f-body); font-size: 14px; color: rgba(253,247,245,.8);
+      line-height: 1.8; padding: 6px 0 6px 28px; position: relative;
+      border-bottom: 1px solid rgba(195,153,80,.1);
+    }
+    .bonus-list li:first-child { border-top: 1px solid rgba(195,153,80,.1); }
+    .bonus-list li::before { content: '✨'; position: absolute; left: 0; top: 6px; font-size: 13px; }
+    .bonus-value { font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+    .bonus-closing { font-family: var(--f-serif); font-style: italic; font-size: 14px; color: rgba(240,221,176,.65); line-height: 1.7; }
 
     /* ── URGENCY ── */
     #urgency { background: var(--dark-brown); text-align: center; }
@@ -354,7 +419,25 @@
     .urgency-body {
       font-family: var(--f-serif); font-style: italic;
       font-size: clamp(16px, 2.2vw, 22px); color: rgba(253,247,245,.78);
-      line-height: 1.8; max-width: 560px; margin: 0 auto 40px;
+      line-height: 1.8; max-width: 580px; margin: 0 auto 40px;
+    }
+
+    /* ── RAISE YOUR HAND ── */
+    #raise-hand { background: var(--rose); text-align: center; }
+    #raise-hand .label { color: rgba(255,255,255,.55); }
+    .raise-h {
+      font-family: var(--f-display); font-size: clamp(28px, 4.5vw, 56px);
+      font-weight: 800; color: var(--white); line-height: 1.05;
+      letter-spacing: -0.02em; margin-bottom: 24px;
+    }
+    .raise-body {
+      font-family: var(--f-serif); font-style: italic;
+      font-size: clamp(16px, 2vw, 21px); color: rgba(255,255,255,.85);
+      line-height: 1.8; max-width: 600px; margin: 0 auto 16px;
+    }
+    .raise-note {
+      font-family: var(--f-body); font-size: 13px; font-weight: 600;
+      color: rgba(255,255,255,.65); margin-bottom: 40px; letter-spacing: 0.02em;
     }
 
     /* ── GUIDE ── */
@@ -366,20 +449,32 @@
     .guide-roles { font-family: var(--f-head); font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 28px; }
     .guide-body { font-family: var(--f-body); font-size: 15px; color: var(--taupe); line-height: 1.9; }
 
-    /* ── CTA BOTTOM ── */
-    #cta-bottom { background: var(--rose); text-align: center; }
-    #cta-bottom .section-h { color: var(--white); max-width: 600px; margin: 0 auto 20px; }
-    #cta-bottom .section-h em { color: rgba(255,255,255,.75); }
-    .cta-body {
-      font-family: var(--f-serif); font-style: italic;
-      font-size: clamp(16px, 2vw, 21px); color: rgba(255,255,255,.85);
-      line-height: 1.75; max-width: 560px; margin: 0 auto 40px;
+    /* ── YOUR LIFE FINALE ── */
+    #finale { background: var(--mocha); }
+    .finale-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center; max-width: var(--max); margin: 0 auto;
     }
-
-    /* ── FINALE ── */
-    #finale { background: var(--mocha); text-align: center; padding: 88px var(--ph); }
-    .finale-line { font-family: var(--f-display); font-size: clamp(18px, 2.8vw, 32px); font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 14px; }
-    .finale-line:last-of-type { margin-bottom: 52px; }
+    .finale-book {
+      border-radius: 16px; overflow: hidden;
+      /* book image: slightly portrait-ish proportions */
+    }
+    .finale-book img { width: 100%; display: block; border-radius: 16px; }
+    .finale-right { }
+    .finale-h {
+      font-family: var(--f-display); font-size: clamp(28px, 4vw, 52px); font-weight: 800;
+      color: var(--white); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .finale-body {
+      font-family: var(--f-body); font-size: 15px;
+      color: rgba(253,247,245,.72); line-height: 2; margin-bottom: 0.75em;
+    }
+    .finale-bold {
+      font-family: var(--f-display); font-size: clamp(16px, 2vw, 22px); font-weight: 700;
+      color: var(--white); line-height: 1.3; margin-bottom: 10px; display: block;
+    }
+    .finale-bold:last-of-type { margin-bottom: 40px; }
+    .finale-rule { display: block; width: 36px; height: 1.5px; background: rgba(195,153,80,.4); margin: 24px 0; }
 
     /* ── FOOTER ── */
     footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
@@ -395,16 +490,21 @@
       .who-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; }
       .about-img { aspect-ratio: 16/9; }
+      .art-duality { grid-template-columns: 1fr; max-width: 300px; }
+      .art-duality-item:first-child { border-radius: 12px 12px 0 0; }
+      .art-duality-item:last-child { border-radius: 0 0 12px 12px; border-left: 1px solid rgba(195,153,80,.2); border-top: none; }
       .ibiza-grid { grid-template-columns: 1fr; }
       .ibiza-img { aspect-ratio: 16/9; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); height: auto; }
       .gallery-cell { height: 220px; }
       .sacred-grid { grid-template-columns: 1fr; }
       .included-grid { grid-template-columns: 1fr; }
+      .outcomes-grid { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
       .guide-grid { grid-template-columns: 1fr; gap: 40px; }
       .guide-portrait { aspect-ratio: 16/9; }
+      .finale-grid { grid-template-columns: 1fr; gap: 48px; }
       .pricing-box { padding: 32px 24px; }
       .bonus-box { padding: 32px 24px; }
     }
@@ -438,9 +538,9 @@
         A Retreat for Women Ready to Return to Themselves<br>and Their Next Chapter
       </p>
       <div class="btn-group reveal d4">
-        <!-- APPLY LINK: Replace href with your application form URL -->
-        <a href="#pricing" class="btn btn-primary">Apply Now</a>
-        <a href="/crossroad/" class="btn btn-outline-white">Book a Crossroad Session</a>
+        <!-- LINK: Replace href with your interest form URL -->
+        <a href="#raise-hand" class="btn btn-primary">Raise Your Hand</a>
+        <a href="#raise-hand" class="btn btn-outline-white">Explore a Spot</a>
       </div>
       <p class="hero-places reveal d5">Only 5 places available</p>
     </div>
@@ -454,16 +554,40 @@
       <span class="rule-gold reveal d1"></span>
       <div class="intro-body reveal d2">
         <p>A moment when life asks something different.</p>
-        <p>Not more effort.</p>
-        <p>Not more striving.</p>
         <p>Not another strategy.</p>
+        <p>Not another course.</p>
+        <p>Not another plan.</p>
         <p>But space.</p>
         <p>Space to breathe.</p>
         <p>Space to listen.</p>
         <p>Space to reconnect with yourself.</p>
         <p>Space to hear what wants to emerge next.</p>
       </div>
-      <p class="intro-closing reveal d3">The Be &amp; Becoming Retreat™ was created for exactly that moment.</p>
+      <p class="intro-closing reveal d3">Because sometimes the next chapter of your life is not found by pushing harder.<br>It is found by returning to yourself.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════ THE ART OF BEING & BECOMING ══════════ -->
+  <section id="art">
+    <div class="art-inner">
+      <span class="label reveal">The Art of Being &amp; Becoming</span>
+      <p class="art-lead reveal d1">Growing into new dimensions of life, leadership and purpose requires us to deepen two capacities at the same time:</p>
+      <div class="art-duality reveal d2">
+        <div class="art-duality-item">
+          <span class="art-duality-word">BE</span>
+          <span class="art-duality-desc">Presence &amp; embodiment</span>
+        </div>
+        <div class="art-duality-item">
+          <span class="art-duality-word">BECOME</span>
+          <span class="art-duality-desc">Vision &amp; direction</span>
+        </div>
+      </div>
+      <p class="art-rhythm reveal d3">Like breathing in and breathing out.<br>Like ebb and flow.</p>
+      <p class="art-body reveal d3">Without vision, direction and intention, we do not move forward consciously.</p>
+      <p class="art-body reveal d3">But without embodiment, self-awareness and inner alignment, we often find ourselves running in many directions at once.</p>
+      <p class="art-body reveal d3" style="color: var(--gold-pale); font-weight: 500;">Busy. Productive. Successful perhaps. Yet disconnected from ourselves.</p>
+      <p class="art-closing reveal d4">The Be &amp; Becoming Retreat™ was created to help you remember how to do both.<br>To be fully present with where you are.<br>And to consciously become who you are here to be.</p>
     </div>
   </section>
 
@@ -480,27 +604,30 @@
         <div class="who-card reveal d1">
           <div class="who-card-title">The Crossroad Woman</div>
           <div class="who-card-body">
-            <p>You are standing at a crossroads in life or leadership.</p>
-            <p>You know something is changing.</p>
-            <p>You know you are meant for more.</p>
-            <p>And you want clarity about your next direction.</p>
+            <p>You are standing at a crossroads in life, work, business or leadership.</p>
+            <p>Something is changing.</p>
+            <p>Something new wants to emerge.</p>
+            <p>You know you cannot continue exactly as you have been.</p>
+            <p>And you long for clarity about what comes next.</p>
           </div>
         </div>
 
         <div class="who-card reveal d2">
           <div class="who-card-title">The Growing Woman</div>
           <div class="who-card-body">
-            <p>You are growing in life, work or business.</p>
-            <p>You feel your next level is calling.</p>
-            <p>And you recognize that your growth requires a deeper relationship with yourself.</p>
+            <p>You are already growing. Building. Creating. Leading. Making an impact.</p>
+            <p>And you know your next level requires more than another strategy.</p>
+            <p>It requires a deeper relationship with yourself.</p>
+            <p>You want growth without losing yourself in the process.</p>
           </div>
         </div>
 
         <div class="who-card reveal d3">
           <div class="who-card-title">The Busy Woman</div>
           <div class="who-card-body">
-            <p>You are always moving. Always giving. Always carrying responsibility.</p>
-            <p>And deep down you know that in order to grow, lead and thrive, you need space to slow down, reconnect and recharge.</p>
+            <p>You are always moving. Always carrying responsibility. Always taking care of others.</p>
+            <p>And deep down you know that if you want to continue growing, giving and leading well, you must first learn how to reconnect with yourself.</p>
+            <p>You need space to breathe. To recharge. To listen. To remember what is true.</p>
           </div>
         </div>
 
@@ -516,27 +643,26 @@
         <img src="../images/ibiza-path.jpg" alt="Path through Ibiza nature">
       </div>
       <div>
-        <span class="label" style="color: var(--gold);">What This Retreat Is About</span>
-        <h2 class="section-h">Not about becoming<br><em>someone else.</em></h2>
-        <p style="font-family: var(--f-body); font-size: 15px; color: var(--taupe); line-height: 1.9; margin-bottom: 20px;">It is about becoming more fully yourself. Over five days, we create space to:</p>
+        <span class="label" style="color: var(--gold);">This Retreat Is Not About Becoming Someone Else</span>
+        <h2 class="section-h">It is about remembering<br><em>who you already are.</em></h2>
+        <p style="font-family: var(--f-body); font-size: 15px; color: var(--taupe); line-height: 1.9; margin-bottom: 20px;">And creating the space for that woman to fully emerge. Over five days together in Ibiza, we slow down enough to hear ourselves again. We create space to:</p>
         <ul class="sparkle-list">
-          <li>Slow down</li>
-          <li>Return to yourself</li>
-          <li>Reconnect with what matters most</li>
+          <li>Reconnect with what truly matters</li>
           <li>Listen beneath the noise</li>
-          <li>Trust your own inner knowing</li>
+          <li>Restore trust in your own inner knowing</li>
+          <li>Release what no longer belongs</li>
           <li>Explore what wants to emerge next</li>
-          <li>Make sense of the transition you are currently in</li>
-          <li>Create clarity about the next chapter of your life</li>
+          <li>Create clarity around your next chapter</li>
+          <li>Remember who you are beneath all expectations, responsibilities and roles</li>
+          <li>Return home to yourself</li>
         </ul>
-        <p class="about-closing">This is a high-touch, intimate experience for women who are ready to stop abandoning themselves and consciously choose what comes next.</p>
+        <p class="about-closing">This is not personal development for the sake of improvement.<br>This is soul remembrance.</p>
       </div>
     </div>
   </section>
 
 
   <!-- ══════════ GALLERY STRIP ══════════ -->
-  <!-- Full-bleed image strip, no section padding -->
   <div id="gallery">
     <div class="gallery-grid">
 
@@ -552,7 +678,7 @@
         <img src="../images/leo-with-group.jpg" alt="Leo with retreat group">
       </div>
 
-      <!-- PLACEHOLDER: Deliver a 4th photo — ideally a candid group shot or atmosphere image from the last retreat -->
+      <!-- PLACEHOLDER: Replace with a 4th candid photo from the last retreat or an Ibiza landscape -->
       <div class="gallery-cell">
         <div class="img-ph img-ph-dark" style="height: 100%; border-radius: 0; border: none; background: rgba(255,255,255,.04);">
           <div class="img-ph-icon">🌿</div>
@@ -577,13 +703,16 @@
         <span class="label">Why Ibiza?</span>
         <h2 class="section-h">The island <em>calls.</em></h2>
         <div class="ibiza-body">
-          <p>There is a reason people have travelled to Ibiza for centuries seeking healing, inspiration, transformation and renewal.</p>
-          <p>Beyond its beauty lies something else.</p>
+          <p>There is a reason people have been drawn to Ibiza for centuries.</p>
+          <p>Beyond its beauty lies something deeper.</p>
+          <p>The island carries a unique energy of liberation, transformation, creativity and renewal.</p>
+          <p>Many people describe arriving here as if something inside them immediately exhales.</p>
         </div>
-        <p class="ibiza-accent">An energy. A presence. A deep invitation to reconnect with what is true.</p>
+        <p class="ibiza-accent">As if they can finally hear themselves again.</p>
         <div class="ibiza-body">
-          <p>Throughout the retreat, we will work not only within the retreat space itself, but also with the island.</p>
-          <p>Ibiza becomes part of the journey.</p>
+          <p>And that is exactly why this retreat takes place here.</p>
+          <p>Because Ibiza is not simply the backdrop.</p>
+          <p>It becomes part of the journey.</p>
         </div>
       </div>
 
@@ -598,33 +727,37 @@
         <span class="label reveal" style="color: var(--gold);">Sacred Places &amp; Transformational Experiences</span>
         <h2 class="section-h reveal d1">Ibiza as teacher.</h2>
       </div>
-      <p class="sacred-intro reveal d2">Depending on the needs of the group, the season, the weather and what is most supportive for your process, Leo will guide the group to carefully selected locations across the island. Each place carries its own symbolic meaning and energetic quality.</p>
+      <p class="sacred-intro reveal d2">Throughout the retreat we will work not only within our sessions, but also with the island itself. Depending on the needs of the group, the weather, the season and what will best support the process unfolding, Leo will guide the group to carefully selected locations across the island. Each place carries its own energetic quality, symbolic meaning and invitation.</p>
 
       <div class="sacred-grid">
 
         <div class="sacred-card reveal d1">
           <div class="sacred-name">Tanit Cave</div>
-          <div class="sacred-body">A sacred place dedicated to Tanit, the ancient goddess of Ibiza. Associated with feminine power, creation, fertility, intuition and rebirth.</div>
+          <div class="sacred-body">A place connected to feminine wisdom, fertility, life force, protection, regeneration and sacred becoming.</div>
         </div>
 
         <div class="sacred-card reveal d2">
           <div class="sacred-name">Es Vedrà</div>
-          <div class="sacred-body">One of the most magnetic and mystical places in the world. A powerful symbol of transformation, manifestation, feminine energy and possibility.</div>
+          <div class="sacred-body">A place associated with transformation, manifestation, possibility and feminine power.</div>
         </div>
 
         <div class="sacred-card reveal d3">
-          <div class="sacred-name">Lighthouse Walk</div>
-          <div class="sacred-body">A place of vision, perspective and direction. An invitation to rise above the noise and reconnect with what truly matters.</div>
+          <div class="sacred-name">The Lighthouse Walk</div>
+          <div class="sacred-body">
+            <p>A place of perspective, vision and direction.</p>
+            <p>An invitation to stop running around and instead become the lighthouse.</p>
+            <p>Grounded. Steady. Clear.</p>
+          </div>
         </div>
 
         <div class="sacred-card reveal d4">
           <div class="sacred-name">Pou des Lleó</div>
-          <div class="sacred-body">A place connected to courage, authenticity, resilience and the untamed spirit of the island. A reminder that your deepest strength often emerges when you return to what is most true.</div>
+          <div class="sacred-body">A place connected to authenticity, courage, resilience and the untamed spirit of the island. A reminder that our deepest strength often emerges when we return to what is most true.</div>
         </div>
 
       </div>
 
-      <p class="sacred-note reveal">Rather than following a fixed schedule, we allow the retreat to unfold in service of the women present. This creates a deeply personal and transformative experience.</p>
+      <p class="sacred-note reveal">Rather than following a rigid itinerary, we allow the retreat to unfold in service of the women present.<br>Because transformation is rarely linear. And the most powerful experiences are often the ones we could not have planned.</p>
     </div>
   </section>
 
@@ -637,14 +770,36 @@
         <h2 class="section-h reveal d1">Everything you need<br>to truly <em>arrive.</em></h2>
       </div>
       <div class="included-grid">
-        <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Daily group sessions with Leo Boxem</span></div>
-        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Guided reflection and integration exercises</span></div>
+        <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Five days and four nights in Ibiza</span></div>
+        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Beautiful accommodation</span></div>
+        <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Daily group sessions with Leo</span></div>
+        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Guided reflection and embodiment exercises</span></div>
         <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Transformational conversations</span></div>
         <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Sacred island experiences</span></div>
-        <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Time for rest, renewal and reconnection</span></div>
-        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Beautiful accommodation</span></div>
+        <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">Integration practices</span></div>
+        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">Time for rest, stillness and renewal</span></div>
         <div class="included-item reveal d1"><span class="included-star">✨</span><span class="included-text">All meals during the retreat</span></div>
-        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">A small and intimate group experience</span></div>
+        <div class="included-item reveal d2"><span class="included-star">✨</span><span class="included-text">A deeply intimate group experience</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════ WHAT WOMEN OFTEN LEAVE WITH ══════════ -->
+  <section id="outcomes">
+    <div class="wrap">
+      <div style="text-align: center;">
+        <span class="label reveal">What Women Often Leave With</span>
+        <h2 class="section-h reveal d1">You will leave <em>different.</em></h2>
+      </div>
+      <div class="outcomes-grid">
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">A renewed connection with themselves</span></div>
+        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">Greater clarity about the next chapter of life, business or leadership</span></div>
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">More trust in their own inner knowing</span></div>
+        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">A deeper sense of peace and groundedness</span></div>
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">The courage to stop postponing what they already know</span></div>
+        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">A personal vision for what they are creating next</span></div>
+        <div class="outcome-item reveal d1" style="grid-column: 1 / -1; max-width: 440px; margin: 0 auto;"><span class="outcome-star">✨</span><span class="outcome-text">The feeling of finally coming home to themselves again</span></div>
       </div>
     </div>
   </section>
@@ -658,23 +813,19 @@
         <h2 class="section-h reveal d1">Women who've <em>been here.</em></h2>
         <p style="font-family: var(--f-serif); font-style: italic; font-size: 16px; color: rgba(253,247,245,.58); max-width: 480px; margin: 12px auto 0;" class="reveal d2">Hear from women who attended the first Be &amp; Becoming Retreat.</p>
       </div>
-
       <div class="video-grid">
-
-        <!-- PLACEHOLDER: Replace this block with a YouTube/Vimeo <iframe> or <video> tag -->
+        <!-- PLACEHOLDER: Replace with YouTube/Vimeo iframe embed or <video> tag -->
         <div class="video-ph reveal d1">
           <div class="play"></div>
           <div class="video-ph-label">Video Testimonial 1</div>
           <div class="video-ph-note">Replace with YouTube / Vimeo embed or .mp4 from last retreat participant</div>
         </div>
-
-        <!-- PLACEHOLDER: Replace this block with a YouTube/Vimeo <iframe> or <video> tag -->
+        <!-- PLACEHOLDER: Replace with YouTube/Vimeo iframe embed or <video> tag -->
         <div class="video-ph reveal d2">
           <div class="play"></div>
           <div class="video-ph-label">Video Testimonial 2</div>
           <div class="video-ph-note">Replace with YouTube / Vimeo embed or .mp4 from last retreat participant</div>
         </div>
-
       </div>
     </div>
   </section>
@@ -687,14 +838,12 @@
         <span class="label reveal">Their Words</span>
         <h2 class="section-h reveal d1">What they say.</h2>
       </div>
-
       <div class="testi-grid">
-
-        <!-- PLACEHOLDER: Replace quote, name, role, and avatar image below -->
+        <!-- PLACEHOLDER: Replace quote, name, and avatar below -->
         <div class="testi-card reveal d1">
-          <p class="testi-quote">"[Paste written testimonial here — 2 to 5 sentences from a participant of the last Be &amp; Becoming Retreat. Ask for permission to use name and quote.]"</p>
+          <p class="testi-quote">"[Written testimonial — 2 to 5 sentences from a participant of the last Be &amp; Becoming Retreat. Ask for permission to use name and quote.]"</p>
           <div class="testi-meta">
-            <!-- PLACEHOLDER: Replace with participant headshot if available; otherwise swap src for a solid placeholder image -->
+            <!-- PLACEHOLDER: Replace src with participant headshot -->
             <div class="testi-avatar">
               <img src="../images/tesimonial-1-retreat-sk.jpg" alt="Retreat participant">
             </div>
@@ -704,12 +853,11 @@
             </div>
           </div>
         </div>
-
-        <!-- PLACEHOLDER: Replace quote, name, role, and avatar image below -->
+        <!-- PLACEHOLDER: Replace quote, name, and avatar below -->
         <div class="testi-card reveal d2">
-          <p class="testi-quote">"[Paste written testimonial here — 2 to 5 sentences from a participant of the last Be &amp; Becoming Retreat. Ask for permission to use name and quote.]"</p>
+          <p class="testi-quote">"[Written testimonial — 2 to 5 sentences from a participant of the last Be &amp; Becoming Retreat. Ask for permission to use name and quote.]"</p>
           <div class="testi-meta">
-            <!-- PLACEHOLDER: Replace with participant headshot if available -->
+            <!-- PLACEHOLDER: Replace src with participant headshot -->
             <div class="testi-avatar">
               <img src="../images/tesimonial-2-retreat-sk.jpg" alt="Retreat participant">
             </div>
@@ -719,13 +867,12 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
 
-  <!-- ══════════ FOUNDING CIRCLE / PRICING ══════════ -->
+  <!-- ══════════ FOUNDING CIRCLE ══════════ -->
   <section id="pricing">
     <div class="pricing-inner">
       <div style="text-align: center; margin-bottom: 48px;">
@@ -741,43 +888,67 @@
         <div class="pricing-row">
           <div>
             <div class="price-label">Founding Circle Investment</div>
-            <div class="price-detail" style="margin-top: 4px;">Available until 5 July 2026</div>
+            <div class="price-detail" style="margin-top: 4px;">Available until 11 July 2026</div>
           </div>
           <span class="price-amount featured">€2,970</span>
         </div>
         <div class="pricing-row" style="flex-direction: column; align-items: flex-start; gap: 8px;">
           <div class="price-label">How to reserve your place</div>
           <div class="price-detail">
-            Deposit of <strong style="color: var(--dark-brown);">€800</strong> to reserve your place<br>
+            Deposit of <strong style="color: var(--dark-brown);">€500</strong> to reserve your place<br>
             Remaining balance due by <strong style="color: var(--dark-brown);">31 August 2026</strong>
           </div>
         </div>
       </div>
 
       <div class="bonus-box reveal d1">
-        <span class="bonus-eyebrow">Founding Circle Bonus — Included</span>
-        <div class="bonus-title">Complimentary access to <em>Living Your Truth™</em></div>
-        <p class="bonus-body">From the moment you enroll until the retreat begins. Join the Daily Return journey, weekly Return Calls and ongoing support as we prepare together for Ibiza.</p>
-        <div class="bonus-value">Value: €444+</div>
+        <span class="bonus-eyebrow">Founding Circle Bonus — Join before 11 July and receive:</span>
+        <div class="bonus-title">Complimentary Access to <em>Living Your Truth™</em></div>
+        <p class="bonus-intro">From the moment you enroll until the retreat begins. Join us for:</p>
+        <ul class="bonus-list">
+          <li>Daily Return Podcast Episodes</li>
+          <li>Weekly Return Calls</li>
+          <li>Reflection exercises</li>
+          <li>Ongoing support and connection</li>
+        </ul>
+        <span class="bonus-value">Value: €444+</span>
+        <p class="bonus-closing">A beautiful way to begin your Be &amp; Becoming journey before we even arrive in Ibiza.</p>
       </div>
 
       <div class="btn-group reveal d2" style="margin-top: 48px;">
-        <!-- APPLY LINK: Replace href with your application form URL -->
-        <a href="#pricing" class="btn btn-dark">Apply Now</a>
-        <a href="/crossroad/" class="btn btn-outline-gold">Book a Crossroad Session</a>
+        <!-- LINK: Replace href with your interest form URL -->
+        <a href="#raise-hand" class="btn btn-dark">Raise Your Hand</a>
+        <a href="#raise-hand" class="btn btn-outline-gold">Explore a Spot</a>
       </div>
     </div>
   </section>
 
 
-  <!-- ══════════ URGENCY ══════════ -->
+  <!-- ══════════ ONLY 5 PLACES ══════════ -->
   <section id="urgency">
     <div class="wrap">
-      <span class="label reveal" style="color: rgba(195,153,80,.6);">Only 5 Places Available</span>
-      <h2 class="section-h reveal d1">This retreat is intentionally small.</h2>
-      <p class="urgency-body reveal d2">The intimacy of the group is part of what makes the experience so powerful.<br>If you feel called, I invite you to trust that feeling.</p>
-      <!-- APPLY LINK: Replace href with your application form URL -->
-      <a href="#pricing" class="btn btn-primary reveal d3">Apply Now — Secure Your Place</a>
+      <span class="label reveal" style="color: rgba(195,153,80,.6);">Only Five Places Available</span>
+      <h2 class="section-h reveal d1">This retreat is intentionally intimate.</h2>
+      <p class="urgency-body reveal d2">The depth of the experience depends on the safety, trust and connection within the group.<br>For that reason, only five women will be joining us.<br><br>If you feel called, I invite you to trust that feeling.</p>
+      <a href="#raise-hand" class="btn btn-primary reveal d3">Raise Your Hand</a>
+    </div>
+  </section>
+
+
+  <!-- ══════════ RAISE YOUR HAND ══════════ -->
+  <section id="raise-hand">
+    <div class="wrap">
+      <span class="label reveal">Raise Your Hand</span>
+      <h2 class="raise-h reveal d1">Curious whether<br>this retreat is for you?</h2>
+      <p class="raise-body reveal d2">Fill in the short interest form and let's explore whether this experience feels like the right next step.</p>
+      <p class="raise-body reveal d2">If you already know you're ready, you can also indicate that you'd like to reserve one of the five places.</p>
+      <p class="raise-note reveal d3">Filling in the form is completely without obligation.</p>
+      <div class="btn-group reveal d4">
+        <!-- LINK: Replace href with your interest form URL (Typeform, Google Form, etc.) -->
+        <a href="#" class="btn btn-outline-white">→ Raise Your Hand</a>
+        <a href="#" class="btn btn-outline-white">→ Explore a Spot for the Retreat</a>
+      </div>
+      <p style="font-family: var(--f-body); font-size: 12px; color: rgba(255,255,255,.4); margin-top: 28px; font-style: italic;" class="reveal d5">Because this is such a personal and intimate experience, Leo likes to connect with each woman before confirming her place. Together we'll explore whether this retreat feels like the right fit for both of us.</p>
     </div>
   </section>
 
@@ -787,18 +958,18 @@
     <div class="guide-grid">
 
       <div class="guide-portrait reveal d1">
-        <!-- PLACEHOLDER: Swap for a portrait of Leo from Ibiza or a warmer/more recent photo if preferred -->
+        <!-- PLACEHOLDER: Swap for a preferred portrait of Leo — ideally from Ibiza or in a warmer setting -->
         <img src="../images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
       </div>
 
       <div class="reveal d2">
         <span class="label" style="color: var(--gold);">Your Guide</span>
         <h2 class="guide-name">Leo Boxem</h2>
-        <span class="guide-roles">Founder of Remember Your Future™ · Legacy Mentor · Transformational Guide · Speaker</span>
+        <span class="guide-roles">Founder of Remember Your Future™</span>
         <div class="guide-body">
-          <p>For over twenty years Leo has helped women navigate transitions, reconnect with their purpose and consciously choose the path that leads to greater meaning, fulfillment and impact.</p>
-          <p>Having transformed more than 4,600 lives and businesses worldwide, she is known for her ability to see both the greatness within a person and the obstacles standing in the way of its expression.</p>
-          <p>The Be &amp; Becoming Retreat™ brings together everything she has learned about transformation, purpose, healing and authentic leadership into one intimate and life-changing experience.</p>
+          <p>For more than twenty years, Leo has guided women through personal and professional transitions, helping them reconnect with themselves, their purpose and their next chapter.</p>
+          <p>Known for her ability to combine deep intuition with practical guidance, she creates transformational experiences that help women move from confusion to clarity, from overwhelm to alignment, and from self-abandonment to self-trust.</p>
+          <p>The Be &amp; Becoming Retreat™ brings together the essence of her work into one intimate and life-changing experience.</p>
         </div>
       </div>
 
@@ -806,29 +977,39 @@
   </section>
 
 
-  <!-- ══════════ NOT SURE YET ══════════ -->
-  <section id="cta-bottom">
-    <div class="wrap">
-      <span class="label reveal" style="color: rgba(255,255,255,.5);">Not Sure Yet?</span>
-      <h2 class="section-h reveal d1">Book a complimentary<br><em>Crossroad Session.</em></h2>
-      <p class="cta-body reveal d2">Together we will explore where you are, what you need and whether the Be &amp; Becoming Retreat™ is the right next step for you.</p>
-      <a href="/crossroad/" class="btn btn-outline-white reveal d3">Book Your Crossroad Session</a>
-    </div>
-  </section>
-
-
-  <!-- ══════════ FINALE ══════════ -->
+  <!-- ══════════ THIS IS YOUR LIFE (FINALE) ══════════ -->
   <section id="finale">
-    <div class="wrap">
-      <span class="rule-gold reveal"></span>
-      <p class="finale-line reveal d1">Stop betraying who you truly are.</p>
-      <p class="finale-line reveal d2">Return to yourself.</p>
-      <p class="finale-line reveal d3">Become who you are here to be.</p>
-      <div class="btn-group reveal d4">
-        <!-- APPLY LINK: Replace href with your application form URL -->
-        <a href="#pricing" class="btn btn-primary">Apply Now</a>
-        <a href="/crossroad/" class="btn btn-outline-white">Book a Crossroad Session</a>
+    <div class="finale-grid">
+
+      <div class="finale-book reveal d1">
+        <!--
+          BOOK IMAGE: This should be the photo/image of the book with the text
+          "Your Life, Your Journey, Your Choice" on the cover.
+          Replace the src below with the correct filename.
+          Current best guess: heartjournal-1.JPG — confirm or correct as needed.
+        -->
+        <img src="../images/heartjournal-1.JPG" alt="Your Life, Your Journey, Your Choice">
       </div>
+
+      <div class="finale-right reveal d2">
+        <h2 class="finale-h">This Is Your Life.</h2>
+        <p class="finale-body">Your journey.</p>
+        <p class="finale-body">Your choice.</p>
+        <p class="finale-body">And perhaps the greatest privilege of all is not becoming someone else.</p>
+        <p class="finale-body">But becoming more fully yourself.</p>
+        <span class="finale-rule"></span>
+        <p class="finale-body" style="font-family: var(--f-serif); font-style: italic; font-size: 18px; color: rgba(253,247,245,.6);">Don't live just <em style="font-style: normal; color: rgba(253,247,245,.4);">a</em> life.</p>
+        <p class="finale-body" style="font-family: var(--f-serif); font-style: italic; font-size: 20px; color: var(--gold-pale); margin-bottom: 28px;">Live <em style="font-style: italic;">your</em> life.</p>
+        <span class="finale-bold">Stop abandoning who you truly are.</span>
+        <span class="finale-bold">Return to yourself.</span>
+        <span class="finale-bold" style="color: var(--gold-pale);">Become who you are here to be.</span>
+        <div class="btn-group" style="justify-content: flex-start;">
+          <!-- LINK: Replace href with your interest form URL -->
+          <a href="#raise-hand" class="btn btn-primary">Raise Your Hand</a>
+          <a href="#raise-hand" class="btn btn-outline-white">Explore a Spot</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
