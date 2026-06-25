@@ -72,7 +72,7 @@
     section > .wrap { padding-left: 0; padding-right: 0; }
 
     .label {
-      font-family: var(--f-head); font-size: 11px; font-weight: 700;
+      font-family: var(--f-head); font-size: 13px; font-weight: 700;
       letter-spacing: 0.24em; text-transform: uppercase; display: block; margin-bottom: 16px;
     }
     .rule-gold {
@@ -106,7 +106,7 @@
       display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 66px;
     }
     .nav-brand { font-family: var(--f-serif); font-size: 15px; font-weight: 500; color: var(--black); letter-spacing: 0.02em; text-decoration: none; }
-    .nav-back { font-family: var(--f-head); font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dark-brown); opacity: .65; text-decoration: none; transition: opacity .2s; }
+    .nav-back { font-family: var(--f-head); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dark-brown); opacity: .65; text-decoration: none; transition: opacity .2s; }
     .nav-back:hover { opacity: 1; }
 
     /* ── BUTTONS ── */
@@ -132,8 +132,8 @@
       align-items: center; justify-content: center; text-align: center; padding: 28px 20px;
     }
     .img-ph-icon { font-size: 28px; margin-bottom: 10px; opacity: .5; }
-    .img-ph-label { font-family: var(--f-head); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-    .img-ph-desc { font-family: var(--f-body); font-size: 11px; font-style: italic; color: var(--taupe); line-height: 1.6; max-width: 220px; }
+    .img-ph-label { font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .img-ph-desc { font-family: var(--f-body); font-size: 13px; font-style: italic; color: var(--taupe); line-height: 1.6; max-width: 220px; }
     .img-ph-dark { background: rgba(255,255,255,.05); border-color: rgba(195,153,80,.22); }
     .img-ph-dark .img-ph-label { color: var(--gold-pale); }
     .img-ph-dark .img-ph-desc { color: rgba(255,255,255,.4); }
@@ -152,7 +152,7 @@
     }
     .hero-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
     .hero-eyebrow {
-      font-family: var(--f-head); font-size: 11px; font-weight: 700;
+      font-family: var(--f-head); font-size: 13px; font-weight: 700;
       letter-spacing: 0.28em; text-transform: uppercase;
       color: var(--gold-pale); display: block; margin-bottom: 28px;
     }
@@ -171,8 +171,8 @@
       line-height: 1.65; max-width: 620px; margin: 0 auto 40px;
     }
     .hero-places {
-      margin-top: 48px; font-family: var(--f-head); font-size: 9px; font-weight: 600;
-      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,.35);
+      margin-top: 48px; font-family: var(--f-head); font-size: 13px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,.60);
     }
 
     /* ── INTRO ── */
@@ -184,7 +184,7 @@
     }
     .intro-body {
       font-family: var(--f-serif); font-style: italic;
-      font-size: clamp(16px, 1.9vw, 21px); color: var(--taupe); line-height: 1.9;
+      font-size: clamp(18px, 1.9vw, 22px); color: var(--taupe); line-height: 1.9;
     }
     .intro-body p { margin-bottom: 0.55em; }
     .intro-closing {
@@ -215,18 +215,18 @@
       color: var(--gold-pale); letter-spacing: -0.01em; display: block; margin-bottom: 4px;
     }
     .art-duality-desc {
-      font-family: var(--f-head); font-size: 9px; font-weight: 600;
-      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.55);
+      font-family: var(--f-head); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.88);
     }
     .art-rhythm {
       font-family: var(--f-cg); font-style: italic;
-      font-size: clamp(17px, 2vw, 22px); color: rgba(240,221,176,.65);
+      font-size: clamp(19px, 2vw, 24px); color: rgba(240,221,176,.90);
       line-height: 1.7; margin: 0 auto 36px; max-width: 560px;
     }
-    .art-body { font-family: var(--f-body); font-size: 15px; color: rgba(253,247,245,.72); line-height: 2; margin-bottom: 0.75em; }
+    .art-body { font-family: var(--f-body); font-size: 15px; color: rgba(253,247,245,.88); line-height: 2; margin-bottom: 0.75em; }
     .art-closing {
       font-family: var(--f-serif); font-style: italic;
-      font-size: clamp(16px, 2vw, 21px); color: var(--gold-pale);
+      font-size: clamp(18px, 2vw, 22px); color: var(--gold-pale);
       line-height: 1.75; margin-top: 32px;
     }
 
@@ -318,6 +318,21 @@
     .included-star { font-size: 16px; flex-shrink: 0; padding-top: 2px; }
     .included-text { font-family: var(--f-body); font-size: 14px; color: var(--dark-brown); line-height: 1.6; }
 
+    /* ── LOCATION & STAY ── */
+    #location { background: var(--white); }
+    .location-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: start; max-width: var(--max); margin: 0 auto;
+    }
+    .location-img { border-radius: 16px; overflow: hidden; }
+    .location-img img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 16px; }
+    .location-body { font-family: var(--f-body); font-size: 15px; color: var(--taupe); line-height: 1.9; margin-bottom: 1em; }
+    .location-accent {
+      font-family: var(--f-serif); font-style: italic;
+      font-size: clamp(18px, 2vw, 22px); color: var(--rose); line-height: 1.75; margin: 24px 0;
+    }
+    .location-divider { display: block; width: 36px; height: 1.5px; background: linear-gradient(to right, var(--gold), transparent); margin: 32px 0 24px; }
+
     /* ── WHAT WOMEN LEAVE WITH ── */
     #outcomes { background: var(--blush); }
     #outcomes .label { color: rgba(80,42,26,.5); }
@@ -356,8 +371,8 @@
       border-color: transparent transparent transparent rgba(195,153,80,.6);
       margin-left: 4px;
     }
-    .video-ph-label { font-family: var(--f-head); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-    .video-ph-note { font-family: var(--f-body); font-size: 11px; font-style: italic; color: rgba(225,198,183,.4); line-height: 1.6; max-width: 240px; }
+    .video-ph-label { font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .video-ph-note { font-family: var(--f-body); font-size: 13px; font-style: italic; color: rgba(225,198,183,.65); line-height: 1.6; max-width: 240px; }
 
     /* ── WRITTEN TESTIMONIALS ── */
     #written-testi { background: var(--cream); }
@@ -374,8 +389,8 @@
     .testi-meta { display: flex; align-items: center; gap: 14px; }
     .testi-avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
     .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .testi-name { font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); }
-    .testi-role { display: block; font-style: italic; text-transform: none; letter-spacing: 0.04em; font-size: 9px; opacity: .7; margin-top: 2px; }
+    .testi-name { font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); }
+    .testi-role { display: block; font-style: italic; text-transform: none; letter-spacing: 0.04em; font-size: 11px; opacity: .8; margin-top: 2px; }
 
     /* ── PRICING ── */
     #pricing { background: var(--white); }
@@ -398,7 +413,7 @@
       background: linear-gradient(135deg, var(--dark-brown), var(--mocha));
       border-radius: 14px; padding: 40px;
     }
-    .bonus-eyebrow { font-family: var(--f-head); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.65); display: block; margin-bottom: 12px; }
+    .bonus-eyebrow { font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(195,153,80,.85); display: block; margin-bottom: 12px; }
     .bonus-title { font-family: var(--f-display); font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
     .bonus-title em { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--gold-pale); }
     .bonus-intro { font-family: var(--f-body); font-size: 14px; color: rgba(253,247,245,.75); line-height: 1.9; margin-bottom: 20px; }
@@ -410,7 +425,7 @@
     }
     .bonus-list li:first-child { border-top: 1px solid rgba(195,153,80,.1); }
     .bonus-list li::before { content: '✨'; position: absolute; left: 0; top: 6px; font-size: 13px; }
-    .bonus-value { font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+    .bonus-value { font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
     .bonus-closing { font-family: var(--f-serif); font-style: italic; font-size: 14px; color: rgba(240,221,176,.65); line-height: 1.7; }
 
     /* ── URGENCY ── */
@@ -446,7 +461,7 @@
     .guide-portrait { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; }
     .guide-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .guide-name { font-family: var(--f-display); font-size: 30px; font-weight: 700; color: var(--dark-brown); margin-bottom: 6px; }
-    .guide-roles { font-family: var(--f-head); font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 28px; }
+    .guide-roles { font-family: var(--f-head); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 28px; }
     .guide-body { font-family: var(--f-body); font-size: 15px; color: var(--taupe); line-height: 1.9; }
 
     /* ── YOUR LIFE FINALE ── */
@@ -479,8 +494,8 @@
     /* ── FOOTER ── */
     footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
     .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
-    .footer-tag { font-family: var(--f-head); font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .6; margin-bottom: 24px; }
-    .footer-links { font-family: var(--f-head); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.3); }
+    .footer-tag { font-family: var(--f-head); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .75; margin-bottom: 24px; }
+    .footer-links { font-family: var(--f-head); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.45); }
     .footer-links a { color: var(--blush); text-decoration: none; opacity: .7; }
     .footer-links a:hover { opacity: 1; }
 
@@ -499,6 +514,7 @@
       .gallery-cell { height: 220px; }
       .sacred-grid { grid-template-columns: 1fr; }
       .included-grid { grid-template-columns: 1fr; }
+      .location-grid { grid-template-columns: 1fr; }
       .outcomes-grid { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
@@ -538,9 +554,7 @@
         A Retreat for Women Ready to Return to Themselves<br>and Their Next Chapter
       </p>
       <div class="btn-group reveal d4">
-        <!-- LINK: Replace href with your interest form URL -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary">Raise Your Hand</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-outline-white">Explore a Spot</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary">I am interested</a>
       </div>
       <p class="hero-places reveal d5">Only 5 places available</p>
     </div>
@@ -785,6 +799,29 @@
   </section>
 
 
+  <!-- ══════════ LOCATION & STAY ══════════ -->
+  <section id="location">
+    <div class="location-grid">
+
+      <div class="location-img reveal d1">
+        <img src="../images/ibiza-sea.jpg" alt="The sea in Ibiza, directly outside the retreat apartment">
+      </div>
+
+      <div class="reveal d2">
+        <span class="label" style="color: var(--gold);">Location &amp; Stay</span>
+        <h2 class="section-h">Your own apartment.<br><em>Directly at the sea.</em></h2>
+        <p class="location-body">During the five days of the retreat, you will stay in your own private apartment — situated directly at the sea.</p>
+        <p class="location-body">Not a hotel room. Not a shared villa. Your own space, where you can return after each session to rest, to journal, or simply sit on your terrace and listen to the water.</p>
+        <p class="location-body">The accommodation is priced at local rate — a genuine, beautiful location that remains accessible and unhurried in October.</p>
+        <span class="location-divider"></span>
+        <span class="label" style="color: var(--gold);">Food</span>
+        <p class="location-body">All meals during the retreat are included. We eat simply, beautifully and well — fresh, local, Mediterranean. Food that nourishes your body and keeps your energy clear and open throughout the five days together.</p>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- ══════════ WHAT WOMEN OFTEN LEAVE WITH ══════════ -->
   <section id="outcomes">
     <div class="wrap">
@@ -793,13 +830,13 @@
         <h2 class="section-h reveal d1">You will leave <em>different.</em></h2>
       </div>
       <div class="outcomes-grid">
-        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">A renewed connection with themselves</span></div>
-        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">Greater clarity about the next chapter of life, business or leadership</span></div>
-        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">More trust in their own inner knowing</span></div>
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">A renewed connection with yourself</span></div>
+        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">Greater clarity about the next chapter of your life, business or leadership</span></div>
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">More trust in your own inner knowing</span></div>
         <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">A deeper sense of peace and groundedness</span></div>
-        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">The courage to stop postponing what they already know</span></div>
-        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">A personal vision for what they are creating next</span></div>
-        <div class="outcome-item reveal d1" style="grid-column: 1 / -1; max-width: 440px; margin: 0 auto;"><span class="outcome-star">✨</span><span class="outcome-text">The feeling of finally coming home to themselves again</span></div>
+        <div class="outcome-item reveal d1"><span class="outcome-star">✨</span><span class="outcome-text">The courage to stop postponing what you already know</span></div>
+        <div class="outcome-item reveal d2"><span class="outcome-star">✨</span><span class="outcome-text">A personal vision for what you are creating next</span></div>
+        <div class="outcome-item reveal d1" style="grid-column: 1 / -1; max-width: 440px; margin: 0 auto;"><span class="outcome-star">✨</span><span class="outcome-text">The feeling of finally coming home to yourself again</span></div>
       </div>
     </div>
   </section>
@@ -916,9 +953,7 @@
       </div>
 
       <div class="btn-group reveal d2" style="margin-top: 48px;">
-        <!-- LINK: Replace href with your interest form URL -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-dark">Raise Your Hand</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-outline-gold">Explore a Spot</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-dark">I am interested</a>
       </div>
     </div>
   </section>
@@ -930,7 +965,7 @@
       <span class="label reveal" style="color: rgba(195,153,80,.6);">Only Five Places Available</span>
       <h2 class="section-h reveal d1">This retreat is intentionally intimate.</h2>
       <p class="urgency-body reveal d2">The depth of the experience depends on the safety, trust and connection within the group.<br>For that reason, only five women will be joining us.<br><br>If you feel called, I invite you to trust that feeling.</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary reveal d3">Raise Your Hand</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary reveal d3">I am interested</a>
     </div>
   </section>
 
@@ -944,9 +979,7 @@
       <p class="raise-body reveal d2">If you already know you're ready, you can also indicate that you'd like to reserve one of the five places.</p>
       <p class="raise-note reveal d3">Filling in the form is completely without obligation.</p>
       <div class="btn-group reveal d4">
-        <!-- LINK: Replace href with your interest form URL (Typeform, Google Form, etc.) -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-outline-white">→ Raise Your Hand</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-outline-white">→ Explore a Spot for the Retreat</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-outline-white">I am interested</a>
       </div>
       <p style="font-family: var(--f-body); font-size: 12px; color: rgba(255,255,255,.4); margin-top: 28px; font-style: italic;" class="reveal d5">Because this is such a personal and intimate experience, Leo likes to connect with each woman before confirming her place. Together we'll explore whether this retreat feels like the right fit for both of us.</p>
     </div>
@@ -1004,9 +1037,7 @@
         <span class="finale-bold">Return to yourself.</span>
         <span class="finale-bold" style="color: var(--gold-pale);">Become who you are here to be.</span>
         <div class="btn-group" style="justify-content: flex-start;">
-          <!-- LINK: Replace href with your interest form URL -->
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary">Raise Your Hand</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-outline-white">Explore a Spot</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary">I am interested</a>
         </div>
       </div>
 
