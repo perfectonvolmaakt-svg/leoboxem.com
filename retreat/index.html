@@ -851,17 +851,32 @@
         <p style="font-family: var(--f-serif); font-style: italic; font-size: 16px; color: rgba(253,247,245,.58); max-width: 480px; margin: 12px auto 0;" class="reveal d2">Hear from women who attended the first Be &amp; Becoming Retreat.</p>
       </div>
       <div class="video-grid">
-        <!-- PLACEHOLDER: Replace with YouTube/Vimeo iframe embed or <video> tag -->
-        <div class="video-ph reveal d1">
-          <div class="play"></div>
-          <div class="video-ph-label">Video Testimonial 1</div>
-          <div class="video-ph-note">Replace with YouTube / Vimeo embed or .mp4 from last retreat participant</div>
+        <!-- Option A: <video> tag — hosted on your server, no YouTube branding, full style control -->
+        <div class="reveal d1" style="border-radius:12px;overflow:hidden;background:#000;">
+          <video
+            src="../images/stacey-testimonial-combi-lyt-and-retreat-web2.mp4"
+            controls
+            style="width:100%;display:block;max-height:420px;object-fit:cover;">
+          </video>
+          <div style="padding:10px 14px 14px;background:#1a1008;">
+            <div class="video-ph-label">Option A — &lt;video&gt; tag</div>
+            <div class="video-ph-note">Hosted on your server. No YouTube branding. You control the look.</div>
+          </div>
         </div>
-        <!-- PLACEHOLDER: Replace with YouTube/Vimeo iframe embed or <video> tag -->
-        <div class="video-ph reveal d2">
-          <div class="play"></div>
-          <div class="video-ph-label">Video Testimonial 2</div>
-          <div class="video-ph-note">Replace with YouTube / Vimeo embed or .mp4 from last retreat participant</div>
+        <!-- Option B: iframe embed — how a YouTube or Vimeo video would look -->
+        <div class="reveal d2" style="border-radius:12px;overflow:hidden;background:#000;">
+          <div style="position:relative;padding-top:56.25%;">
+            <iframe
+              src="../images/stacey-testimonial-combi-lyt-and-retreat-web2.mp4"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="autoplay; fullscreen"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div style="padding:10px 14px 14px;background:#1a1008;">
+            <div class="video-ph-label">Option B — iframe embed</div>
+            <div class="video-ph-note">How a YouTube / Vimeo link would sit in the page. Same ratio, different player chrome.</div>
+          </div>
         </div>
       </div>
     </div>
