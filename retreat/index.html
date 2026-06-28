@@ -551,38 +551,32 @@
     .client-card p { font-family: var(--f-cg); font-style: italic; font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 0; }
 
     /* ── SPHERE GALLERY ── */
-    .sphere-gallery { background: var(--cream); padding: var(--pv) var(--ph); }
+    .sphere-gallery { background: var(--cream); padding: 32px var(--ph) 56px; }
     .sphere-gallery .inner { max-width: var(--wide); margin: 0 auto; }
-    .sphere-gallery .head { text-align: center; margin-bottom: 56px; }
+    .sphere-gallery .head { text-align: center; margin-bottom: 28px; }
     .sphere-row {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+      display: flex; gap: 20px;
+      justify-content: center; align-items: center; flex-wrap: wrap;
     }
-    .sphere-item { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .sphere-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
     .sphere-img {
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--blush);
-      box-shadow: 0 8px 32px rgba(185,135,116,.18);
+      width: 120px; height: 120px; border-radius: 50%; overflow: hidden;
+      border: 2px solid var(--blush);
+      box-shadow: 0 4px 16px rgba(185,135,116,.15);
       transition: transform .4s ease, box-shadow .4s ease;
     }
-    .sphere-img:hover { transform: scale(1.04); box-shadow: 0 12px 40px rgba(185,135,116,.28); }
+    .sphere-img:hover { transform: scale(1.05); box-shadow: 0 8px 24px rgba(185,135,116,.25); }
     .sphere-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .sphere-label {
-      font-family: var(--f-head); font-size: 10px; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe);
-      text-align: center;
+      font-family: var(--f-head); font-size: 9px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); text-align: center;
     }
     @media (max-width: 900px) {
-      .sphere-img { width: 150px; height: 150px; }
-      .sphere-row { gap: 20px; }
+      .sphere-img { width: 90px; height: 90px; }
+      .sphere-row { gap: 14px; }
     }
     @media (max-width: 600px) {
-      .sphere-img { width: 130px; height: 130px; }
+      .sphere-img { width: 72px; height: 72px; }
     }
 
     /* ── 22. FINALE ── */
