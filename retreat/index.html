@@ -201,7 +201,7 @@
     }
 
     /* ── 5. WHO THIS IS FOR ── */
-    .who { background: var(--cream); }
+    .who { background: #ffffff; }
     .who .inner { max-width: var(--wide); margin: 0 auto; }
     .who-head { text-align: center; margin-bottom: 56px; }
     .who-head-title {
@@ -310,13 +310,13 @@
     .sacred .inner { max-width: var(--max); margin: 0 auto; }
     .sacred h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 12px; }
     .sacred-intro-cg {
-      font-family: var(--f-cg); font-style: italic; font-size: 18px;
-      color: var(--taupe); margin-bottom: 16px;
+      font-family: var(--f-cg); font-style: italic; font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--taupe); margin-bottom: 16px; line-height: 1.5;
     }
     .sacred-quote {
-      font-family: var(--f-mont); font-size: 14px; color: var(--text-mid);
+      font-family: var(--f-mont); font-size: 15px; color: #ffffff;
       font-style: italic; margin-bottom: 36px; line-height: 1.8;
-      padding: 20px 24px; background: #f5ece6; border-left: 2px solid var(--blush); border-radius: 0 2px 2px 0;
+      padding: 28px 32px; background: var(--rose); border-radius: 2px;
     }
     .sacred-sub {
       font-family: var(--f-head); font-size: 11px; font-weight: 900;
@@ -356,8 +356,8 @@
     .location .inner { max-width: var(--max); margin: 0 auto; }
     .location h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 8px; }
     .location .sub {
-      font-family: var(--f-cg); font-style: italic; font-size: 18px;
-      color: var(--text); margin-bottom: 40px; font-weight: 500;
+      font-family: var(--f-cg); font-style: italic; font-size: clamp(22px, 3vw, 34px);
+      color: var(--text); margin-bottom: 40px; font-weight: 500; line-height: 1.3;
     }
     .location-video-wrap {
       position: relative; width: 100%; padding-bottom: 56.25%;
@@ -389,6 +389,28 @@
     .leave-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
     .leave-list li { display: flex; gap: 16px; align-items: flex-start; font-size: 16px; color: var(--text-mid); }
     .leave-list li::before { content: '✦'; color: var(--rose); font-size: 12px; margin-top: 4px; min-width: 14px; }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip { padding: 0; overflow: hidden; }
+    .photo-strip-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      height: 340px;
+    }
+    .photo-strip-cell { overflow: hidden; position: relative; }
+    .photo-strip-cell img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .photo-strip-cell:hover img { transform: scale(1.05); }
+    @media (max-width: 900px) {
+      .photo-strip-row { grid-template-columns: repeat(3, 1fr); height: 240px; }
+      .photo-strip-cell:nth-child(n+4) { display: none; }
+    }
+    @media (max-width: 600px) {
+      .photo-strip-row { grid-template-columns: repeat(2, 1fr); height: 200px; }
+      .photo-strip-cell:nth-child(n+3) { display: none; }
+    }
 
     /* ── 15. TESTIMONIALS ── */
     .testimonials { background: var(--cream); }
@@ -860,49 +882,6 @@
 </section>
 
 
-<!-- ── SPHERE GALLERY ── -->
-<!-- Deliver 5 square images at 1000×1000px, named: sphere-1.jpg through sphere-5.jpg, in the images/ folder -->
-<section class="sphere-gallery">
-  <div class="inner">
-    <div class="head">
-      <span class="eyebrow reveal">Ibiza · October 2026</span>
-    </div>
-    <div class="sphere-row">
-      <div class="sphere-item reveal">
-        <div class="sphere-img">
-          <img src="../images/ibiza-sea.jpg" alt="The sea of Ibiza">
-        </div>
-        <span class="sphere-label">The sea</span>
-      </div>
-      <div class="sphere-item reveal d1">
-        <div class="sphere-img">
-          <img src="../images/ibiza-perfectly-imperfect.jpg" alt="Ibiza nature">
-        </div>
-        <span class="sphere-label">The island</span>
-      </div>
-      <div class="sphere-item reveal d2">
-        <div class="sphere-img">
-          <img src="../images/leo-with-group.jpg" alt="Leo with retreat group">
-        </div>
-        <span class="sphere-label">The group</span>
-      </div>
-      <div class="sphere-item reveal d3">
-        <div class="sphere-img">
-          <img src="../images/retreat-hands-esvedra.jpg" alt="Connection at the retreat">
-        </div>
-        <span class="sphere-label">The connection</span>
-      </div>
-      <div class="sphere-item reveal d4">
-        <div class="sphere-img">
-          <img src="../images/ibiza-path.jpg" alt="Ibiza path">
-        </div>
-        <span class="sphere-label">The journey</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- ── 11. SACRED PLACES ── -->
 <section class="sacred">
   <div class="inner">
@@ -949,6 +928,38 @@
 </section>
 
 
+<!-- ── SPHERE GALLERY ── -->
+<section class="sphere-gallery">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow reveal">Ibiza · October 2026</span>
+    </div>
+    <div class="sphere-row">
+      <div class="sphere-item reveal">
+        <div class="sphere-img"><img src="../images/ibiza-sea.jpg" alt="The sea of Ibiza"></div>
+        <span class="sphere-label">The sea</span>
+      </div>
+      <div class="sphere-item reveal d1">
+        <div class="sphere-img"><img src="../images/ibiza-perfectly-imperfect.jpg" alt="Ibiza nature"></div>
+        <span class="sphere-label">The island</span>
+      </div>
+      <div class="sphere-item reveal d2">
+        <div class="sphere-img"><img src="../images/leo-with-group.jpg" alt="Leo with retreat group"></div>
+        <span class="sphere-label">The group</span>
+      </div>
+      <div class="sphere-item reveal d3">
+        <div class="sphere-img"><img src="../images/retreat-hands-esvedra.jpg" alt="Connection at the retreat"></div>
+        <span class="sphere-label">The connection</span>
+      </div>
+      <div class="sphere-item reveal d4">
+        <div class="sphere-img"><img src="../images/ibiza-path.jpg" alt="Ibiza path"></div>
+        <span class="sphere-label">The journey</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── 12. WHAT IS INCLUDED ── -->
 <section class="included">
   <div class="inner">
@@ -978,7 +989,7 @@
     <h2 class="h-spartan reveal d1">Your Own Apartment. Directly at the Sea.</h2>
     <p class="sub reveal d2">Not a hotel room. Not a shared villa. Your own space.</p>
     <div class="location-video-wrap reveal d2">
-      <video controls preload="none" poster="../images/Be-becoming-retreat-cover-1.jpg">
+      <video controls preload="none" poster="../images/retreat-apartment-view-thumb.jpg">
         <source src="../images/retreat-apartment-view-web.mp4" type="video/mp4">
       </video>
     </div>
@@ -1018,6 +1029,19 @@
     </div>
   </div>
 </section>
+
+
+<!-- ── PHOTO STRIP ── -->
+<!-- Deliver 5 landscape images at 1200×800px, named: strip-1.jpg through strip-5.jpg, in the images/ folder -->
+<div class="photo-strip">
+  <div class="photo-strip-row">
+    <div class="photo-strip-cell"><img src="../images/ibiza-sea.jpg" alt="Ibiza"></div>
+    <div class="photo-strip-cell"><img src="../images/Retreat-walk4.jpg" alt="Retreat walk"></div>
+    <div class="photo-strip-cell"><img src="../images/leo-with-group.jpg" alt="Leo with group"></div>
+    <div class="photo-strip-cell"><img src="../images/retreat-client-pool.jpg" alt="Retreat pool"></div>
+    <div class="photo-strip-cell"><img src="../images/retreat-hands-esvedra.jpg" alt="Connection"></div>
+  </div>
+</div>
 
 
 <!-- ── 15. TESTIMONIALS ── -->
