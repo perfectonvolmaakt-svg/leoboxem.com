@@ -22,20 +22,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:   #fdf7f5;
-      --blush:   #e1c6b7;
-      --rose:    #b98774;
-      --taupe:   #8c756a;
-      --rust:    #8d4215;
-      --gold:    #c39950;
-      --text:    #2e1a0e;
-      --text-mid:#6b4535;
-      --white:   #ffffff;
+      --cream:    #fdf7f5;
+      --blush:    #e1c6b7;
+      --rose:     #b98774;
+      --taupe:    #8c756a;
+      --rust:     #8d4215;
+      --gold:     #c39950;
+      --text:     #2e1a0e;
+      --text-mid: #6b4535;
+      --white:    #ffffff;
 
-      --f-head:  'League Spartan', sans-serif;
-      --f-cg:    'Cormorant Garamond', serif;
-      --f-body:  'Outfit', sans-serif;
-      --f-mont:  'Montserrat', sans-serif;
+      --f-head: 'League Spartan', sans-serif;
+      --f-cg:   'Cormorant Garamond', serif;
+      --f-body: 'Outfit', sans-serif;
+      --f-mont: 'Montserrat', sans-serif;
 
       --max:  920px;
       --wide: 1160px;
@@ -66,7 +66,7 @@
     .d4 { transition-delay: .50s; }
 
     /* ── Layout ── */
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--ph); }
+    .wrap      { max-width: var(--max);  margin: 0 auto; padding: 0 var(--ph); }
     .wrap-wide { max-width: var(--wide); margin: 0 auto; padding: 0 var(--ph); }
     section { padding: var(--pv) var(--ph); }
     section.tight { padding: 64px var(--ph); }
@@ -74,97 +74,43 @@
     /* ── Type atoms ── */
     .eyebrow {
       font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--rose);
-      display: block;
-      margin-bottom: 18px;
+      font-size: 11px; font-weight: 900;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--rose); display: block; margin-bottom: 18px;
     }
-    .eyebrow.dark { color: var(--taupe); }
-    .eyebrow.light { color: rgba(253,247,245,.75); }
+    .eyebrow.dark  { color: var(--taupe); }
+    .eyebrow.light { color: rgba(253,247,245,.82); }
 
-    .rule {
-      display: block;
-      width: 40px; height: 1.5px;
-      background: linear-gradient(to right, var(--gold), transparent);
-      margin-bottom: 28px;
-    }
+    .rule { display: block; width: 40px; height: 1.5px;
+      background: linear-gradient(to right, var(--gold), transparent); margin-bottom: 28px; }
     .rule.centered { margin-left: auto; margin-right: auto;
       background: linear-gradient(to right, transparent, var(--gold), transparent); }
 
     /* ── Headings ── */
-    .h-spartan {
-      font-family: var(--f-head);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--text);
-    }
-    .h-cg {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--rose);
-    }
-    .h-outfit {
-      font-family: var(--f-body);
-      font-weight: 600;
-      line-height: 1.2;
-      color: var(--text);
-    }
+    .h-spartan { font-family: var(--f-head); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; color: var(--text); }
+    .h-cg      { font-family: var(--f-cg); font-style: italic; font-weight: 400; line-height: 1.2; color: var(--rose); }
+    .h-outfit  { font-family: var(--f-body); font-weight: 600; line-height: 1.2; color: var(--text); }
 
     /* ── Buttons ── */
     .btn {
       display: inline-block;
-      font-family: var(--f-head);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 36px;
-      border-radius: 2px;
-      transition: all .25s ease;
-      cursor: pointer;
+      font-family: var(--f-head); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+      padding: 16px 36px; border-radius: 2px; transition: all .25s ease; cursor: pointer;
     }
-    .btn-primary {
-      background: var(--rose);
-      color: var(--cream);
-      border: 1.5px solid var(--rose);
-    }
-    .btn-primary:hover { background: var(--taupe); border-color: var(--taupe); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--rose);
-      border: 1.5px solid var(--rose);
-    }
-    .btn-outline:hover { background: var(--rose); color: var(--cream); }
-
-    .btn-outline-light {
-      background: transparent;
-      color: var(--cream);
-      border: 1.5px solid rgba(253,247,245,.6);
-    }
-    .btn-outline-light:hover { background: rgba(253,247,245,.12); }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--cream);
-      border: 1.5px solid var(--gold);
-    }
-    .btn-gold:hover { background: var(--taupe); border-color: var(--taupe); }
+    .btn-primary      { background: var(--rose); color: var(--cream); border: 1.5px solid var(--rose); }
+    .btn-primary:hover{ background: var(--taupe); border-color: var(--taupe); }
+    .btn-outline      { background: transparent; color: var(--rose); border: 1.5px solid var(--rose); }
+    .btn-outline:hover{ background: var(--rose); color: var(--cream); }
+    .btn-outline-light      { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.75); }
+    .btn-outline-light:hover{ background: rgba(255,255,255,.15); }
 
     /* ── NAV ── */
     nav {
       position: fixed; inset: 0 0 auto 0; z-index: 400;
       display: flex; align-items: center; justify-content: space-between;
       padding: 18px 40px;
-      background: rgba(253,247,245,.95);
-      backdrop-filter: blur(8px);
+      background: rgba(253,247,245,.95); backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(185,135,116,.15);
       transition: box-shadow .3s;
     }
@@ -174,445 +120,235 @@
 
     /* ── 1. HERO ── */
     .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      min-height: 560px;
-      max-height: 1000px;
-      overflow: hidden;
-      padding: 0;
+      position: relative; width: 100%;
+      height: 100vh; min-height: 560px; max-height: 1000px;
+      overflow: hidden; padding: 0;
     }
-    .hero img {
+    .hero picture, .hero picture img {
       width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
+      object-fit: cover; object-position: center top; display: block;
     }
 
     /* ── 2. CTA INTRO ── */
     .cta-intro {
-      background: var(--cream);
+      background: #f0e4dc;
       text-align: center;
       padding: var(--pv) var(--ph);
     }
     .cta-intro .inner { max-width: 680px; margin: 0 auto; }
-    .hero-title {
-      font-size: clamp(42px, 7vw, 80px);
-      margin-bottom: 20px;
-      line-height: 1.05;
-    }
-    .hero-title .be-becoming {
-      font-family: var(--f-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--text);
-    }
-    .hero-title .retreat {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-weight: 400;
-      color: var(--rose);
-    }
+    .hero-title { font-size: clamp(42px, 7vw, 80px); margin-bottom: 20px; line-height: 1.05; }
+    .hero-title .be-becoming { font-family: var(--f-head); font-weight: 900; letter-spacing: -0.02em; color: var(--text); }
+    .hero-title .retreat     { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--rose); }
     .hero-subtitle {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(20px, 2.8vw, 28px);
-      color: var(--taupe);
-      margin-bottom: 32px;
-      line-height: 1.4;
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(20px, 2.8vw, 28px); color: var(--taupe);
+      margin-bottom: 32px; line-height: 1.4;
     }
     .scarcity {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 28px;
+      font-family: var(--f-head); font-size: 11px; font-weight: 900;
+      letter-spacing: 0.26em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px;
     }
-    .social-proof {
-      font-family: var(--f-mont);
-      font-size: 14px;
-      color: var(--taupe);
-      font-style: italic;
-      margin-top: 20px;
-    }
+    .social-proof { font-family: var(--f-mont); font-size: 14px; color: var(--taupe); font-style: italic; margin-top: 20px; }
 
     /* ── 3. WHAT IT'S ABOUT ── */
     .about { background: var(--cream); }
     .about .inner { max-width: var(--max); margin: 0 auto; }
     .about .centered-head { text-align: center; margin-bottom: 60px; }
-    .about-main-title {
-      font-size: clamp(32px, 5vw, 56px);
-      margin-bottom: 12px;
-    }
+    .about-main-title { font-size: clamp(32px, 5vw, 56px); margin-bottom: 12px; }
     .about-subtitle {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(20px, 2.5vw, 26px);
-      color: var(--rose);
-      margin-bottom: 8px;
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(24px, 3vw, 34px); font-weight: 500;
+      color: var(--rose); margin-bottom: 8px;
     }
     .about-tagline {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--taupe);
+      font-family: var(--f-head); font-size: 11px; font-weight: 900;
+      letter-spacing: 0.26em; text-transform: uppercase; color: var(--taupe);
     }
-    .about-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
+    .about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .about-img { border-radius: 2px; overflow: hidden; }
     .about-img img { width: 100%; height: 500px; object-fit: cover; }
-    .about-text { }
-    .about-text p {
-      font-family: var(--f-body);
-      font-size: 16px;
-      margin-bottom: 28px;
-    }
+    .about-text p { font-family: var(--f-body); font-size: 16px; margin-bottom: 28px; }
     .about-text ol {
-      list-style: none;
-      counter-reset: steps;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 28px;
+      list-style: none; counter-reset: steps;
+      display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px;
     }
     .about-text ol li {
       counter-increment: steps;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      font-size: 16px;
+      display: flex; align-items: flex-start; gap: 16px; font-size: 16px;
     }
     .about-text ol li::before {
       content: counter(steps);
-      font-family: var(--f-head);
-      font-weight: 900;
-      font-size: 13px;
-      color: var(--cream);
-      background: var(--rose);
-      width: 28px; height: 28px;
-      min-width: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
+      font-family: var(--f-head); font-weight: 900; font-size: 13px;
+      color: var(--cream); background: var(--rose);
+      width: 28px; height: 28px; min-width: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
     }
     .about-italic {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--taupe);
-      border-left: 2px solid var(--blush);
-      padding-left: 20px;
-      margin-top: 20px;
+      font-family: var(--f-cg); font-style: italic; font-size: 18px; color: var(--taupe);
+      border-left: 2px solid var(--blush); padding-left: 20px; margin-top: 20px;
     }
 
     /* ── 4. QUICK TESTIMONIALS ── */
-    .quick-testimonials {
-      background: #f5ece6;
-      text-align: center;
-      padding: 72px var(--ph);
-    }
+    .quick-testimonials { background: #f5ece6; text-align: center; padding: 72px var(--ph); }
     .quick-testimonials .inner {
       max-width: var(--max); margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
     }
     .q-quote {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(18px, 2.2vw, 22px);
-      color: var(--text-mid);
-      line-height: 1.6;
-      padding: 32px 36px;
-      background: var(--cream);
-      border-radius: 2px;
-      border-top: 2px solid var(--rose);
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(18px, 2.2vw, 22px); color: var(--text-mid); line-height: 1.6;
+      padding: 32px 36px; background: var(--cream); border-radius: 2px; border-top: 2px solid var(--rose);
     }
 
     /* ── 5. WHO THIS IS FOR ── */
     .who { background: var(--cream); }
     .who .inner { max-width: var(--wide); margin: 0 auto; }
     .who-head { text-align: center; margin-bottom: 56px; }
-    .who-head h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      margin-bottom: 8px;
+    .who-head-title {
+      font-family: var(--f-cg); font-style: italic; font-weight: 500;
+      font-size: clamp(28px, 4vw, 48px); color: var(--rose); margin-bottom: 8px;
     }
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .who-card { border-radius: 2px; padding: 40px 36px; }
+    .who-card-1 { background: #fdf7f5;  border-top: 3px solid #e1c6b7; }
+    .who-card-2 { background: #f0dfd5;  border-top: 3px solid #b98774; }
+    .who-card-3 { background: var(--rose); border-top: 3px solid var(--rust); }
+    .who-card-3 h3, .who-card-3 p { color: var(--cream); }
+    .who-icon {
+      font-size: 28px; color: var(--gold); display: block; margin-bottom: 16px; line-height: 1;
     }
-    .who-card {
-      border-radius: 2px;
-      padding: 40px 36px;
-    }
-    .who-card-1 { background: #fdf7f5; border-top: 3px solid #e1c6b7; }
-    .who-card-2 { background: #f0dfd5; border-top: 3px solid #b98774; }
-    .who-card-3 { background: #e8d5c8; border-top: 3px solid #8c756a; }
     .who-card h3 {
-      font-family: var(--f-head);
-      font-size: 15px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text);
-      margin-bottom: 20px;
+      font-family: var(--f-head); font-size: 15px; font-weight: 900;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); margin-bottom: 20px;
     }
-    .who-card p {
-      font-size: 15px;
-      line-height: 1.85;
-      color: var(--text-mid);
-      margin-bottom: 0;
-    }
+    .who-card p { font-size: 15px; line-height: 1.85; color: var(--text-mid); margin-bottom: 0; }
     .who-card p + p { margin-top: 10px; }
 
     /* ── 6. VIDEO TESTIMONIALS ── */
     .video-testimonials { background: #f5ece6; }
     .video-testimonials .inner { max-width: var(--wide); margin: 0 auto; }
     .video-head { text-align: center; margin-bottom: 56px; }
-    .video-head .title-combined {
-      font-size: clamp(26px, 3.5vw, 42px);
-      line-height: 1.2;
-    }
-    .video-head .title-combined .cg { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--rose); }
+    .video-head .title-combined { font-size: clamp(26px, 3.5vw, 42px); line-height: 1.2; }
+    .video-head .title-combined .cg  { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--rose); }
     .video-head .title-combined .out { font-family: var(--f-body); font-weight: 400; color: var(--text); }
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .video-item { }
     .video-wrap {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      background: #2a1a10;
-      border-radius: 2px;
-      overflow: hidden;
+      position: relative; width: 100%; padding-bottom: 56.25%;
+      background: #2a1a10; border-radius: 2px; overflow: hidden;
     }
     .video-wrap video {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     }
     .video-caption {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-top: 14px;
-      text-align: center;
+      font-family: var(--f-head); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--taupe);
+      margin-top: 14px; text-align: center;
     }
 
-    /* ── 7. THERE COMES A TIME ── */
+    /* ── 7. POEM ── */
     .poem { background: var(--cream); text-align: center; }
     .poem .inner { max-width: 640px; margin: 0 auto; }
     .poem-main {
-      font-family: var(--f-mont);
-      font-size: clamp(15px, 2vw, 17px);
-      line-height: 2.2;
-      color: var(--text-mid);
-      margin-bottom: 40px;
+      font-family: var(--f-mont); font-size: clamp(15px, 2vw, 17px);
+      line-height: 2.2; color: var(--text-mid); margin-bottom: 40px;
     }
-    .poem-main strong {
-      font-weight: 600;
-      color: var(--text);
-      font-size: 1.08em;
-    }
-    .poem-close {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(18px, 2.4vw, 24px);
-      color: var(--rose);
-      line-height: 1.6;
-    }
+    .poem-main strong { font-weight: 600; color: var(--text); font-size: 1.08em; }
+    .poem-close { font-family: var(--f-cg); font-style: italic; font-size: clamp(18px, 2.4vw, 24px); color: var(--rose); line-height: 1.6; }
 
     /* ── 8. CTA BAND ── */
-    .cta-band {
-      position: relative;
-      padding: 100px var(--ph);
-      overflow: hidden;
-      text-align: center;
-      background: var(--rose);
-    }
+    .cta-band { position: relative; overflow: hidden; text-align: center; padding: 0; }
     .cta-band-bg {
       position: absolute; inset: 0;
       background: url('../images/ibiza-sea.jpg') center/cover no-repeat;
-      opacity: .28;
     }
-    .cta-band .inner { position: relative; z-index: 2; }
-    .cta-band .eyebrow { color: rgba(253,247,245,.8); margin-bottom: 28px; }
+    .cta-band-overlay { position: absolute; inset: 0; background: rgba(140,117,106,.35); }
+    .cta-band .inner { position: relative; z-index: 2; padding: 100px 40px; }
+    .cta-band .eyebrow { color: rgba(255,255,255,.9); margin-bottom: 32px; }
 
     /* ── 9. ART OF BEING & BECOMING ── */
     .art { background: #f5ece6; }
     .art .inner { max-width: var(--max); margin: 0 auto; }
     .art-head { margin-bottom: 48px; }
     .art-head h2 { font-size: clamp(28px, 4vw, 46px); margin-bottom: 16px; }
-    .art-head .art-intro {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(18px, 2.2vw, 22px);
-      color: var(--rose);
-      line-height: 1.5;
+    .art-intro {
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(18px, 2.2vw, 22px); color: var(--rose); line-height: 1.5;
+      font-weight: 500;
     }
-    .be-become {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin: 36px 0;
-    }
-    .be-card {
-      background: var(--cream);
-      border-radius: 2px;
-      padding: 28px 32px;
-      border-left: 3px solid var(--rose);
-    }
+    .be-become { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 36px 0; }
+    .be-card { background: var(--cream); border-radius: 2px; padding: 28px 32px; border-left: 3px solid var(--rose); }
     .be-card h3 {
-      font-family: var(--f-head);
-      font-size: 18px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 8px;
+      font-family: var(--f-head); font-size: 18px; font-weight: 900;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--rose); margin-bottom: 8px;
     }
     .be-card p { font-size: 15px; color: var(--text-mid); margin-bottom: 0; }
-    .art-body { font-size: 16px; color: var(--text-mid); margin-bottom: 0; }
+    .art-body { font-size: 16px; color: var(--text-mid); }
     .art-body p + p { margin-top: 14px; }
-    .art-close {
-      margin-top: 32px;
-      font-family: var(--f-body);
-      font-size: 16px;
-      color: var(--text);
-    }
+    .art-close { margin-top: 32px; font-family: var(--f-body); font-size: 16px; color: var(--text); }
 
     /* ── 10. WHY IBIZA ── */
-    .why-ibiza {
-      position: relative;
-      padding: var(--pv) var(--ph);
-      background: var(--taupe);
-      color: var(--cream);
-      overflow: hidden;
-    }
+    .why-ibiza { position: relative; padding: var(--pv) var(--ph); color: var(--cream); overflow: hidden; }
     .why-ibiza-bg {
       position: absolute; inset: 0;
       background: url('../images/ibiza-perfectly-imperfect.jpg') center/cover no-repeat;
-      opacity: .2;
     }
+    .why-ibiza-overlay { position: absolute; inset: 0; background: rgba(80,50,30,.50); }
     .why-ibiza .inner { position: relative; z-index: 2; max-width: var(--max); margin: 0 auto; }
-    .why-ibiza .eyebrow { color: rgba(253,247,245,.75); }
+    .why-ibiza .eyebrow { color: rgba(253,247,245,.82); }
     .why-ibiza h2 {
-      font-family: var(--f-head);
-      font-weight: 900;
-      font-size: clamp(28px, 4vw, 48px);
-      color: var(--cream);
-      margin-bottom: 24px;
-      letter-spacing: -0.02em;
-      line-height: 1.05;
+      font-family: var(--f-head); font-weight: 900;
+      font-size: clamp(28px, 4vw, 48px); color: var(--cream);
+      margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.05;
     }
-    .why-ibiza h2 em {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.1em;
-      color: var(--blush);
-    }
-    .why-ibiza p {
-      font-family: var(--f-mont);
-      font-size: 15px;
-      color: rgba(253,247,245,.88);
-      line-height: 1.95;
-      margin-bottom: 12px;
-    }
-    .why-ibiza p em {
-      font-style: italic;
-      color: var(--blush);
-    }
+    .why-ibiza h2 em { font-family: var(--f-cg); font-style: italic; font-weight: 400; font-size: 1.1em; color: var(--blush); }
+    .why-ibiza p { font-family: var(--f-mont); font-size: 15px; color: rgba(253,247,245,.92); line-height: 1.95; margin-bottom: 12px; }
+    .why-ibiza p em { font-style: italic; color: var(--blush); }
 
     /* ── 11. SACRED PLACES ── */
     .sacred { background: var(--cream); }
     .sacred .inner { max-width: var(--max); margin: 0 auto; }
     .sacred h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 12px; }
-    .sacred .intro-text {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--taupe);
-      margin-bottom: 48px;
+    .sacred-intro-cg {
+      font-family: var(--f-cg); font-style: italic; font-size: 18px;
+      color: var(--taupe); margin-bottom: 16px;
+    }
+    .sacred-quote {
+      font-family: var(--f-mont); font-size: 14px; color: var(--text-mid);
+      font-style: italic; margin-bottom: 36px; line-height: 1.8;
+      padding: 20px 24px; background: #f5ece6; border-left: 2px solid var(--blush); border-radius: 0 2px 2px 0;
+    }
+    .sacred-sub {
+      font-family: var(--f-head); font-size: 11px; font-weight: 900;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--taupe);
+      margin-bottom: 24px; display: block;
     }
     .sacred-list { display: flex; flex-direction: column; gap: 28px; }
     .sacred-item {
       display: flex; gap: 24px; align-items: flex-start;
-      padding: 28px 32px;
-      background: #f5ece6;
-      border-radius: 2px;
-      border-left: 3px solid var(--blush);
+      padding: 28px 32px; background: #f5ece6; border-radius: 2px; border-left: 3px solid var(--blush);
     }
-    .sacred-dot {
-      width: 10px; height: 10px; min-width: 10px;
-      border-radius: 50%;
-      background: var(--rose);
-      margin-top: 8px;
-    }
+    .sacred-dot { width: 10px; height: 10px; min-width: 10px; border-radius: 50%; background: var(--rose); margin-top: 8px; }
     .sacred-item h3 {
-      font-family: var(--f-head);
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text);
-      margin-bottom: 8px;
+      font-family: var(--f-head); font-size: 14px; font-weight: 900;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); margin-bottom: 8px;
     }
     .sacred-item p { font-size: 15px; color: var(--text-mid); margin-bottom: 0; }
-    .sacred-note {
-      margin-top: 36px;
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 17px;
-      color: var(--taupe);
-      line-height: 1.6;
-    }
 
     /* ── 12. WHAT IS INCLUDED ── */
     .included { background: #f5ece6; }
     .included .inner { max-width: var(--max); margin: 0 auto; }
     .included h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 8px; }
     .included .sub {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--rose);
-      margin-bottom: 48px;
+      font-family: var(--f-cg); font-style: italic; font-size: 20px;
+      color: var(--text); margin-bottom: 48px; font-weight: 500;
     }
-    .included-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+    .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .included-item {
       display: flex; gap: 16px; align-items: flex-start;
-      padding: 20px 24px;
-      background: var(--cream);
-      border-radius: 2px;
+      padding: 20px 24px; background: var(--cream); border-radius: 2px;
     }
-    .inc-icon {
-      color: var(--rose);
-      font-size: 18px;
-      margin-top: 2px;
-      min-width: 20px;
-    }
+    .inc-icon { color: var(--rose); font-size: 18px; margin-top: 2px; min-width: 20px; }
     .included-item span { font-size: 15px; color: var(--text-mid); line-height: 1.6; }
 
     /* ── 13. LOCATION & STAY ── */
@@ -620,36 +356,23 @@
     .location .inner { max-width: var(--max); margin: 0 auto; }
     .location h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 8px; }
     .location .sub {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--taupe);
-      margin-bottom: 40px;
+      font-family: var(--f-cg); font-style: italic; font-size: 18px;
+      color: var(--text); margin-bottom: 40px; font-weight: 500;
     }
-    .location-img {
-      width: 100%; height: 400px;
-      object-fit: cover;
-      border-radius: 2px;
-      margin-bottom: 44px;
+    .location-video-wrap {
+      position: relative; width: 100%; padding-bottom: 56.25%;
+      background: #2a1a10; border-radius: 2px; overflow: hidden; margin-bottom: 44px;
     }
-    .location-body p {
-      font-size: 16px; color: var(--text-mid); line-height: 1.9; margin-bottom: 20px;
+    .location-video-wrap video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     }
+    .location-body p { font-size: 16px; color: var(--text-mid); line-height: 1.9; margin-bottom: 20px; }
     .location-body h3 {
-      font-family: var(--f-head);
-      font-size: 13px; font-weight: 900;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 12px;
-      margin-top: 36px;
+      font-family: var(--f-head); font-size: 13px; font-weight: 900;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-bottom: 12px; margin-top: 36px;
     }
     .location-footnote {
-      margin-top: 32px;
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 17px;
-      color: var(--taupe);
+      margin-top: 32px; font-family: var(--f-cg); font-style: italic; font-size: 17px; color: var(--taupe);
     }
 
     /* ── 14. WHAT WOMEN LEAVE WITH ── */
@@ -658,423 +381,165 @@
     .leave-with-head { text-align: center; margin-bottom: 56px; }
     .leave-with-head h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 8px; }
     .leave-with-head .sub {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--rose);
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(32px, 4.5vw, 56px); color: var(--rose); font-weight: 500; line-height: 1.15;
     }
-    .leave-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .leave-img img { width: 100%; height: 520px; object-fit: cover; border-radius: 2px; }
-    .leave-list {
-      list-style: none;
-      display: flex; flex-direction: column; gap: 18px;
-    }
-    .leave-list li {
-      display: flex; gap: 16px; align-items: flex-start;
-      font-size: 16px;
-      color: var(--text-mid);
-    }
-    .leave-list li::before {
-      content: '✦';
-      color: var(--rose);
-      font-size: 12px;
-      margin-top: 4px;
-      min-width: 14px;
-    }
+    .leave-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .leave-img img { width: 100%; height: auto; max-height: 600px; object-fit: contain; object-position: left center; border-radius: 2px; }
+    .leave-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .leave-list li { display: flex; gap: 16px; align-items: flex-start; font-size: 16px; color: var(--text-mid); }
+    .leave-list li::before { content: '✦'; color: var(--rose); font-size: 12px; margin-top: 4px; min-width: 14px; }
 
     /* ── 15. TESTIMONIALS ── */
     .testimonials { background: var(--cream); }
     .testimonials .inner { max-width: var(--wide); margin: 0 auto; }
     .testimonials h2 { font-size: clamp(22px, 3vw, 36px); margin-bottom: 48px; text-align: center; }
-    .test-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .test-card {
-      background: #f5ece6;
-      border-radius: 2px;
-      padding: 32px 28px;
-      border-top: 2px solid var(--blush);
-      display: flex;
-      flex-direction: column;
+      background: #f5ece6; border-radius: 2px; padding: 32px 28px;
+      border-top: 2px solid var(--blush); display: flex; flex-direction: column;
     }
-    .test-card.wide {
-      grid-column: span 2;
-    }
-    .test-quote {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 17px;
-      color: var(--text-mid);
-      line-height: 1.7;
-      flex: 1;
-      margin-bottom: 16px;
-    }
-    .test-name {
-      font-family: var(--f-head);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--taupe);
-    }
+    .test-card.wide { grid-column: span 2; }
+    .test-quote { font-family: var(--f-cg); font-style: italic; font-size: 17px; color: var(--text-mid); line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .test-name { font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); }
+
+    /* ── IMAGE BREAK (between testimonials and pricing) ── */
+    .img-break { padding: 0; }
+    .img-break img { width: 100%; height: 480px; object-fit: cover; display: block; }
 
     /* ── 16. PRICING ── */
     .pricing { background: #f5ece6; }
     .pricing .inner { max-width: 680px; margin: 0 auto; text-align: center; }
-    .pricing h2 {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(28px, 3.5vw, 42px);
-      color: var(--rose);
-      margin-bottom: 8px;
+    .pricing .section-label {
+      font-family: var(--f-body); font-weight: 600;
+      font-size: clamp(22px, 3vw, 36px); color: var(--text); margin-bottom: 8px;
     }
-    .pricing .reserve {
-      font-family: var(--f-body);
-      font-size: 17px;
-      color: var(--taupe);
-      margin-bottom: 44px;
-    }
+    .pricing h2 { font-family: var(--f-cg); font-style: italic; font-size: clamp(28px, 3.5vw, 42px); color: var(--rose); margin-bottom: 8px; }
+    .pricing .reserve { font-family: var(--f-body); font-size: 17px; color: var(--taupe); margin-bottom: 44px; }
     .pricing-box {
-      background: var(--cream);
-      border: 1px solid var(--blush);
-      border-radius: 2px;
-      padding: 44px 52px;
-      text-align: left;
-      margin-bottom: 16px;
+      background: var(--cream); border: 1px solid var(--blush);
+      border-radius: 2px; padding: 44px 52px; text-align: left; margin-bottom: 16px;
     }
     .price-full {
-      font-family: var(--f-head);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--taupe);
-      text-decoration: line-through;
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
+      font-family: var(--f-head); font-size: 14px; font-weight: 600;
+      color: var(--taupe); text-decoration: line-through; letter-spacing: 0.06em; margin-bottom: 8px;
     }
-    .price-featured {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 28px;
-    }
-    .price-featured-left { }
-    .price-label {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 4px;
-    }
-    .price-amount {
-      font-family: var(--f-head);
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 900;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      line-height: 1;
-    }
-    .price-avail {
-      font-family: var(--f-body);
-      font-size: 13px;
-      color: var(--taupe);
-      margin-top: 4px;
-    }
-    .deposit-badge {
-      font-family: var(--f-head);
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 900;
-      color: var(--gold);
-      letter-spacing: -0.01em;
-      line-height: 1;
-    }
-    .deposit-label {
-      font-family: var(--f-body);
-      font-size: 13px;
-      color: var(--taupe);
-      text-align: right;
-      margin-top: 4px;
-    }
-    .price-detail {
-      padding-top: 24px;
-      border-top: 1px solid var(--blush);
-    }
-    .price-detail p {
-      font-size: 14px;
-      color: var(--text-mid);
-      margin-bottom: 6px;
-    }
-    .pricing .cta-wrap {
-      margin-top: 32px;
-      display: flex; flex-direction: column; align-items: center; gap: 12px;
-    }
+    .price-featured { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+    .price-label { font-family: var(--f-head); font-size: 11px; font-weight: 900; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 4px; }
+    .price-amount { font-family: var(--f-head); font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: var(--text); letter-spacing: -0.02em; line-height: 1; }
+    .price-avail { font-family: var(--f-body); font-size: 13px; color: var(--taupe); margin-top: 4px; }
+    .deposit-badge { font-family: var(--f-head); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--gold); letter-spacing: -0.01em; line-height: 1; }
+    .deposit-label { font-family: var(--f-body); font-size: 13px; color: var(--taupe); text-align: right; margin-top: 4px; }
+    .price-detail { padding-top: 24px; border-top: 1px solid var(--blush); }
+    .price-detail p { font-size: 14px; color: var(--text-mid); margin-bottom: 6px; }
+    .pricing .cta-wrap { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
     .pricing .cta-wrap .btn { min-width: 240px; text-align: center; }
 
     /* ── BONUS / LYT ── */
     .bonus { background: var(--cream); text-align: center; }
     .bonus .inner { max-width: 720px; margin: 0 auto; }
-    .bonus h2 {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(26px, 3.5vw, 38px);
-      color: var(--rose);
-      margin-bottom: 20px;
+    .bonus .but-wait {
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(20px, 2.5vw, 28px); color: var(--taupe); margin-bottom: 16px;
     }
+    .bonus h2 { font-family: var(--f-cg); font-style: italic; font-size: clamp(26px, 3.5vw, 38px); color: var(--rose); margin-bottom: 20px; }
     .bonus-list {
-      list-style: none;
-      display: flex; flex-direction: column; gap: 8px;
-      margin: 24px auto;
-      max-width: 380px;
-      text-align: left;
+      list-style: none; display: flex; flex-direction: column; gap: 8px;
+      margin: 24px auto; max-width: 380px; text-align: left;
     }
-    .bonus-list li {
-      display: flex; gap: 12px; align-items: flex-start;
-      font-size: 15px; color: var(--text-mid);
-    }
+    .bonus-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--text-mid); }
     .bonus-list li::before { content: '—'; color: var(--rose); min-width: 16px; }
-    .bonus-value {
-      font-family: var(--f-head);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--rust);
-      margin: 8px 0 20px;
+    .bonus-value { font-family: var(--f-head); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--rust); margin: 8px 0 20px; }
+    .bonus-desc { font-size: 16px; color: var(--text-mid); margin-bottom: 32px; }
+    .lyt-name {
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(22px, 3vw, 32px); color: var(--text); font-weight: 600;
     }
-    .bonus-desc {
-      font-size: 16px; color: var(--text-mid); margin-bottom: 32px;
-    }
-    .lyt-listen {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(17px, 2vw, 21px);
-      color: var(--taupe);
-      margin: 48px 0 32px;
-      line-height: 1.5;
-    }
+    .lyt-listen { font-family: var(--f-cg); font-style: italic; font-size: clamp(17px, 2vw, 21px); color: var(--taupe); margin: 48px 0 32px; line-height: 1.5; }
     .video-duo {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: var(--max);
-      margin: 0 auto;
-      text-align: left;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      max-width: var(--max); margin: 0 auto; text-align: left;
     }
 
     /* ── 17. ONLY 5 PLACES ── */
-    .five-places {
-      background: var(--rose);
-      padding: 80px var(--ph);
-      text-align: center;
-      color: var(--cream);
-    }
+    .five-places { background: var(--rose); padding: 80px var(--ph); text-align: center; color: var(--cream); }
     .five-places .inner { max-width: 640px; margin: 0 auto; }
+    .five-places .eyebrow-italic {
+      font-family: var(--f-cg); font-style: italic;
+      font-size: 18px; color: rgba(253,247,245,.88);
+      display: block; margin-bottom: 20px; font-weight: 400;
+    }
     .five-places h2 {
-      font-family: var(--f-head);
-      font-weight: 900;
-      font-size: clamp(26px, 4vw, 44px);
-      color: var(--cream);
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-      line-height: 1.1;
+      font-family: var(--f-head); font-weight: 900;
+      font-size: clamp(26px, 4vw, 44px); color: var(--cream);
+      margin-bottom: 20px; letter-spacing: -0.01em; line-height: 1.1;
     }
-    .five-places p {
-      font-size: 16px;
-      color: rgba(253,247,245,.88);
-      line-height: 1.85;
-    }
-    .five-places p em {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 1.15em;
-      color: var(--cream);
-    }
+    .five-places p { font-size: 16px; color: rgba(253,247,245,.88); line-height: 1.85; }
+    .five-places p em { font-family: var(--f-cg); font-style: italic; font-size: 1.15em; color: var(--cream); }
 
     /* ── 18. RAISE YOUR HAND ── */
     .raise { background: var(--cream); }
     .raise .inner { max-width: 680px; margin: 0 auto; text-align: center; }
     .raise h2 { font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 24px; }
     .raise p { font-size: 16px; color: var(--text-mid); margin-bottom: 16px; }
-    .raise p em {
-      font-family: var(--f-cg);
-      font-style: italic;
-      color: var(--taupe);
-      font-size: 1.1em;
-    }
+    .raise .obligatory { font-style: italic; color: var(--text); font-weight: 500; }
     .raise .cta-wrap { margin-top: 36px; }
 
     /* ── 19. YOUR GUIDE ── */
     .guide { background: #f5ece6; }
-    .guide .inner {
-      max-width: var(--wide); margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1.6fr; gap: 72px; align-items: center;
-    }
+    .guide .inner { max-width: var(--wide); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 72px; align-items: center; }
     .guide-img img { width: 100%; height: 540px; object-fit: cover; object-position: top; border-radius: 2px; }
     .guide-text .eyebrow { margin-bottom: 12px; }
     .guide-text h2 { font-size: clamp(28px, 3.5vw, 44px); margin-bottom: 6px; }
-    .guide-text .sub {
-      font-family: var(--f-body);
-      font-style: italic;
-      font-size: 14px;
-      color: var(--taupe);
-      margin-bottom: 32px;
-    }
+    .guide-text .sub { font-family: var(--f-body); font-style: italic; font-size: 14px; color: var(--taupe); margin-bottom: 32px; }
     .guide-text p { font-size: 16px; color: var(--text-mid); margin-bottom: 18px; }
 
     /* ── 20. ACTIVATION ── */
-    .activation {
-      background: var(--blush);
-      text-align: center;
-      padding: var(--pv) var(--ph);
-    }
+    .activation { background: var(--blush); text-align: center; padding: var(--pv) var(--ph); }
     .activation .inner { max-width: 560px; margin: 0 auto; }
     .activation .open {
-      font-family: var(--f-head);
-      font-weight: 900;
-      font-size: clamp(22px, 4vw, 38px);
-      color: var(--text);
-      letter-spacing: -0.01em;
-      line-height: 1.15;
-      margin-bottom: 32px;
+      font-family: var(--f-head); font-weight: 900;
+      font-size: clamp(22px, 4vw, 38px); color: var(--text);
+      letter-spacing: -0.01em; line-height: 1.15; margin-bottom: 32px;
     }
-    .activation .middle {
-      font-family: var(--f-mont);
-      font-size: 15px;
-      line-height: 2.2;
-      color: var(--text-mid);
-      margin-bottom: 32px;
-    }
+    .activation .middle { font-family: var(--f-mont); font-size: 15px; line-height: 2.2; color: var(--text-mid); margin-bottom: 32px; }
     .activation .bold-call {
-      font-family: var(--f-head);
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 0.04em;
-      line-height: 2;
-      margin-bottom: 24px;
+      font-family: var(--f-head); font-size: 16px; font-weight: 700;
+      color: var(--text); letter-spacing: 0.04em; line-height: 2; margin-bottom: 24px;
     }
     .activation .bold-call em { font-style: italic; font-family: var(--f-cg); font-size: 1.2em; }
     .activation .close-line {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(15px, 2vw, 18px);
-      color: var(--taupe);
-      line-height: 1.9;
+      font-family: var(--f-cg); font-style: italic;
+      font-size: clamp(17px, 2.2vw, 22px); color: var(--text); line-height: 1.9; font-weight: 500;
     }
 
     /* ── 21. CLIENT EXPERIENCES ── */
-    .client-exp { background: var(--cream); }
+    .client-exp { background: #f5ece6; }
     .client-exp .inner { max-width: var(--wide); margin: 0 auto; }
-    .client-exp h2 {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(22px, 3vw, 34px);
-      color: var(--rose);
-      margin-bottom: 48px;
-      text-align: center;
-    }
-    .client-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .client-card {
-      background: #f5ece6;
-      border-radius: 2px;
-      padding: 28px 26px;
-      border-left: 3px solid var(--blush);
-    }
-    .client-card p {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: 16px;
-      color: var(--text-mid);
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
+    .client-exp h2 { font-family: var(--f-cg); font-style: italic; font-size: clamp(22px, 3vw, 34px); color: var(--rose); margin-bottom: 48px; text-align: center; }
+    .client-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .client-card { background: var(--cream); border-radius: 2px; padding: 28px 26px; border-left: 3px solid var(--blush); }
+    .client-card p { font-family: var(--f-cg); font-style: italic; font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 0; }
 
     /* ── 22. FINALE ── */
-    .finale {
-      background: var(--taupe);
-      color: var(--cream);
-      padding: var(--pv) var(--ph);
-    }
+    .finale { background: var(--taupe); color: var(--cream); padding: var(--pv) var(--ph); }
     .finale .inner { max-width: var(--max); margin: 0 auto; }
-    .finale .open-line {
-      font-family: var(--f-body);
-      font-size: 18px;
-      color: rgba(253,247,245,.9);
-      margin-bottom: 36px;
-      line-height: 1.7;
-    }
+    .finale .open-line { font-family: var(--f-body); font-size: 18px; color: rgba(253,247,245,.9); margin-bottom: 36px; line-height: 1.7; }
     .finale-list {
-      list-style: none;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 14px 48px;
-      margin-bottom: 48px;
+      list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 48px; margin-bottom: 48px;
     }
-    .finale-list li {
-      display: flex; gap: 14px; align-items: flex-start;
-      font-size: 15px; color: rgba(253,247,245,.82);
-    }
+    .finale-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; color: rgba(253,247,245,.82); }
     .finale-list li::before { content: '—'; color: var(--blush); min-width: 16px; }
     .finale-close-wrap { text-align: center; border-top: 1px solid rgba(225,198,183,.25); padding-top: 40px; }
-    .finale-not {
-      font-family: var(--f-body);
-      font-style: italic;
-      font-size: 16px;
-      color: rgba(253,247,245,.7);
-      margin-bottom: 12px;
-    }
-    .finale-soul {
-      font-family: var(--f-cg);
-      font-style: italic;
-      font-size: clamp(22px, 3vw, 34px);
-      color: var(--blush);
-    }
+    .finale-not { font-family: var(--f-body); font-style: italic; font-size: 16px; color: rgba(253,247,245,.7); margin-bottom: 12px; }
+    .finale-soul { font-family: var(--f-cg); font-style: italic; font-size: clamp(22px, 3vw, 34px); color: var(--blush); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--cream);
-      padding: 48px var(--ph);
-      text-align: center;
-      border-top: 1px solid var(--blush);
-    }
-    footer .foot-brand {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-bottom: 8px;
-    }
-    footer .foot-meta {
-      font-size: 13px;
-      color: var(--taupe);
-      margin-bottom: 16px;
-    }
-    footer .foot-links {
-      display: flex; gap: 24px; justify-content: center;
-    }
-    footer .foot-links a {
-      font-family: var(--f-head);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--rose);
-      text-decoration: none;
-      transition: color .2s;
-    }
+    footer { background: var(--cream); padding: 48px var(--ph); text-align: center; border-top: 1px solid var(--blush); }
+    footer .foot-brand { font-family: var(--f-head); font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--taupe); margin-bottom: 8px; }
+    footer .foot-meta { font-size: 13px; color: var(--taupe); margin-bottom: 16px; }
+    footer .foot-links { display: flex; gap: 24px; justify-content: center; }
+    footer .foot-links a { font-family: var(--f-head); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose); text-decoration: none; transition: color .2s; }
     footer .foot-links a:hover { color: var(--taupe); }
 
     /* ── RESPONSIVE ── */
@@ -1082,7 +547,6 @@
       :root { --pv: 64px; --ph: 28px; }
       .about-cols, .leave-cols, .guide .inner { grid-template-columns: 1fr; gap: 36px; }
       .about-img img { height: 340px; }
-      .leave-img img { height: 320px; }
       .guide-img img { height: 340px; }
       .who-grid, .test-grid, .client-grid { grid-template-columns: 1fr; }
       .test-card.wide { grid-column: span 1; }
@@ -1093,9 +557,10 @@
       .finale-list { grid-template-columns: 1fr; }
       .quick-testimonials .inner { grid-template-columns: 1fr; }
       .pricing-box { padding: 32px 28px; }
+      .img-break img { height: 280px; }
     }
     @media (max-width: 600px) {
-      .hero { height: 85vw; max-height: 640px; }
+      nav { padding: 14px 20px; }
       .nav-logo img { height: 28px; }
       .price-featured { flex-direction: column; gap: 16px; }
     }
@@ -1116,8 +581,12 @@
 
 
 <!-- ── 1. HERO ── -->
+<!-- Mobile image: deliver portrait ~750×1334px (9:16), name it Be-becoming-retreat-cover-mobile.jpg -->
 <section class="hero" style="padding:0;">
-  <img src="../images/Be-becoming-retreat-cover-1.jpg" alt="The Be &amp; Becoming Retreat – Ibiza 2026">
+  <picture>
+    <source media="(max-width: 768px)" srcset="../images/Be-becoming-retreat-cover-mobile.jpg">
+    <img src="../images/Be-becoming-retreat-cover-1.jpg" alt="The Be &amp; Becoming Retreat – Ibiza 2026">
+  </picture>
 </section>
 
 
@@ -1131,8 +600,6 @@
     </h1>
     <p class="hero-subtitle reveal d3">A Retreat for Women Ready to Return to Themselves<br>and Their Next Chapter</p>
     <p class="scarcity reveal d4">Only 5 places available</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header"
-       target="_blank" rel="noopener" class="btn btn-primary reveal d4">I am interested</a>
     <p class="social-proof reveal d4">Leo has led many retreats on Ibiza, rated with an average of 9,8 out of 10 by previous participants</p>
   </div>
 </section>
@@ -1142,9 +609,8 @@
 <section class="about">
   <div class="inner">
     <div class="centered-head">
-      <span class="eyebrow reveal">Centered</span>
       <h2 class="h-spartan about-main-title reveal d1">This Retreat Is Not About<br>Becoming Someone Else</h2>
-      <p class="about-subtitle reveal d2">It is about remembering <em>who you already are.</em></p>
+      <p class="about-subtitle reveal d2"><em>It is about remembering who you already are.</em></p>
       <p class="about-tagline reveal d3">And creating the space for that woman to fully emerge.</p>
     </div>
     <div class="about-cols">
@@ -1185,22 +651,25 @@
   <div class="inner">
     <div class="who-head">
       <span class="eyebrow reveal">Is this for you?</span>
-      <h2 class="h-outfit who-head reveal d1">Who This Retreat Is For</h2>
+      <h2 class="who-head-title reveal d1">Who This Retreat Is For</h2>
     </div>
     <div class="who-grid">
       <div class="who-card who-card-1 reveal">
+        <span class="who-icon">⟁</span>
         <h3>The Crossroad Woman</h3>
         <p>You are standing at a crossroads in life, work, business or leadership.</p>
         <p>Something is changing. Something new wants to emerge. You know you cannot continue exactly as you have been.</p>
         <p>And you long for clarity about what comes next.</p>
       </div>
       <div class="who-card who-card-2 reveal d1">
+        <span class="who-icon">↑</span>
         <h3>The Growing Woman</h3>
         <p>You are already growing. Building. Creating. Leading. Making an impact.</p>
         <p>And you know your next level requires more than another strategy. It requires a deeper relationship with yourself.</p>
         <p>You want growth without losing yourself in the process.</p>
       </div>
       <div class="who-card who-card-3 reveal d2">
+        <span class="who-icon">◈</span>
         <h3>The Busy Woman</h3>
         <p>You are always moving. Always carrying responsibility. Always taking care of others.</p>
         <p>And deep down you know that if you want to continue growing, giving and leading well, you must first learn how to reconnect with yourself.</p>
@@ -1224,51 +693,51 @@
     <div class="video-grid">
       <div class="video-item reveal">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-2.jpg">
+          <video controls preload="none" poster="../images/maria-how-does-retreat-make-you-feel-thumb.jpg">
             <source src="../images/maria-how-does-retreat-make-you-feel-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Maria — how does the retreat make you feel</p>
+        <p class="video-caption">What do you wanna take home from this retreat?</p>
       </div>
       <div class="video-item reveal d1">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-2.jpg">
+          <video controls preload="none" poster="../images/stacey-how-does-retreat-make-you-feel-thumb.jpg">
             <source src="../images/stacey-how-does-retreat-make-you-feel-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Stacey — how does the retreat make you feel</p>
+        <p class="video-caption">How do you feel after this retreat?</p>
       </div>
       <div class="video-item reveal d2">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-2.jpg">
+          <video controls preload="none" poster="../images/stacey-safe-sapce-intimate-group-thumb.jpg">
             <source src="../images/stacey-safe-sapce-intimate-group-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Stacey — safe space &amp; intimate group</p>
+        <p class="video-caption">How the safe space in an intimate group setting helps</p>
       </div>
       <div class="video-item reveal">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-3.jpg">
+          <video controls preload="none" poster="../images/maria-stacey-who-is-retreat-for-thumb.jpg">
             <source src="../images/maria-stacey-who-is-retreat-for-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Maria &amp; Stacey — who is this retreat for</p>
+        <p class="video-caption">Who is this retreat for?</p>
       </div>
       <div class="video-item reveal d1">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-3.jpg">
+          <video controls preload="none" poster="../images/stacey-having-your-own-sea-appartment-thumb.jpg">
             <source src="../images/stacey-having-your-own-sea-appartment-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Stacey — having your own sea apartment</p>
+        <p class="video-caption">To have your private beach apartment directly at the sea</p>
       </div>
       <div class="video-item reveal d2">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-3.jpg">
+          <video controls preload="none" poster="../images/maria-stacey-power-of-right-questions-being-thumb.jpg">
             <source src="../images/maria-stacey-power-of-right-questions-being-web.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-caption">Maria &amp; Stacey — the power of the right questions</p>
+        <p class="video-caption">The power of the right questions &amp; focusing on being</p>
       </div>
     </div>
   </div>
@@ -1297,9 +766,10 @@
 
 
 <!-- ── 8. CTA BAND ── -->
-<section class="cta-band tight" style="padding:0;">
+<section class="cta-band">
   <div class="cta-band-bg"></div>
-  <div style="position:relative;z-index:2;padding:88px 40px;text-align:center;">
+  <div class="cta-band-overlay"></div>
+  <div class="inner">
     <span class="eyebrow light reveal" style="margin-bottom:32px;">Only 5 places available</span>
     <a href="#pricing"
        class="btn btn-outline-light reveal d1"
@@ -1333,7 +803,7 @@
       <p>Without vision, direction and intention, we do not move forward consciously. But without embodiment, self-awareness and inner alignment, we often find ourselves running in many directions at once.</p>
       <p>Busy. Productive. Successful perhaps. Yet disconnected from ourselves.</p>
     </div>
-    <p class="art-close reveal d3">The Be &amp; Becoming Retreat™ was created to help you remember how to do both. To be fully present with where you are. And to consciously become who you are here to be.</p>
+    <p class="art-close reveal d3">The Be &amp; Becoming Retreat™ was created to help you remember how to do both.<br>To be fully present with where you are. And to consciously become who you are here to be.</p>
   </div>
 </section>
 
@@ -1341,6 +811,7 @@
 <!-- ── 10. WHY IBIZA ── -->
 <section class="why-ibiza">
   <div class="why-ibiza-bg"></div>
+  <div class="why-ibiza-overlay"></div>
   <div class="inner">
     <span class="eyebrow reveal">The setting</span>
     <h2 class="reveal d1">Why Ibiza? — The island <em>calls.</em></h2>
@@ -1358,8 +829,14 @@
 <section class="sacred">
   <div class="inner">
     <span class="eyebrow reveal">Sacred places</span>
-    <h2 class="h-spartan reveal d1">Sacred Places &amp; Transformational Experiences</h2>
-    <p class="intro-text reveal d2">Ibiza as teacher — throughout the retreat we work not only within our sessions, but also with the island itself.</p>
+    <h2 class="h-spartan reveal d1">Ibiza as teacher</h2>
+
+    <p class="sacred-quote reveal d2">"Rather than following a rigid itinerary, we allow the retreat to unfold in service of the women present. Because transformation is rarely linear. And the most powerful experiences are often the ones we could not have planned."</p>
+
+    <p class="sacred-intro-cg reveal d3">Ibiza as teacher — throughout the retreat we work not only within our sessions, but also with the island itself.</p>
+
+    <span class="sacred-sub reveal d3">Sacred Places &amp; Transformational Experiences</span>
+
     <div class="sacred-list">
       <div class="sacred-item reveal">
         <div class="sacred-dot"></div>
@@ -1390,7 +867,6 @@
         </div>
       </div>
     </div>
-    <p class="sacred-note reveal">Rather than following a rigid itinerary, we allow the retreat to unfold in service of the women present. Because transformation is rarely linear. And the most powerful experiences are often the ones we could not have planned.</p>
   </div>
 </section>
 
@@ -1400,48 +876,18 @@
   <div class="inner">
     <span class="eyebrow reveal">Everything you need</span>
     <h2 class="h-spartan reveal d1">What Is Included</h2>
-    <p class="sub reveal d2">Everything you need to truly <em>arrive.</em></p>
+    <p class="sub reveal d2">Everything you need to truly arrive.</p>
     <div class="included-grid">
-      <div class="included-item reveal">
-        <span class="inc-icon">✦</span>
-        <span>Five days and four nights in Ibiza</span>
-      </div>
-      <div class="included-item reveal d1">
-        <span class="inc-icon">✦</span>
-        <span>Beautiful accommodation — a private apartment directly at the beach and turquoise sea</span>
-      </div>
-      <div class="included-item reveal">
-        <span class="inc-icon">✦</span>
-        <span>All meals during the retreat</span>
-      </div>
-      <div class="included-item reveal d1">
-        <span class="inc-icon">✦</span>
-        <span>Daily group sessions with Leo</span>
-      </div>
-      <div class="included-item reveal">
-        <span class="inc-icon">✦</span>
-        <span>Guided reflection and embodiment exercises</span>
-      </div>
-      <div class="included-item reveal d1">
-        <span class="inc-icon">✦</span>
-        <span>Transformational conversations</span>
-      </div>
-      <div class="included-item reveal">
-        <span class="inc-icon">✦</span>
-        <span>Sacred island experiences</span>
-      </div>
-      <div class="included-item reveal d1">
-        <span class="inc-icon">✦</span>
-        <span>Integration practices</span>
-      </div>
-      <div class="included-item reveal">
-        <span class="inc-icon">✦</span>
-        <span>Time for rest, renewal and recharging</span>
-      </div>
-      <div class="included-item reveal d1">
-        <span class="inc-icon">✦</span>
-        <span>A deeply intimate group experience</span>
-      </div>
+      <div class="included-item reveal"><span class="inc-icon">✦</span><span>Five days and four nights in Ibiza</span></div>
+      <div class="included-item reveal d1"><span class="inc-icon">✦</span><span>Beautiful accommodation — a private apartment directly at the beach and turquoise sea</span></div>
+      <div class="included-item reveal"><span class="inc-icon">✦</span><span>All meals during the retreat</span></div>
+      <div class="included-item reveal d1"><span class="inc-icon">✦</span><span>Daily group sessions with Leo</span></div>
+      <div class="included-item reveal"><span class="inc-icon">✦</span><span>Guided reflection and embodiment exercises</span></div>
+      <div class="included-item reveal d1"><span class="inc-icon">✦</span><span>Transformational conversations</span></div>
+      <div class="included-item reveal"><span class="inc-icon">✦</span><span>Sacred island experiences</span></div>
+      <div class="included-item reveal d1"><span class="inc-icon">✦</span><span>Integration practices</span></div>
+      <div class="included-item reveal"><span class="inc-icon">✦</span><span>Time for rest, renewal and recharging</span></div>
+      <div class="included-item reveal d1"><span class="inc-icon">✦</span><span>A deeply intimate group experience</span></div>
     </div>
   </div>
 </section>
@@ -1452,8 +898,12 @@
   <div class="inner">
     <span class="eyebrow reveal">Location &amp; stay</span>
     <h2 class="h-spartan reveal d1">Your Own Apartment. Directly at the Sea.</h2>
-    <p class="sub reveal d2">Not a hotel room. Not a shared villa. <em>Your own space.</em></p>
-    <img src="../images/retreat-client-pool.jpg" alt="Retreat accommodation by the sea" class="location-img reveal d2">
+    <p class="sub reveal d2">Not a hotel room. Not a shared villa. Your own space.</p>
+    <div class="location-video-wrap reveal d2">
+      <video controls preload="none" poster="../images/Be-becoming-retreat-cover-1.jpg">
+        <source src="../images/retreat-apartment-view-web.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="location-body reveal d3">
       <p>During the five days of the retreat, you will stay in your own private apartment — situated directly at the sea. Your own space, where you can return after each session to rest, to journal, or simply sit on your terrace and listen to the water.</p>
       <h3>Food</h3>
@@ -1474,7 +924,7 @@
     </div>
     <div class="leave-cols">
       <div class="leave-img reveal">
-        <img src="../images/BBR-take-back-power-for-full-alignment.jpg" alt="Retreat transformation">
+        <img src="../images/BBR-take-back-power-for-full-alignment.jpg" alt="Take back power for full alignment">
       </div>
       <div class="leave-right reveal d1">
         <ul class="leave-list">
@@ -1532,12 +982,19 @@
 </section>
 
 
+<!-- ── IMAGE BREAK (pool image between testimonials and pricing) ── -->
+<div class="img-break">
+  <img src="../images/retreat-client-pool.jpg" alt="Retreat experience">
+</div>
+
+
 <!-- ── 16. PRICING ── -->
 <section class="pricing" id="pricing">
   <div class="inner">
     <span class="eyebrow reveal" style="text-align:center;">Reserve your place</span>
-    <h2 class="reveal d1">Founding Circle Invitation</h2>
-    <p class="reserve reveal d2">Join now and step into the experience that will change everything.</p>
+    <p class="section-label reveal d1">Reserve your place</p>
+    <h2 class="reveal d2">Founding Circle Invitation</h2>
+    <p class="reserve reveal d3">Join now and step into the experience that will change everything.</p>
 
     <div class="pricing-box reveal d3">
       <p class="price-full">Full investment: €3,500</p>
@@ -1570,12 +1027,13 @@
 <section class="bonus">
   <div class="inner">
     <span class="rule centered reveal"></span>
-    <h2 class="reveal d1">Founding Circle Bonus</h2>
+    <p class="but-wait reveal d1">But wait…</p>
+    <h2 class="reveal d2">Founding Circle Bonus</h2>
     <span class="eyebrow reveal d2" style="text-transform:none;letter-spacing:.08em;font-size:13px;">Join before 15 July and receive:</span>
 
-    <p class="reveal d2" style="font-size:17px;color:var(--text-mid);margin-top:20px;">
+    <p class="reveal d3" style="font-size:17px;color:var(--text-mid);margin-top:20px;">
       Complimentary Access to the<br>
-      <span style="font-family:var(--f-cg);font-style:italic;font-size:1.35em;color:var(--rose);">Living Your Truth™ Community</span><br>
+      <span class="lyt-name">Living Your Truth™ Community</span><br>
       <span style="font-family:var(--f-mont);font-size:14px;color:var(--taupe);">From the moment you enroll until the retreat begins.</span>
     </p>
 
@@ -1595,7 +1053,7 @@
     <div class="video-duo">
       <div class="video-item reveal">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-2.jpg">
+          <video controls preload="none" poster="../images/maria-testimonial-combi-lyt-and-retreat-thumb.jpg">
             <source src="../images/maria-testimonial-combi-lyt-and-retreat-web.mp4" type="video/mp4">
           </video>
         </div>
@@ -1603,7 +1061,7 @@
       </div>
       <div class="video-item reveal d1">
         <div class="video-wrap">
-          <video controls preload="none" poster="../images/Be-becoming-retreat-cover-3.jpg">
+          <video controls preload="none" poster="../images/stacey-testimonial-combi-lyt-and-retreat-thumb.jpg">
             <source src="../images/stacey-testimonial-combi-lyt-and-retreat-web.mp4" type="video/mp4">
           </video>
         </div>
@@ -1622,7 +1080,7 @@
 <!-- ── 17. ONLY 5 PLACES ── -->
 <section class="five-places">
   <div class="inner">
-    <span class="eyebrow light reveal" style="margin-bottom:24px;">Intentionally intimate</span>
+    <span class="eyebrow-italic reveal">Intentionally intimate</span>
     <h2 class="reveal d1">Only Five Places Available</h2>
     <p class="reveal d2">The depth of the experience depends on the safety, trust and connection within the group. For that reason, only five women will be joining us.</p>
     <p class="reveal d3" style="margin-top:20px;"><em>If you feel called, I invite you to trust that feeling.</em></p>
@@ -1637,7 +1095,7 @@
     <h2 class="h-spartan reveal d1">Raise Your Hand</h2>
     <p class="reveal d2">Curious whether this retreat is for you? Fill in the short interest form and let's explore whether this experience feels like the right next step.</p>
     <p class="reveal d2">If you already know you're ready, you can also indicate that you'd like to reserve one of the five places.</p>
-    <p class="reveal d3"><em>Filling in the form is completely without obligation.</em></p>
+    <p class="obligatory reveal d3">Filling in the form is completely without obligation.</p>
     <p class="reveal d3">Because this is such a personal and intimate experience, Leo likes to connect with each woman before confirming her place. Together we'll explore whether this retreat feels like the right fit for both of us.</p>
     <div class="cta-wrap reveal d4">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdU7SQTwIxJ2v_m-7zIvs4FD2p9tW-RuHAB_yiBPaT2pHDIdw/viewform?usp=header"
@@ -1698,24 +1156,12 @@
   <div class="inner">
     <h2 class="reveal">Client Experiences from Previous Retreats</h2>
     <div class="client-grid">
-      <div class="client-card reveal">
-        <p>"This was the guidance I sought for a long time..."</p>
-      </div>
-      <div class="client-card reveal d1">
-        <p>"In the first 2 hours, I already had enormous shifts. And then I had a whole more week to discover more!"</p>
-      </div>
-      <div class="client-card reveal d2">
-        <p>"I don't know how you do it, I have never met someone like you, but I do know I was waiting for you for a long time."</p>
-      </div>
-      <div class="client-card reveal">
-        <p>"OMG in this retreat you DO overdeliver any expectation of what this retreat would be about!"</p>
-      </div>
-      <div class="client-card reveal d1">
-        <p>"I have never felt so present in my body."</p>
-      </div>
-      <div class="client-card reveal d2">
-        <p>"I can say yes to life now."</p>
-      </div>
+      <div class="client-card reveal"><p>"This was the guidance I sought for a long time..."</p></div>
+      <div class="client-card reveal d1"><p>"In the first 2 hours, I already had enormous shifts. And then I had a whole more week to discover more!"</p></div>
+      <div class="client-card reveal d2"><p>"I don't know how you do it, I have never met someone like you, but I do know I was waiting for you for a long time."</p></div>
+      <div class="client-card reveal"><p>"OMG in this retreat you DO overdeliver any expectation of what this retreat would be about!"</p></div>
+      <div class="client-card reveal d1"><p>"I have never felt so present in my body."</p></div>
+      <div class="client-card reveal d2"><p>"I can say yes to life now."</p></div>
     </div>
   </div>
 </section>
@@ -1760,13 +1206,11 @@
 
 
 <script>
-  // Nav scroll shadow
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
-  // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
