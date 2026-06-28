@@ -132,8 +132,9 @@
       object-fit: cover; object-position: center top; display: block;
     }
     @media (max-width: 768px) {
-      .hero { height: 100svh; min-height: 500px; max-height: 900px; }
-      .hero picture img { object-position: 60% top; }
+      .hero { height: auto; aspect-ratio: 16/9; min-height: 200px; max-height: 420px; }
+      .hero picture, .hero picture img { height: 100%; }
+      .hero picture img { object-fit: contain; object-position: center center; }
     }
 
     /* ── 2. CTA INTRO ── */
@@ -144,7 +145,7 @@
     }
     .cta-intro .inner { max-width: 680px; margin: 0 auto; }
     .hero-title { font-size: clamp(42px, 7vw, 80px); margin-bottom: 20px; line-height: 1.05; }
-    .hero-title .be-becoming { font-family: var(--f-head); font-weight: 900; letter-spacing: -0.02em; color: var(--text); }
+    .hero-title .be-becoming { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--text); }
     .hero-title .retreat     { font-family: var(--f-cg); font-style: italic; font-weight: 400; color: var(--rose); }
     .hero-subtitle {
       font-family: var(--f-cg); font-style: italic;
