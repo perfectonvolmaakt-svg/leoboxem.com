@@ -157,6 +157,8 @@
       letter-spacing: 0.26em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px;
     }
     .social-proof { font-family: var(--f-mont); font-size: 14px; color: var(--taupe); font-style: italic; margin-top: 20px; }
+    .hero-img-wrap { margin: 48px auto 0; max-width: 820px; width: 100%; border-radius: 3px; overflow: hidden; }
+    .hero-img-wrap img { width: 100%; height: auto; display: block; border-radius: 3px; }
 
     /* ── 3. WHAT IT'S ABOUT ── */
     .about { background: var(--cream); }
@@ -639,17 +641,7 @@
 </nav>
 
 
-<!-- ── 1. HERO ── -->
-<!-- Mobile image: deliver portrait ~750×1334px (9:16), name it Be-becoming-retreat-cover-mobile.jpg -->
-<section class="hero" style="padding:0;">
-  <picture>
-    <source media="(max-width: 768px)" srcset="../images/Be-becoming-retreat-cover-mobile.jpg">
-    <img src="../images/Be-becoming-retreat-cover-1.jpg" alt="The Be &amp; Becoming Retreat – Ibiza 2026">
-  </picture>
-</section>
-
-
-<!-- ── 2. CTA INTRO ── -->
+<!-- ── 1+2. CTA INTRO (now first section) ── -->
 <section class="cta-intro">
   <div class="inner">
     <span class="eyebrow reveal d1">Ibiza · 22–26 October 2026</span>
@@ -660,6 +652,9 @@
     <p class="hero-subtitle reveal d3">A Retreat for Women Ready to Return to Themselves<br>and Their Next Chapter</p>
     <p class="scarcity reveal d4">Only 5 places available</p>
     <p class="social-proof reveal d4">Leo has led many retreats on Ibiza, rated with an average of 9,8 out of 10 by previous participants</p>
+    <div class="hero-img-wrap reveal d4">
+      <img src="../images/Be-becoming-retreat-cover-1.jpg" alt="The Be &amp; Becoming Retreat – Ibiza 2026">
+    </div>
   </div>
 </section>
 
