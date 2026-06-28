@@ -521,6 +521,41 @@
     .client-card { background: var(--cream); border-radius: 2px; padding: 28px 26px; border-left: 3px solid var(--blush); }
     .client-card p { font-family: var(--f-cg); font-style: italic; font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 0; }
 
+    /* ── SPHERE GALLERY ── */
+    .sphere-gallery { background: var(--cream); padding: var(--pv) var(--ph); }
+    .sphere-gallery .inner { max-width: var(--wide); margin: 0 auto; }
+    .sphere-gallery .head { text-align: center; margin-bottom: 56px; }
+    .sphere-row {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .sphere-item { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .sphere-img {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--blush);
+      box-shadow: 0 8px 32px rgba(185,135,116,.18);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .sphere-img:hover { transform: scale(1.04); box-shadow: 0 12px 40px rgba(185,135,116,.28); }
+    .sphere-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sphere-label {
+      font-family: var(--f-head); font-size: 10px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe);
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .sphere-img { width: 150px; height: 150px; }
+      .sphere-row { gap: 20px; }
+    }
+    @media (max-width: 600px) {
+      .sphere-img { width: 130px; height: 130px; }
+    }
+
     /* ── 22. FINALE ── */
     .finale { background: var(--taupe); color: var(--cream); padding: var(--pv) var(--ph); }
     .finale .inner { max-width: var(--max); margin: 0 auto; }
@@ -820,6 +855,49 @@
       <p>The island carries a unique energy of liberation, transformation, creativity and renewal.</p>
       <p>Many people describe arriving here as if something inside them immediately exhales. <em>As if they can finally hear themselves again.</em></p>
       <p>And that is exactly why this retreat takes place here. Because Ibiza is not simply the backdrop. It becomes part of the journey.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SPHERE GALLERY ── -->
+<!-- Deliver 5 square images at 1000×1000px, named: sphere-1.jpg through sphere-5.jpg, in the images/ folder -->
+<section class="sphere-gallery">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow reveal">Ibiza · October 2026</span>
+    </div>
+    <div class="sphere-row">
+      <div class="sphere-item reveal">
+        <div class="sphere-img">
+          <img src="../images/ibiza-sea.jpg" alt="The sea of Ibiza">
+        </div>
+        <span class="sphere-label">The sea</span>
+      </div>
+      <div class="sphere-item reveal d1">
+        <div class="sphere-img">
+          <img src="../images/ibiza-perfectly-imperfect.jpg" alt="Ibiza nature">
+        </div>
+        <span class="sphere-label">The island</span>
+      </div>
+      <div class="sphere-item reveal d2">
+        <div class="sphere-img">
+          <img src="../images/leo-with-group.jpg" alt="Leo with retreat group">
+        </div>
+        <span class="sphere-label">The group</span>
+      </div>
+      <div class="sphere-item reveal d3">
+        <div class="sphere-img">
+          <img src="../images/retreat-hands-esvedra.jpg" alt="Connection at the retreat">
+        </div>
+        <span class="sphere-label">The connection</span>
+      </div>
+      <div class="sphere-item reveal d4">
+        <div class="sphere-img">
+          <img src="../images/ibiza-path.jpg" alt="Ibiza path">
+        </div>
+        <span class="sphere-label">The journey</span>
+      </div>
     </div>
   </div>
 </section>
