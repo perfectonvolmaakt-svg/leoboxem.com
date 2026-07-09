@@ -457,12 +457,15 @@
       font-family: var(--f-head); font-size: 14px; font-weight: 600;
       color: var(--taupe); text-decoration: line-through; letter-spacing: 0.06em; margin-bottom: 8px;
     }
-    .price-featured { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
-    .price-label { font-family: var(--f-head); font-size: 11px; font-weight: 900; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 4px; }
-    .price-amount { font-family: var(--f-head); font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: var(--text); letter-spacing: -0.02em; line-height: 1; }
+    .invest-title {
+      font-family: var(--f-head); font-size: 15px; font-weight: 900;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose);
+      display: inline-block; padding-bottom: 10px; margin-bottom: 28px;
+      border-bottom: 2px solid var(--rose);
+    }
     .price-avail { font-family: var(--f-body); font-size: 13px; color: var(--taupe); margin-top: 4px; }
-    .deposit-badge { font-family: var(--f-head); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--gold); letter-spacing: -0.01em; line-height: 1; }
-    .deposit-label { font-family: var(--f-body); font-size: 13px; color: var(--taupe); text-align: right; margin-top: 4px; }
+    .deposit-badge { font-family: var(--f-head); font-size: clamp(40px, 7vw, 64px); font-weight: 900; color: var(--gold); letter-spacing: -0.01em; line-height: 1; margin-bottom: 4px; }
+    .deposit-label { font-family: var(--f-body); font-size: 15px; color: var(--taupe); margin-bottom: 16px; }
     .price-detail { padding-top: 24px; border-top: 1px solid var(--blush); }
     .price-detail p { font-size: 14px; color: var(--text-mid); margin-bottom: 6px; }
     .pricing .cta-wrap { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
@@ -624,7 +627,6 @@
     @media (max-width: 600px) {
       nav { padding: 14px 20px; }
       .nav-logo img { height: 28px; }
-      .price-featured { flex-direction: column; gap: 16px; }
     }
   </style>
 </head>
@@ -1066,25 +1068,18 @@
   <div class="inner">
     <span class="eyebrow reveal" style="text-align:center;">Reserve your place</span>
     <p class="section-label reveal d1">Reserve your place</p>
-    <h2 class="reveal d2">Founding Circle Invitation</h2>
+    <p class="price-full reveal d2">Full investment: €3,500</p>
     <p class="reserve reveal d3">Join now and step into the experience that will change everything.</p>
+    <h2 class="reveal d3" style="margin-bottom:32px;">For early birds &ndash; the Founding Circle Invitation</h2>
 
-    <div class="pricing-box reveal d3">
-      <p class="price-full">Full investment: €3,500</p>
-      <div class="price-featured">
-        <div class="price-featured-left">
-          <p class="price-label">Founding Circle Investment</p>
-          <p class="price-amount">€2,970</p>
-          <p class="price-avail">Available until 15 July 2026</p>
-        </div>
-        <div style="text-align:right;">
-          <p class="deposit-badge">€500</p>
-          <p class="deposit-label">deposit to reserve<br>your place</p>
-        </div>
-      </div>
+    <div class="pricing-box reveal d4">
+      <p class="invest-title">Founding Circle Investment</p>
+      <p class="deposit-badge">€500</p>
+      <p class="deposit-label">deposit to reserve your spot</p>
+      <p class="price-avail">Available until 20 July 2026</p>
       <div class="price-detail">
-        <p>Remaining balance due by 31 August 2026</p>
-        <p>Click below to show your interest and connect to Leo</p>
+        <p>The remaining balance of €2,470 can be spread over 3 or 5 payments.</p>
+        <p>Click below to show your interest and Leo will reach out to have a short call where you both talk through your questions and details.</p>
       </div>
     </div>
 
@@ -1102,7 +1097,7 @@
     <span class="rule centered reveal"></span>
     <p class="but-wait reveal d1">But wait…</p>
     <h2 class="reveal d2">Founding Circle Bonus</h2>
-    <span class="eyebrow reveal d2" style="text-transform:none;letter-spacing:.08em;font-size:13px;">Join before 15 July and receive:</span>
+    <span class="eyebrow reveal d2" style="text-transform:none;letter-spacing:.08em;font-size:13px;">Join before 20 July and receive:</span>
 
     <p class="reveal d3" style="font-size:17px;color:var(--text-mid);margin-top:20px;">
       Complimentary Access to the<br>
