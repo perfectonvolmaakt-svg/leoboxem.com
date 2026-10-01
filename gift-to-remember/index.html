@@ -111,18 +111,9 @@
     .inside-list h3 { font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.03em; color: var(--red-brown); line-height: 1.3; margin: 8px 0 4px; }
     .inside-list p { font-size: 15px; line-height: 1.65; color: var(--dark-brown); }
 
-    /* WHY NOW */
-    #why { background: var(--dark-brown); text-align: center; }
-    .why-inner { max-width: 720px; margin: 0 auto; }
-    #why h2 { font-family: 'Outfit', sans-serif; font-size: clamp(24px, 3.2vw, 36px); font-weight: 700; line-height: 1.25; color: var(--white); margin-bottom: 28px; }
-    #why .rule { background: var(--gold); }
-    .why-lead { font-size: clamp(17px, 1.7vw, 20px); line-height: 1.8; color: rgba(253,247,245,.9); margin-bottom: 18px; }
-    .why-accent { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: clamp(24px, 3vw, 34px); line-height: 1.4; color: var(--blush); }
-
-    /* 6 — CTA bottom */
-    #cta-bottom { background: var(--dark-brown); text-align: center; padding-top: 0; }
-    #cta-bottom .btn { background: var(--gold); color: var(--dark-brown); box-shadow: 0 10px 28px rgba(0,0,0,.25); }
-    #cta-bottom .btn:hover { background: var(--blush); }
+    /* Closing lines under the hero button */
+    .why-lead { font-size: clamp(17px, 1.7vw, 19px); line-height: 1.8; color: var(--dark-brown); max-width: 640px; margin: 40px auto 10px; }
+    .why-accent { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.4; color: var(--red-brown); }
 
     /* 7 — OPT-IN FORM */
     #download { background: var(--blush); text-align: center; scroll-margin-top: 66px; }
@@ -175,6 +166,11 @@
   <section id="cta-top">
     <a href="#download" class="btn reveal">Download Now</a>
     <p class="btn-note reveal d1">Free · Instant access</p>
+    <p class="why-lead reveal d2">Because your future isn't something you have to figure out.</p>
+    <p class="why-accent reveal d2">
+      Sometimes you simply have to remember it.<br>
+      And then take one small step toward living it.
+    </p>
   </section>
 
 
@@ -222,26 +218,6 @@
         </div>
       </li>
     </ol>
-  </section>
-
-
-  <!-- WHY NOW -->
-  <section id="why">
-    <div class="why-inner">
-      <h2 class="reveal">Why is this Starter Kit essential right now?</h2>
-      <span class="rule reveal d1"></span>
-      <p class="why-lead reveal d1">Because your future isn't something you have to figure out.</p>
-      <p class="why-accent reveal d2">
-        Sometimes you simply have to remember it.<br>
-        And then take one small step toward living it.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- 6 — CTA -->
-  <section id="cta-bottom">
-    <a href="#download" class="btn reveal">Download Now</a>
   </section>
 
 
