@@ -27,7 +27,6 @@
     :root {
       --cream:      #fdf7f5;
       --blush:      #e1c6b7;
-      --blush-soft: #efdcd2;
       --rose:       #b98774;
       --red-brown:  #8d4215;
       --dark-brown: #502a1a;
@@ -105,20 +104,12 @@
     h1.kit-title em { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; text-transform: none; font-size: 1.2em; letter-spacing: 0; color: var(--red-brown); margin-top: 6px; }
     .intro-text { font-size: clamp(17px, 1.6vw, 19px); line-height: 1.85; color: var(--dark-brown); }
 
-    /* 4 — 2×2 GRID */
-    #kit-grid { background: var(--cream); padding-top: 0; }
-    .grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
-    .grid-2x2 img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 12px 32px rgba(80,42,26,.12); }
-
-    /* 5 — INSIDE */
-    #inside { background: var(--blush-soft); }
-    .inside-inner { max-width: 760px; margin: 0 auto; }
-    .inside-inner h2 { font-family: 'Outfit', sans-serif; font-size: clamp(26px, 3.4vw, 40px); font-weight: 700; line-height: 1.2; color: var(--dark-brown); text-align: center; margin-bottom: 20px; }
-    .inside-list { list-style: none; display: grid; gap: 18px; }
-    .inside-list li { display: grid; grid-template-columns: 52px 1fr; gap: 20px; align-items: start; background: var(--white); border-radius: 12px; padding: 26px 28px; border: 1px solid rgba(141,66,21,.1); }
-    .inside-num { width: 52px; height: 52px; border-radius: 50%; background: var(--red-brown); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-    .inside-list h3 { font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: var(--red-brown); line-height: 1.35; margin: 4px 0 6px; }
-    .inside-list p { font-size: 16px; line-height: 1.75; color: var(--dark-brown); }
+    /* 4 — INSIDE LIST: compact 2×2 on desktop, single column on phone */
+    .inside-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 36px 48px; max-width: 920px; margin: 56px auto 0; text-align: left; }
+    .inside-list li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
+    .inside-num { width: 40px; height: 40px; border-radius: 50%; background: var(--red-brown); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .inside-list h3 { font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.03em; color: var(--red-brown); line-height: 1.3; margin: 8px 0 4px; }
+    .inside-list p { font-size: 15px; line-height: 1.65; color: var(--dark-brown); }
 
     /* WHY NOW */
     #why { background: var(--dark-brown); text-align: center; }
@@ -139,7 +130,7 @@
     #download h2 { font-family: 'Outfit', sans-serif; font-size: clamp(26px, 3.6vw, 42px); font-weight: 700; line-height: 1.15; color: var(--dark-brown); margin-bottom: 14px; }
     #download h2 em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 1.15em; color: var(--red-brown); }
     .form-sub { font-size: 16px; line-height: 1.75; color: var(--dark-brown); margin-bottom: 36px; }
-    .form-card { background: var(--cream); border-radius: 16px; padding: 40px 36px; box-shadow: 0 14px 40px rgba(80,42,26,.12); text-align: left; }
+    .form-card { background: var(--white); border-radius: 16px; padding: 40px 36px; box-shadow: 0 14px 40px rgba(80,42,26,.12); text-align: left; }
 
     /* FOOTER */
     footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; border-top: 1px solid rgba(195,153,80,.2); }
@@ -149,64 +140,19 @@
     .footer-links a { color: var(--blush); text-decoration: none; opacity: .85; }
     .footer-links a:hover { opacity: 1; }
 
-    /* === CIRCLE FORM FIXES === */
-    [data-circle-form-uid] > div {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-      padding: 0 !important;
-      border-radius: 0 !important;
-    }
-    [data-circle-form-uid] > div > *:not(form) { display: none !important; }
-    [data-circle-form-uid] input[type="text"],
-    [data-circle-form-uid] input[type="email"] {
-      background: var(--white) !important;
-      border: 1px solid rgba(140,117,106,.35) !important;
-      color: var(--black) !important;
-      padding: 14px 18px !important;
-      border-radius: 6px !important;
-      font-family: var(--f-body) !important;
-      font-size: 16px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      margin-bottom: 12px !important;
-    }
-    [data-circle-form-uid] label {
-      color: var(--dark-brown) !important;
-      font-family: var(--f-head) !important;
-      font-size: 13px !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.16em !important;
-      text-transform: uppercase !important;
-      display: block !important;
-      margin-bottom: 6px !important;
-    }
-    [data-circle-form-uid] button[type="submit"],
-    [data-circle-form-uid] input[type="submit"] {
-      background: #8d4215 !important;
-      color: #ffffff !important;
-      border: none !important;
-      border-radius: 6px !important;
-      font-family: var(--f-head) !important;
-      font-size: 15px !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.18em !important;
-      text-transform: uppercase !important;
-      padding: 18px 28px !important;
-      cursor: pointer !important;
-      width: 100% !important;
-      margin-top: 8px !important;
-    }
+    /* Circle renders the form in an iframe (sized by Circle). If it never shows, a direct link appears instead. */
+    .form-fallback { display: none; text-align: center; }
+    .form-fallback p { font-size: 15px; color: var(--dark-brown); margin-bottom: 20px; }
+    .form-fallback.show { display: block; }
+    .form-card.empty { visibility: hidden; height: 0; padding: 0; overflow: hidden; box-shadow: none; }
 
     @media (max-width: 880px) {
       :root { --pv: 64px; --ph: 24px; }
-      .grid-2x2 { gap: 16px; }
     }
     @media (max-width: 560px) {
       .nav-back { display: none; }
       .btn { padding: 20px 36px 18px; font-size: 15px; width: 100%; max-width: 360px; }
-      .grid-2x2 { grid-template-columns: 1fr; }
-      .inside-list li { grid-template-columns: 1fr; gap: 14px; padding: 24px 22px; }
+      .inside-list { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
       .form-card { padding: 28px 20px; }
     }
   </style>
@@ -234,11 +180,11 @@
   </section>
 
 
-  <!-- 3 — INTRO -->
+  <!-- 3 — WHAT'S INSIDE -->
   <section id="intro">
     <div class="intro-inner">
       <h1 class="kit-title reveal">
-        <span class="the">The</span>
+        <span class="the">What you'll get inside the</span>
         Remember Your Future™
         <em>Starter Kit</em>
       </h1>
@@ -247,57 +193,37 @@
         A curated collection of my favorite resources to help you begin Remembering Your Future™ — reconnecting with who you are, why you're here, and the work you're here to lead.
       </p>
     </div>
-  </section>
 
-
-  <!-- 4 — 2×2 GRID -->
-  <section id="kit-grid">
-    <div class="grid-2x2">
-      <img class="reveal"    src="../images/starterkit-1.jpg" alt="Part 1 — The Daily Return™ Podcast" loading="lazy" width="1200" height="1200">
-      <img class="reveal d1" src="../images/starterkit-2.jpg" alt="Part 2 — The Return Shortcut™" loading="lazy" width="1200" height="1200">
-      <img class="reveal"    src="../images/starterkit-3.jpg" alt="Part 3 — Unlock Your Lionheart™" loading="lazy" width="1200" height="1200">
-      <img class="reveal d1" src="../images/starterkit-4.jpg" alt="Part 4 — The Authentic Shift™" loading="lazy" width="1200" height="1200">
-    </div>
-  </section>
-
-
-  <!-- 5 — INSIDE YOU'LL RECEIVE -->
-  <section id="inside">
-    <div class="inside-inner">
-      <h2 class="reveal">Inside you'll receive</h2>
-      <span class="rule reveal d1"></span>
-
-      <ol class="inside-list">
-        <li class="reveal">
-          <span class="inside-num">1</span>
-          <div>
-            <h3>The Daily Return™ Podcast</h3>
-            <p>Daily short episodes to help you return to yourself, one morning at a time.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="inside-num">2</span>
-          <div>
-            <h3>The Return Shortcut™</h3>
-            <p>One audio that summarizes the full first season — the guiding principles and essential ideas from 50+ episodes of The Daily Return™ Podcast.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="inside-num">3</span>
-          <div>
-            <h3>Unlock Your Lionheart™</h3>
-            <p>A guided visualisation and audio experience to reconnect with your courage, purpose and next chapter.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="inside-num">4</span>
-          <div>
-            <h3>The Authentic Shift™</h3>
-            <p>1 short practice to stop waiting for “one day” and take one small action today that brings your outer life into greater alignment with the truth you already know inside.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
+    <ol class="inside-list">
+      <li class="reveal">
+        <span class="inside-num">1</span>
+        <div>
+          <h3>The Daily Return™ Podcast</h3>
+          <p>Daily short episodes to help you return to yourself, one morning at a time.</p>
+        </div>
+      </li>
+      <li class="reveal d1">
+        <span class="inside-num">2</span>
+        <div>
+          <h3>The Return Shortcut™</h3>
+          <p>One audio that summarizes the full first season — the guiding principles and essential ideas from 50+ episodes of The Daily Return™ Podcast.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="inside-num">3</span>
+        <div>
+          <h3>Unlock Your Lionheart™</h3>
+          <p>A guided visualisation and audio experience to reconnect with your courage, purpose and next chapter.</p>
+        </div>
+      </li>
+      <li class="reveal d1">
+        <span class="inside-num">4</span>
+        <div>
+          <h3>The Authentic Shift™</h3>
+          <p>1 short practice to stop waiting for “one day” and take one small action today that brings your outer life into greater alignment with the truth you already know inside.</p>
+        </div>
+      </li>
+    </ol>
   </section>
 
 
@@ -331,13 +257,17 @@
       <div class="form-card reveal d3">
         <div data-is-popup="false" data-circle-form-uid="de981d01"></div>
       </div>
+      <div class="form-fallback">
+        <p>Click below to leave your name and email.</p>
+        <a href="https://leoboxem.circle.so/forms/de981d01" class="btn" target="_blank" rel="noopener">Get the Starter Kit</a>
+      </div>
     </div>
   </section>
 
 
   <footer>
     <p class="footer-name">Remember Your Future™</p>
-    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-tag">Leo Boxem · Mallorca, Spain</p>
     <p class="footer-links">
       © 2026 Leo Boxem &nbsp;·&nbsp;
       <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
@@ -347,24 +277,18 @@
   </footer>
 
   <script>
-    // Strip Circle's own card styling, title and description so the form blends into the page
-    function cleanCircle() {
-      document.querySelectorAll('[data-circle-form-uid]').forEach(function(wrap) {
-        wrap.querySelectorAll('div').forEach(function(d) {
-          d.style.background = 'transparent';
-          d.style.boxShadow = 'none';
-          d.style.border = 'none';
-        });
-        var form = wrap.querySelector('form');
-        if (form && form.parentElement) {
-          Array.from(form.parentElement.children).forEach(function(child) {
-            if (child !== form) child.style.cssText = 'display:none!important';
-          });
-        }
-      });
-    }
-    [600, 1200, 2000, 3500].forEach(function(ms) { setTimeout(cleanCircle, ms); });
-    new MutationObserver(cleanCircle).observe(document.body, { childList: true, subtree: true });
+    // Safety net: some browsers block Circle's embedded form. While it hasn't sized itself (after 6s), offer the hosted form instead.
+    (function() {
+      var card = document.querySelector('.form-card');
+      var fallback = document.querySelector('.form-fallback');
+      function check() {
+        var frame = document.querySelector('[data-circle-form-uid] iframe');
+        var missing = !frame || parseInt(frame.style.height, 10) < 60 || !frame.style.height;
+        card.classList.toggle('empty', missing);
+        fallback.classList.toggle('show', missing);
+      }
+      setTimeout(function() { check(); setInterval(check, 1000); }, 6000);
+    })();
   </script>
 
   <script>
