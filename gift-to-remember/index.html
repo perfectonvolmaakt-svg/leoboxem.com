@@ -140,11 +140,9 @@
     .footer-links a { color: var(--blush); text-decoration: none; opacity: .85; }
     .footer-links a:hover { opacity: 1; }
 
-    /* Circle renders the form in an iframe (sized by Circle). If it never shows, a direct link appears instead. */
-    .form-fallback { display: none; text-align: center; }
-    .form-fallback p { font-size: 15px; color: var(--dark-brown); margin-bottom: 20px; }
-    .form-fallback.show { display: block; }
-    .form-card.empty { visibility: hidden; height: 0; padding: 0; overflow: hidden; box-shadow: none; }
+    /* Circle renders the form in an iframe that it sizes itself; show a loading note until it has */
+    .form-loading { font-size: 15px; color: var(--taupe); text-align: center; padding: 24px 0; }
+    .form-card.ready .form-loading { display: none; }
 
     @media (max-width: 880px) {
       :root { --pv: 64px; --ph: 24px; }
@@ -255,11 +253,8 @@
       <p class="form-sub reveal d2">Leave your name and email and the Remember Your Future™ Starter Kit will be on its way to your inbox.</p>
 
       <div class="form-card reveal d3">
+        <p class="form-loading">Loading the form…</p>
         <div data-is-popup="false" data-circle-form-uid="de981d01"></div>
-      </div>
-      <div class="form-fallback">
-        <p>Click below to leave your name and email.</p>
-        <a href="https://leoboxem.circle.so/forms/de981d01" class="btn" target="_blank" rel="noopener">Get the Starter Kit</a>
       </div>
     </div>
   </section>
@@ -277,17 +272,16 @@
   </footer>
 
   <script>
-    // Safety net: some browsers block Circle's embedded form. While it hasn't sized itself (after 6s), offer the hosted form instead.
+    // Hide the loading note once Circle has sized its form iframe
     (function() {
       var card = document.querySelector('.form-card');
-      var fallback = document.querySelector('.form-fallback');
-      function check() {
-        var frame = document.querySelector('[data-circle-form-uid] iframe');
-        var missing = !frame || parseInt(frame.style.height, 10) < 60 || !frame.style.height;
-        card.classList.toggle('empty', missing);
-        fallback.classList.toggle('show', missing);
-      }
-      setTimeout(function() { check(); setInterval(check, 1000); }, 6000);
+      var timer = setInterval(function() {
+        var frame = card.querySelector('iframe');
+        if (frame && parseInt(frame.style.height, 10) > 60) {
+          card.classList.add('ready');
+          clearInterval(timer);
+        }
+      }, 300);
     })();
   </script>
 
