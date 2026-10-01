@@ -55,6 +55,9 @@
     .mail { display: inline-block; font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: var(--red-brown); text-decoration: none; padding: 20px 40px 18px; border-radius: 6px; box-shadow: 0 10px 28px rgba(141,66,21,.25); transition: background .25s, transform .25s; }
     .mail:hover { background: var(--dark-brown); transform: translateY(-2px); }
 
+    .copied { font-size: 15px; margin: 18px 0 0; visibility: hidden; }
+    .copied.show { visibility: visible; }
+
     /* FOOTER */
     footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
     .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
@@ -87,7 +90,8 @@
   <section id="message">
     <h1>Cannot wait?</h1>
     <p>Send me a message and I'll personally come back to you!</p>
-    <a href="mailto:leo@leoboxem.com" class="mail">leo@leoboxem.com</a>
+    <a href="mailto:leo@leoboxem.com" class="mail" id="mail">leo@leoboxem.com</a>
+    <p class="copied" id="copied">Email address copied, paste it into your email.</p>
   </section>
 
   <footer>
@@ -100,6 +104,17 @@
       <a href="https://www.leoboxem.com">www.leoboxem.com</a>
     </p>
   </footer>
+
+  <script>
+    // mailto only works with a desktop mail app, so also copy the address for webmail users
+    document.getElementById('mail').addEventListener('click', function() {
+      try {
+        navigator.clipboard.writeText('leo@leoboxem.com').then(function() {
+          document.getElementById('copied').classList.add('show');
+        });
+      } catch (e) {}
+    });
+  </script>
 
 </body>
 </html>
