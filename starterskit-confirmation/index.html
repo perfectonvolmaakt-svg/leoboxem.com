@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In — The Remember Your Future™ Starter Kit</title>
+  <meta name="description" content="You are signed up for the Remember Your Future™ Starter Kit. It launches on 10-10 and arrives in your inbox.">
+  <meta name="robots" content="noindex">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Leo Boxem · Remember Your Future™">
+  <meta property="og:title" content="You're In — The Remember Your Future™ Starter Kit">
+  <meta property="og:image" content="https://www.leoboxem.com/images/Starterskit-launches-10-10.jpg">
+  <meta property="og:url" content="https://www.leoboxem.com/starterskit-confirmation">
+
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@400;500;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #fdf7f5;
+      --blush:      #e1c6b7;
+      --red-brown:  #8d4215;
+      --dark-brown: #502a1a;
+      --gold:       #c39950;
+
+      --f-head:  'League Spartan', sans-serif;
+      --f-serif: 'Playfair Display', Georgia, serif;
+      --f-body:  'Montserrat', sans-serif;
+
+      --ph: 48px;
+    }
+
+    body { font-family: var(--f-body); font-size: 16px; line-height: 1.8; color: var(--dark-brown); background: var(--blush); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav { position: fixed; inset: 0 0 auto 0; z-index: 400; background: rgba(253,247,245,.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(195,153,80,.18); padding: 0 var(--ph); }
+    .nav-in { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 66px; }
+    .nav-brand { font-family: var(--f-serif); font-size: 16px; font-weight: 500; color: var(--dark-brown); letter-spacing: 0.02em; text-decoration: none; }
+    .nav-back { font-family: var(--f-head); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dark-brown); opacity: .8; text-decoration: none; transition: opacity .2s; }
+    .nav-back:hover { opacity: 1; }
+
+    /* HERO IMAGE, full width */
+    #hero { padding-top: 66px; }
+    #hero img { width: 100%; height: auto; }
+
+    /* MESSAGE */
+    #message { text-align: center; padding: 72px var(--ph) 88px; }
+    #message h1 { font-family: 'Outfit', sans-serif; font-size: clamp(26px, 3.4vw, 38px); font-weight: 700; line-height: 1.2; color: var(--dark-brown); margin-bottom: 12px; }
+    #message p { font-size: clamp(17px, 1.7vw, 19px); margin-bottom: 28px; }
+    .mail { display: inline-block; font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: var(--red-brown); text-decoration: none; padding: 20px 40px 18px; border-radius: 6px; box-shadow: 0 10px 28px rgba(141,66,21,.25); transition: background .25s, transform .25s; }
+    .mail:hover { background: var(--dark-brown); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--dark-brown); padding: 48px var(--ph); text-align: center; }
+    .footer-name { font-family: var(--f-serif); font-size: 20px; font-weight: 500; font-style: italic; color: var(--gold); margin-bottom: 8px; }
+    .footer-tag { font-family: var(--f-head); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: .85; margin-bottom: 20px; }
+    .footer-links { font-family: var(--f-head); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.75); }
+    .footer-links a { color: var(--blush); text-decoration: none; opacity: .85; }
+    .footer-links a:hover { opacity: 1; }
+
+    @media (max-width: 560px) {
+      :root { --ph: 24px; }
+      .nav-back { display: none; }
+      #message { padding: 56px var(--ph) 64px; }
+      .mail { font-size: 16px; padding: 18px 28px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-in">
+      <a href="https://www.leoboxem.com" class="nav-brand">Remember Your Future™</a>
+      <a href="https://www.leoboxem.com" class="nav-back">← Back to main page</a>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <img src="../images/Starterskit-launches-10-10.jpg" alt="You are signed up successfully! The Remember Your Future™ Starters Kit launches on 10-10. On October 10th you will receive your Starters Kit by email, with a personal invitation to become part of the movement for women who want to make their midlife and beyond the best part of their lives." width="1920" height="1080">
+  </section>
+
+  <section id="message">
+    <h1>Cannot wait?</h1>
+    <p>Send me a message and I'll personally come back to you!</p>
+    <a href="mailto:leo@leoboxem.com" class="mail">leo@leoboxem.com</a>
+  </section>
+
+  <footer>
+    <p class="footer-name">Remember Your Future™</p>
+    <p class="footer-tag">Leo Boxem · Mallorca, Spain</p>
+    <p class="footer-links">
+      © 2026 Leo Boxem &nbsp;·&nbsp;
+      <a href="mailto:leo@leoboxem.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.leoboxem.com">www.leoboxem.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
