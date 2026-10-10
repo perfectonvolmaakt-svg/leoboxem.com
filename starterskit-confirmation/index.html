@@ -15,9 +15,11 @@
   <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400&family=League+Spartan:wght@600;700&family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    @font-face { font-family: 'Gistesy'; src: url('../fonts/gistesy.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -30,7 +32,7 @@
       --f-head:   'League Spartan', sans-serif;
       --f-serif:  'Playfair Display', Georgia, serif;
       --f-body:   'Montserrat', sans-serif;
-      --f-script: 'Corinthia', cursive;
+      --f-script: 'Gistesy', 'Corinthia', cursive;
 
       --ph: 48px;
     }
@@ -46,14 +48,14 @@
     .nav-back:hover { opacity: 1; }
 
     /* HERO IMAGE, full width */
-    #hero { padding-top: 66px; }
-    #hero img { width: 100%; height: auto; }
+    #hero { padding: 102px var(--ph) 0; }
+    #hero img { width: 100%; max-width: 400px; height: auto; margin: 0 auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(80,42,26,.14); }
 
     /* SHARED */
-    section.block { text-align: center; padding: 80px var(--ph) 88px; }
+    section.block { text-align: center; padding: 48px var(--ph) 88px; }
     .block-in { max-width: 640px; margin: 0 auto; }
     .eyebrow { font-family: var(--f-head); font-size: 15px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; line-height: 1.4; color: var(--red-brown); margin-bottom: 4px; }
-    .script { display: block; font-family: var(--f-script); font-weight: 400; font-size: clamp(56px, 7vw, 76px); line-height: 1; color: var(--red-brown); margin-bottom: 28px; }
+    .script { display: block; font-family: var(--f-script); font-weight: 400; font-size: clamp(64px, 8vw, 88px); line-height: 1.1; color: var(--red-brown); margin: 22px 0 30px; }
     .block p { font-size: clamp(17px, 1.7vw, 19px); margin-bottom: 32px; }
     .btn { display: inline-block; font-family: var(--f-head); font-size: 18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; background: var(--red-brown); text-decoration: none; padding: 21px 44px 18px; border-radius: 6px; box-shadow: 0 10px 28px rgba(141,66,21,.25); transition: background .25s, transform .25s; }
     .btn:hover { background: var(--dark-brown); transform: translateY(-2px); }
@@ -77,6 +79,7 @@
     @media (max-width: 560px) {
       :root { --ph: 20px; }
       .nav-back { display: none; }
+      #hero { padding-top: 86px; }
       section.block { padding: 56px var(--ph) 64px; }
       .btn { font-size: 15px; padding: 19px 26px 16px; }
     }
