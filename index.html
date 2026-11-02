@@ -39,6 +39,7 @@
       --gold:       #c39950;
       --black:      #1a1a1a;
       --white:      #ffffff;
+      --taupe:      #8c756a;
 
       /* Fonts */
       --f-head:   'League Spartan', sans-serif;
@@ -410,7 +411,7 @@
     }
 
     .hero-body {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 1.95;
       color: var(--black);
     }
@@ -510,6 +511,49 @@
     ============================================================= */
     #journey { background: var(--cream); }
 
+    .remember-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .remember-card {
+      background: var(--white);
+      border: 1px solid rgba(195,153,80,.2);
+      border-radius: 12px;
+      padding: 40px 28px;
+      text-align: center;
+    }
+
+    .remember-word {
+      font-family: var(--f-head);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--dark-brown);
+      margin-bottom: 12px;
+    }
+
+    .remember-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(30px, 3.2vw, 40px);
+      line-height: 1.15;
+      color: var(--red-brown);
+    }
+
+    .remember-close {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(22px, 2.6vw, 32px);
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.3;
+      text-align: center;
+      margin-top: 40px;
+    }
+
     .j-track {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -587,10 +631,10 @@
     /* =============================================================
        SECTION 6 — START HERE
     ============================================================= */
-    #start { background: #fdf7f5; }
-    #start .h-sub { color: #b98774; }
-    #start .start-list li::before { color: #b98774; }
-    #start .rule { background: linear-gradient(to right, #b98774, transparent); }
+    #podcast { background: #fdf7f5; }
+    #podcast .h-sub { color: #b98774; }
+    #podcast .start-list li::before { color: #b98774; }
+    #podcast .rule { background: linear-gradient(to right, #b98774, transparent); }
 
     .start-list {
       list-style: none;
@@ -720,27 +764,27 @@
 
     .footer-tag {
       font-family: var(--f-head);
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--white);
-      opacity: .7;
+      opacity: .9;
       margin-bottom: 24px;
     }
 
     .footer-links {
       font-family: var(--f-head);
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.5);
+      color: rgba(255,255,255,.85);
     }
 
     .footer-links a {
       color: var(--white);
       text-decoration: none;
-      opacity: .8;
+      opacity: 1;
     }
 
     .footer-links a:hover { opacity: 1; }
@@ -748,6 +792,12 @@
     /* =============================================================
        MOBILE
     ============================================================= */
+    .nav-links a { white-space: nowrap; }
+
+    @media (max-width: 1180px) {
+      .nav-links { display: none; }
+    }
+
     @media (max-width: 880px) {
       :root { --pv: 60px; --ph: 24px; }
 
@@ -757,20 +807,36 @@
       .two-col,
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
 
+      .hero-grid > *,
+      .two-col > *,
+      .about-grid > * { min-width: 0; }
+
+      .hero-text > img { max-width: 100%; object-fit: contain; object-position: left; }
+
       .about-grid { direction: rtl; }
       .about-grid > * { direction: ltr; }
 
       h1.hero-h { font-size: 38px; }
+      .hero-body { font-size: 15px; }
+      .hero-img-wrap { display: none; }
 
       .btns { flex-direction: column; }
       .btn { text-align: center; }
 
+      .remember-grid { grid-template-columns: 1fr; }
       .j-track { grid-template-columns: 1fr 1fr; }
+      .j-card:last-child { grid-column: auto !important; }
       .img-sticky { position: static; }
     }
 
     @media (max-width: 520px) {
       .j-track { grid-template-columns: 1fr; }
+      .j-card { grid-column: auto !important; }
+
+      .nav-in { gap: 12px; }
+      .nav-brand { flex-shrink: 1; min-width: 0; }
+      .nav-brand-name { font-size: 13px; white-space: normal; }
+      .nav-cta { padding: 9px 12px; letter-spacing: 0.08em; }
     }
   </style>
 </head>
@@ -787,14 +853,15 @@
       </a>
 
       <ul class="nav-links">
+        <li><a href="/call">Your Next Level Session</a></li>
+        <li><a href="https://app.helloaudio.fm/feed/2eb98fa1-1d6e-4e68-b8cf-1ff417c66ce4/signup" target="_blank" rel="noopener">Podcast</a></li>
         <li><a href="#about">About Leo</a></li>
         <li><a href="#what">The Work</a></li>
         <li><a href="#journey">Journey</a></li>
-        <li><a href="/call">Your Next Level Session</a></li>
         <li><a href="/retreat">Retreat</a></li>
       </ul>
 
-      <a href="/call" class="nav-cta" style="background: var(--taupe); border-color: var(--taupe); color: var(--white);">Book a Free Session</a>
+      <a href="/call" class="nav-cta">Book a Free Session</a>
 
     </div>
   </nav>
@@ -812,8 +879,6 @@
         <div class="hero-text reveal d1">
           <img src="images/ryf-expertise-logo-1.png" alt="Remember Your Future" style="height: 64px; width: auto; display: block; margin-bottom: 28px;">
 
-          <p class="hero-eyebrow">High-Touch Mentoring for Women on a Threshold in Life &amp; Leadership</p>
-
           <h1 class="hero-h">There is a <em>hidden gift</em> in the <em>crossroad</em> you are facing right now.</h1>
 
           <div class="hero-body reveal d2">
@@ -827,7 +892,7 @@
           </div>
 
           <div class="reveal d3" style="margin-top: 28px;">
-            <p style="font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Book Your Free Session</p>
+            <p style="font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Book Your Free Session</p>
             <p style="font-size: 13px; font-style: italic; color: var(--taupe, #8c756a); line-height: 1.7; margin-bottom: 14px;">A heart-to-heart to make sense of where you are — and what comes next.</p>
             <a href="/call" class="btn btn-gold">Reserve your spot</a>
           </div>
@@ -885,10 +950,9 @@
 
           <p>Your Soul is knocking on the door — waiting for you to be true to your purpose.</p>
 
-          <p>You are not starting over. You are in transition.<br>
-          That is why you are at a 'crossroad'.</p>
+          <p>You are not starting over. You are in transition.</p>
 
-          <p><strong>Crossroad moments — as uncomfortable as they feel — carry the greatest opportunity for growth, clarity, and meaningful change.</strong></p>
+          <p><strong>These moments — as uncomfortable as they feel — carry the greatest opportunity for growth, clarity, and meaningful change.</strong></p>
 
           <p><strong>I have been in your shoes. So have many of the women I've guided toward clarity.<br>
           And I know the best way to get to your truth and new direction — one honest step at a time.</strong></p>
@@ -999,79 +1063,22 @@
       <h2 class="h-main reveal d1">Your Path <em>Forward</em></h2>
       <p class="h-sub reveal d1" style="max-width: 540px;">You only have to decide on the next natural step forward.</p>
 
-      <div class="j-track" style="margin-top: 48px;">
-
-        <div class="j-card reveal">
-          <div class="j-num">1</div>
-          <div class="j-step-label">Pause &amp; Re-Start</div>
-          <div class="j-title"><a href="/call" style="color: inherit; text-decoration: none;">Next Level Session™</a></div>
-          <ul class="j-list">
-            <li>Where you are right now</li>
-            <li>What is changing in your life</li>
-            <li>What may be holding you back</li>
-            <li>What this moment is asking of you</li>
-            <li>What your next natural step could be</li>
-          </ul>
+      <div class="remember-grid">
+        <div class="remember-card reveal">
+          <p class="remember-word">Remember</p>
+          <p class="remember-line">who you are</p>
         </div>
-
-        <div class="j-card reveal d1">
-          <div class="j-num">2</div>
-          <div class="j-step-label">Awaken</div>
-          <div class="j-title">Mirror of Meaning™</div>
-          <ul class="j-list">
-            <li>Take an honest look into the Mirror of Meaning™</li>
-            <li>Recognize where you're (not yet) aligned to your purpose</li>
-            <li>Next step forward, your Authentic Shift™</li>
-          </ul>
+        <div class="remember-card reveal d1">
+          <p class="remember-word">Remember</p>
+          <p class="remember-line">why you are here</p>
         </div>
-
-        <div class="j-card reveal d2" style="grid-column: span 2;">
-          <div class="j-num">3</div>
-          <div class="j-step-label">Deepen &amp; Grow</div>
-          <div class="j-title">Master Vessel™</div>
-          <ul class="j-list">
-            <li>Become the MasterVessel of your Life's Purpose</li>
-            <li>Find back your path, purpose and re-align everything into alignment</li>
-            <li><strong>Part 1)</strong> Live Your Truth™ → Daily upgrade your Energy &amp; Alignment</li>
-            <li><strong>Part 2)</strong> Authentic Shift™ → Decode your Purpose, find Clarity &amp; Direction</li>
-            <li><strong>Part 3)</strong> Master Vessel™ → Channel, Embodiment &amp; Movement</li>
-          </ul>
+        <div class="remember-card reveal d2">
+          <p class="remember-word">Remember</p>
+          <p class="remember-line">what you are here to lead</p>
         </div>
-
-        <div class="j-card reveal d3" style="grid-column: span 2;">
-          <div class="j-num">4</div>
-          <div class="j-step-label">Fully Embody &amp; Expand</div>
-          <div class="j-title">Authentic Legacy Mastermind™</div>
-          <ul class="j-list">
-            <li>Build your life and work intentionally</li>
-            <li>Bring your Soul into Structure &amp; Form for Success</li>
-            <li>Grow, expand and scale</li>
-            <li>Build your Authentic Legacy™ to create the change you are here to make</li>
-          </ul>
-        </div>
-
-        <div class="j-card reveal d3">
-          <div class="j-num">5</div>
-          <div class="j-step-label">Experience &amp; Be</div>
-          <div class="j-title">Being &amp; Becoming Retreat</div>
-          <ul class="j-list">
-            <li>Step out of daily life, on purpose</li>
-            <li>Reconnect with yourself &amp; others</li>
-            <li>Move forward recharged &amp; with clarity</li>
-          </ul>
-        </div>
-
-        <div class="j-card reveal d3" style="grid-column: 4 / 5;">
-          <div class="j-num">6</div>
-          <div class="j-step-label">Additional Power Move</div>
-          <div class="j-title">Private Mentor Session(s)</div>
-          <ul class="j-list">
-            <li>Go beyond with laser focus on your situation</li>
-            <li>Get Leo's eyes on your life and work</li>
-          </ul>
-        </div>
-
       </div>
+
+      <p class="remember-close reveal d3">And find the courage to live it fully.</p>
 
     </div>
 
@@ -1100,12 +1107,6 @@
         </div>
       </div>
 
-      <div class="reveal d3" style="text-align: center; margin-top: 48px;">
-        <p style="font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--dark-brown); line-height: 1.9; max-width: 640px; margin: 0 auto 28px;">
-          If you feel that something in your life is shifting, and you would value a calm, honest conversation about what comes next — I warmly invite you to book your session.
-        </p>
-        <a href="/call" class="btn btn-fill" style="font-size: 12px; padding: 17px 34px; line-height: 1.4;">Book Your<br>'Next Level Session'</a>
-      </div>
 
     </div>
   </section>
@@ -1158,35 +1159,37 @@
 
 
   <!-- =============================================================
-       SECTION 7 — THE FOUNDATION
+       SECTION 7 — THE FOUNDATION: THE DAILY RETURN
   ============================================================= -->
-  <section id="start">
+  <section id="podcast">
     <div class="wrap">
       <div class="two-col">
 
         <div class="start-text">
           <span class="label reveal">The Foundation</span>
-          <h2 class="h-main reveal d1">You can start here TODAY<br><em>free trial</em></h2>
-          <p class="h-sub reveal d1">Start Here to Live Your Own Truth</p>
+          <h2 class="h-main reveal d1">You can start here <em>today</em></h2>
+          <p class="h-sub reveal d1">Not through pressure. Through presence.</p>
           <span class="rule reveal d1"></span>
 
           <div class="reveal d2">
-            <p>Inside the Living Your Truth™ Circle, you will receive:</p>
+            <p><strong>The Daily Return™ podcast is your place to come back to yourself.</strong></p>
+            <p>Short, grounded daily reflections to help you pause, reconnect with what matters, and return to who you truly are — before you choose, act, or lead.</p>
           </div>
 
           <ul class="start-list reveal d2">
-            <li>Daily guidance through the Daily Return™ (private podcast)</li>
-            <li>Weekly live recalibration calls with Leo</li>
-            <li>Monthly Authentic Shift™ Moves summaries</li>
-            <li>A supportive community of likeminded women in transition</li>
+            <li>Reset your energy and create space to breathe</li>
+            <li>Clear mental noise and reconnect with what matters</li>
+            <li>Listen to your inner knowing</li>
+            <li>Make choices from greater alignment, rather than automatic reaction</li>
           </ul>
 
-          <p class="reveal d2" style="font-style: italic; font-weight: 700; color: var(--dark-brown);">Not through pressure. Through presence.</p>
+          <p class="reveal d2" style="font-weight: 700; color: var(--dark-brown);">Before you do the work, return to yourself first.</p>
 
           <div class="btns reveal d3">
-            <a href="https://leoboxem.circle.so/checkout/lyt" target="_blank" rel="noopener" class="btn" style="background: #b98774; color: var(--white); border: 2px solid #b98774;">Yes — let me start immediately inside LYT</a>
+            <a href="https://app.helloaudio.fm/feed/2eb98fa1-1d6e-4e68-b8cf-1ff417c66ce4/signup" target="_blank" rel="noopener" class="btn" style="background: #b98774; color: var(--white); border: 2px solid #b98774;">Listen to The Daily Return™ Podcast</a>
+            <a href="https://substack.com/@leoboxem" target="_blank" rel="noopener" class="btn" style="background: transparent; color: var(--dark-brown); border: 2px solid #b98774;">Join the RYF Community on Substack</a>
           </div>
-          <p class="reveal d3" style="margin-top: 10px; font-size: 12px; font-style: italic; color: var(--taupe); opacity: .8; text-align: center;">With a 14-day Free Trial</p>
+          <p class="reveal d3" style="margin-top: 10px; font-size: 13px; color: var(--dark-brown);">The podcast is free to join.</p>
         </div>
 
         <div class="reveal d1">
@@ -1248,7 +1251,7 @@
   ============================================================= -->
   <footer>
     <p class="footer-name">Remember Your Future™</p>
-    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-tag">Leo Boxem · Mallorca, Spain</p>
     <p class="footer-links">
       © 2026 Leo Boxem &nbsp;·&nbsp;
       <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
