@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Crossroad Session — Leo Boxem | Remember Your Future™</title>
-  <meta name="description" content="A private heart-to-heart conversation to help you make sense of where you are — and discover the opportunity hidden inside this moment of change.">
+  <title>The Next Level Session™ — Leo Boxem | Remember Your Future™</title>
+  <meta name="description" content="You’re not falling apart. You’re being prepared for your next level. A genuine gift of clarity for the woman who knows there is more. Complimentary. No obligation.">
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Leo Boxem · Remember Your Future™">
-  <meta property="og:title" content="Your Crossroad Session — Leo Boxem">
-  <meta property="og:description" content="A private heart-to-heart conversation to help you make sense of where you are — and discover the opportunity hidden inside this moment of change.">
+  <meta property="og:title" content="The Next Level Session™ — Leo Boxem">
+  <meta property="og:description" content="Every woman deserves an extra pair of eyes when it matters. A genuine gift of clarity for the woman who knows there is more.">
   <meta property="og:image" content="https://www.leoboxem.com/images/ryf-banner.jpg">
   <meta property="og:url" content="https://www.leoboxem.com/call">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.leoboxem.com/images/ryf-banner.jpg">
 
-  <link rel="icon" type="image/png" href="images/ryf-favicon.png">
+  <link rel="icon" type="image/png" href="../images/ryf-favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
+    /* The file is deployed as fonts/Gistesy.ttf and stored locally as fonts/gistesy.ttf */
+    @font-face { font-family: 'Gistesy'; src: url('../fonts/Gistesy.ttf') format('truetype'), url('../fonts/gistesy.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
     /* =============================================================
        RESET
     ============================================================= */
@@ -41,6 +44,7 @@
       --f-head:   'League Spartan', sans-serif;
       --f-serif:  'Playfair Display', Georgia, serif;
       --f-body:   'Montserrat', sans-serif;
+      --f-script: 'Gistesy', 'Corinthia', cursive;
 
       --max: 1100px;
       --pv:  88px;
@@ -51,8 +55,8 @@
 
     body {
       font-family: var(--f-body);
-      font-size: 15px;
-      line-height: 1.9;
+      font-size: 16px;
+      line-height: 1.85;
       color: var(--black);
       background: var(--cream);
       -webkit-font-smoothing: antialiased;
@@ -76,7 +80,6 @@
     .d1 { transition-delay: .1s; }
     .d2 { transition-delay: .22s; }
     .d3 { transition-delay: .36s; }
-    .d4 { transition-delay: .5s; }
 
     /* =============================================================
        LAYOUT
@@ -84,11 +87,26 @@
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0 var(--ph);
     }
 
-    section { padding: var(--pv) var(--ph); }
-    section > .wrap { padding-left: 0; padding-right: 0; }
+    .narrow {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .center { text-align: center; }
+
+    section {
+      padding: var(--pv) var(--ph);
+      scroll-margin-top: 66px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
 
     /* =============================================================
        TYPOGRAPHY
@@ -98,8 +116,9 @@
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.22em;
+      line-height: 1.5;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--red-brown);
       display: block;
       margin-bottom: 16px;
     }
@@ -111,34 +130,47 @@
       background: linear-gradient(to right, var(--gold), transparent);
       margin-bottom: 28px;
     }
+    .center .rule {
+      margin-left: auto;
+      margin-right: auto;
+      background: var(--gold);
+    }
 
     .h-main {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(28px, 4vw, 50px);
+      font-family: var(--f-head);
+      font-size: clamp(30px, 4vw, 48px);
       font-weight: 700;
       color: var(--black);
       line-height: 1.15;
       letter-spacing: -0.01em;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
     }
 
-    .h-main em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
+    .h-small {
+      font-family: var(--f-head);
+      font-size: clamp(21px, 2.2vw, 25px);
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    /* Gistesy accent. Short words and phrases only. */
+    .script {
+      font-family: var(--f-script);
       font-weight: 400;
-      font-size: 1.15em;
-      color: var(--black);
+      font-size: 1.75em;
+      line-height: 0.8;
       letter-spacing: 0;
+      color: var(--red-brown);
     }
 
-    .h-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(17px, 2vw, 24px);
-      font-weight: 400;
-      color: var(--rose);
-      line-height: 1.4;
-      margin-bottom: 28px;
+    .strong-line {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.2vw, 24px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--dark-brown);
     }
 
     /* =============================================================
@@ -147,34 +179,40 @@
     .btn {
       display: inline-block;
       font-family: var(--f-head);
-      font-size: 11px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
       text-align: center;
       border-radius: 6px;
-      padding: 16px 28px;
-      line-height: 1.5;
+      padding: 19px 34px 16px;
+      line-height: 1.4;
       transition: opacity .2s, transform .2s;
       cursor: pointer;
     }
-    .btn:hover { opacity: .82; transform: translateY(-2px); }
+    .btn:hover { opacity: .85; transform: translateY(-2px); }
 
     .btn-fill {
       background: var(--red-brown);
       color: var(--white);
-      border: 2px solid var(--red-brown);
-    }
-    .btn-gold {
-      background: transparent;
-      color: var(--dark-brown);
-      border: 1.5px solid var(--gold);
+      box-shadow: 0 10px 28px rgba(141,66,21,.2);
     }
     .btn-blush {
       background: var(--blush);
       color: var(--dark-brown);
-      border: 2px solid var(--blush);
+    }
+    .btn-line {
+      background: transparent;
+      color: var(--blush);
+      border: 1.5px solid var(--blush);
+      font-size: 13px;
+    }
+
+    .btn-note {
+      font-size: 14px;
+      color: var(--dark-brown);
+      margin-top: 16px;
     }
 
     /* =============================================================
@@ -183,7 +221,7 @@
     .img-portrait {
       border-radius: 16px;
       overflow: hidden;
-      aspect-ratio: 3/4;
+      aspect-ratio: 4/5;
     }
     .img-portrait img {
       width: 100%;
@@ -216,29 +254,23 @@
     }
 
     .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-    .nav-brand-name {
       font-family: var(--f-serif);
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 500;
       color: var(--black);
       letter-spacing: 0.02em;
+      text-decoration: none;
       white-space: nowrap;
     }
 
     .nav-back {
       font-family: var(--f-head);
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--dark-brown);
-      opacity: .65;
+      opacity: .8;
       text-decoration: none;
       transition: opacity .2s;
     }
@@ -246,14 +278,15 @@
 
     .nav-cta {
       font-family: var(--f-head);
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
       text-transform: uppercase;
       color: var(--white);
       background: var(--red-brown);
       border-radius: 6px;
-      padding: 10px 18px;
+      padding: 12px 18px 9px;
       text-decoration: none;
       white-space: nowrap;
       transition: opacity .2s;
@@ -266,411 +299,456 @@
     ============================================================= */
     #hero {
       background: var(--cream);
-      padding-top: calc(var(--pv) + 66px);
-      text-align: center;
+      padding-top: calc(64px + 66px);
+      padding-bottom: 72px;
     }
 
-    .hero-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--f-head);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: .85;
-      margin-bottom: 20px;
-    }
+    #hero .two-col { grid-template-columns: 7fr 5fr; }
 
     h1.hero-h {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(38px, 6vw, 76px);
-      font-weight: 700;
+      font-family: var(--f-head);
+      font-size: clamp(50px, 7vw, 88px);
+      font-weight: 800;
       color: var(--black);
-      line-height: 1.1;
+      line-height: 0.98;
       letter-spacing: -0.02em;
-      margin-bottom: 20px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    h1.hero-h .the {
+      display: block;
+      font-size: 0.5em;
+      margin-bottom: 4px;
+    }
+    h1.hero-h .tm {
+      font-size: 0.4em;
+      font-weight: 700;
+      vertical-align: super;
+      line-height: 0;
     }
 
-    h1.hero-h em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.1em;
-      color: var(--red-brown);
-      letter-spacing: 0;
+    .hero-reframe {
+      font-family: var(--f-head);
+      font-size: clamp(24px, 2.8vw, 32px);
+      font-weight: 600;
+      color: var(--dark-brown);
+      line-height: 1.3;
+      margin-bottom: 24px;
     }
 
     .hero-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(17px, 2vw, 22px);
-      color: var(--taupe);
-      line-height: 1.6;
-      max-width: 620px;
-      margin: 0 auto 36px;
+      font-family: var(--f-head);
+      font-size: clamp(19px, 2.1vw, 24px);
+      font-weight: 400;
+      color: var(--dark-brown);
+      line-height: 1.4;
+      max-width: 520px;
+      margin-bottom: 34px;
     }
 
     /* =============================================================
-       OPENING INVITATION (centered, poetic)
+       ESSENTIAL MESSAGE BAND
     ============================================================= */
-    #invitation {
-      background: var(--white);
-    }
-
-    .invitation-inner {
-      max-width: 680px;
-      margin: 0 auto;
+    .message-band {
+      background: var(--blush);
+      padding: 32px var(--ph) 28px;
       text-align: center;
     }
-
-    .poem-block {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(16px, 1.8vw, 20px);
-      color: var(--dark-brown);
-      line-height: 2;
-      margin: 28px 0;
-    }
-
-    .poem-questions {
-      margin: 28px auto;
-      text-align: left;
-      display: inline-block;
-      font-family: var(--f-body);
-      font-size: 15px;
-      line-height: 2.1;
-      color: var(--black);
-    }
-
-    .poem-questions p {
-      padding-left: 22px;
-      position: relative;
-      margin-bottom: 0;
-    }
-
-    .poem-questions p::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-family: var(--f-serif);
-    }
-
-    .invitation-closing {
-      font-family: var(--f-body);
-      font-size: 15px;
-      line-height: 2;
-      color: var(--black);
-      margin-top: 28px;
-    }
-
-    /* =============================================================
-       TWO-COL
-    ============================================================= */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-
-    /* =============================================================
-       WHAT IT IS (cream)
-    ============================================================= */
-    #what { background: var(--cream); }
-
-    .explore-list {
-      list-style: none;
-      margin: 20px 0 32px;
-    }
-
-    .explore-list li {
-      padding: 10px 0 10px 24px;
-      position: relative;
-      font-size: 15px;
-      border-bottom: 1px solid rgba(195,153,80,.15);
-    }
-
-    .explore-list li:first-child { border-top: 1px solid rgba(195,153,80,.15); }
-
-    .explore-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 18px;
-      width: 10px; height: 1px;
-      background: var(--gold);
-    }
-
-    .mini-quote {
-      border-left: 2px solid var(--gold);
-      padding: 18px 22px;
-      margin: 28px 0 0;
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: 14px;
-      line-height: 2;
-      color: var(--dark-brown);
-    }
-
-    /* =============================================================
-       WHAT IT'S NOT (taupe/dark)
-    ============================================================= */
-    #not-section { background: var(--taupe); }
-
-    #not-section .label { color: rgba(225,198,183,.8); }
-    #not-section .h-main { color: var(--white); }
-    #not-section .h-main em { color: var(--blush); }
-    #not-section .rule { background: linear-gradient(to right, var(--blush), transparent); }
-
-    .not-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 40px;
-    }
-
-    .not-box {
-      background: rgba(0,0,0,.12);
-      border-radius: 12px;
-      padding: 28px 28px 24px;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .not-box-title {
+    .message-band p {
       font-family: var(--f-head);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.22em;
+      font-size: clamp(15px, 2vw, 22px);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      line-height: 1.6;
       text-transform: uppercase;
-      color: var(--blush);
-      margin-bottom: 14px;
-    }
-
-    .not-list {
-      list-style: none;
-    }
-
-    .not-list li {
-      padding: 6px 0 6px 18px;
-      position: relative;
-      font-size: 14px;
-      color: rgba(255,255,255,.85);
-      line-height: 1.7;
-    }
-
-    .not-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 14px;
-      width: 8px; height: 1px;
-      background: var(--blush);
-    }
-
-    .not-role {
-      margin-top: 36px;
-      padding: 22px 28px;
-      background: rgba(255,255,255,.07);
-      border-left: 2px solid var(--blush);
-      border-radius: 0 8px 8px 0;
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: 16px;
-      color: rgba(255,255,255,.88);
-      line-height: 1.85;
-    }
-
-    /* =============================================================
-       WHO IT'S FOR (blush)
-    ============================================================= */
-    #who { background: var(--blush); }
-
-    .who-grid {
-      display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: 72px;
-      align-items: center;
-    }
-
-    .for-list {
-      list-style: none;
-      margin: 20px 0 28px;
-    }
-
-    .for-list li {
-      padding: 10px 0 10px 24px;
-      position: relative;
-      font-size: 15px;
-      border-bottom: 1px solid rgba(141,66,21,.12);
-    }
-
-    .for-list li:first-child { border-top: 1px solid rgba(141,66,21,.12); }
-
-    .for-list li::before {
-      content: '✦';
-      position: absolute;
-      left: 0; top: 13px;
-      font-size: 8px;
       color: var(--red-brown);
     }
 
     /* =============================================================
-       WALK AWAY (cream)
+       SOMETHING HAS SHIFTED
     ============================================================= */
-    #walkaway { background: var(--cream); text-align: center; }
+    #shifted { background: var(--white); }
 
-    .walkaway-inner {
-      max-width: 740px;
-      margin: 0 auto;
+    .shift-list {
+      font-family: var(--f-head);
+      font-size: clamp(21px, 2.4vw, 26px);
+      font-weight: 600;
+      color: var(--red-brown);
+      line-height: 1.6;
+      margin: 8px 0 32px;
+    }
+    .shift-list p { margin-bottom: 0; }
+
+    .changed {
+      font-family: var(--f-head);
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.2;
+      margin: 8px 0 16px;
     }
 
-    .outcome-grid {
+    /* =============================================================
+       THE GIFT
+    ============================================================= */
+    #gift { background: var(--cream); }
+
+    #gift .label { margin-bottom: 30px; }
+
+    .explore-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin: 40px 0;
+      margin: 32px 0 40px;
       text-align: left;
     }
 
-    .outcome-card {
+    .explore-card {
       background: var(--white);
-      border: 1px solid rgba(195,153,80,.2);
+      border: 1px solid rgba(195,153,80,.25);
       border-radius: 12px;
-      padding: 24px 20px;
+      padding: 28px 28px 26px;
     }
-
-    .outcome-num {
-      font-family: var(--f-serif);
-      font-size: 28px;
-      font-style: italic;
-      color: var(--gold);
-      opacity: .5;
-      line-height: 1;
-      margin-bottom: 10px;
+    .explore-card h3 {
+      font-family: var(--f-head);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--red-brown);
+      line-height: 1.25;
+      margin-bottom: 8px;
     }
+    .explore-card p { font-size: 15px; line-height: 1.75; }
 
-    .outcome-text {
-      font-size: 14px;
-      line-height: 1.75;
-      color: var(--dark-brown);
-    }
-
-    .walkaway-note {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: 17px;
-      color: var(--rose);
-      line-height: 1.8;
+    .no-buy {
+      border-top: 1px solid rgba(195,153,80,.4);
+      border-bottom: 1px solid rgba(195,153,80,.4);
+      padding: 36px 24px 32px;
+      text-align: center;
     }
 
     /* =============================================================
-       PRACTICAL DETAILS
+       TO HELP YOU SEE
     ============================================================= */
-    #details { background: var(--white); }
+    #see { background: var(--white); }
 
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin: 40px 0 0;
+    #see .h-main { font-size: clamp(30px, 3.1vw, 38px); }
+
+    .someone {
+      list-style: none;
+      margin: 24px 0 0;
+    }
+    .someone li {
+      padding: 12px 0 12px 24px;
+      position: relative;
+      border-bottom: 1px solid rgba(195,153,80,.2);
+      font-weight: 500;
+      color: var(--dark-brown);
+      line-height: 1.6;
+    }
+    .someone li:first-child { border-top: 1px solid rgba(195,153,80,.2); }
+    .someone li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 24px;
+      width: 12px; height: 1px;
+      background: var(--gold);
     }
 
-    .detail-card {
-      background: var(--cream);
+    /* =============================================================
+       EVERY WOMAN DESERVES
+    ============================================================= */
+    #statement {
+      background: var(--dark-brown);
+      text-align: center;
+      padding-top: 104px;
+      padding-bottom: 96px;
+    }
+
+    .statement-h {
+      font-family: var(--f-head);
+      font-size: clamp(25px, 4vw, 46px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .statement-h .script {
+      display: block;
+      font-size: clamp(64px, 11vw, 136px);
+      line-height: 1.25;
+      margin: 0.14em 0 0.04em;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--blush);
+    }
+
+    .statement-after {
+      font-size: 18px;
+      color: rgba(255,255,255,.9);
+    }
+
+    /* =============================================================
+       WHAT IF NOTHING IS WRONG
+    ============================================================= */
+    #nothing-wrong { background: var(--cream); }
+
+    .whatif p {
+      font-size: clamp(16px, 1.7vw, 18px);
+      margin-bottom: 14px;
+    }
+
+    .story-swap {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      align-items: stretch;
+      width: min(1000px, calc(100vw - 2 * var(--ph)));
+      margin: 44px 0 44px 50%;
+      transform: translateX(-50%);
+    }
+    .story-card {
       border-radius: 12px;
       padding: 28px 24px;
-      border: 1px solid rgba(195,153,80,.2);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-
-    .detail-icon {
+    .story-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .story-arrow svg {
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+    .story-card p { font-size: 15px; margin-bottom: 10px; }
+    .story-card .story-quote {
       font-family: var(--f-head);
-      font-size: 9px;
+      font-size: clamp(21px, 2.3vw, 25px);
       font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
+      line-height: 1.3;
+      margin-bottom: 0;
     }
+    .story-old { background: #d6c9c2; }
+    .story-old .story-quote { color: var(--dark-brown); }
+    .story-new { background: var(--blush); }
+    .story-new .story-quote { color: var(--red-brown); }
 
-    .detail-value {
-      font-family: 'Outfit', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
+    .reframe {
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 30px 32px;
+      margin-bottom: 52px;
+    }
+    .reframe p {
+      font-family: var(--f-head);
+      font-size: clamp(21px, 2.5vw, 28px);
+      font-weight: 600;
       color: var(--dark-brown);
-      line-height: 1.2;
-      margin-bottom: 6px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .reframe p:last-child { margin-bottom: 0; }
+    .reframe .keep { white-space: nowrap; }
+    .reframe .reframe-script {
+      font-family: var(--f-script);
+      font-size: clamp(44px, 6vw, 64px);
+      font-weight: 400;
+      color: var(--red-brown);
+      line-height: 1.3;
+      margin-top: 10px;
     }
 
-    .detail-desc {
-      font-size: 13px;
-      color: var(--taupe);
-      line-height: 1.7;
+    .answer {
+      font-size: clamp(20px, 2.2vw, 24px);
+      font-weight: 500;
+      color: var(--dark-brown);
+      line-height: 1.5;
+      text-align: center;
+    }
+    .answer p { margin-bottom: 4px; }
+
+    .helps {
+      list-style: none;
+      max-width: 560px;
+      margin: 28px auto 44px;
+    }
+    .helps li {
+      padding: 7px 0 7px 24px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .helps li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 19px;
+      width: 12px; height: 1px;
+      background: var(--gold);
+    }
+
+    .invite {
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.2vw, 24px);
+      font-weight: 600;
+      color: var(--dark-brown);
+      line-height: 1.45;
+      text-align: center;
+      margin-bottom: 28px;
     }
 
     /* =============================================================
-       BOOKING (dark background)
+       THIS IS FOR YOU IF
+    ============================================================= */
+    #for-you { background: var(--blush); }
+
+    #for-you .label { color: var(--red-brown); }
+
+    #for-you .two-col { align-items: start; }
+
+    .built-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 8px 0 28px;
+    }
+    .built-chips span {
+      background: var(--cream);
+      border-radius: 40px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--dark-brown);
+      line-height: 1.4;
+      padding: 8px 18px;
+    }
+
+    .more-in-me {
+      font-family: var(--f-head);
+      font-size: clamp(28px, 3.4vw, 40px);
+      font-weight: 700;
+      color: var(--red-brown);
+      line-height: 1.2;
+    }
+
+    .may-list p { color: var(--dark-brown); margin-bottom: 18px; }
+    .may-list p:first-child { padding-top: 6px; }
+    .may-list .see-line {
+      font-family: var(--f-head);
+      font-size: clamp(21px, 2.3vw, 25px);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-top: 26px;
+    }
+
+    /* =============================================================
+       WHAT YOU'LL LEAVE WITH
+    ============================================================= */
+    #leave { background: var(--white); }
+
+    .not-lines {
+      font-size: clamp(16px, 1.7vw, 18px);
+      color: var(--dark-brown);
+      margin-bottom: 28px;
+    }
+    .not-lines p { margin-bottom: 2px; }
+
+    .leave-h {
+      font-size: clamp(25px, 3vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    .leave-list {
+      list-style: none;
+      margin: 12px 0 36px;
+      text-align: left;
+    }
+    .leave-list li {
+      padding: 15px 0 15px 28px;
+      position: relative;
+      border-bottom: 1px solid rgba(195,153,80,.2);
+      font-weight: 600;
+      color: var(--dark-brown);
+      line-height: 1.5;
+    }
+    .leave-list li:first-child { border-top: 1px solid rgba(195,153,80,.2); }
+    .leave-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0; top: 16px;
+      font-size: 12px;
+      color: var(--gold);
+    }
+    .leave-list .soft { font-weight: 400; }
+
+    /* =============================================================
+       ABOUT
+    ============================================================= */
+    #about { background: var(--cream); }
+
+    #about .two-col { grid-template-columns: 5fr 7fr; }
+
+    .about-name {
+      display: block;
+      font-family: var(--f-head);
+      font-size: clamp(20px, 2.1vw, 23px);
+      font-weight: 700;
+      color: var(--red-brown);
+      line-height: 1.45;
+      margin-top: 4px;
+    }
+
+    .about-philosophy { font-weight: 700; }
+
+    /* =============================================================
+       BOOKING
     ============================================================= */
     #booking {
       background: var(--dark-brown);
       text-align: center;
+      color: rgba(255,255,255,.92);
     }
 
-    #booking .label { color: var(--blush); opacity: .8; }
-    #booking .h-main { color: var(--white); }
-    #booking .h-main em { color: var(--blush); }
+    #booking .h-main { color: var(--white); text-transform: uppercase; }
 
-    .booking-sub {
+    #booking .h-small { color: var(--blush); margin-bottom: 28px; }
+
+    .come p { margin-bottom: 6px; }
+
+    .bring {
+      font-family: var(--f-head);
+      font-size: clamp(22px, 2.6vw, 28px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+      margin: 26px 0 36px;
+    }
+
+    .booking-note {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(16px, 1.8vw, 20px);
-      color: rgba(255,255,255,.65);
-      line-height: 1.7;
-      max-width: 560px;
-      margin: 0 auto 48px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255,255,255,.9);
+      margin-top: 20px;
+    }
+
+    #calendar {
+      scroll-margin-top: 82px;
+      max-width: 900px;
+      margin: 56px auto 28px;
     }
 
     .tidycal-wrap {
       background: var(--white);
       border-radius: 16px;
       overflow: hidden;
-      max-width: 900px;
-      margin: 0 auto 40px;
       min-height: 600px;
-    }
-
-    /* Fallback if embed doesn't load */
-    .booking-fallback {
-      padding: 60px 40px;
-    }
-
-    .booking-fallback p {
-      font-size: 15px;
-      color: var(--taupe);
-      margin-bottom: 28px;
-    }
-
-    /* =============================================================
-       FIT NOTE (blush strip)
-    ============================================================= */
-    .fit-strip {
-      background: var(--blush);
-      padding: 44px var(--ph);
-      text-align: center;
-    }
-
-    .fit-strip-inner {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .fit-strip p {
-      font-size: 15px;
-      color: var(--dark-brown);
-      line-height: 2;
+      color: var(--black);
     }
 
     /* =============================================================
@@ -693,51 +771,87 @@
 
     .footer-tag {
       font-family: var(--f-head);
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--blush);
-      opacity: .6;
-      margin-bottom: 24px;
+      opacity: .85;
+      margin-bottom: 20px;
     }
 
     .footer-links {
       font-family: var(--f-head);
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.3);
+      color: rgba(255,255,255,.75);
     }
 
     .footer-links a {
       color: var(--blush);
       text-decoration: none;
-      opacity: .7;
     }
 
-    .footer-links a:hover { opacity: 1; }
+    .footer-links a:hover { color: var(--white); }
 
     /* =============================================================
        MOBILE
     ============================================================= */
     @media (max-width: 880px) {
-      :root { --pv: 60px; --ph: 24px; }
+      :root { --pv: 64px; --ph: 24px; }
 
       .two-col,
-      .who-grid,
-      .not-grid { grid-template-columns: 1fr; gap: 40px; }
+      #hero .two-col,
+      #about .two-col { grid-template-columns: 1fr; gap: 40px; }
 
-      .outcome-grid { grid-template-columns: 1fr 1fr; }
-      .details-grid { grid-template-columns: 1fr 1fr; }
+      .nav-back { display: none; }
 
-      .who-grid .img-portrait { order: -1; }
+      #hero { padding-top: calc(44px + 66px); padding-bottom: 56px; }
+      #hero .img-portrait { max-width: 460px; }
+
+      #about .img-portrait,
+      #see .img-portrait { max-width: 460px; }
+
+      #statement { padding-top: 72px; padding-bottom: 68px; }
+    }
+
+    @media (max-width: 700px) {
+      .story-swap {
+        grid-template-columns: 1fr;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        transform: none;
+      }
+      .story-arrow svg { transform: rotate(90deg); }
     }
 
     @media (max-width: 560px) {
-      h1.hero-h { font-size: 42px; }
-      .outcome-grid { grid-template-columns: 1fr; }
-      .details-grid { grid-template-columns: 1fr 1fr; }
+      .explore-grid { grid-template-columns: 1fr; }
+
+      nav { padding: 0 16px; }
+      .nav-in { gap: 10px; }
+      .nav-brand { font-size: 14px; }
+      .nav-cta { padding: 10px 12px 8px; letter-spacing: 0.08em; }
+
+      #gift .h-main { line-height: 1.4; }
+
+      .btn { display: block; padding-left: 18px; padding-right: 18px; }
+
+      .message-band p { letter-spacing: 0.14em; }
+
+      .statement-h { letter-spacing: 0.03em; }
+      .statement-h .script { font-size: 15vw; }
+
+      .reframe { padding: 24px 20px; }
+
+      .tidycal-wrap { border-radius: 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
     }
   </style>
 </head>
@@ -749,11 +863,9 @@
   <nav>
     <div class="nav-in">
 
-      <a href="index.html" class="nav-brand">
-        <span class="nav-brand-name">Remember Your Future™</span>
-      </a>
+      <a href="/" class="nav-brand">Remember Your Future™</a>
 
-      <a href="index.html" class="nav-back">← Back to main page</a>
+      <a href="/" class="nav-back">← Back to main page</a>
 
       <a href="#booking" class="nav-cta">Book Your Session</a>
 
@@ -766,104 +878,27 @@
   ============================================================= -->
   <section id="hero">
     <div class="wrap">
-      <div class="hero-inner">
-
-        <p class="hero-eyebrow reveal">A private session with Leo Boxem</p>
-
-        <h1 class="hero-h reveal d1">Your<br><em>Crossroad</em><br>Session</h1>
-
-        <p class="hero-sub reveal d2">
-          A valuable heart-to-heart conversation to help you make sense of where you are —
-          and discover the opportunity hidden inside this moment of change.
-        </p>
-
-        <div class="reveal d3">
-          <a href="#booking" class="btn btn-fill">Book Your Session — Complimentary</a>
-        </div>
-
-        <div class="reveal d4" style="display: flex; justify-content: center; gap: 36px; margin-top: 44px; flex-wrap: wrap;">
-          <span style="font-family: var(--f-head); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); opacity: .8;">30 min · Online · Complimentary</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       OPENING INVITATION
-  ============================================================= -->
-  <section id="invitation">
-    <div class="wrap">
-      <div class="invitation-inner">
-
-        <p class="poem-block reveal d1">
-          There are moments in life when something shifts.
-        </p>
-
-        <div class="reveal d2" style="font-size: 15px; line-height: 2.1; color: var(--black);">
-          <p>Your life may still look the same on the outside —<br>
-          but inside, you feel that something is changing.</p>
-          <p>You may be questioning:</p>
-        </div>
-
-        <div class="poem-questions reveal d2">
-          <p>What do I really want now?</p>
-          <p>Is this still the life I am meant to live?</p>
-          <p>Why does what used to work no longer feel right?</p>
-        </div>
-
-        <div class="invitation-closing reveal d3">
-          <p>This does not mean something is wrong.<br>
-          It often means <strong>something new is trying to emerge.</strong></p>
-          <p>And that is exactly what this session is for.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       WHAT THIS SESSION IS
-  ============================================================= -->
-  <section id="what">
-    <div class="wrap">
       <div class="two-col">
 
         <div>
-          <span class="label reveal">What This Session Is</span>
-          <h2 class="h-main reveal d1">A Space to<br><em>See Clearly</em></h2>
-          <p class="h-sub reveal d1">Private. Focused. Without pressure.</p>
-          <span class="rule reveal d1"></span>
+          <h1 class="hero-h reveal"><span class="the">The</span>Next Level Session<span class="tm">™</span></h1>
 
-          <div class="reveal d2">
-            <p>Your Crossroad Session is a private one-on-one conversation with Leo.</p>
-            <p>A safe, focused space where you can pause, reflect, and look honestly at where you are — without pressure, without judgment, and without needing to have everything figured out.</p>
-            <p><strong>Together, we will explore:</strong></p>
+          <p class="hero-reframe reveal d1">
+            You’re not falling apart.<br>
+            You’re being <span class="script">prepared</span> for your next level.
+          </p>
+
+          <p class="hero-sub reveal d2">What if the thing you thought was blocking you is actually clearing the way?</p>
+
+          <div class="reveal d3">
+            <a href="#booking" class="btn btn-fill">Book your Next Level Session™</a>
+            <p class="btn-note">Complimentary. No obligation.</p>
           </div>
-
-          <ul class="explore-list reveal d2">
-            <li>Where you are right now</li>
-            <li>What is changing in your life</li>
-            <li>What may be holding you back</li>
-            <li>What this moment is asking of you</li>
-            <li>What your next natural step could be</li>
-          </ul>
-
-          <div class="mini-quote reveal d3">
-            <p>"I can finally see my situation clearly."</p>
-            <p>"I feel completely seen in my path and my true power!"</p>
-            <p>"I now dare to make changes, and feel calm about it."</p>
-            <p>"I leave the call with clarity and a roadmap."</p>
-            <p style="margin-top: 10px; font-style: normal; font-size: 12px; font-family: var(--f-head); letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe);">— Women after their session</p>
-          </div>
-
         </div>
 
         <div class="reveal d1">
           <div class="img-portrait">
-            <img src="images/talk-to-leo-3-4.jpg" alt="A conversation with Leo">
+            <img src="../images/leo-ibiza-sea.jpg" alt="Leo Boxem by the sea">
           </div>
         </div>
 
@@ -873,41 +908,83 @@
 
 
   <!-- ============================================================
-       WHAT IT'S NOT
+       ESSENTIAL MESSAGE
   ============================================================= -->
-  <section id="not-section">
-    <div class="wrap">
+  <div class="message-band">
+    <p>Every woman deserves an extra pair of eyes when it matters</p>
+  </div>
 
-      <span class="label reveal">No pressure. No agenda.</span>
-      <h2 class="h-main reveal d1">What This<br>Session Is <em>Not</em></h2>
-      <span class="rule reveal d1"></span>
 
-      <div class="not-grid">
+  <!-- ============================================================
+       SOMETHING HAS SHIFTED
+  ============================================================= -->
+  <section id="shifted">
+    <div class="narrow center">
 
-        <div class="not-box reveal d1">
-          <div class="not-box-title">This is not</div>
-          <ul class="not-list">
-            <li>A sales call</li>
-            <li>Therapy</li>
-            <li>A coaching session</li>
-          </ul>
-        </div>
+      <p class="h-small reveal">Maybe something in your life has shifted.</p>
 
-        <div class="not-box reveal d2">
-          <div class="not-box-title">You do not need to</div>
-          <ul class="not-list">
-            <li>Prepare anything</li>
-            <li>Impress anyone</li>
-            <li>Decide anything during the call</li>
-          </ul>
-        </div>
-
+      <div class="shift-list reveal d1">
+        <p>Your relationship.</p>
+        <p>Your work.</p>
+        <p>Your leadership.</p>
+        <p>Your sense of who you are.</p>
       </div>
 
-      <div class="not-role reveal d3">
-        My role is simple.<br>
-        To listen. To understand your situation.<br>
-        And to help you see the opportunity hidden inside this moment of change.
+      <div class="reveal d2">
+        <p>Maybe you’ve built a life you once wanted — and yet you know something more is calling you.</p>
+        <p>Maybe you can’t quite explain what’s happening.</p>
+        <p style="margin-top: 32px;">You just know:</p>
+      </div>
+
+      <p class="changed reveal d2">Something has changed.</p>
+
+      <p class="reveal d3">And you’re ready to understand what it means.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE GIFT
+  ============================================================= -->
+  <section id="gift">
+    <div class="wrap" style="max-width: 900px;">
+
+      <div class="center">
+        <span class="label reveal">The Next Level Session™</span>
+        <h2 class="h-main reveal d1">A genuine <span class="script">gift of clarity</span><br>for the woman who knows there is more.</h2>
+        <span class="rule reveal d1"></span>
+
+        <div class="narrow reveal d2">
+          <p>Bring me what’s happening in your life, relationships, work or leadership.</p>
+          <p>I’ll help you step back from the noise and see what may actually be happening underneath the surface.</p>
+          <p style="margin-top: 28px;"><strong>Together, we’ll explore:</strong></p>
+        </div>
+      </div>
+
+      <div class="explore-grid">
+        <div class="explore-card reveal">
+          <h3>What’s really happening.</h3>
+          <p>The deeper pattern beneath what you’re currently experiencing.</p>
+        </div>
+        <div class="explore-card reveal d1">
+          <h3>What you’re ready for.</h3>
+          <p>Not what you think you should want next — but what is actually calling you forward.</p>
+        </div>
+        <div class="explore-card reveal">
+          <h3>What needs to shift.</h3>
+          <p>What may be keeping you where you are, and what you’re being asked to see differently.</p>
+        </div>
+        <div class="explore-card reveal d1">
+          <h3>How to move forward.</h3>
+          <p>You’ll leave with a clearer sense of your first next step — whether that step is with me or without me.</p>
+        </div>
+      </div>
+
+      <div class="no-buy reveal">
+        <h3 class="h-small">You don’t have to buy anything.</h3>
+        <p>This is not a disguised sales call.</p>
+        <p>It is a conversation designed to give you something valuable whether or not we ever work together.</p>
       </div>
 
     </div>
@@ -915,38 +992,34 @@
 
 
   <!-- ============================================================
-       WHO IT'S FOR
+       TO HELP YOU SEE
   ============================================================= -->
-  <section id="who">
+  <section id="see">
     <div class="wrap">
-      <div class="who-grid">
+      <div class="two-col">
 
-        <div class="reveal d1">
+        <div class="reveal">
           <div class="img-portrait">
-            <img src="images/leo-on-rocks-smile.jpg" alt="Leo Boxem">
+            <img src="../images/leo-conversation.jpg" alt="Leo in a one-on-one conversation with a woman" loading="lazy">
           </div>
         </div>
 
         <div>
-          <span class="label reveal">This Session Is For You If</span>
-          <h2 class="h-main reveal d1">You Are <em>Ready</em><br>for Clarity</h2>
+          <h2 class="h-main reveal d1">I am not trying to get you to buy.<br>I am trying to help you <span class="script">see.</span></h2>
           <span class="rule reveal d1"></span>
 
-          <ul class="for-list reveal d2">
-            <li>Something in your life is changing</li>
-            <li>Your current path no longer fully fits</li>
-            <li>You are standing at a crossroad</li>
-            <li>You want clarity before making your next move</li>
-            <li>You know you are meant for more — but are not yet sure how</li>
-            <li>You are in a transition in life or work</li>
-            <li>You are questioning your direction</li>
-            <li>You feel restless, stuck, or uncertain</li>
-            <li>You are ready to take yourself seriously again</li>
-            <li>You are looking for honest guidance from someone who has walked this path</li>
+          <div class="reveal d2">
+            <p>I deeply believe in my method.</p>
+            <p>It has helped more than 4,500 women before you.</p>
+            <p>But that’s not why I’m inviting you into this conversation.</p>
+            <p>I’m inviting you because I believe that sometimes, when you’re in the middle of a significant life moment, you need another set of eyes.</p>
+          </div>
+
+          <ul class="someone reveal d3">
+            <li>Someone who can step outside the story you’re living inside.</li>
+            <li>Someone who can see what you can’t quite see yet.</li>
+            <li>Someone who can name what is really happening.</li>
           </ul>
-
-          <a href="#booking" class="btn btn-fill reveal d3">Book Your Session</a>
-
         </div>
 
       </div>
@@ -955,89 +1028,113 @@
 
 
   <!-- ============================================================
-       WHAT YOU WALK AWAY WITH
+       EVERY WOMAN DESERVES
   ============================================================= -->
-  <section id="walkaway">
+  <section id="statement">
     <div class="wrap">
-      <div class="walkaway-inner">
-
-        <span class="label reveal" style="text-align: center;">What You Will Walk Away With</span>
-        <h2 class="h-main reveal d1">One Conversation.<br><em>Real</em> Clarity.</h2>
-        <p class="h-sub reveal d1">By the end of this session, you will:</p>
-
-        <div class="outcome-grid">
-
-          <div class="outcome-card reveal">
-            <div class="outcome-num">01</div>
-            <div class="outcome-text">Understand what is really happening in your life right now</div>
-          </div>
-
-          <div class="outcome-card reveal d1">
-            <div class="outcome-num">02</div>
-            <div class="outcome-text">Feel more grounded and clear about where you are</div>
-          </div>
-
-          <div class="outcome-card reveal d2">
-            <div class="outcome-num">03</div>
-            <div class="outcome-text">See your situation from a new perspective</div>
-          </div>
-
-          <div class="outcome-card reveal d1">
-            <div class="outcome-num">04</div>
-            <div class="outcome-text">Recognize the opportunity hidden inside this moment</div>
-          </div>
-
-          <div class="outcome-card reveal d2">
-            <div class="outcome-num">05</div>
-            <div class="outcome-text">Know what your next natural step could be</div>
-          </div>
-
-          <div class="outcome-card reveal d3" style="display: flex; flex-direction: column; justify-content: center; background: var(--cream); border: 1px solid rgba(195,153,80,.3);">
-            <div class="outcome-text" style="font-family: var(--f-serif); font-style: italic; font-size: 15px; color: var(--dark-brown); line-height: 1.9;">
-              Even if that step is simply:<br>Pause.<br>Adjust.<br>Or take one small, honest move forward.
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      <h2 class="statement-h reveal">
+        Every Woman Deserves
+        <span class="script">an extra pair of eyes</span>
+        When It Matters
+      </h2>
+      <p class="statement-after reveal d1">That’s what I want to offer you.</p>
     </div>
   </section>
 
 
   <!-- ============================================================
-       PRACTICAL DETAILS
+       WHAT IF NOTHING IS WRONG
   ============================================================= -->
-  <section id="details">
+  <section id="nothing-wrong">
+    <div class="narrow">
+
+      <h2 class="h-main center reveal">What if nothing is wrong?</h2>
+      <div class="center"><span class="rule reveal"></span></div>
+
+      <div class="whatif reveal d1">
+        <p>What if the relationship changing is showing you something?</p>
+        <p>What if the career that no longer fits is making room?</p>
+        <p>What if the business that has stopped feeling right is asking you to lead differently?</p>
+        <p>What if the restlessness isn’t a sign that you’ve lost yourself —<br>
+        but an invitation to remember yourself?</p>
+      </div>
+
+      <div class="story-swap">
+        <div class="story-card story-old reveal">
+          <p>You may have been telling yourself:</p>
+          <p class="story-quote">“My life is falling apart.”</p>
+        </div>
+        <div class="story-arrow reveal d1" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#8d4215" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h27"/><path d="M23 10l10 10-10 10"/></svg>
+        </div>
+        <div class="story-card story-new reveal d2">
+          <p>I’m going to ask you to consider another possibility:</p>
+          <p class="story-quote">“Maybe I’m being prepared.”</p>
+        </div>
+      </div>
+
+      <div class="reframe reveal">
+        <p>You’re not falling apart. <span class="keep">You’re being prepared.</span></p>
+        <p>You’re not being delayed.</p>
+        <p class="reframe-script">You’re being prepared.</p>
+      </div>
+
+      <div class="answer reveal">
+        <p>You don’t need to know the answer before we meet.</p>
+        <p>That’s what the session is for.</p>
+      </div>
+
+      <ul class="helps reveal d1">
+        <li>What is actually happening in your life right now.</li>
+        <li>What the disruption may be revealing.</li>
+        <li>What you may be ready to remember, release or realign.</li>
+        <li>What your next step could be.</li>
+      </ul>
+
+      <p class="invite reveal">If you’re ready to understand why this is happening and what it might be preparing you for, book your Next Level Session.</p>
+
+      <div class="center reveal d1">
+        <a href="#booking" class="btn btn-fill">Book your Next Level Session™</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THIS IS FOR YOU IF
+  ============================================================= -->
+  <section id="for-you">
     <div class="wrap">
 
-      <span class="label reveal">Practical Details</span>
-      <h2 class="h-main reveal d1">Simple.<br><em>Straightforward.</em></h2>
+      <h2 class="h-main reveal" style="margin-bottom: 40px;">THIS IS FOR YOU IF...</h2>
 
-      <div class="details-grid">
+      <div class="two-col">
 
-        <div class="detail-card reveal">
-          <div class="detail-icon">Length</div>
-          <div class="detail-value">30 min</div>
-          <div class="detail-desc">Extended to 45 minutes if needed</div>
+        <div>
+          <p class="h-small reveal">You’ve already built something.</p>
+
+          <div class="built-chips reveal d1">
+            <span>A life.</span>
+            <span>A career.</span>
+            <span>A business.</span>
+            <span>A family.</span>
+            <span>A reputation.</span>
+            <span>A way of living.</span>
+          </div>
+
+          <div class="reveal d2">
+            <p style="color: var(--dark-brown); margin-bottom: 6px;">And somewhere inside, you know:</p>
+            <p class="more-in-me">There is more in me.</p>
+          </div>
         </div>
 
-        <div class="detail-card reveal d1">
-          <div class="detail-icon">Location</div>
-          <div class="detail-value">Online</div>
-          <div class="detail-desc">Via Zoom — from wherever you are</div>
-        </div>
-
-        <div class="detail-card reveal d2">
-          <div class="detail-icon">Investment</div>
-          <div class="detail-value">Free</div>
-          <div class="detail-desc">Complimentary — no strings attached</div>
-        </div>
-
-        <div class="detail-card reveal d3">
-          <div class="detail-icon">After Booking</div>
-          <div class="detail-value">Confirmed</div>
-          <div class="detail-desc">You will receive a confirmation email with your Zoom link and simple instructions</div>
+        <div class="may-list reveal d1">
+          <p>You may be in a season of disruption, questioning, transition or change.</p>
+          <p>You may feel successful on the outside and uncertain on the inside.</p>
+          <p>You may know that the next chapter is calling, but you can’t yet see what it looks like.</p>
+          <p>You don’t need another person telling you what you <em>should</em> do.</p>
+          <p class="see-line">You want someone who can help you see.</p>
         </div>
 
       </div>
@@ -1047,15 +1144,75 @@
 
 
   <!-- ============================================================
-       FIT NOTE
+       WHAT YOU'LL LEAVE WITH
   ============================================================= -->
-  <div class="fit-strip">
-    <div class="fit-strip-inner">
-      <p class="reveal"><em style="font-family: var(--f-serif); font-style: italic; font-size: 17px;">If, during our conversation, it becomes clear that I can support you further —</em></p>
-      <p class="reveal d1">I may share what that next step could look like. This could be joining the Living Your Truth™ community, working together more closely, or taking a deeper step into your next chapter.</p>
-      <p class="reveal d2"><strong>But there is never pressure to continue. This session is, first and foremost, a moment of clarity.</strong></p>
+  <section id="leave">
+    <div class="narrow center">
+
+      <div class="not-lines reveal">
+        <p>Not a sales pitch.</p>
+        <p>Not another list of things to fix.</p>
+        <p>Not more information to overwhelm you.</p>
+      </div>
+
+      <h2 class="h-main leave-h reveal d1">WHAT YOU’LL LEAVE WITH</h2>
+
+      <ul class="leave-list reveal d2">
+        <li>Clarity about what’s really happening.</li>
+        <li>A deeper understanding of what you truly want next.</li>
+        <li>A perspective on what this season may be preparing you for.</li>
+        <li>A clear first step for moving forward.</li>
+        <li><span class="soft">And, if it feels aligned,</span> clarity about whether working together makes sense.</li>
+      </ul>
+
+      <div class="reveal">
+        <p>There is no obligation.</p>
+        <p>Sometimes the right next step is with me.</p>
+        <p>Sometimes it isn’t.</p>
+        <p class="strong-line" style="margin-top: 24px;">My job is to help you see the difference.</p>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="two-col">
+
+        <div class="reveal">
+          <div class="img-portrait">
+            <img src="../images/leo-professional-wild.jpg" alt="Leo Boxem" loading="lazy">
+          </div>
+        </div>
+
+        <div>
+          <h2 class="h-main reveal d1">A LITTLE ABOUT ME</h2>
+          <span class="rule reveal d1"></span>
+
+          <div class="reveal d2">
+            <p class="strong-line" style="margin-bottom: 10px;">I’m Leo.</p>
+            <p>And I have a particular way of seeing women in moments like this.</p>
+            <p>I look beneath the apparent problem.<br>
+            I listen for what’s really happening.<br>
+            <span class="about-name">I name what you may not yet have words for.</span></p>
+            <p>And I help you see how the disruption you’re experiencing may actually be preparing you for the next level of your life, leadership and life’s work.</p>
+            <p>This is the philosophy behind <strong>Remember Your Future™:</strong></p>
+            <p class="about-philosophy">Remember who you are.<br>
+            Remember why you’re here.<br>
+            Remember what you’re here to lead.</p>
+            <p>Because your next chapter isn’t about becoming someone new.<br>
+            It’s about remembering what’s already there.</p>
+            <p>I have helped over 4,500 women transform their lives and businesses — adding more truth, alignment and purpose. I am looking forward to seeing what we can do together for you.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
   <!-- ============================================================
@@ -1064,32 +1221,40 @@
   <section id="booking">
     <div class="wrap">
 
-      <span class="label reveal" style="text-align:center; display:block;">Reserve Your Spot</span>
-      <h2 class="h-main reveal d1" style="text-align:center;">Book Your<br><em>Crossroad Session</em></h2>
+      <div class="narrow">
+        <h2 class="h-main reveal">Ready to see what’s really happening?</h2>
+        <p class="h-small reveal d1">Book your Next Level Session™.</p>
 
-      <p class="booking-sub reveal d2">
-        If you feel that something in your life is shifting,
-        and you would value a calm, honest conversation about what comes next —
-        I warmly invite you to book your session.
-      </p>
+        <div class="come reveal d1">
+          <p>Come as you are.</p>
+          <p>Bring the thing you’re trying to make sense of.</p>
+          <p>You don’t need to prepare the perfect story.</p>
+          <p>You don’t need to know what you want to do next.</p>
+          <p>Just bring what’s real.</p>
+        </div>
+
+        <p class="bring reveal d2">I’ll bring the extra pair of eyes.</p>
+
+        <div class="reveal d2">
+          <a href="#calendar" class="btn btn-blush">Book your Next Level Session™</a>
+          <p class="booking-note">Complimentary. No obligation. Come receive the clarity.</p>
+        </div>
+      </div>
 
       <!-- TidyCal embed -->
-      <!-- IMPORTANT: Replace the data-path below with your actual TidyCal booking link path -->
-      <!-- Example: if your URL is tidycal.com/perfectonvolmaakt/crossroad-session, use that path -->
-      <div class="tidycal-wrap reveal d3">
-        <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
-        <div class="tidycal-embed" data-path="leoboxem/your-crossroad-session"></div>
+      <div id="calendar">
+        <div class="tidycal-wrap">
+          <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+          <div class="tidycal-embed" data-path="leoboxem/next-level-session"></div>
+        </div>
       </div>
 
       <!-- Fallback direct link button -->
-      <div class="reveal d3" style="text-align: center; margin-top: 8px;">
-        <a href="https://tidycal.com/leoboxem/your-crossroad-session"
-           target="_blank" rel="noopener"
-           class="btn btn-blush">
-          Can't see the calendar? Open booking page →
-        </a>
-        <!-- Update both href links above with your actual TidyCal URL -->
-      </div>
+      <a href="https://tidycal.com/leoboxem/next-level-session"
+         target="_blank" rel="noopener"
+         class="btn btn-line">
+        Can’t see the calendar? Open booking page →
+      </a>
 
     </div>
   </section>
@@ -1100,12 +1265,12 @@
   ============================================================= -->
   <footer>
     <p class="footer-name">Remember Your Future™</p>
-    <p class="footer-tag">Leo Boxem · Ibiza, Spain</p>
+    <p class="footer-tag">Leo Boxem · Mallorca, Spain</p>
     <p class="footer-links">
       © 2026 Leo Boxem &nbsp;·&nbsp;
       <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
       &nbsp;·&nbsp;
-      <a href="index.html">Back to main page</a>
+      <a href="/">Back to main page</a>
       &nbsp;·&nbsp;
       <a href="https://www.leoboxem.com">www.leoboxem.com</a>
     </p>
