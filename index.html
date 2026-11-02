@@ -528,29 +528,36 @@
     }
 
     .remember-card {
-      background: var(--white);
-      border: 1px solid rgba(195,153,80,.2);
       border-radius: 12px;
-      padding: 40px 16px;
+      padding: 44px 20px 40px;
       text-align: center;
     }
 
+    .remember-card-1 { background: #f4e7df; }
+    .remember-card-2 { background: var(--blush); }
+    .remember-card-3 { background: var(--taupe); }
+
     .remember-word {
-      font-family: var(--f-head);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--dark-brown);
-      margin-bottom: 12px;
+      font-family: var(--f-script);
+      font-size: 44px;
+      line-height: 1;
+      color: var(--red-brown);
+      margin-bottom: 14px;
     }
 
     .remember-line {
-      font-family: var(--f-script);
-      font-size: clamp(40px, 3.9vw, 50px);
-      line-height: 1.15;
-      color: var(--red-brown);
+      font-family: var(--f-head);
+      font-size: clamp(20px, 1.9vw, 25px);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-wrap: balance;
+      color: var(--dark-brown);
     }
+
+    .remember-card-3 .remember-word { color: #f4e7df; }
+    .remember-card-3 .remember-line { color: var(--white); }
 
     .remember-close {
       font-family: 'Outfit', sans-serif;
@@ -562,9 +569,7 @@
       margin-top: 40px;
     }
 
-    #overview { background: var(--cream); }
-
-    .overview-visual { display: block; max-width: 860px; margin: 0 auto; }
+    .overview-visual { display: block; max-width: 860px; margin: 32px auto 0; }
     .overview-visual img { display: block; width: 100%; height: auto; }
 
     .j-track {
@@ -845,7 +850,7 @@
     @media (max-width: 520px) {
       .j-track { grid-template-columns: 1fr; }
       .j-card { grid-column: auto !important; }
-      .overview-visual { margin: 0 calc(-1 * var(--ph)); max-width: none; }
+      .overview-visual { margin: 16px calc(-1 * var(--ph)) 0; max-width: none; }
 
       .nav-in { gap: 12px; }
       .nav-brand { flex-shrink: 1; min-width: 0; }
@@ -898,9 +903,9 @@
             Not because you failed.<br>
             Because you are evolving into something more aligned<br>
             <em>(and your Soul is knocking on the door — until you answer....)</em></p>
-            <p>You are here for a reason.<br>
-            And there is a proven path forward<br>
-            if you are ready to get to your next level.</p>
+            <p>You are here for a reason.</p>
+            <p><strong>And there is a proven path forward<br>
+            if you are ready to get to your next level.</strong></p>
           </div>
 
           <div class="reveal d3" style="margin-top: 28px;">
@@ -1071,25 +1076,30 @@
     <div class="wrap">
 
       <span class="label reveal">How to Remember Your Future™</span>
-      <h2 class="h-main reveal d1">Your Path <em>Forward</em></h2>
+      <h2 class="h-main reveal d1">Your Path Forward</h2>
       <p class="h-sub reveal d1" style="max-width: 540px;">You only have to decide on the next natural step forward.</p>
 
       <div class="remember-grid">
-        <div class="remember-card reveal">
-          <p class="remember-word">Remember</p>
+        <div class="remember-card remember-card-1 reveal">
+          <p class="remember-word">remember</p>
           <p class="remember-line">who you are</p>
         </div>
-        <div class="remember-card reveal d1">
-          <p class="remember-word">Remember</p>
+        <div class="remember-card remember-card-2 reveal d1">
+          <p class="remember-word">remember</p>
           <p class="remember-line">why you are here</p>
         </div>
-        <div class="remember-card reveal d2">
-          <p class="remember-word">Remember</p>
+        <div class="remember-card remember-card-3 reveal d2">
+          <p class="remember-word">remember</p>
           <p class="remember-line">what you are here to lead</p>
         </div>
       </div>
 
       <p class="remember-close reveal d3">And find the courage to live it fully.</p>
+
+      <picture class="overview-visual reveal">
+        <source media="(max-width: 600px)" srcset="images/ryf-overview-sacred-geometry-phone.png">
+        <img src="images/ryf-overview-sacred-geometry.png" alt="Remember Your Future: Private 1:1 Mentoring, Group Program, In Person Retreat in Ibiza and Mallorca, Motivational Speaking and Collaboration, Resources to Remember, The Daily Podcast, Community and Movement" loading="lazy">
+      </picture>
 
     </div>
 
@@ -1187,6 +1197,14 @@
 
           <div class="btns reveal d3">
             <a href="https://app.helloaudio.fm/feed/2eb98fa1-1d6e-4e68-b8cf-1ff417c66ce4/signup" target="_blank" rel="noopener" class="btn" style="background: #b98774; color: var(--white); border: 2px solid #b98774;">Listen to The Daily Return™ Podcast</a>
+          </div>
+
+          <div class="reveal d3" style="margin-top: 32px;">
+            <p style="margin-bottom: 6px;"><strong>The Remember Your Future™ movement</strong></p>
+            <p>The movement for midlife women who know they are meant for more.</p>
+          </div>
+
+          <div class="btns reveal d3" style="margin-top: 16px;">
             <a href="https://substack.com/@leoboxem" target="_blank" rel="noopener" class="btn" style="background: transparent; color: var(--dark-brown); border: 2px solid #b98774;">Join the RYF Community on Substack</a>
           </div>
           <p class="reveal d3" style="margin-top: 10px; font-size: 13px; color: var(--dark-brown);">Both are free to join.</p>
@@ -1205,19 +1223,6 @@
       <img src="images/ibiza-sea.jpg" alt="Ibiza sea" style="width: 100%; height: auto; display: block;">
     </div>
 
-  </section>
-
-
-  <!-- =============================================================
-       OVERVIEW VISUAL
-  ============================================================= -->
-  <section id="overview">
-    <div class="wrap">
-      <picture class="overview-visual reveal">
-        <source media="(max-width: 600px)" srcset="images/ryf-overview-sacred-geometry-phone.png">
-        <img src="images/ryf-overview-sacred-geometry.png" alt="Remember Your Future: Private 1:1 Mentoring, Group Program, In Person Retreat in Ibiza and Mallorca, Motivational Speaking and Collaboration, Resources to Remember, The Daily Podcast, Community and Movement" loading="lazy">
-      </picture>
-    </div>
   </section>
 
 
