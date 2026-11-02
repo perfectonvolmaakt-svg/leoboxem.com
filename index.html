@@ -103,7 +103,7 @@
     ============================================================= */
     .label {
       font-family: var(--f-head);
-      font-size: 14px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -520,11 +520,25 @@
     ============================================================= */
     #journey { background: var(--cream); }
 
+    .path-sub { font-size: clamp(12.5px, 3.4vw, 22px); }
+
+    .remember-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 700;
+      text-transform: none;
+      color: var(--black);
+      line-height: 1.2;
+      text-align: center;
+      text-wrap: balance;
+      margin-top: 56px;
+    }
+
     .remember-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 48px;
+      margin-top: 32px;
     }
 
     .remember-card {
@@ -850,6 +864,7 @@
     @media (max-width: 520px) {
       .j-track { grid-template-columns: 1fr; }
       .j-card { grid-column: auto !important; }
+      .label { font-size: 15px; letter-spacing: 0.16em; }
       .overview-visual { margin: 16px calc(-1 * var(--ph)) 0; max-width: none; }
 
       .nav-in { gap: 12px; }
@@ -909,7 +924,7 @@
           </div>
 
           <div class="reveal d3" style="margin-top: 28px;">
-            <p style="font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Book Your Free Session</p>
+            <p style="font-family: var(--f-head); font-size: 15px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Book Your Free Session</p>
             <p style="font-size: 13px; font-style: italic; color: var(--taupe, #8c756a); line-height: 1.7; margin-bottom: 14px;">A heart-to-heart to make sense of where you are — and what comes next.</p>
             <a href="/call" class="btn btn-gold">Reserve your spot</a>
           </div>
@@ -1077,7 +1092,13 @@
 
       <span class="label reveal">How to Remember Your Future™</span>
       <h2 class="h-main reveal d1">Your Path Forward</h2>
-      <p class="h-sub reveal d1" style="max-width: 540px;">You only have to decide on the next natural step forward.</p>
+      <p class="h-sub path-sub reveal d1">You only have to decide on the next natural step forward.</p>
+
+      <picture class="overview-visual reveal">
+        <img src="images/ryf-overview-sacred-geometry-phone.png" alt="Remember Your Future: Private 1:1 Mentoring, Group Program, In Person Retreat in Ibiza and Mallorca, Motivational Speaking and Collaboration, Resources to Remember, The Daily Podcast, Community and Movement" loading="lazy">
+      </picture>
+
+      <h3 class="remember-heading reveal">3 steps to Remember Your Future</h3>
 
       <div class="remember-grid">
         <div class="remember-card remember-card-1 reveal">
@@ -1095,10 +1116,6 @@
       </div>
 
       <p class="remember-close reveal d3">And find the courage to live it fully.</p>
-
-      <picture class="overview-visual reveal">
-        <img src="images/ryf-overview-sacred-geometry-phone.png" alt="Remember Your Future: Private 1:1 Mentoring, Group Program, In Person Retreat in Ibiza and Mallorca, Motivational Speaking and Collaboration, Resources to Remember, The Daily Podcast, Community and Movement" loading="lazy">
-      </picture>
 
     </div>
 
