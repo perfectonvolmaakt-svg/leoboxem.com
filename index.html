@@ -24,6 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Outfit:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
   <style>
+    /* The file is deployed as fonts/Gistesy.ttf and stored locally as fonts/gistesy.ttf */
+    @font-face { font-family: 'Gistesy'; src: url('fonts/Gistesy.ttf') format('truetype'), url('fonts/gistesy.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
     /* =============================================================
        RESET
     ============================================================= */
@@ -45,7 +48,7 @@
       --f-head:   'League Spartan', sans-serif;
       --f-serif:  'Playfair Display', Georgia, serif;
       --f-body:   'Montserrat', sans-serif;
-      --f-script: 'Great Vibes', cursive;
+      --f-script: 'Gistesy', 'Great Vibes', cursive;
 
       --max: 1200px;
       --pv:  88px;
@@ -130,18 +133,21 @@
     }
 
     .h-main em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
+      font-family: var(--f-script);
+      font-style: normal;
       font-weight: 400;
-      font-size: 1.15em;
-      color: var(--black);
+      font-size: 1.5em;
+      line-height: 0.8;
+      color: var(--red-brown);
       letter-spacing: 0;
+      text-transform: lowercase;
+      padding: 0 0.08em;
     }
 
     /* Sub-heading — Playfair Display italic, warm */
     .h-sub {
-      font-family: var(--f-serif);
-      font-style: italic;
+      font-family: var(--f-head);
+      font-style: normal;
       font-size: clamp(18px, 2.2vw, 26px);
       font-weight: 400;
       color: var(--rose);
@@ -392,12 +398,15 @@
     }
 
     h1.hero-h em {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
+      font-family: var(--f-script);
+      font-style: normal;
       font-weight: 400;
-      font-size: 1.15em;
-      color: var(--black);
+      color: var(--red-brown);
+      line-height: 0.8;
+      text-transform: lowercase;
+      font-size: 1.5em;
       letter-spacing: 0;
+      padding: 0 0.08em;
     }
 
     .hero-serif-sub {
@@ -522,7 +531,7 @@
       background: var(--white);
       border: 1px solid rgba(195,153,80,.2);
       border-radius: 12px;
-      padding: 40px 28px;
+      padding: 40px 16px;
       text-align: center;
     }
 
@@ -537,9 +546,8 @@
     }
 
     .remember-line {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(30px, 3.2vw, 40px);
+      font-family: var(--f-script);
+      font-size: clamp(40px, 3.9vw, 50px);
       line-height: 1.15;
       color: var(--red-brown);
     }
@@ -856,8 +864,6 @@
         <li><a href="/call">Your Next Level Session</a></li>
         <li><a href="https://app.helloaudio.fm/feed/2eb98fa1-1d6e-4e68-b8cf-1ff417c66ce4/signup" target="_blank" rel="noopener">Podcast</a></li>
         <li><a href="#about">About Leo</a></li>
-        <li><a href="#what">The Work</a></li>
-        <li><a href="#journey">Journey</a></li>
         <li><a href="/retreat">Retreat</a></li>
       </ul>
 
@@ -994,7 +1000,6 @@
             <li>Build a life that feels true</li>
           </ul>
 
-          <a href="/call" class="btn btn-fill reveal d3">Begin With Your 'Next Level Session'</a>
         </div>
 
         <div class="img-sticky reveal d1">
@@ -1136,10 +1141,6 @@
             <li>What your next natural step could be</li>
           </ul>
 
-          <div class="reveal d2 work-body">
-            <p><strong>No pressure. No judgment. Just honest direction.</strong></p>
-          </div>
-
           <div class="work-note reveal d3">
             If it feels aligned, I may share how we can continue working together — but even if not, this session is full of value and stands completely on its own.
           </div>
@@ -1172,24 +1173,17 @@
           <span class="rule reveal d1"></span>
 
           <div class="reveal d2">
-            <p><strong>The Daily Return™ podcast is your place to come back to yourself.</strong></p>
-            <p>Short, grounded daily reflections to help you pause, reconnect with what matters, and return to who you truly are — before you choose, act, or lead.</p>
+            <p><strong>The Daily Return™ podcast</strong></p>
+            <p>A daily practice of returning to yourself, reconnecting with what matters, and living your truth.</p>
           </div>
 
-          <ul class="start-list reveal d2">
-            <li>Reset your energy and create space to breathe</li>
-            <li>Clear mental noise and reconnect with what matters</li>
-            <li>Listen to your inner knowing</li>
-            <li>Make choices from greater alignment, rather than automatic reaction</li>
-          </ul>
-
-          <p class="reveal d2" style="font-weight: 700; color: var(--dark-brown);">Before you do the work, return to yourself first.</p>
+          <p class="reveal d2" style="font-weight: 700; color: var(--dark-brown); margin-top: 18px;">Before you do important work, return to yourself first.</p>
 
           <div class="btns reveal d3">
             <a href="https://app.helloaudio.fm/feed/2eb98fa1-1d6e-4e68-b8cf-1ff417c66ce4/signup" target="_blank" rel="noopener" class="btn" style="background: #b98774; color: var(--white); border: 2px solid #b98774;">Listen to The Daily Return™ Podcast</a>
             <a href="https://substack.com/@leoboxem" target="_blank" rel="noopener" class="btn" style="background: transparent; color: var(--dark-brown); border: 2px solid #b98774;">Join the RYF Community on Substack</a>
           </div>
-          <p class="reveal d3" style="margin-top: 10px; font-size: 13px; color: var(--dark-brown);">The podcast is free to join.</p>
+          <p class="reveal d3" style="margin-top: 10px; font-size: 13px; color: var(--dark-brown);">Both are free to join.</p>
         </div>
 
         <div class="reveal d1">
@@ -1225,7 +1219,7 @@
         <span class="label reveal" style="display:block; text-align:center;">Your Invitation</span>
 
         <h2 class="h-main reveal d1">You Do <em>Not</em> Have to<br>Figure It Out Alone</h2>
-        <p class="h-sub reveal d1">You are not late. You are not behind.</p>
+        <p class="h-sub reveal d1" style="color: var(--dark-brown);">You are not late. You are not behind.</p>
 
         <div class="closing-body reveal d2">
           <p>You are exactly where you need to be to begin your next chapter.</p>
@@ -1238,7 +1232,7 @@
         </p>
 
         <a href="/call" class="btn btn-gold-fill reveal d3" style="font-size: 12px; padding: 17px 34px;">
-          Book My 'Next Level Session' — It's Free
+          Book Your 'Next Level Session' — It's Free
         </a>
 
       </div>
@@ -1253,8 +1247,8 @@
     <p class="footer-name">Remember Your Future™</p>
     <p class="footer-tag">Leo Boxem · Mallorca, Spain</p>
     <p class="footer-links">
-      © 2026 Leo Boxem &nbsp;·&nbsp;
-      <a href="mailto:perfectonvolmaakt@gmail.com">Contact</a>
+      © 2026 Leontine Boxem &nbsp;·&nbsp;
+      <a href="mailto:leo@leoboxem.com">Contact</a>
       &nbsp;·&nbsp;
       <a href="https://www.leoboxem.com">www.leoboxem.com</a>
     </p>
