@@ -562,6 +562,11 @@
       margin-top: 40px;
     }
 
+    #overview { background: var(--cream); }
+
+    .overview-visual { display: block; max-width: 860px; margin: 0 auto; }
+    .overview-visual img { display: block; width: 100%; height: auto; }
+
     .j-track {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -840,6 +845,7 @@
     @media (max-width: 520px) {
       .j-track { grid-template-columns: 1fr; }
       .j-card { grid-column: auto !important; }
+      .overview-visual { margin: 0 calc(-1 * var(--ph)); max-width: none; }
 
       .nav-in { gap: 12px; }
       .nav-brand { flex-shrink: 1; min-width: 0; }
@@ -1199,6 +1205,19 @@
       <img src="images/ibiza-sea.jpg" alt="Ibiza sea" style="width: 100%; height: auto; display: block;">
     </div>
 
+  </section>
+
+
+  <!-- =============================================================
+       OVERVIEW VISUAL
+  ============================================================= -->
+  <section id="overview">
+    <div class="wrap">
+      <picture class="overview-visual reveal">
+        <source media="(max-width: 600px)" srcset="images/ryf-overview-sacred-geometry-phone.png">
+        <img src="images/ryf-overview-sacred-geometry.png" alt="Remember Your Future: Private 1:1 Mentoring, Group Program, In Person Retreat in Ibiza and Mallorca, Motivational Speaking and Collaboration, Resources to Remember, The Daily Podcast, Community and Movement" loading="lazy">
+      </picture>
+    </div>
   </section>
 
 
